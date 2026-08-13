@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HetCLOP · Two-factor rule for count-decoder dispersion</title>
+  <meta name="description" content="Paper companion for HetCLOP: extra dispersion in single-cell count decoders only when Poisson-on-mean leaves a variance deficit and θ is conditional enough to place it.">
+  <meta name="author" content="Zeyu Fu">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1d4ed8">
+  <link rel="canonical" href="https://peterponyu.github.io/HetCLOP-site/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap-wide header-inner">
+      <a class="wordmark" href="#home">
+        <span class="wordmark-mark" aria-hidden="true">HC</span>
+        <span class="wordmark-name">HetCLOP</span>
+      </a>
+      <nav class="nav-primary" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#figures">Figures</a>
+        <a href="#data">Data+Code</a>
+        <a href="#cite">Cite</a>
+        <a href="#team">Team</a>
+      </nav>
+      <div class="header-chips">
+        <a class="chip" href="https://peterponyu.github.io/" rel="noopener noreferrer" target="_blank">Homepage</a>
+        <a class="chip" href="https://peterponyu.github.io/scportal/" rel="noopener noreferrer" target="_blank">SCPortal</a>
+      </div>
+      <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav">
+        <span data-label>Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <nav aria-label="Mobile">
+        <a href="#home">Home</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#figures">Figures</a>
+        <a href="#data">Data+Code</a>
+        <a href="#cite">Cite</a>
+        <a href="#team">Team</a>
+        <div class="mobile-graph">
+          <a href="https://peterponyu.github.io/" rel="noopener noreferrer" target="_blank">Homepage — ZF Lab</a>
+          <a href="https://peterponyu.github.io/scportal/" rel="noopener noreferrer" target="_blank">SCPortal — discovery hub</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="wrap">
+        <p class="kicker">ZF Lab · PeerJ Computer Science · AI Application</p>
+        <h1>HetCLOP</h1>
+        <p class="lead">Extra dispersion in a conditional count decoder helps only when Poisson-on-mean leaves a within-type <strong>variance deficit</strong> and θ is <strong>conditional enough</strong> to place that missing variance per group.</p>
+        <div class="pills">
+          <a class="pill pill-primary" href="#abstract">Read the abstract</a>
+          <a class="pill pill-ghost" href="#figures">Browse figures</a>
+          <a class="pill pill-amber" href="https://doi.org/10.5281/zenodo.21524012" rel="noopener noreferrer" target="_blank">Zenodo archive</a>
+        </div>
+        <div class="stats">
+          <div class="stat-tile"><strong>50</strong><span>GEO datasets</span></div>
+          <div class="stat-tile"><strong>133,845</strong><span>cells</span></div>
+          <div class="stat-tile"><strong>2,500</strong><span>gene panel</span></div>
+          <div class="stat-tile"><strong>15</strong><span>manuscript figures</span></div>
+        </div>
+
+        <article class="paper-card">
+          <span class="disc" aria-hidden="true">1</span>
+          <div>
+            <h2>When should single-cell count decoders add dispersion? A two-factor design rule</h2>
+            <p class="paper-meta"><strong>Fu, Z.</strong> · <em>PeerJ Computer Science</em> · 2026 · article DOI pending</p>
+            <div class="badges">
+              <span class="badge badge-doi is-disabled" title="PeerJ CS — DOI on acceptance">DOI</span>
+              <span class="badge badge-code is-disabled" title="Code unpublished until anonymous public HTTPS 200; Zenodo is the public artifact">Code</span>
+              <span class="badge badge-site is-disabled" title="Site badge enables once https://peterponyu.github.io/HetCLOP-site/ returns HTTP 200">Site</span>
+              <a class="badge badge-zenodo" href="https://doi.org/10.5281/zenodo.21524012" rel="noopener noreferrer" target="_blank">Zenodo</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="legend" aria-label="Decoder colour key">
+          <span><i class="swatch" style="background:#0072B2"></i>Poisson / no dispersion</span>
+          <span><i class="swatch" style="background:#E69F00"></i>Global θ<sub>g</sub></span>
+          <span><i class="swatch" style="background:#009E73"></i>Conditional θ</span>
+          <span><i class="swatch" style="background:#D55E00"></i>Global fails</span>
+        </div>
+
+        <div class="rule-matrix">
+          <h2>The physical object is the count law</h2>
+          <p class="rule-note">Overdispersion is not a default add-on. Fig. 2 is the product: a 2×2 of deficit × placement. This leaf does not ship a 10×4 A–D collage.</p>
+          <div class="matrix" role="group" aria-label="Two-factor design rule">
+            <div></div>
+            <div class="matrix-head">Global θ<sub>g</sub></div>
+            <div class="matrix-head">Conditional θ</div>
+            <div class="matrix-side">No deficit</div>
+            <div class="cell cell-gray">
+              <h3>Poisson wins or ties</h3>
+              <p>Added θ over-inflates. Arm A sits here.</p>
+            </div>
+            <div class="cell cell-gray">
+              <h3>Poisson wins or ties</h3>
+              <p>No deficit; conditionality unused.</p>
+            </div>
+            <div class="matrix-side">Variance deficit</div>
+            <div class="cell cell-fail">
+              <h3>Global θ loses</h3>
+              <p>Right total variance, wrong groups.</p>
+            </div>
+            <div class="cell cell-win">
+              <h3>Conditional θ wins</h3>
+              <p>Deficit filled per group — the only cell where extra dispersion helps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Honest scope</h3>
+          <p>Mean-fixed biological cost: marker-gene recovery 55.8% (global) vs 79.3% (conditional); rare-type F1 0.179 vs 0.415 (Poisson), with global retaining 27.2% of the split-half ceiling. The conditional draw’s apparent win over Poisson rests on marker recall. On TSTR macro-F1 the gap 0.004 is smaller than its across-seed SD 0.008 — a tie. End-to-end, the marker gap closes; rare-type harm survives in a narrower sense (0.052 global vs 0.078 Poisson).</p>
+        </div>
+        <div class="callout exclude-note">
+          <h3>What this site is not</h3>
+          <p>Not a mega-portal, not a GPU demo, and not a 10×4 metric mosaic. Tightness (Fig. 4) and UMAP (Fig. 14) are <strong>negative-control / diagnostic-failure</strong> panels: they can miss a dispersion defect. scVI and CFGen are within-decoder controls, not a bake-off.</p>
+        </div>
+
+        <div class="routes" style="margin-top:1.5rem">
+          <a class="route-card card-hover" href="#abstract"><span class="disc disc-lg">01</span><div><h3>Abstract</h3><p>Canonical abstract from the manuscript, no TeX pointers.</p></div></a>
+          <a class="route-card card-hover" href="#figures"><span class="disc disc-lg">02</span><div><h3>Figures</h3><p>Fifteen Wong-coloured vector panels. Filter F1–F4. Fig. 2 is the hero.</p></div></a>
+          <a class="route-card card-hover" href="#data"><span class="disc disc-lg">03</span><div><h3>Data+Code</h3><p>Zenodo 2.6.8, 50 GEO accessions, verifier (266 numbers / 48 groups).</p></div></a>
+          <a class="route-card card-hover" href="#cite"><span class="disc disc-lg">04</span><div><h3>Cite</h3><p>BibTeX stub until PeerJ assigns a DOI; archive DOI is live.</p></div></a>
+          <a class="route-card card-hover" href="#team"><span class="disc disc-lg">05</span><div><h3>Team</h3><p>Sole author, Army Medical University, ORCID and email.</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="abstract">
+      <div class="wrap">
+        <p class="kicker">Abstract</p>
+        <h2 class="section-title">When should a count decoder add dispersion?</h2>
+        <p class="deck">Same body as the PeerJ PDF. Numbers match <span class="mono">numbers.tex</span> / the verifier.</p>
+        <div class="abstract-prose">
+          <p>Conditional single-cell generators are judged on how faithfully they reproduce within-cell-type heterogeneity, yet it is unclear when a conditional count decoder should model that heterogeneity by adding dispersion. We give a design rule: extra dispersion helps when the Poisson-on-mean draw (sampling each count from a Poisson distribution whose rate is the model’s predicted value for that cell and gene) leaves a within-type variance deficit, and the dispersion is conditional enough (a per-cell and/or per-type dispersion, as opposed to a single global value) to place that variance per group. The second condition binds in proportion to how heterogeneous the true dispersion is across cell types—with a homogeneous true dispersion a single global value suffices.</p>
+          <p>Systematic experiments across 50 datasets (133,845 cells) show that violating the rule carries a measurable biological cost. In mean-fixed re-decoding—holding a deployed model’s own fitted mean fixed and varying only the dispersion—a global, marginally-fitted dispersion, the default in deployed generators such as CFGen and scVI, recovers only 0.558 of marker genes (the per-cell-type top differentially-expressed genes whose recovery is the standard biological-content check) against 0.793 for a conditional one and more than halves rare-cell-type recovery, while carrying the best marginal variance calibration of the three draws.</p>
+          <p><strong>Honest scope on the biological-cost claim:</strong> the conditional draw’s apparent “win” over Poisson rests on marker recall; on TSTR macro-F1 the gap 0.004 is smaller than its own across-seed standard deviation (0.008) and the two draws tie. End-to-end, with latents sampled from the fitted prior, the latent path dominates the error and the marker gap closes, but the rare-type harm survives in a narrower sense (0.052 against 0.078 for the dispersion-free draw).</p>
+          <p>On scVI, switching from global to per-cell amortised dispersion flips which decoder wins; a controlled probe holding the mean fixed isolates the parameterisation as the cause. The rule emerges from diagnosing why encoder choice—the usual lever—is not the bottleneck: a within-over-between tightness ratio used as a heterogeneity diagnostic matches the identity ceiling under a random projection (0.9994, and beats principal components on 8/8 datasets), and once circularity is broken, six non-degenerate encoders each seeing half of a 2,500-gene panel span only 0.0045 in reconstruction correlation. A standard single-cell UMAP embedding can under-report the dispersion failure severalfold, so the distortion is invisible where practitioners usually look. Every number reported in the prose and tables is machine-checked against the source artifacts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="figures">
+      <div class="wrap-wide">
+        <p class="kicker">Figures</p>
+        <h2 class="section-title">Fifteen panels, one rule</h2>
+        <p class="deck">Captions match the manuscript (TeX pointers removed). F1 tightness and F3 geometry traps are diagnostic failures, not model-failure headlines. Colour key after Fig. 3: blue Poisson, orange global θ, green conditional θ.</p>
+        <div class="toolbar" role="group" aria-label="Filter figures by finding">
+          <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All 15</button>
+          <button type="button" class="filter-chip" data-filter="F1" aria-pressed="false">F1 · Fig. 4</button>
+          <button type="button" class="filter-chip" data-filter="F2" aria-pressed="false">F2 · Fig. 5</button>
+          <button type="button" class="filter-chip" data-filter="F3" aria-pressed="false">F3 · Figs. 6, 15</button>
+          <button type="button" class="filter-chip" data-filter="F4" aria-pressed="false">F4 · Figs. 2, 7–13</button>
+        </div>
+        <div class="figure-grid">
+          <figure class="figure-card card-hover" data-findings="setup" id="fig-01">
+            <button type="button" class="thumb" data-full="figures/figure-01.png" aria-label="Open Fig. 1 · Pipeline">
+              <img src="figures/figure-01.png" alt="HetCLOP diagnosis pipeline from corpus through encoder, mean-fixed decoder, readouts, biological cost, and the two-factor rule" width="1700" height="924">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 1 · Pipeline</strong> </div>
+              <p>Overview of the HetCLOP diagnosis pipeline. The 50 GEO datasets are harmonised onto a shared 2,500-gene cross-species ortholog panel while retaining within-dataset labels. Interchangeable foundation-model encoders, PCA, and random projection feed the Arm A near-invertible and Arm B held-out-gene designs. With each fitted mean frozen, re-decoding varies only the inverse-dispersion parameterisation: the Poisson limit (θ→∞), global θ_g, or conditional θ_ng. Distributional readouts, including energy distance, are considered alongside geometry diagnostics; tightness and UMAP are retained as controls that can miss dispersion defects. Biological cost is assessed through marker-gene and rare-type recovery. The resulting design diagnosis applies the two-factor rule: does Poisson-on-mean leave a variance deficit, and is dispersion conditional enough to place it? The gate is conceptual, not a trained router.</p>
+              <div class="fig-links">
+                <a href="figures/figure-01.png" download>PNG</a>
+                <a href="figures/figure-01.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-02">
+            <button type="button" class="thumb" data-full="figures/figure-02.png" aria-label="Open Fig. 2 · Law schematic">
+              <img src="figures/figure-02.png" alt="Two-by-two schematic of the count-law rule: deficit versus no deficit, global versus conditional dispersion" width="940" height="547">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 2 · Law schematic</strong> <span class="chip-f">F4</span></div>
+              <p>The two-factor design rule at a glance. Extra dispersion helps only in the bottom-right cell: when the Poisson-on-mean draw leaves a within-type variance deficit (a) and the dispersion is conditional enough to place that variance per group (b). A global θ (bottom-left)—the default in deployed generators—can match the pooled variance yet mis-place it across groups, and then loses to adding none. Card colour marks the outcome (gray: neither helps; vermillion: global fails; green: conditional helps). Column mini-curves mark one shared dispersion curve (orange, global) against per-group curves (green, conditional); row mini-curves mark a tight against a wide count distribution. In the no-deficit row Poisson wins or ties.</p>
+              <div class="fig-links">
+                <a href="figures/figure-02.png" download>PNG</a>
+                <a href="figures/figure-02.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="setup" id="fig-03">
+            <button type="button" class="thumb" data-full="figures/figure-03.png" aria-label="Open Fig. 3 · Design">
+              <img src="figures/figure-03.png" alt="Arm A and Arm B encoder-decoder designs plus the mean-fixed dispersion ablation with Wong colour key" width="1470" height="487">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 3 · Design</strong> </div>
+              <p>The three designs. (a) Arm A: encoder and decoder share the full 2,500-gene panel (near-invertible). Arm B: a fixed random split; the encoder sees 1,250 genes and the decoder predicts the held-out 1,250 genes it never encoded. (b) Mean-fixed dispersion ablation: one frozen fitted mean, three dispersion parameterisations. Colour key (blue Poisson, orange global θ, green conditional θ) is locked for the rest of the paper.</p>
+              <div class="fig-links">
+                <a href="figures/figure-03.png" download>PNG</a>
+                <a href="figures/figure-03.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F1" id="fig-04">
+            <button type="button" class="thumb" data-full="figures/figure-04.png" aria-label="Open Fig. 4 · Tightness (F1)">
+              <img src="figures/figure-04.png" alt="Random projection versus PCA tightness ratio, a negative-control diagnostic" width="1420" height="674">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 4 · Tightness (F1)</strong> <span class="chip-f">F1</span></div>
+              <p>F1: a random projection matches the identity ceiling and beats PCA on the tightness ratio. (a) In the published configuration (eight datasets, 512-d, centroid estimator), a random Gaussian projection beats per-dataset PCA on every dataset; grey reference lines mark the previously reported PCA value and the identity ceiling; the previously reported scGPT value, 0.647, lies well below the PCA line. (b) Appending isotropic-noise dimensions inflates the estimator past the identity ceiling—evidence that it rewards undifferentiated variance rather than retained heterogeneity. Tightness here is a negative-control diagnostic, not a claim that the model failed.</p>
+              <div class="fig-links">
+                <a href="figures/figure-04.png" download>PNG</a>
+                <a href="figures/figure-04.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F2" id="fig-05">
+            <button type="button" class="thumb" data-full="figures/figure-05.png" aria-label="Open Fig. 5 · Encoder span (F2)">
+              <img src="figures/figure-05.png" alt="Held-out-gene reconstruction Pearson across encoders showing a 0.0045 span" width="1504" height="684">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 5 · Encoder span (F2)</strong> <span class="chip-f">F2</span></div>
+              <p>F2: encoder identity is nearly irrelevant to decoded reconstruction. (a) Circularity-broken (Arm B) held-out-gene reconstruction Pearson, mean s.d. over three seeds; the identity oracle is a dashed reference. Six non-degenerate encoders span 0.0045; only random projection-50 falls back. The x-axis is zoomed: the whole non-degenerate spread is 0.0045 Pearson wide. (b) A closed-form ridge, the standard oracle decoder, and a 21.9 M-parameter decoder differ by little—the task is capacity-saturated near 0.68.</p>
+              <div class="fig-links">
+                <a href="figures/figure-05.png" download>PNG</a>
+                <a href="figures/figure-05.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F3" id="fig-06">
+            <button type="button" class="thumb" data-full="figures/figure-06.png" aria-label="Open Fig. 6 · Variance (F3)">
+              <img src="figures/figure-06.png" alt="Expressed-gene signed variance ratio by decoder variant" width="1427" height="757">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 6 · Variance (F3)</strong> <span class="chip-f">F3</span></div>
+              <p>F3: variance calibration on genes that carry signal. (a) Expressed-gene signed variance ratio by decoder variant for PCA-512; the dashed line marks calibration. All Gaussian variants under-inflate; the count models (F4) over-inflate. (b) The unrestricted statistic (all genes) is directionally misleading: matched noise looks calibrated (PCA) or over-inflated (scGPT), yet both under-inflate by 35–39% on expressed genes.</p>
+              <div class="fig-links">
+                <a href="figures/figure-06.png" download>PNG</a>
+                <a href="figures/figure-06.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-07">
+            <button type="button" class="thumb" data-full="figures/figure-07.png" aria-label="Open Fig. 7 · Arm A theta">
+              <img src="figures/figure-07.png" alt="Energy distance and variance ratio versus imposed scalar dispersion approaching the Poisson limit" width="1447" height="664">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 7 · Arm A theta</strong> <span class="chip-f">F4</span></div>
+              <p>Arm A: with no variance deficit, no dispersion is the best dispersion. With the fitted count mean held fixed and a scalar dispersion θ imposed (PCA-512, three seeds), energy distance to real data falls overall toward the Poisson limit, and expressed-gene signed variance ratio approaches but never crosses one. The median fitted conditional θ̂ (1.31) sits in the over-inflated regime.</p>
+              <div class="fig-links">
+                <a href="figures/figure-07.png" download>PNG</a>
+                <a href="figures/figure-07.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-08">
+            <button type="button" class="thumb" data-full="figures/figure-08.png" aria-label="Open Fig. 8 · Forest">
+              <img src="figures/figure-08.png" alt="Per-dataset forest plot of NB minus Poisson variance-ratio effect" width="1387" height="674">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 8 · Forest</strong> <span class="chip-f">F4</span></div>
+              <p>The primary contrast is a corpus-level regularity. Per-dataset median paired effect (NB − Poisson |log2 r_var|, expressed genes; positive = Poisson better), pooled over three seeds, IQR whiskers, datasets ranked by their median. Nearly every dataset’s median sits above zero—the effect is not carried by a handful of studies.</p>
+              <div class="fig-links">
+                <a href="figures/figure-08.png" download>PNG</a>
+                <a href="figures/figure-08.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-09">
+            <button type="button" class="thumb" data-full="figures/figure-09.png" aria-label="Open Fig. 9 · scVI modes">
+              <img src="figures/figure-09.png" alt="scVI dispersion parameterisations: global loses, gene-cell wins, gene-label in between" width="1440" height="737">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 9 · scVI modes</strong> <span class="chip-f">F4</span></div>
+              <p>Conditionality flips the winner on a deployed model. (a) scVI’s three built-in dispersion parameterisations as the negative binomial’s win fraction against a Poisson draw on the same fitted mean. The global gene dispersion loses on both metrics; the per-cell gene-cell wins on both; the per-type gene-label sits between—conditionality is graded, not binary. (b) A mean-fixed probe isolates the flip as attributable to the dispersion alone. scVI and CFGen are within-decoder controls, not a leaderboard.</p>
+              <div class="fig-links">
+                <a href="figures/figure-09.png" download>PNG</a>
+                <a href="figures/figure-09.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-10">
+            <button type="button" class="thumb" data-full="figures/figure-10.png" aria-label="Open Fig. 10 · Law grid">
+              <img src="figures/figure-10.png" alt="Controlled 2-by-2 lawgrid of the two-factor rule against known ground truth" width="1430" height="747">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 10 · Law grid</strong> <span class="chip-f">F4</span></div>
+              <p>The two-factor design rule against known ground truth. Counts are drawn from a negative binomial with a known per-group dispersion; all three decoders share an identical, perfect conditional mean, so only the dispersion parameterisation varies. With no deficit all three are statistically indistinguishable on the primary leg. Given a deficit, a global θ matches the conditional one only when the true dispersion is homogeneous across cell types; under heterogeneous or bimodal truth only the conditional θ stays calibrated.</p>
+              <div class="fig-links">
+                <a href="figures/figure-10.png" download>PNG</a>
+                <a href="figures/figure-10.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-11">
+            <button type="button" class="thumb" data-full="figures/figure-11.png" aria-label="Open Fig. 11 · Biological cost">
+              <img src="figures/figure-11.png" alt="Biological-cost bars for marker recall, TSTR macro-F1, and rare-type F1 under Poisson, global, and conditional draws" width="1030" height="720">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 11 · Biological cost</strong> <span class="chip-f">F4</span></div>
+              <p>The biological cost of a mis-placed dispersion. Three draws share one conditional mean and differ only in the dispersion parameterisation, on four held-out readouts. The global, marginally-fitted dispersion is lowest on marker recovery, TSTR macro-F1, and rare-cell-type F1. Poisson and the conditional draw are close on all four (statistically indistinguishable once the 50 datasets are the unit of inference). Honest scope: the conditional “win” over Poisson on markers does not extend to TSTR (gap 0.004 < seed SD 0.008).</p>
+              <div class="fig-links">
+                <a href="figures/figure-11.png" download>PNG</a>
+                <a href="figures/figure-11.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-12">
+            <button type="button" class="thumb" data-full="figures/figure-12.png" aria-label="Open Fig. 12 · Marker ECDFs">
+              <img src="figures/figure-12.png" alt="Empirical CDFs of CD8-positive T-cell marker genes under real cells and three mean-fixed draws" width="1564" height="674">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 12 · Marker ECDFs</strong> <span class="chip-f">F4</span></div>
+              <p>What a destroyed marker looks like. Empirical CDFs of log1p counts for the three strongest real marker genes of the scoreable held-out cell type whose marker recall the global draw damages most (CD8+ T cells). The global, marginally-fitted dispersion puts far too much mass at zero where the real curve has little; Poisson and the conditional draw track the real curve. A qualitative panel from a single seed; it anchors no headline number.</p>
+              <div class="fig-links">
+                <a href="figures/figure-12.png" download>PNG</a>
+                <a href="figures/figure-12.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F4" id="fig-13">
+            <button type="button" class="thumb" data-full="figures/figure-13.png" aria-label="Open Fig. 13 · End-to-end">
+              <img src="figures/figure-13.png" alt="End-to-end robustness of marker and rare-type readouts across three seeds" width="880" height="557">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 13 · End-to-end</strong> <span class="chip-f">F4</span></div>
+              <p>End-to-end robustness across three seeds. Mean-fixed conclusions flatten when latents are sampled from the fitted prior; the rare-type ordering and the global/conditional tie hold on the mean across three seeds, two fits per seed. The marker gap closes; rare-type harm survives in a narrower sense (0.052 global vs 0.078 Poisson).</p>
+              <div class="fig-links">
+                <a href="figures/figure-13.png" download>PNG</a>
+                <a href="figures/figure-13.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="ctrl" id="fig-14">
+            <button type="button" class="thumb" data-full="figures/figure-14.png" aria-label="Open Fig. 14 · UMAP control">
+              <img src="figures/figure-14.png" alt="UMAP of real cells and three synthetic draws that look alike while marker recovery differs" width="1035" height="925">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 14 · UMAP control</strong> </div>
+              <p>The standard single-cell figure is blind to the defect. A single UMAP over 2,538 held-out cells and three synthetic draws that share an identical conditional mean and differ only in the dispersion parameterisation. The panels are visually alike and 15-nearest-neighbour label purity barely moves—yet the global-θ panel recovers the fewest marker genes and more than halves rare-cell-type recovery. This is a negative-control embedding, not evidence that the models are interchangeable.</p>
+              <div class="fig-links">
+                <a href="figures/figure-14.png" download>PNG</a>
+                <a href="figures/figure-14.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card card-hover" data-findings="F3" id="fig-15">
+            <button type="button" class="thumb" data-full="figures/figure-15.png" aria-label="Open Fig. 15 · Geometry trap (F3)">
+              <img src="figures/figure-15.png" alt="Tightness ranking noise highest while energy distance does not" width="1704" height="820">
+            </button>
+            <figcaption>
+              <div class="fig-kicker"><strong>Fig. 15 · Geometry trap (F3)</strong> <span class="chip-f">F3</span></div>
+              <p>Geometry ranks noise highest; a proper divergence does not. (a) Under the decoded tightness estimator, trivial noise injection ranks highest and the deterministic decoder lowest. (b) On energy distance the ordering does not reward pure noise: matched noise is never best. The geometry metric and the divergence disagree. Colours here label decoder variants and are local to this figure; they are not the Poisson / global / conditional trio.</p>
+              <div class="fig-links">
+                <a href="figures/figure-15.png" download>PNG</a>
+                <a href="figures/figure-15.pdf" download>PDF</a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="data">
+      <div class="wrap">
+        <p class="kicker">Data + Code</p>
+        <h2 class="section-title">Zenodo 2.6.8 and Table 1</h2>
+        <p class="deck">Processed corpus files are not in this Zenodo version. Recreate the 2,500-gene panel from the public GEO sources below.</p>
+        <div class="stack">
+          <div class="zenodo-card">
+            <h3>Archive</h3>
+            <p class="mono" style="margin:0.45rem 0 0.7rem"><a href="https://doi.org/10.5281/zenodo.21524012" rel="noopener noreferrer" target="_blank">doi:10.5281/zenodo.21524012</a> · hetclop-reproducibility-v2.6.8</p>
+            <p style="margin:0;font-size:0.9rem;color:var(--text-m)">Contains <span class="mono">hetclop-reproducibility-v2.6.8.tar.gz</span> plus AI-code BEFORE / AFTER / PROMPTS zips. Code MIT; result artifacts CC-BY-4.0. GitHub <span class="mono">PeterPonyu/HetCLOP</span> is private today — use Zenodo for the public payload.</p>
+          </div>
+          <div class="zenodo-card">
+            <h3>Verifier</h3>
+            <p style="margin:0.45rem 0 0;font-size:0.9rem;color:var(--text-m)">Every prose and table number is re-derived from the result JSONs. From the archive root: <span class="mono">python3 experiments/verify_manuscript.py</span> — 266 machine-checked numbers across 48 claim groups; the build aborts on disagreement.</p>
+          </div>
+          <div class="license-row">
+            <span>Code: MIT</span>
+            <span>Artifacts: CC-BY-4.0</span>
+            <span>314 evaluation groups</span>
+            <span>No GPU on this page</span>
+          </div>
+        </div>
+        <h3 style="margin:1.75rem 0 0.6rem;font-size:1.05rem">GEO Table 1 · 50 accessions</h3>
+        <div class="table-wrap">
+          <table class="geo">
+            <thead>
+              <tr><th>Accession</th><th>Sp.</th><th><em>n</em></th><th>T</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE104323" rel="noopener noreferrer" target="_blank">GSE104323</a></td><td>Mm</td><td>3000</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE115571" rel="noopener noreferrer" target="_blank">GSE115571</a></td><td>Mm</td><td>326</td><td>2</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117988" rel="noopener noreferrer" target="_blank">GSE117988<sup>a</sup></a></td><td>n/s</td><td>2990</td><td>5</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117988" rel="noopener noreferrer" target="_blank">GSE117988<sup>b</sup></a></td><td>n/s</td><td>2626</td><td>7</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120446" rel="noopener noreferrer" target="_blank">GSE120446</a></td><td>n/s</td><td>2843</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120505" rel="noopener noreferrer" target="_blank">GSE120505</a></td><td>n/s</td><td>3000</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE123813" rel="noopener noreferrer" target="_blank">GSE123813<sup>a</sup></a></td><td>Hs</td><td>3000</td><td>12</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE123813" rel="noopener noreferrer" target="_blank">GSE123813<sup>b</sup></a></td><td>Hs</td><td>3000</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE123902" rel="noopener noreferrer" target="_blank">GSE123902</a></td><td>Hs</td><td>2737</td><td>11</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE124310" rel="noopener noreferrer" target="_blank">GSE124310</a></td><td>Hs</td><td>2833</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE130148" rel="noopener noreferrer" target="_blank">GSE130148</a></td><td>Hs</td><td>3000</td><td>12</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132509" rel="noopener noreferrer" target="_blank">GSE132509</a></td><td>Hs</td><td>2984</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138709" rel="noopener noreferrer" target="_blank">GSE138709</a></td><td>n/s</td><td>2891</td><td>12</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139369" rel="noopener noreferrer" target="_blank">GSE139369</a></td><td>Hs</td><td>2995</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141259" rel="noopener noreferrer" target="_blank">GSE141259</a></td><td>Mm</td><td>3000</td><td>5</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142653" rel="noopener noreferrer" target="_blank">GSE142653</a></td><td>Hs</td><td>2869</td><td>13</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143423" rel="noopener noreferrer" target="_blank">GSE143423<sup>a</sup></a></td><td>Hs</td><td>2765</td><td>10</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143423" rel="noopener noreferrer" target="_blank">GSE143423<sup>b</sup></a></td><td>Hs</td><td>2319</td><td>7</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144024" rel="noopener noreferrer" target="_blank">GSE144024</a></td><td>n/s</td><td>3000</td><td>7</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145929" rel="noopener noreferrer" target="_blank">GSE145929<sup>a</sup></a></td><td>Mm</td><td>2713</td><td>6</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE145929" rel="noopener noreferrer" target="_blank">GSE145929<sup>b</sup></a></td><td>Mm</td><td>2542</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE148218" rel="noopener noreferrer" target="_blank">GSE148218</a></td><td>Hs</td><td>2807</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE149655" rel="noopener noreferrer" target="_blank">GSE149655</a></td><td>Hs</td><td>2087</td><td>13</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155109" rel="noopener noreferrer" target="_blank">GSE155109<sup>a</sup></a></td><td>Hs</td><td>3000</td><td>5</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155109" rel="noopener noreferrer" target="_blank">GSE155109<sup>b</sup></a></td><td>Hs</td><td>3000</td><td>11</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE163558" rel="noopener noreferrer" target="_blank">GSE163558</a></td><td>Hs</td><td>2467</td><td>10</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165784" rel="noopener noreferrer" target="_blank">GSE165784</a></td><td>Hs</td><td>2622</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165844" rel="noopener noreferrer" target="_blank">GSE165844</a></td><td>Mm</td><td>1217</td><td>3</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167597" rel="noopener noreferrer" target="_blank">GSE167597</a></td><td>Mm</td><td>2169</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168181" rel="noopener noreferrer" target="_blank">GSE168181</a></td><td>Mm</td><td>2863</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE183904" rel="noopener noreferrer" target="_blank">GSE183904</a></td><td>Hs</td><td>3000</td><td>12</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE189070" rel="noopener noreferrer" target="_blank">GSE189070</a></td><td>Mm</td><td>2960</td><td>15</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE189357" rel="noopener noreferrer" target="_blank">GSE189357</a></td><td>Hs</td><td>2868</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE192857" rel="noopener noreferrer" target="_blank">GSE192857</a></td><td>Hs</td><td>2696</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213740" rel="noopener noreferrer" target="_blank">GSE213740</a></td><td>Hs</td><td>2688</td><td>10</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE222002" rel="noopener noreferrer" target="_blank">GSE222002</a></td><td>Mm</td><td>2962</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE222369" rel="noopener noreferrer" target="_blank">GSE222369</a></td><td>Hs</td><td>2576</td><td>6</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE225600" rel="noopener noreferrer" target="_blank">GSE225600</a></td><td>Hs</td><td>2314</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE225857" rel="noopener noreferrer" target="_blank">GSE225857</a></td><td>Hs</td><td>2793</td><td>6</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE226131" rel="noopener noreferrer" target="_blank">GSE226131</a></td><td>Mm</td><td>2590</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE226824" rel="noopener noreferrer" target="_blank">GSE226824</a></td><td>n/s</td><td>2623</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE228499" rel="noopener noreferrer" target="_blank">GSE228499</a></td><td>Hs</td><td>2341</td><td>11</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE235787" rel="noopener noreferrer" target="_blank">GSE235787</a></td><td>Hs</td><td>2798</td><td>8</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253355" rel="noopener noreferrer" target="_blank">GSE253355</a></td><td>Hs</td><td>2835</td><td>10</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262288" rel="noopener noreferrer" target="_blank">GSE262288</a></td><td>Hs</td><td>2321</td><td>15</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275119" rel="noopener noreferrer" target="_blank">GSE275119</a></td><td>Mm</td><td>2358</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283205" rel="noopener noreferrer" target="_blank">GSE283205</a></td><td>n/s</td><td>2994</td><td>10</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72857" rel="noopener noreferrer" target="_blank">GSE72857</a></td><td>Mm</td><td>3000</td><td>9</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75748" rel="noopener noreferrer" target="_blank">GSE75748</a></td><td>Hs</td><td>2531</td><td>7</td></tr>
+              <tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE98638" rel="noopener noreferrer" target="_blank">GSE98638</a></td><td>Hs</td><td>2932</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-foot">Species as in the manuscript table (Mm / Hs / n/s). Superscripts mark split studies from one GEO record. GSE222002 and GSE168181 are listed Mm; the GEO source tags them human — source metadata are the only remaining inconsistency, and labels are used only within-dataset. Cell counts are after harmonisation to the 2,500-gene panel (corpus total 133,845).</p>
+      </div>
+    </section>
+
+    <section class="section" id="cite">
+      <div class="wrap">
+        <p class="kicker">Cite</p>
+        <h2 class="section-title">PeerJ Computer Science</h2>
+        <p class="deck">Article DOI is not assigned yet. Cite the archive DOI now; swap in the PeerJ DOI on acceptance.</p>
+        <div class="cite-block">
+          <div class="cite-toolbar">
+            <h3>BibTeX</h3>
+            <button type="button" class="copy-btn" id="copy-bibtex">Copy BibTeX</button>
+          </div>
+          <pre class="bibtex" id="bibtex">@article{fu2026hetclop,
+  author  = {Fu, Zeyu},
+  title   = {When should single-cell count decoders add dispersion? A two-factor design rule},
+  journal = {PeerJ Computer Science},
+  year    = {2026},
+  note    = {Article DOI pending. Archive DOI: 10.5281/zenodo.21524012}
+}</pre>
+          <p class="peerj-line">Fu, Z. (2026). When should single-cell count decoders add dispersion? A two-factor design rule. <em>PeerJ Computer Science</em>.</p>
+          <p id="copy-status" class="visually-hidden" aria-live="polite"></p>
+        </div>
+        <div class="related-card" style="margin-top:1rem">
+          <h3>Related · CLOP-DiT (F1 tightness only)</h3>
+          <p style="margin:0.45rem 0 0;font-size:0.9rem;color:var(--text-m)">Random-projection tightness-ratio reference values come from CLOP-DiT, Zenodo <a href="https://doi.org/10.5281/zenodo.19643738" rel="noopener noreferrer" target="_blank">10.5281/zenodo.19643738</a>. That archive is cited for F1 only. This submission’s contribution remains the F4 two-factor <strong>decoder</strong> rule; encoder work is not restaged here. No article DOI is invented for a <span class="mono">fu2026clopdit</span> key.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="team">
+      <div class="wrap">
+        <p class="kicker">Team</p>
+        <h2 class="section-title">Sole author</h2>
+        <div class="author-card">
+          <h3>Zeyu Fu</h3>
+          <p class="affil">State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China. Corresponding author.</p>
+          <div class="links">
+            <a href="https://orcid.org/0009-0001-8329-0108" rel="noopener noreferrer" target="_blank">ORCID 0009-0001-8329-0108</a>
+            <a href="mailto:fuzeyu09@gmail.com">fuzeyu09@gmail.com</a>
+            <a href="https://peterponyu.github.io/" rel="noopener noreferrer" target="_blank">Homepage</a>
+          </div>
+          <p class="affil" style="margin-top:0.9rem">No specific funding. No competing interests. All study design, decisions, and interpretations are the author’s. An AI assistant was used for limited code refactoring and language editing; all assisted content was reviewed and verified by the author.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide footer-grid">
+      <div>
+        <h2>HetCLOP</h2>
+        <p>A PeerJ Computer Science companion leaf. Two-factor count-decoder rule. Not SCPortal and not a training UI.</p>
+      </div>
+      <div>
+        <h3>Browse</h3>
+        <ul>
+          <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#figures">Figures</a></li>
+          <li><a href="#data">Data+Code</a></li>
+          <li><a href="#cite">Cite</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Graph</h3>
+        <ul>
+          <li><a href="https://peterponyu.github.io/" rel="noopener noreferrer" target="_blank">Homepage</a></li>
+          <li><a href="https://peterponyu.github.io/scportal/" rel="noopener noreferrer" target="_blank">SCPortal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Code · Cite</h3>
+        <ul>
+          <li><a href="https://doi.org/10.5281/zenodo.21524012" rel="noopener noreferrer" target="_blank">Zenodo 10.5281/zenodo.21524012</a></li>
+          <li>GitHub workbench is private — not a public Code link. Use Zenodo.</li>
+          <li><a href="#cite">BibTeX</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-bar">
+      <strong id="lightbox-title">Figure</strong>
+      <button type="button" class="lightbox-close" id="lightbox-close">Close</button>
+    </div>
+    <figure>
+      <img id="lightbox-img" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </dialog>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
