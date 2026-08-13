@@ -1,9 +1,7 @@
 # HetCLOP-site
 
-Public GitHub Pages leaf.
+This repository is a redirect. The live paper leaf is:
 
-Live URL (after the first green Pages workflow): https://peterponyu.github.io/HetCLOP-site/
+https://peterponyu.github.io/HetCLOP/
 
-Public archive: https://doi.org/10.5281/zenodo.21524012. Code chip stays off until a public HTTPS 200.
-
-This repository is the Pages origin only. It does not publish a private workbench.
+Do not treat this as a competing Pages origin.

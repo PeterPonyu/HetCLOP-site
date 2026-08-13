@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /PEERJ_REVIEWER_FAQ.md
-Disallow: /superpowers/
-Disallow: /LITERATURE_SOTA_SCAN_2026-07-04.md
