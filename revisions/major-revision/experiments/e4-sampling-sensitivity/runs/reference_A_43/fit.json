@@ -1,0 +1,13 @@
+{
+  "variant": "reference",
+  "arm": "A",
+  "seed": 43,
+  "best_validation_nll": 0.26294025778770447,
+  "n_parameters": 12875656,
+  "n_train": 93673,
+  "n_validation": 20059,
+  "n_test": 20113,
+  "seconds": 72.07147526741028,
+  "device": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "torch": "2.12.1+cu130"
+}

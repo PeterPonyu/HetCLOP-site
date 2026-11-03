@@ -1,0 +1,34 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=1.7cm},width=5.6cm, height=5.4cm, ybar, /pgf/bar width=13pt, enlarge x limits=0.30,symbolic x coords={rvar,energy}, xtick=data, xticklabels={{$|\log_2 r_{\mathrm{var}}|$\\(expr)},{energy\\distance}}, x tick label style={align=center},ylabel={NB win fraction vs Poisson (\%)}, ymin=0, ymax=102,legend style={font=\footnotesize, at={(0.5,1.19)}, anchor=south, legend columns=3, draw=none}, legend cell align=left]
+\nextgroupplot[title={scVI dispersion modes}]
+\addplot[draw=black!30, fill=horange, error bars/.cd, y dir=both, y explicit] coordinates {
+  (rvar,26.115) +- (0,0.843)
+  (energy,41.614) +- (0,2.671)
+}; \addlegendentry{Shared}
+\addplot[draw=black!30, fill=holive, error bars/.cd, y dir=both, y explicit] coordinates {
+  (rvar,36.837) +- (0,2.594)
+  (energy,69.321) +- (0,2.072)
+}; \addlegendentry{Per type}
+\addplot[draw=black!30, fill=hgreen, error bars/.cd, y dir=both, y explicit] coordinates {
+  (rvar,67.941) +- (0,0.486)
+  (energy,96.285) +- (0,0.368)
+}; \addlegendentry{Per cell}
+\draw[hgray, dashed] ({rel axis cs:0,0}|-{axis cs:rvar,50}) -- ({rel axis cs:1,0}|-{axis cs:energy,50});
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={Dispersion at a fixed mean},/pgf/bar width=20pt, legend style={font=\footnotesize, at={(0.5,1.19)}, anchor=south, legend columns=2, draw=none}]
+\addplot[draw=black!30, fill=horange, error bars/.cd, y dir=both, y explicit] coordinates {
+  (rvar,14.968) +- (0,0.552)
+  (energy,8.068) +- (0,1.326)
+}; \addlegendentry{global $\theta_g$}
+\addplot[draw=black!30, fill=hgreen, error bars/.cd, y dir=both, y explicit] coordinates {
+  (rvar,67.941) +- (0,0.486)
+  (energy,96.285) +- (0,0.368)
+}; \addlegendentry{amortised $\theta_{ng}$}
+\draw[hgray, dashed] ({rel axis cs:0,0}|-{axis cs:rvar,50}) -- ({rel axis cs:1,0}|-{axis cs:energy,50});
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}
+
+\endgroup

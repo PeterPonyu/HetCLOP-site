@@ -1,0 +1,182 @@
+[
+  {
+    "dataset": "GSE120505_bloodAged",
+    "cell_type": "Erythroid progenitors",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE120505_bloodAged",
+    "cell_type": "Macrophages",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE120505_bloodAged",
+    "cell_type": "Megakaryocytes",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE123813_bccHmCancer",
+    "cell_type": "Regulatory T cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE130148_LungHmDev",
+    "cell_type": "Alveolar type 1",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE138709_LiverCancer",
+    "cell_type": "Endothelial cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE138709_LiverCancer",
+    "cell_type": "MHC-II high APCs",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE142653pitHmDev",
+    "cell_type": "Corticotrophs",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE142653pitHmDev",
+    "cell_type": "Erythroid progenitors",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE143423_lbm_CancerBrainHm",
+    "cell_type": "Macrophages",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE143423_tnbc_CancerBrainHm",
+    "cell_type": "Neutrophils",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE145929_UrineMmDev",
+    "cell_type": "Endothelial cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE149655_CAHmCancer",
+    "cell_type": "CD8+ T cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE149655_CAHmCancer",
+    "cell_type": "Fibroblasts",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE165784_RetinaHmDev",
+    "cell_type": "Smooth muscle cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE165844_LSKMmBatch",
+    "cell_type": "IFN-stimulated cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE183904_GastricHmCancer",
+    "cell_type": "Neuroendocrine cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE189070_astrocytesSCIMmDev",
+    "cell_type": "Capillary endothelial",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE189070_astrocytesSCIMmDev",
+    "cell_type": "Oligodendrocytes",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE192857_hESCHmTimes",
+    "cell_type": "Cycling cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE192857_hESCHmTimes",
+    "cell_type": "Inhibitory neurons",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE192857_hESCHmTimes",
+    "cell_type": "Intermediate progenitors",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE213740_ADHm",
+    "cell_type": "Macrophages",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE213740_ADHm",
+    "cell_type": "Monocytes",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE225600_breast_CancerHm",
+    "cell_type": "Fibroblasts",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE225600_breast_CancerHm",
+    "cell_type": "NK cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE225600_breast_CancerHm",
+    "cell_type": "Smooth muscle cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE226131_HSCMmAged",
+    "cell_type": "Macrophages",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE235787_bcellsALLHmCancer",
+    "cell_type": "HSCs/Progenitors",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE253355_bmNicheHm",
+    "cell_type": "Erythrocytes",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE253355_bmNicheHm",
+    "cell_type": "Smooth muscle cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE262288_breastMetasisHmCancer",
+    "cell_type": "Stress-response cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE275119_TeethMmDev",
+    "cell_type": "Basal cells",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "GSE275119_TeethMmDev",
+    "cell_type": "Macrophages",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "bm_GSE120446",
+    "cell_type": "Erythrocytes",
+    "reason": "group has fewer than20cells in validation or test"
+  },
+  {
+    "dataset": "dentate",
+    "cell_type": "Excitatory neurons",
+    "reason": "group has fewer than20cells in validation or test"
+  }
+]

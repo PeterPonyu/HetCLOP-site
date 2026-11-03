@@ -1,0 +1,479 @@
+{
+  "n_cells": 133845,
+  "n_train": 93673,
+  "n_val": 20059,
+  "n_test": 20113,
+  "panel_size": 2500,
+  "g_in": 1250,
+  "g_out": 1250,
+  "armB_fm_feasibility": {
+    "scfoundation": "EXCLUDED: only 1236 of 1250 genes mapped to the scFoundation 19,264-gene panel (species=human); refusing to embed on near-zero overlap",
+    "uce": "EXCLUDED: human-symbol overlap 1241 < 2000; refusing to embed uce_probe_gin"
+  },
+  "results": [
+    {
+      "arm": "A",
+      "encoder": "pca",
+      "embed_dim": 50,
+      "decoder_params": 7280068,
+      "val_mse": 0.06951484084129333,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6891382129080885,
+        "n_genes_scored": 2500,
+        "mse": 0.07001798705609626
+      },
+      "latent_tightness": {
+        "median": 0.7586565977831554,
+        "iqr": [
+          0.7282993386975503,
+          0.8213229223579671
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7699405222893663,
+        "iqr": [
+          0.7310687563775488,
+          0.8191882261674298
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "A",
+      "encoder": "randproj",
+      "embed_dim": 50,
+      "decoder_params": 7280068,
+      "val_mse": 0.08067965507507324,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6636473445993615,
+        "n_genes_scored": 2500,
+        "mse": 0.08109922614399225
+      },
+      "latent_tightness": {
+        "median": 0.9669199395863222,
+        "iqr": [
+          0.9472350260612616,
+          0.9812876167114171
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.8175924531620149,
+        "iqr": [
+          0.7736489375986031,
+          0.8700355320810241
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "A",
+      "encoder": "scgpt",
+      "embed_dim": 512,
+      "decoder_params": 7753156,
+      "val_mse": 0.07301086187362671,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6900453039972411,
+        "n_genes_scored": 2500,
+        "mse": 0.07345162527380265
+      },
+      "latent_tightness": {
+        "median": 0.8539910456922877,
+        "iqr": [
+          0.8215769063153788,
+          0.8919349667503702
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7588873420241073,
+        "iqr": [
+          0.7161818933155393,
+          0.8079885477928406
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "A",
+      "encoder": "geneformer",
+      "embed_dim": 768,
+      "decoder_params": 8015300,
+      "val_mse": 0.07073191553354263,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6956942980407537,
+        "n_genes_scored": 2500,
+        "mse": 0.07130047675121105
+      },
+      "latent_tightness": {
+        "median": 0.8316765536035435,
+        "iqr": [
+          0.787598573961425,
+          0.868433373154349
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7492773632557654,
+        "iqr": [
+          0.6976883591060231,
+          0.7960545353715471
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "A",
+      "encoder": "scfoundation",
+      "embed_dim": 3072,
+      "decoder_params": 10374596,
+      "val_mse": 0.0704551711678505,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6953769395632264,
+        "n_genes_scored": 2500,
+        "mse": 0.07105293254069023
+      },
+      "latent_tightness": {
+        "median": 0.863146010245846,
+        "iqr": [
+          0.820264025127285,
+          0.8859066814010983
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7552504840688014,
+        "iqr": [
+          0.6984898783754484,
+          0.7987638272557162
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "A",
+      "encoder": "uce",
+      "embed_dim": 1280,
+      "decoder_params": 8539588,
+      "val_mse": 0.07528966665267944,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6830426185046612,
+        "n_genes_scored": 2500,
+        "mse": 0.07593134010472487
+      },
+      "latent_tightness": {
+        "median": 0.8481271914150063,
+        "iqr": [
+          0.8072789931495234,
+          0.8934828424076424
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7376412102413288,
+        "iqr": [
+          0.6874755531749394,
+          0.7782681599655521
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "A",
+      "encoder": "scgpt",
+      "embed_dim": 50,
+      "decoder_params": 7280068,
+      "val_mse": 0.07527410984039307,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6842617416760925,
+        "n_genes_scored": 2500,
+        "mse": 0.07570207626035136
+      },
+      "latent_tightness": {
+        "median": 0.8203065897686765,
+        "iqr": [
+          0.7837297791137079,
+          0.8609591564719353
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7736043359354641,
+        "iqr": [
+          0.7239232777726538,
+          0.8154394910802183
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": true
+    },
+    {
+      "arm": "A",
+      "encoder": "geneformer",
+      "embed_dim": 50,
+      "decoder_params": 7280068,
+      "val_mse": 0.07402069121599197,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6874203634687194,
+        "n_genes_scored": 2500,
+        "mse": 0.07471670481296894
+      },
+      "latent_tightness": {
+        "median": 0.7521637824891033,
+        "iqr": [
+          0.7082212571250833,
+          0.816458936682725
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7384716686301559,
+        "iqr": [
+          0.6806056867963534,
+          0.7804917791701176
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": true
+    },
+    {
+      "arm": "A",
+      "encoder": "scfoundation",
+      "embed_dim": 50,
+      "decoder_params": 7280068,
+      "val_mse": 0.07247894257307053,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6898852131248041,
+        "n_genes_scored": 2500,
+        "mse": 0.0731383851055707
+      },
+      "latent_tightness": {
+        "median": 0.8399704631116681,
+        "iqr": [
+          0.7965930454805006,
+          0.8625889916959115
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7553387095578709,
+        "iqr": [
+          0.6946880951935921,
+          0.7944250058331084
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": true
+    },
+    {
+      "arm": "A",
+      "encoder": "uce",
+      "embed_dim": 50,
+      "decoder_params": 7280068,
+      "val_mse": 0.07755715399980545,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6762062754549184,
+        "n_genes_scored": 2500,
+        "mse": 0.07834270733008333
+      },
+      "latent_tightness": {
+        "median": 0.7751228893183848,
+        "iqr": [
+          0.7198689747746994,
+          0.8287526015353504
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7380750742383653,
+        "iqr": [
+          0.6632145988199267,
+          0.7816398113267031
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": true
+    },
+    {
+      "arm": "B",
+      "encoder": "pca",
+      "embed_dim": 50,
+      "decoder_params": 4718818,
+      "val_mse": 0.07679599523544312,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6746034211236559,
+        "n_genes_scored": 1250,
+        "mse": 0.07748330456723988
+      },
+      "latent_tightness": {
+        "median": 0.7894398508001467,
+        "iqr": [
+          0.7627960941102744,
+          0.8500746494835512
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7572674950118365,
+        "iqr": [
+          0.7042607431966525,
+          0.8085519099567781
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "B",
+      "encoder": "randproj",
+      "embed_dim": 50,
+      "decoder_params": 4718818,
+      "val_mse": 0.08566740155220032,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6442981094204413,
+        "n_genes_scored": 1250,
+        "mse": 0.08651782679458647
+      },
+      "latent_tightness": {
+        "median": 0.9714686539443986,
+        "iqr": [
+          0.9572809396002876,
+          0.9797006199503837
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.8089291654168471,
+        "iqr": [
+          0.7523597160915492,
+          0.8473357213684329
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "B",
+      "encoder": "scgpt",
+      "embed_dim": 512,
+      "decoder_params": 5191906,
+      "val_mse": 0.07822888344526291,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6705054533901997,
+        "n_genes_scored": 1250,
+        "mse": 0.07897130186164825
+      },
+      "latent_tightness": {
+        "median": 0.8868907089653384,
+        "iqr": [
+          0.8544086636398757,
+          0.917679409545925
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7695077640275798,
+        "iqr": [
+          0.7165099119669343,
+          0.8106152131728319
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "B",
+      "encoder": "geneformer",
+      "embed_dim": 768,
+      "decoder_params": 5454050,
+      "val_mse": 0.07716366648674011,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6755097193742773,
+        "n_genes_scored": 1250,
+        "mse": 0.07778927856867762
+      },
+      "latent_tightness": {
+        "median": 0.9231215673429038,
+        "iqr": [
+          0.8912052310241128,
+          0.9608889608193492
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7543293961860645,
+        "iqr": [
+          0.7008349092246123,
+          0.802458478209118
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": false
+    },
+    {
+      "arm": "B",
+      "encoder": "scgpt",
+      "embed_dim": 50,
+      "decoder_params": 4718818,
+      "val_mse": 0.0797370970249176,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6657045532609819,
+        "n_genes_scored": 1250,
+        "mse": 0.08053454885994202
+      },
+      "latent_tightness": {
+        "median": 0.851874760371347,
+        "iqr": [
+          0.8093434727046602,
+          0.890979122070915
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.7749997258511121,
+        "iqr": [
+          0.7195987778509321,
+          0.815103849376432
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": true
+    },
+    {
+      "arm": "B",
+      "encoder": "geneformer",
+      "embed_dim": 50,
+      "decoder_params": 4718818,
+      "val_mse": 0.0798567533493042,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6654992474430401,
+        "n_genes_scored": 1250,
+        "mse": 0.08054487624707317
+      },
+      "latent_tightness": {
+        "median": 0.8603016398482886,
+        "iqr": [
+          0.7957176787324824,
+          0.8973954102823429
+        ],
+        "n_datasets": 50
+      },
+      "decoded_tightness": {
+        "median": 0.766862217902053,
+        "iqr": [
+          0.7120441712397871,
+          0.8122275388168176
+        ],
+        "n_datasets": 50
+      },
+      "capacity_control": true
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "purpose": "Paper-level multiplicity over EVERY dataset-clustered significance claim the manuscript asserts, corrected as a SINGLE family (most conservative).",
+  "n_tests": 22,
+  "n_survive_bh_0.05": 22,
+  "n_survive_holm_0.05": 19,
+  "all_survive_bh": true,
+  "all_survive_holm": false,
+  "worst_raw_p": 0.025500083179634814,
+  "worst_bh_q": 0.025500083179634814,
+  "worst_holm_p": 0.06892461722479837,
+  "families": [
+    "F2_positive_control",
+    "F4_armA_zinb",
+    "F4_armB_deficit",
+    "F4_deployed",
+    "F4_mechanism",
+    "F4_probe_factor_b",
+    "F5_trap"
+  ],
+  "failing_bh": [],
+  "failing_holm": [
+    [
+      "armB_energy_scgpt_512",
+      0.022974872408266123,
+      0.06892461722479837
+    ],
+    [
+      "g4_gap_vs_energy_monotonicity",
+      0.023809523809523808,
+      0.06892461722479837
+    ],
+    [
+      "det_vs_stochastic_worst",
+      0.025500083179634814,
+      0.06892461722479837
+    ]
+  ],
+  "tests": [
+    {
+      "test_id": "armB_energy_pca_512",
+      "family": "F4_armB_deficit",
+      "raw_p": 1.1326234101716182e-06,
+      "source": "phase2g.json E7",
+      "holm_p_paper": 1.3591480922059418e-05,
+      "bh_q_paper": 2.2652468203432363e-06,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "armB_energy_randproj_512",
+      "family": "F4_armB_deficit",
+      "raw_p": 0.0001778852638985029,
+      "source": "phase2g.json E7",
+      "holm_p_paper": 0.0010673115833910174,
+      "bh_q_paper": 0.00023020445916276846,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "armB_energy_scgpt_512",
+      "family": "F4_armB_deficit",
+      "raw_p": 0.022974872408266123,
+      "source": "phase2g.json E7",
+      "holm_p_paper": 0.06892461722479837,
+      "bh_q_paper": 0.02494331065759637,
+      "survives_holm_0.05": false,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "armB_energy_geneformer",
+      "family": "F4_armB_deficit",
+      "raw_p": 0.0006207713421488847,
+      "source": "phase2g.json E7",
+      "holm_p_paper": 0.0031038567107444237,
+      "bh_q_paper": 0.0007587205292930813,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "cfgen_rvar_poisson_wins",
+      "family": "F4_deployed",
+      "raw_p": 3.3822118439275073e-09,
+      "source": "cfgen.json",
+      "holm_p_paper": 5.4115389502840117e-08,
+      "bh_q_paper": 1.0629808652343594e-08,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "scvi_gene_rvar",
+      "family": "F4_deployed",
+      "raw_p": 2.9747345218211763e-05,
+      "source": "scvi.json",
+      "holm_p_paper": 0.0002379787617456941,
+      "bh_q_paper": 4.3629439653377254e-05,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "scvi_gene-cell_rvar",
+      "family": "F4_deployed",
+      "raw_p": 7.155652345502972e-05,
+      "source": "scvi.json",
+      "holm_p_paper": 0.000500895664185208,
+      "bh_q_paper": 9.839021975066586e-05,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_amortized_vs_poisson__rvar_expressed",
+      "family": "F4_probe_factor_b",
+      "raw_p": 1.5207189122179443e-05,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 0.000136864702099615,
+      "bh_q_paper": 2.3897011477710555e-05,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_amortized_vs_poisson__rvar_topk",
+      "family": "F4_probe_factor_b",
+      "raw_p": 2.1002898957789284e-06,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 2.3103188853568213e-05,
+      "bh_q_paper": 3.850531475594702e-06,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_amortized_vs_poisson__energy",
+      "family": "F4_probe_factor_b",
+      "raw_p": 1.7763568394002505e-15,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 3.907985046680551e-14,
+      "bh_q_paper": 6.5133084111342514e-15,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_global_vs_poisson__rvar_expressed",
+      "family": "F4_probe_factor_b",
+      "raw_p": 6.3368066349767105e-09,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 8.871529288967395e-08,
+      "bh_q_paper": 1.5489971774387513e-08,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_global_vs_poisson__rvar_topk",
+      "family": "F4_probe_factor_b",
+      "raw_p": 2.2451841275028528e-08,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 2.9187393657537086e-07,
+      "bh_q_paper": 4.9394050805062764e-08,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_global_vs_poisson__energy",
+      "family": "F4_probe_factor_b",
+      "raw_p": 5.310079487230723e-09,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 7.965119230846085e-08,
+      "bh_q_paper": 1.4602718589884489e-08,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_amortized_vs_nb_global__rvar_expressed",
+      "family": "F4_probe_factor_b",
+      "raw_p": 1.7763568394002505e-15,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 3.907985046680551e-14,
+      "bh_q_paper": 6.5133084111342514e-15,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_amortized_vs_nb_global__rvar_topk",
+      "family": "F4_probe_factor_b",
+      "raw_p": 1.7763568394002505e-15,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 3.907985046680551e-14,
+      "bh_q_paper": 6.5133084111342514e-15,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "probe_nb_amortized_vs_nb_global__energy",
+      "family": "F4_probe_factor_b",
+      "raw_p": 1.7763568394002505e-15,
+      "source": "scvi_theta_probe.json",
+      "holm_p_paper": 3.907985046680551e-14,
+      "bh_q_paper": 6.5133084111342514e-15,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "g1_pca2_vs_pca512_energy",
+      "family": "F2_positive_control",
+      "raw_p": 1.7763568394002505e-15,
+      "source": "g1_positive_control.json",
+      "holm_p_paper": 3.907985046680551e-14,
+      "bh_q_paper": 6.5133084111342514e-15,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "g1_ordering_energy_permutation",
+      "family": "F2_positive_control",
+      "raw_p": 0.002777777777777778,
+      "source": "g1_positive_control.json (exact permutation)",
+      "holm_p_paper": 0.011111111111111112,
+      "bh_q_paper": 0.003216374269005848,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "g4_gap_vs_energy_monotonicity",
+      "family": "F4_mechanism",
+      "raw_p": 0.023809523809523808,
+      "source": "g4_monotonicity.json (exact permutation)",
+      "holm_p_paper": 0.06892461722479837,
+      "bh_q_paper": 0.02494331065759637,
+      "survives_holm_0.05": false,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "g5_zinb_stochastic_vs_nb_stochastic__energy_distance",
+      "family": "F4_armA_zinb",
+      "raw_p": 1.7763568394002505e-15,
+      "source": "g5_zinb.json",
+      "holm_p_paper": 3.907985046680551e-14,
+      "bh_q_paper": 6.5133084111342514e-15,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "g5_zinb_stochastic_vs_nb_stochastic__r_var_abs_log2_expr",
+      "family": "F4_armA_zinb",
+      "raw_p": 1.1033688904760197e-05,
+      "source": "g5_zinb.json",
+      "holm_p_paper": 0.00011033688904760197,
+      "bh_q_paper": 1.8672396608055717e-05,
+      "survives_holm_0.05": true,
+      "survives_bh_0.05": true
+    },
+    {
+      "test_id": "det_vs_stochastic_worst",
+      "family": "F5_trap",
+      "raw_p": 0.025500083179634814,
+      "source": "det_paired.json",
+      "holm_p_paper": 0.06892461722479837,
+      "bh_q_paper": 0.025500083179634814,
+      "survives_holm_0.05": false,
+      "survives_bh_0.05": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "experiment": "E4c: validation of k-nearest-neighbour label transfer",
+  "created": "2026-11-03",
+  "status": "fixed before execution",
+  "question": "How accurately does the label-transfer rule used in E4 recover the original annotations of held-out annotated cells, including rare types?",
+  "cells": "original annotated cells of each dataset (the analysed corpus's 3000-cell sample after quality control), including cells in clusters annotated as unknown",
+  "procedure": "5-fold cross-validation per dataset (shuffled, seed 0). Within each fold: log1p counts per 10,000 over the dataset's 8000 genes; PCA with 30 components fitted on the training folds; 15-nearest-neighbour majority vote; a held-out cell is left unlabelled when the vote share is below 0.5 or the majority label is unknown. This is the transfer rule of build_corpus.py.",
+  "endpoints": ["coverage: share of held-out labelled cells that receive a label", "accuracy among labelled predictions", "overall accuracy counting abstentions as errors", "macro-F1 over the dataset's cell types (abstentions count as errors)", "recall of rare types (types with fewer than 50 cells in the analysed test split)"],
+  "summary": "dataset-level values, then equal-weight means over datasets with a 2000-resample dataset bootstrap (seed 20261109); pooled per-type recall for rare types",
+  "retention": "all datasets and folds retained"
+}

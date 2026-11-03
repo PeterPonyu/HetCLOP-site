@@ -1,0 +1,73 @@
+{
+  "classifier": [
+    {
+      "variant": "poisson",
+      "iterations": [
+        220
+      ],
+      "warnings": []
+    },
+    {
+      "variant": "shared_per_gene",
+      "iterations": [
+        203
+      ],
+      "warnings": []
+    },
+    {
+      "variant": "per_cell_type",
+      "iterations": [
+        170
+      ],
+      "warnings": []
+    },
+    {
+      "variant": "per_cell",
+      "iterations": [
+        190
+      ],
+      "warnings": []
+    },
+    {
+      "variant": "real_reference",
+      "iterations": [
+        175
+      ],
+      "warnings": []
+    }
+  ],
+  "theta_fallback_types": [
+    "Bipolar cells",
+    "Corticotrophs",
+    "Definitive endoderm",
+    "Gamma-delta T cells",
+    "Kupffer cells",
+    "Oligodendrocytes",
+    "Proximal tubule",
+    "Schwann cells"
+  ],
+  "mu_sha256": "4849893d1bd398d7e3d8bc505e6feff979af7142525ea4fbd5fe601e46e05448",
+  "all_variants_share_mu": true,
+  "rare_types": [
+    "Alveolar type 1",
+    "Bipolar cells",
+    "Corticotrophs",
+    "Definitive endoderm",
+    "Delta cells",
+    "Dendritic cells",
+    "Gamma-delta T cells",
+    "Intermediate progenitors",
+    "Kupffer cells",
+    "Lymphatic endothelial",
+    "Mesenchymal stem cells",
+    "Myoepithelial cells",
+    "OPCs",
+    "Odontoblasts",
+    "Oligodendrocytes",
+    "Proximal tubule",
+    "Schwann cells",
+    "Sertoli cells",
+    "Thyrotrophs"
+  ],
+  "n_genes": 1250
+}

@@ -1,0 +1,12 @@
+{
+  "design_sha256": "2d6b666768ca7ba5a7c5ac4e911aec861af407ab346fa7237f860084427ac33e",
+  "files": {
+    "validation-deficits.csv": "7d15589383096b641546b152224bce4dfbb1b446e7033c69483a998209ca16d6",
+    "groups.csv": "41ff64da2cd9bb437e155e776f9e897bf00e40f49cc751c9c841b70ed79cb403",
+    "dataset-classification.csv": "8b421daad16b3334ab5da4fcec721d664b41e98047aa1bf90daf2cdbf86434c4",
+    "pooled-classification.csv": "844f5ca77bc5e2373a79a03acbcfcb726518c71ec1683f58ec207f1fa2f9b5a3",
+    "predictions.csv": "1d400b8acbc455f921f35c85f2aee52c8f0ed8e0449995377216eb5b7e9717d0",
+    "fit-log.json": "af52491d6286c2b6bfd6ea19ef20b56d568127d52a55487b38d3909a6bf28a68",
+    "evaluation-split.npz": "a0f714a466ca42083543246d68c70de048f2fce21e52340be021b257172db736"
+  }
+}

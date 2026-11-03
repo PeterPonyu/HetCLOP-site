@@ -1,0 +1,1441 @@
+{
+  "purpose": "Phase 2c Task 2 NB arm: negative-binomial count decoder on raw counts (library-size offset), metrics on log1p(counts) for scale-comparability with the Gaussian arm. Tests whether the Phase 2b verdict depends on the Gaussian-on-log1p likelihood.",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "encoders": [
+    "pca_512",
+    "scgpt_512"
+  ],
+  "n_groups": 314,
+  "mean_train_libsize": 3074.082763671875,
+  "logtheta_clamp": [
+    -4.0,
+    8.0
+  ],
+  "acceptance_gate": {
+    "rule": "NB mean log1p Pearson within 0.02 of the deterministic MSE-on-log1p baseline; else distributional numbers flagged UNTRUSTWORTHY.",
+    "tol": 0.02
+  },
+  "metric_scale": "all distributional metrics on log1p(counts); real = logX[te] = log1p(raw[te]).",
+  "control_sanity_check": {
+    "rule": "matched_noise / matched_noise_per_type (log1p-space, pca_512, first seed) must reproduce PHASE2B_V3_REPORT.md's energy_distance medians within tol=0.20 absolute.",
+    "tol": 0.2,
+    "result": {
+      "matched_noise_per_type": {
+        "got": 0.947926193126067,
+        "expected_v3": 0.951,
+        "abs_diff": 0.003073806873932994,
+        "passed": true
+      },
+      "matched_noise": {
+        "got": 1.0107842431479899,
+        "expected_v3": 1.012,
+        "abs_diff": 0.0012157568520101414,
+        "passed": true
+      }
+    }
+  },
+  "gate_records": {
+    "pca_512": {
+      "42": {
+        "det_log_pearson": 0.741955478023618,
+        "nb_mean_log_pearson": 0.7479297008337323,
+        "gap_vs_det": -0.0059742228101142825,
+        "gate_passed": true,
+        "nb_val_nll": 0.2632608711719513,
+        "nb_params": 12875656,
+        "logtheta_stats": {
+          "min": -4.0,
+          "median": 0.2687690258026123,
+          "max": 8.0,
+          "frac_at_min_clamp": 0.004587202306965644,
+          "frac_at_max_clamp": 3.042808134042659e-06,
+          "theta_median": 1.3083529103806926
+        },
+        "types_estimated": 71,
+        "types_fallback": 8,
+        "test_cells_on_fallback": 85,
+        "types_estimated_nb_mean": 71,
+        "types_fallback_nb_mean": 8
+      },
+      "43": {
+        "det_log_pearson": 0.7420573073556134,
+        "nb_mean_log_pearson": 0.7484156041492585,
+        "gap_vs_det": -0.00635829679364508,
+        "gate_passed": true,
+        "nb_val_nll": 0.2629561722278595,
+        "nb_params": 12875656,
+        "logtheta_stats": {
+          "min": -4.0,
+          "median": 0.27176785469055176,
+          "max": 8.0,
+          "frac_at_min_clamp": 0.004644757122259235,
+          "frac_at_max_clamp": 6.60269477452394e-06,
+          "theta_median": 1.3122823257613794
+        },
+        "types_estimated": 71,
+        "types_fallback": 8,
+        "test_cells_on_fallback": 85,
+        "types_estimated_nb_mean": 71,
+        "types_fallback_nb_mean": 8
+      },
+      "44": {
+        "det_log_pearson": 0.7420775111299235,
+        "nb_mean_log_pearson": 0.7478999102686777,
+        "gap_vs_det": -0.005822399138754264,
+        "gate_passed": true,
+        "nb_val_nll": 0.26312798261642456,
+        "nb_params": 12875656,
+        "logtheta_stats": {
+          "min": -4.0,
+          "median": 0.27316875755786896,
+          "max": 8.0,
+          "frac_at_min_clamp": 0.004604424998757023,
+          "frac_at_max_clamp": 5.210560334112266e-06,
+          "theta_median": 1.3141219941317488
+        },
+        "types_estimated": 71,
+        "types_fallback": 8,
+        "test_cells_on_fallback": 85,
+        "types_estimated_nb_mean": 71,
+        "types_fallback_nb_mean": 8
+      }
+    },
+    "scgpt_512": {
+      "42": {
+        "det_log_pearson": 0.6900453040244693,
+        "nb_mean_log_pearson": 0.668449955342198,
+        "gap_vs_det": 0.02159534868227131,
+        "gate_passed": false,
+        "nb_val_nll": 0.3038868010044098,
+        "nb_params": 12875656,
+        "logtheta_stats": {
+          "min": -4.0,
+          "median": -0.43754296004772186,
+          "max": 6.023580551147461,
+          "frac_at_min_clamp": 0.008462467061104758,
+          "frac_at_max_clamp": 0.0,
+          "theta_median": 0.64562078993217
+        },
+        "types_estimated": 71,
+        "types_fallback": 8,
+        "test_cells_on_fallback": 85,
+        "types_estimated_nb_mean": 71,
+        "types_fallback_nb_mean": 8
+      },
+      "43": {
+        "det_log_pearson": 0.6908217726179539,
+        "nb_mean_log_pearson": 0.6686581671617406,
+        "gap_vs_det": 0.02216360545621321,
+        "gate_passed": false,
+        "nb_val_nll": 0.30398228764533997,
+        "nb_params": 12875656,
+        "logtheta_stats": {
+          "min": -4.0,
+          "median": -0.4247148483991623,
+          "max": 5.583769798278809,
+          "frac_at_min_clamp": 0.008504052105603342,
+          "frac_at_max_clamp": 0.0,
+          "theta_median": 0.6539562352126628
+        },
+        "types_estimated": 71,
+        "types_fallback": 8,
+        "test_cells_on_fallback": 85,
+        "types_estimated_nb_mean": 71,
+        "types_fallback_nb_mean": 8
+      },
+      "44": {
+        "det_log_pearson": 0.691287255970285,
+        "nb_mean_log_pearson": 0.6680550901849982,
+        "gap_vs_det": 0.02323216578528675,
+        "gate_passed": false,
+        "nb_val_nll": 0.30412158370018005,
+        "nb_params": 12875656,
+        "logtheta_stats": {
+          "min": -4.0,
+          "median": -0.4506208300590515,
+          "max": 5.827783584594727,
+          "frac_at_min_clamp": 0.008463322229403868,
+          "frac_at_max_clamp": 0.0,
+          "theta_median": 0.6372324157538208
+        },
+        "types_estimated": 71,
+        "types_fallback": 8,
+        "test_cells_on_fallback": 85,
+        "types_estimated_nb_mean": 71,
+        "types_fallback_nb_mean": 8
+      }
+    }
+  },
+  "paired_tests": {
+    "42": {
+      "energy_distance__nb_stochastic_vs_matched_noise_per_type": {
+        "metric": "energy_distance",
+        "control": "matched_noise_per_type",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.11525466809277418,
+            "median_stochastic": 0.5974813621954453,
+            "median_control": 0.947926193126067,
+            "wilcoxon_stat": 5828.0,
+            "p_value": 8.096282079991489e-32,
+            "learned_win_fraction": 0.7643312101910829,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 8.096282079991489e-32,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.29571160474935176,
+            "median_stochastic": 0.7884207868310487,
+            "median_control": 1.4625654760476596,
+            "wilcoxon_stat": 1230.0,
+            "p_value": 3.0554331275981264e-48,
+            "learned_win_fraction": 0.9394904458598726,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.110866255196253e-48,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_matched_noise": {
+        "metric": "energy_distance",
+        "control": "matched_noise",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.18738996665483754,
+            "median_stochastic": 0.5974813621954453,
+            "median_control": 1.0107842431479899,
+            "wilcoxon_stat": 4080.0,
+            "p_value": 1.2013837279175683e-37,
+            "learned_win_fraction": 0.8152866242038217,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.2013837279175683e-37,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.4919465282148465,
+            "median_stochastic": 0.7884207868310487,
+            "median_control": 1.6165958238760147,
+            "wilcoxon_stat": 638.0,
+            "p_value": 1.3017020068726192e-50,
+            "learned_win_fraction": 0.9522292993630573,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 2.6034040137452383e-50,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_poisson_resample": {
+        "metric": "energy_distance",
+        "control": "poisson_resample",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.1267732980663645,
+            "median_stochastic": 0.5974813621954453,
+            "median_control": 0.7458057706990573,
+            "wilcoxon_stat": 901.0,
+            "p_value": 1.4957715263348943e-49,
+            "learned_win_fraction": 0.9808917197452229,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 2.9915430526697887e-49,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.20499496824017704,
+            "median_stochastic": 0.7884207868310487,
+            "median_control": 1.004182035885628,
+            "wilcoxon_stat": 1110.0,
+            "p_value": 1.0215907395042045e-48,
+            "learned_win_fraction": 0.9235668789808917,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.0215907395042045e-48,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_nbmean_matched_noise_per_type": {
+        "metric": "energy_distance",
+        "control": "nbmean_matched_noise_per_type",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.3726230559413235,
+            "median_stochastic": 0.5974813621954453,
+            "median_control": 1.1465962336108735,
+            "wilcoxon_stat": 8.0,
+            "p_value": 3.369591632715406e-53,
+            "learned_win_fraction": 0.9936305732484076,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.7158969343193817,
+            "median_stochastic": 0.7884207868310487,
+            "median_control": 1.8860758815813838,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_nbmean_matched_noise": {
+        "metric": "energy_distance",
+        "control": "nbmean_matched_noise",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.4768293935867165,
+            "median_stochastic": 0.5974813621954453,
+            "median_control": 1.2917811660160385,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -1.3333835160975305,
+            "median_stochastic": 0.7884207868310487,
+            "median_control": 2.424369985164059,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_poisson_on_nb_mean": {
+        "metric": "energy_distance",
+        "control": "poisson_on_nb_mean",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.004689741268716574,
+            "median_stochastic": 0.5974813621954453,
+            "median_control": 0.6011812155328258,
+            "wilcoxon_stat": 17838.0,
+            "p_value": 1.8768820963442644e-05,
+            "learned_win_fraction": 0.37579617834394907,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.8768820963442644e-05,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.018052352470459,
+            "median_stochastic": 0.7884207868310487,
+            "median_control": 0.8433975061223178,
+            "wilcoxon_stat": 14851.0,
+            "p_value": 8.554824486076804e-10,
+            "learned_win_fraction": 0.6273885350318471,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.7109648972153607e-09,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_matched_noise_per_type": {
+        "metric": "r_var_abs_log2",
+        "control": "matched_noise_per_type",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.1504907390617244,
+            "median_stochastic": 0.5783239387829333,
+            "median_control": 0.7433199302411839,
+            "wilcoxon_stat": 9086.0,
+            "p_value": 2.60489641371798e-22,
+            "learned_win_fraction": 0.7420382165605095,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 2.60489641371798e-22,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.24547725746786678,
+            "median_stochastic": 0.6588707319946989,
+            "median_control": 0.9015134774740575,
+            "wilcoxon_stat": 5183.0,
+            "p_value": 6.558166266476614e-34,
+            "learned_win_fraction": 0.8184713375796179,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.3116332532953228e-33,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_matched_noise": {
+        "metric": "r_var_abs_log2",
+        "control": "matched_noise",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.26699593431963925,
+            "median_stochastic": 0.5783239387829333,
+            "median_control": 0.8387908796444691,
+            "wilcoxon_stat": 4226.0,
+            "p_value": 3.854610479881494e-37,
+            "learned_win_fraction": 0.821656050955414,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 3.854610479881494e-37,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.37739469901559597,
+            "median_stochastic": 0.6588707319946989,
+            "median_control": 1.0243099626079988,
+            "wilcoxon_stat": 1998.0,
+            "p_value": 2.9737460251585796e-45,
+            "learned_win_fraction": 0.910828025477707,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 5.947492050317159e-45,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_poisson_resample": {
+        "metric": "r_var_abs_log2",
+        "control": "poisson_resample",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.05757080522253527,
+            "median_stochastic": 0.5783239387829333,
+            "median_control": 0.6550620953468893,
+            "wilcoxon_stat": 7760.0,
+            "p_value": 1.9605287604016047e-24,
+            "learned_win_fraction": 0.7770700636942676,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.9605287604016047e-24,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.13304980190784255,
+            "median_stochastic": 0.6588707319946989,
+            "median_control": 0.8195411888957016,
+            "wilcoxon_stat": 1885.0,
+            "p_value": 6.078719255326815e-45,
+            "learned_win_fraction": 0.9267515923566879,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.215743851065363e-44,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_nbmean_matched_noise_per_type": {
+        "metric": "r_var_abs_log2",
+        "control": "nbmean_matched_noise_per_type",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.07279219487926791,
+            "median_stochastic": 0.5783239387829333,
+            "median_control": 0.6763938819574267,
+            "wilcoxon_stat": 12637.0,
+            "p_value": 5.940508932458453e-14,
+            "learned_win_fraction": 0.6656050955414012,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 5.940508932458453e-14,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.14532819914116868,
+            "median_stochastic": 0.6588707319946989,
+            "median_control": 0.8376342261435055,
+            "wilcoxon_stat": 7633.0,
+            "p_value": 2.474570618233134e-26,
+            "learned_win_fraction": 0.7484076433121019,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 4.949141236466268e-26,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_nbmean_matched_noise": {
+        "metric": "r_var_abs_log2",
+        "control": "nbmean_matched_noise",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.1026679421664895,
+            "median_stochastic": 0.5783239387829333,
+            "median_control": 0.7205679372331452,
+            "wilcoxon_stat": 10806.0,
+            "p_value": 5.304858542404749e-18,
+            "learned_win_fraction": 0.6719745222929936,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 5.304858542404749e-18,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.37563944212936284,
+            "median_stochastic": 0.6588707319946989,
+            "median_control": 1.0423039147754727,
+            "wilcoxon_stat": 1572.0,
+            "p_value": 6.728467687962206e-47,
+            "learned_win_fraction": 0.9171974522292994,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.3456935375924411e-46,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_poisson_on_nb_mean": {
+        "metric": "r_var_abs_log2",
+        "control": "poisson_on_nb_mean",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.021934352201915808,
+            "median_stochastic": 0.5783239387829333,
+            "median_control": 0.5611539164631563,
+            "wilcoxon_stat": 4582.0,
+            "p_value": 7.022425765809383e-35,
+            "learned_win_fraction": 0.16560509554140126,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.4044851531618766e-34,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.026042330579967632,
+            "median_stochastic": 0.6588707319946989,
+            "median_control": 0.6132586005899205,
+            "wilcoxon_stat": 8573.5,
+            "p_value": 6.162173410182177e-22,
+            "learned_win_fraction": 0.20382165605095542,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.162173410182177e-22,
+            "significant_holm_0.05": true
+          }
+        ]
+      }
+    },
+    "43": {
+      "energy_distance__nb_stochastic_vs_matched_noise_per_type": {
+        "metric": "energy_distance",
+        "control": "matched_noise_per_type",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.11281283890686034,
+            "median_stochastic": 0.5976536857793882,
+            "median_control": 0.9551149168216178,
+            "wilcoxon_stat": 5121.0,
+            "p_value": 4.0934668055250115e-34,
+            "learned_win_fraction": 0.7898089171974523,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 4.0934668055250115e-34,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.2639230767348977,
+            "median_stochastic": 0.7861290339043094,
+            "median_control": 1.41534590122515,
+            "wilcoxon_stat": 2766.0,
+            "p_value": 2.3078136683360753e-42,
+            "learned_win_fraction": 0.8949044585987261,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 4.6156273366721506e-42,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_matched_noise": {
+        "metric": "energy_distance",
+        "control": "matched_noise",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.1898049968216764,
+            "median_stochastic": 0.5976536857793882,
+            "median_control": 1.0188322217620396,
+            "wilcoxon_stat": 3738.0,
+            "p_value": 7.582202605418089e-39,
+            "learned_win_fraction": 0.8280254777070064,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 7.582202605418089e-39,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.4412952131285799,
+            "median_stochastic": 0.7861290339043094,
+            "median_control": 1.575628617499726,
+            "wilcoxon_stat": 1646.0,
+            "p_value": 1.3058889995158674e-46,
+            "learned_win_fraction": 0.9140127388535032,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 2.611777999031735e-46,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_poisson_resample": {
+        "metric": "energy_distance",
+        "control": "poisson_resample",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.13166227717132273,
+            "median_stochastic": 0.5976536857793882,
+            "median_control": 0.7531034557193061,
+            "wilcoxon_stat": 804.0,
+            "p_value": 6.097153481231852e-50,
+            "learned_win_fraction": 0.9840764331210191,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.2194306962463704e-49,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.19903100920776762,
+            "median_stochastic": 0.7861290339043094,
+            "median_control": 1.007090143569343,
+            "wilcoxon_stat": 1934.0,
+            "p_value": 1.6906000338777806e-45,
+            "learned_win_fraction": 0.9299363057324841,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.6906000338777806e-45,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_nbmean_matched_noise_per_type": {
+        "metric": "energy_distance",
+        "control": "nbmean_matched_noise_per_type",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.36055795485695175,
+            "median_stochastic": 0.5976536857793882,
+            "median_control": 1.1451595099162128,
+            "wilcoxon_stat": 4.0,
+            "p_value": 3.2429537220690937e-53,
+            "learned_win_fraction": 0.9968152866242038,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.302191637906193e-53,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.7216521682265284,
+            "median_stochastic": 0.7861290339043094,
+            "median_control": 1.8510280458670767,
+            "wilcoxon_stat": 1.0,
+            "p_value": 3.1510958189530965e-53,
+            "learned_win_fraction": 0.9968152866242038,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.302191637906193e-53,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_nbmean_matched_noise": {
+        "metric": "energy_distance",
+        "control": "nbmean_matched_noise",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.4752318528772932,
+            "median_stochastic": 0.5976536857793882,
+            "median_control": 1.2977448551577062,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -1.3260092562063948,
+            "median_stochastic": 0.7861290339043094,
+            "median_control": 2.435566111087816,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_poisson_on_nb_mean": {
+        "metric": "energy_distance",
+        "control": "poisson_on_nb_mean",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.005439288188829217,
+            "median_stochastic": 0.5976536857793882,
+            "median_control": 0.5997964836872098,
+            "wilcoxon_stat": 18582.0,
+            "p_value": 0.00013510697041892945,
+            "learned_win_fraction": 0.35987261146496813,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 0.00013510697041892945,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.021219364888698244,
+            "median_stochastic": 0.7861290339043094,
+            "median_control": 0.8566835123447465,
+            "wilcoxon_stat": 13178.0,
+            "p_value": 7.317242735418832e-13,
+            "learned_win_fraction": 0.6369426751592356,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.4634485470837664e-12,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_matched_noise_per_type": {
+        "metric": "r_var_abs_log2",
+        "control": "matched_noise_per_type",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.13848197036364018,
+            "median_stochastic": 0.5935097190856966,
+            "median_control": 0.7515275002370544,
+            "wilcoxon_stat": 9488.0,
+            "p_value": 2.9293135684325215e-21,
+            "learned_win_fraction": 0.7452229299363057,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 2.9293135684325215e-21,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.24958328073983713,
+            "median_stochastic": 0.6529040956425289,
+            "median_control": 0.8977346440929843,
+            "wilcoxon_stat": 4890.0,
+            "p_value": 6.979408318146678e-35,
+            "learned_win_fraction": 0.8184713375796179,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.3958816636293357e-34,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_matched_noise": {
+        "metric": "r_var_abs_log2",
+        "control": "matched_noise",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.26499810140221414,
+            "median_stochastic": 0.5935097190856966,
+            "median_control": 0.8384578102621225,
+            "wilcoxon_stat": 4540.0,
+            "p_value": 4.600898173698315e-36,
+            "learned_win_fraction": 0.8121019108280255,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 4.600898173698315e-36,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.38255662568572085,
+            "median_stochastic": 0.6529040956425289,
+            "median_control": 1.0298228426091751,
+            "wilcoxon_stat": 1609.0,
+            "p_value": 9.376167434998674e-47,
+            "learned_win_fraction": 0.9203821656050956,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.875233486999735e-46,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_poisson_resample": {
+        "metric": "r_var_abs_log2",
+        "control": "poisson_resample",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.05768735684305834,
+            "median_stochastic": 0.5935097190856966,
+            "median_control": 0.6560214206352571,
+            "wilcoxon_stat": 6877.5,
+            "p_value": 3.6385117114190115e-26,
+            "learned_win_fraction": 0.7770700636942676,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 3.6385117114190115e-26,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.13972595422627984,
+            "median_stochastic": 0.6529040956425289,
+            "median_control": 0.8204961570352645,
+            "wilcoxon_stat": 1832.5,
+            "p_value": 8.937464204105059e-45,
+            "learned_win_fraction": 0.9267515923566879,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.7874928408210117e-44,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_nbmean_matched_noise_per_type": {
+        "metric": "r_var_abs_log2",
+        "control": "nbmean_matched_noise_per_type",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.08214189586826826,
+            "median_stochastic": 0.5935097190856966,
+            "median_control": 0.6830483042027835,
+            "wilcoxon_stat": 12709.0,
+            "p_value": 8.351024918778116e-14,
+            "learned_win_fraction": 0.6847133757961783,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 8.351024918778116e-14,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.14443960342787787,
+            "median_stochastic": 0.6529040956425289,
+            "median_control": 0.8321333273019944,
+            "wilcoxon_stat": 7283.0,
+            "p_value": 2.3561910024805455e-27,
+            "learned_win_fraction": 0.7707006369426752,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 4.712382004961091e-27,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_nbmean_matched_noise": {
+        "metric": "r_var_abs_log2",
+        "control": "nbmean_matched_noise",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.10651495931488497,
+            "median_stochastic": 0.5935097190856966,
+            "median_control": 0.7158520060146067,
+            "wilcoxon_stat": 10991.0,
+            "p_value": 1.4419519987377417e-17,
+            "learned_win_fraction": 0.6910828025477707,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.4419519987377417e-17,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.35251390520739245,
+            "median_stochastic": 0.6529040956425289,
+            "median_control": 1.039881059159256,
+            "wilcoxon_stat": 1325.0,
+            "p_value": 7.245049350197729e-48,
+            "learned_win_fraction": 0.9267515923566879,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.4490098700395459e-47,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_poisson_on_nb_mean": {
+        "metric": "r_var_abs_log2",
+        "control": "poisson_on_nb_mean",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.030498894753544226,
+            "median_stochastic": 0.5935097190856966,
+            "median_control": 0.5525159430914562,
+            "wilcoxon_stat": 4630.0,
+            "p_value": 2.6857626008683284e-34,
+            "learned_win_fraction": 0.14331210191082802,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 5.371525201736657e-34,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.02296887478376991,
+            "median_stochastic": 0.6529040956425289,
+            "median_control": 0.6125186831818499,
+            "wilcoxon_stat": 8894.0,
+            "p_value": 4.5155364728849724e-21,
+            "learned_win_fraction": 0.2070063694267516,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 4.5155364728849724e-21,
+            "significant_holm_0.05": true
+          }
+        ]
+      }
+    },
+    "44": {
+      "energy_distance__nb_stochastic_vs_matched_noise_per_type": {
+        "metric": "energy_distance",
+        "control": "matched_noise_per_type",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.11617253856157284,
+            "median_stochastic": 0.5869096557412519,
+            "median_control": 0.9532647676908521,
+            "wilcoxon_stat": 5334.0,
+            "p_value": 2.0541295894963845e-33,
+            "learned_win_fraction": 0.7770700636942676,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 2.0541295894963845e-33,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.25832412193306276,
+            "median_stochastic": 0.7941110653022321,
+            "median_control": 1.4577076433741336,
+            "wilcoxon_stat": 2232.0,
+            "p_value": 2.3133111964376083e-44,
+            "learned_win_fraction": 0.9235668789808917,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 4.626622392875217e-44,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_matched_noise": {
+        "metric": "energy_distance",
+        "control": "matched_noise",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.1876481441276585,
+            "median_stochastic": 0.5869096557412519,
+            "median_control": 1.012904216130428,
+            "wilcoxon_stat": 3847.0,
+            "p_value": 1.837936404032631e-38,
+            "learned_win_fraction": 0.8343949044585988,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.837936404032631e-38,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.4596485520458957,
+            "median_stochastic": 0.7941110653022321,
+            "median_control": 1.58690900587162,
+            "wilcoxon_stat": 1337.0,
+            "p_value": 8.077904884510059e-48,
+            "learned_win_fraction": 0.9331210191082803,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.6155809769020117e-47,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_poisson_resample": {
+        "metric": "energy_distance",
+        "control": "poisson_resample",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.13203023028819327,
+            "median_stochastic": 0.5869096557412519,
+            "median_control": 0.749969434563126,
+            "wilcoxon_stat": 740.0,
+            "p_value": 3.366053303962038e-50,
+            "learned_win_fraction": 0.9713375796178344,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.732106607924076e-50,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.21346187872808642,
+            "median_stochastic": 0.7941110653022321,
+            "median_control": 1.0208095921439782,
+            "wilcoxon_stat": 1199.0,
+            "p_value": 2.3035037396677727e-48,
+            "learned_win_fraction": 0.9394904458598726,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 2.3035037396677727e-48,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_nbmean_matched_noise_per_type": {
+        "metric": "energy_distance",
+        "control": "nbmean_matched_noise_per_type",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.3685250274076157,
+            "median_stochastic": 0.5869096557412519,
+            "median_control": 1.148841039055271,
+            "wilcoxon_stat": 3.0,
+            "p_value": 3.2120419167358734e-53,
+            "learned_win_fraction": 0.9968152866242038,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.7142131966628558,
+            "median_stochastic": 0.7941110653022321,
+            "median_control": 1.8641746867783269,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_nbmean_matched_noise": {
+        "metric": "energy_distance",
+        "control": "nbmean_matched_noise",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.46709415710642155,
+            "median_stochastic": 0.5869096557412519,
+            "median_control": 1.281676706826472,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -1.3269985654428416,
+            "median_stochastic": 0.7941110653022321,
+            "median_control": 2.4236876790743747,
+            "wilcoxon_stat": 0.0,
+            "p_value": 3.1210560052902193e-53,
+            "learned_win_fraction": 1.0,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 6.242112010580439e-53,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "energy_distance__nb_stochastic_vs_poisson_on_nb_mean": {
+        "metric": "energy_distance",
+        "control": "poisson_on_nb_mean",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.0035198626564421076,
+            "median_stochastic": 0.5869096557412519,
+            "median_control": 0.6010378011952033,
+            "wilcoxon_stat": 20288.0,
+            "p_value": 0.00582692698106142,
+            "learned_win_fraction": 0.3980891719745223,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 0.00582692698106142,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.02361666736793211,
+            "median_stochastic": 0.7941110653022321,
+            "median_control": 0.8532431863565888,
+            "wilcoxon_stat": 12058.0,
+            "p_value": 3.574805614645027e-15,
+            "learned_win_fraction": 0.6656050955414012,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 7.149611229290054e-15,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_matched_noise_per_type": {
+        "metric": "r_var_abs_log2",
+        "control": "matched_noise_per_type",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.1492369081425928,
+            "median_stochastic": 0.5907266642909386,
+            "median_control": 0.7488156725847849,
+            "wilcoxon_stat": 9367.0,
+            "p_value": 1.4231361737273383e-21,
+            "learned_win_fraction": 0.7388535031847133,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.4231361737273383e-21,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.2401043649464319,
+            "median_stochastic": 0.6624422448095472,
+            "median_control": 0.8962275954553428,
+            "wilcoxon_stat": 4572.0,
+            "p_value": 5.911050850786937e-36,
+            "learned_win_fraction": 0.8152866242038217,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.1822101701573874e-35,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_matched_noise": {
+        "metric": "r_var_abs_log2",
+        "control": "matched_noise",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.26794919960928576,
+            "median_stochastic": 0.5907266642909386,
+            "median_control": 0.8343803481072622,
+            "wilcoxon_stat": 4556.0,
+            "p_value": 5.21524807354437e-36,
+            "learned_win_fraction": 0.8184713375796179,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 5.21524807354437e-36,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.3774265860737416,
+            "median_stochastic": 0.6624422448095472,
+            "median_control": 1.0183727123892616,
+            "wilcoxon_stat": 1791.0,
+            "p_value": 4.759526481166046e-46,
+            "learned_win_fraction": 0.9171974522292994,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 9.519052962332092e-46,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_poisson_resample": {
+        "metric": "r_var_abs_log2",
+        "control": "poisson_resample",
+        "question": "procedure",
+        "question_meaning": "different mean AND different noise model vs nb_stochastic; tests whether a count-likelihood generative procedure beats the Gaussian-arm's deterministic-mean+noise procedure end-to-end",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.05974838241562419,
+            "median_stochastic": 0.5907266642909386,
+            "median_control": 0.6639457947718828,
+            "wilcoxon_stat": 7683.0,
+            "p_value": 2.590448432679191e-25,
+            "learned_win_fraction": 0.7834394904458599,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 2.590448432679191e-25,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.14214987543787666,
+            "median_stochastic": 0.6624422448095472,
+            "median_control": 0.8293890643531984,
+            "wilcoxon_stat": 460.5,
+            "p_value": 7.961219196167707e-51,
+            "learned_win_fraction": 0.9554140127388535,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 1.5922438392335415e-50,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_nbmean_matched_noise_per_type": {
+        "metric": "r_var_abs_log2",
+        "control": "nbmean_matched_noise_per_type",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.06879113334664516,
+            "median_stochastic": 0.5907266642909386,
+            "median_control": 0.6847050711188618,
+            "wilcoxon_stat": 13020.0,
+            "p_value": 3.5550172206164897e-13,
+            "learned_win_fraction": 0.6719745222929936,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 3.5550172206164897e-13,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.13628613851976684,
+            "median_stochastic": 0.6624422448095472,
+            "median_control": 0.8235075488693673,
+            "wilcoxon_stat": 7186.0,
+            "p_value": 1.2177695538915504e-27,
+            "learned_win_fraction": 0.7770700636942676,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 2.435539107783101e-27,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_nbmean_matched_noise": {
+        "metric": "r_var_abs_log2",
+        "control": "nbmean_matched_noise",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.10117977291372413,
+            "median_stochastic": 0.5907266642909386,
+            "median_control": 0.7144841675292659,
+            "wilcoxon_stat": 11027.0,
+            "p_value": 1.749043967707904e-17,
+            "learned_win_fraction": 0.6751592356687898,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 1.749043967707904e-17,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": -0.35868626015630445,
+            "median_stochastic": 0.6624422448095472,
+            "median_control": 1.0578657498544697,
+            "wilcoxon_stat": 1414.0,
+            "p_value": 1.6216690509831604e-47,
+            "learned_win_fraction": 0.9076433121019108,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 3.2433381019663207e-47,
+            "significant_holm_0.05": true
+          }
+        ]
+      },
+      "r_var_abs_log2__nb_stochastic_vs_poisson_on_nb_mean": {
+        "metric": "r_var_abs_log2",
+        "control": "poisson_on_nb_mean",
+        "question": "dispersion",
+        "question_meaning": "SAME mean as nb_stochastic (NB's own mu); only the noise model varies; tests whether the learned per-gene dispersion buys anything beyond restoring shot/residual noise around that mean",
+        "holm_family": "encoders within seed",
+        "per_encoder": [
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.022320381994180516,
+            "median_stochastic": 0.5907266642909386,
+            "median_control": 0.5587114308674512,
+            "wilcoxon_stat": 5484.0,
+            "p_value": 1.9636756208015458e-31,
+            "learned_win_fraction": 0.1624203821656051,
+            "encoder": "pca_512",
+            "gate_passed": true,
+            "p_holm": 3.9273512416030917e-31,
+            "significant_holm_0.05": true
+          },
+          {
+            "n_pairs": 314,
+            "median_paired_diff": 0.025948418381925464,
+            "median_stochastic": 0.6624422448095472,
+            "median_control": 0.6206460962150016,
+            "wilcoxon_stat": 9362.0,
+            "p_value": 2.813944149025352e-20,
+            "learned_win_fraction": 0.23248407643312102,
+            "encoder": "scgpt_512",
+            "gate_passed": false,
+            "p_holm": 2.813944149025352e-20,
+            "significant_holm_0.05": true
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "purpose": "Confound check: does NB beat Poisson under scVI gene-cell amortized dispersion because of theta's CELL-CONDITIONALITY, or merely because that arm's mean is worse (deeper variance deficit)? mu is IDENTICAL in all three arms, so a mean deficit cannot confound this contrast.",
+  "deviation_from_literal_request": "sample_nb_fixed_theta only accepts a scalar/inf theta; theta_g is a PER-GENE vector (median over cells of the amortized theta_ic), so (ii) nb_global_theta was drawn with sample_nb(mu, theta_g_broadcast) instead -- the identical Gamma-Poisson mixture, just via the array-capable function. See module docstring.",
+  "no_retraining_caveat": "scVI gene-cell was NOT checkpointed in the main run (only aggregate metrics were persisted), so extracting raw mu_ic/theta_ic required one re-fit at the SAME seed/config already used -- not a new model or hyperparameter change. See module docstring.",
+  "deterministic_baseline_log_pearson": 0.7419554779881322,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "results": {
+    "0": {
+      "seed": 0,
+      "n_groups": 314,
+      "mu_identical_across_arms": true,
+      "gate_informational": {
+        "det_log_pearson": 0.7419554779881322,
+        "model_mean_log_pearson": 0.549296787366611,
+        "gap_vs_det": 0.1926586906215212,
+        "gate_passed": false
+      },
+      "theta_g_summary": {
+        "min": 0.0014041580725461245,
+        "median": 0.28947900235652924,
+        "max": 8.079313278198242
+      },
+      "theta_ic_summary": {
+        "min": 1e-08,
+        "median": 0.28045012056827545,
+        "max": 4002.821044921875
+      },
+      "contrasts": {
+        "nb_amortized_vs_poisson__rvar_expressed": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.321656050955414,
+          "median_paired_diff_a_minus_b": -0.02673139401608879,
+          "naive_p": 2.945606415751405e-14,
+          "clustered_wilcoxon_p": 1.5207189122179443e-05,
+          "clustered_sign_p": 9.021490107130603e-05,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_poisson__rvar_topk": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.2802547770700637,
+          "median_paired_diff_a_minus_b": -0.04259818362053912,
+          "naive_p": 3.7281214434783493e-19,
+          "clustered_wilcoxon_p": 2.1002898957789284e-06,
+          "clustered_sign_p": 1.163555804595262e-06,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_poisson__energy": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.03503184713375796,
+          "median_paired_diff_a_minus_b": -0.28812738621171974,
+          "naive_p": 3.3180541827970605e-52,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__rvar_expressed": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.8535031847133758,
+          "median_paired_diff_a_minus_b": 0.11200105420553257,
+          "naive_p": 2.0387152729099363e-33,
+          "clustered_wilcoxon_p": 6.3368066349767105e-09,
+          "clustered_sign_p": 3.708322537931963e-11,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__rvar_topk": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.8152866242038217,
+          "median_paired_diff_a_minus_b": 0.08761749944600136,
+          "naive_p": 7.828078306853182e-23,
+          "clustered_wilcoxon_p": 2.2451841275028528e-08,
+          "clustered_sign_p": 4.209852022540872e-09,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__energy": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.9044585987261147,
+          "median_paired_diff_a_minus_b": 0.5777360367484237,
+          "naive_p": 5.011018514036212e-37,
+          "clustered_wilcoxon_p": 5.310079487230723e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__rvar_expressed": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.03503184713375796,
+          "median_paired_diff_a_minus_b": -0.1342907659699431,
+          "naive_p": 2.4960065614896326e-52,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__rvar_topk": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.03184713375796178,
+          "median_paired_diff_a_minus_b": -0.13286344659157096,
+          "naive_p": 1.3447212914080022e-51,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__energy": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": -1.009645738183977,
+          "naive_p": 3.1210560052902193e-53,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        }
+      },
+      "direction": {
+        "poisson_on_mean": {
+          "r_var_signed_expr_median": 0.8294034787222582,
+          "r_var_frac_gt1_expr_median": 0.2749281117349035,
+          "r_var_abs_log2_expr_median": 0.3651408983103849,
+          "energy_median": 1.3190399093643634
+        },
+        "nb_global_theta": {
+          "r_var_signed_expr_median": 1.0356165088389317,
+          "r_var_frac_gt1_expr_median": 0.5298816012027814,
+          "r_var_abs_log2_expr_median": 0.4831413290031719,
+          "energy_median": 2.1382907691368587
+        },
+        "nb_amortized": {
+          "r_var_signed_expr_median": 0.961993287978968,
+          "r_var_frac_gt1_expr_median": 0.45255544566431627,
+          "r_var_abs_log2_expr_median": 0.3458236651014481,
+          "energy_median": 0.95507341515835
+        }
+      },
+      "train_meta": {
+        "n_epochs_trained": 85,
+        "dispersion": "gene-cell"
+      }
+    },
+    "1": {
+      "seed": 1,
+      "n_groups": 314,
+      "mu_identical_across_arms": true,
+      "gate_informational": {
+        "det_log_pearson": 0.7419554779881322,
+        "model_mean_log_pearson": 0.5545965497120104,
+        "gap_vs_det": 0.18735892827612177,
+        "gate_passed": false
+      },
+      "theta_g_summary": {
+        "min": 0.003136606188490987,
+        "median": 0.2769312113523483,
+        "max": 7.292685508728027
+      },
+      "theta_ic_summary": {
+        "min": 4.5779348312180446e-08,
+        "median": 0.2721173167228699,
+        "max": 2181.487060546875
+      },
+      "contrasts": {
+        "nb_amortized_vs_poisson__rvar_expressed": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.3248407643312102,
+          "median_paired_diff_a_minus_b": -0.0266769468003534,
+          "naive_p": 1.181328865533694e-12,
+          "clustered_wilcoxon_p": 7.155652345502972e-05,
+          "clustered_sign_p": 0.000936222910851825,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_poisson__rvar_topk": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.30254777070063693,
+          "median_paired_diff_a_minus_b": -0.04172894714379591,
+          "naive_p": 7.680170931791497e-17,
+          "clustered_wilcoxon_p": 9.040639391599825e-05,
+          "clustered_sign_p": 0.006600447966810918,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 0.00029997000299970003,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_poisson__energy": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.03503184713375796,
+          "median_paired_diff_a_minus_b": -0.2915336231755852,
+          "naive_p": 3.349670944674337e-52,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__rvar_expressed": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.8535031847133758,
+          "median_paired_diff_a_minus_b": 0.11717409433363343,
+          "naive_p": 1.6677444557924996e-35,
+          "clustered_wilcoxon_p": 4.057499225496031e-09,
+          "clustered_sign_p": 4.209852022540872e-09,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__rvar_topk": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.8089171974522293,
+          "median_paired_diff_a_minus_b": 0.10188733015159565,
+          "naive_p": 1.4678270305671765e-23,
+          "clustered_wilcoxon_p": 2.305757291765076e-07,
+          "clustered_sign_p": 2.098677427397888e-07,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__energy": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.9235668789808917,
+          "median_paired_diff_a_minus_b": 0.6263160463236472,
+          "naive_p": 1.575592298763052e-38,
+          "clustered_wilcoxon_p": 4.440531498062228e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__rvar_expressed": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.022292993630573247,
+          "median_paired_diff_a_minus_b": -0.14053226208904487,
+          "naive_p": 1.5933032589903027e-51,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__rvar_topk": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.01910828025477707,
+          "median_paired_diff_a_minus_b": -0.1447183470102007,
+          "naive_p": 5.333438510809121e-53,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__energy": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": -1.040530989120409,
+          "naive_p": 3.1210560052902193e-53,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        }
+      },
+      "direction": {
+        "poisson_on_mean": {
+          "r_var_signed_expr_median": 0.826307349766231,
+          "r_var_frac_gt1_expr_median": 0.2700235732690094,
+          "r_var_abs_log2_expr_median": 0.37134610150475633,
+          "energy_median": 1.3374356435713404
+        },
+        "nb_global_theta": {
+          "r_var_signed_expr_median": 1.0367303833685155,
+          "r_var_frac_gt1_expr_median": 0.5316800458715596,
+          "r_var_abs_log2_expr_median": 0.4903825152746527,
+          "energy_median": 2.180783733950153
+        },
+        "nb_amortized": {
+          "r_var_signed_expr_median": 0.962960954871311,
+          "r_var_frac_gt1_expr_median": 0.44922383847155883,
+          "r_var_abs_log2_expr_median": 0.3430506866348867,
+          "energy_median": 0.9401704383247376
+        }
+      },
+      "train_meta": {
+        "n_epochs_trained": 85,
+        "dispersion": "gene-cell"
+      }
+    },
+    "2": {
+      "seed": 2,
+      "n_groups": 314,
+      "mu_identical_across_arms": true,
+      "gate_informational": {
+        "det_log_pearson": 0.7419554779881322,
+        "model_mean_log_pearson": 0.5514654999233469,
+        "gap_vs_det": 0.1904899780647853,
+        "gate_passed": false
+      },
+      "theta_g_summary": {
+        "min": 0.002301474567502737,
+        "median": 0.28444376587867737,
+        "max": 5.72210168838501
+      },
+      "theta_ic_summary": {
+        "min": 3.4204369114831934e-08,
+        "median": 0.2823766767978668,
+        "max": 2100.117919921875
+      },
+      "contrasts": {
+        "nb_amortized_vs_poisson__rvar_expressed": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.31528662420382164,
+          "median_paired_diff_a_minus_b": -0.026024790581757412,
+          "naive_p": 7.966122269332753e-14,
+          "clustered_wilcoxon_p": 7.239255257474042e-07,
+          "clustered_sign_p": 0.00030586400160359517,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_poisson__rvar_topk": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.25477707006369427,
+          "median_paired_diff_a_minus_b": -0.0433243901801984,
+          "naive_p": 2.1117307055426938e-20,
+          "clustered_wilcoxon_p": 7.239255257474042e-07,
+          "clustered_sign_p": 5.614100093254137e-06,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_poisson__energy": {
+          "a": "nb_amortized",
+          "b": "poisson_on_mean",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.041401273885350316,
+          "median_paired_diff_a_minus_b": -0.2716513683972792,
+          "naive_p": 2.692963521521702e-52,
+          "clustered_wilcoxon_p": 3.552713678800501e-15,
+          "clustered_sign_p": 9.059419880941277e-14,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__rvar_expressed": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.8439490445859873,
+          "median_paired_diff_a_minus_b": 0.10615381799614301,
+          "naive_p": 2.2102864202160273e-32,
+          "clustered_wilcoxon_p": 2.070065541204258e-08,
+          "clustered_sign_p": 4.461782054931973e-10,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__rvar_topk": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.7866242038216561,
+          "median_paired_diff_a_minus_b": 0.08334430694320721,
+          "naive_p": 1.1879217856973643e-19,
+          "clustered_wilcoxon_p": 5.951474850718341e-07,
+          "clustered_sign_p": 5.614100093254137e-06,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_global_vs_poisson__energy": {
+          "a": "nb_global_theta",
+          "b": "poisson_on_mean",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.9299363057324841,
+          "median_paired_diff_a_minus_b": 0.6031135150914677,
+          "naive_p": 4.648149916094786e-39,
+          "clustered_wilcoxon_p": 4.440531498062228e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__rvar_expressed": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.044585987261146494,
+          "median_paired_diff_a_minus_b": -0.13155784807492493,
+          "naive_p": 4.967020116069002e-51,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__rvar_topk": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.012738853503184714,
+          "median_paired_diff_a_minus_b": -0.1305382376125675,
+          "naive_p": 3.47916613949807e-52,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "nb_amortized_vs_nb_global__energy": {
+          "a": "nb_amortized",
+          "b": "nb_global_theta",
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "b_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": -1.053681124040998,
+          "naive_p": 3.1210560052902193e-53,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_n_datasets": 50,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        }
+      },
+      "direction": {
+        "poisson_on_mean": {
+          "r_var_signed_expr_median": 0.8231597853254269,
+          "r_var_frac_gt1_expr_median": 0.2783625730994152,
+          "r_var_abs_log2_expr_median": 0.3789879567455046,
+          "energy_median": 1.3390684018562444
+        },
+        "nb_global_theta": {
+          "r_var_signed_expr_median": 1.0319581291264752,
+          "r_var_frac_gt1_expr_median": 0.5315570505443923,
+          "r_var_abs_log2_expr_median": 0.48599876889277344,
+          "energy_median": 2.1448859656149306
+        },
+        "nb_amortized": {
+          "r_var_signed_expr_median": 0.9594853447078289,
+          "r_var_frac_gt1_expr_median": 0.44950182499753377,
+          "r_var_abs_log2_expr_median": 0.3388791850912098,
+          "energy_median": 0.9374697801036405
+        }
+      },
+      "train_meta": {
+        "n_epochs_trained": 85,
+        "dispersion": "gene-cell"
+      }
+    }
+  }
+}

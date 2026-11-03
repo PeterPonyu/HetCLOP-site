@@ -1,14 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=https://peterponyu.github.io/HetCLOP/">
-  <link rel="canonical" href="https://peterponyu.github.io/HetCLOP/">
-  <title>HetCLOP-site moved</title>
-  <script>location.replace('https://peterponyu.github.io/HetCLOP/');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders</title>
+<meta name="description" content="Code, result records, figure sources and the analysed corpus for the article Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders.">
+<style>
+  :root { --ink: #1d232a; --muted: #5a6470; --rule: #d9dee3; --link: #0b5cad; --code: #f3f5f7; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); background: #fff; font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  .byline { color: var(--muted); margin: 0 0 1.5rem; }
+  a { color: var(--link); }
+  ul { padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  code, pre { font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--code); }
+  code { padding: .1rem .3rem; border-radius: 3px; overflow-wrap: anywhere; }
+  pre { padding: .8rem 1rem; border-radius: 4px; overflow-x: auto; }
+  pre code { padding: 0; background: none; }
+  footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+</style>
 </head>
 <body>
-  <p>This leaf moved to <a href="https://peterponyu.github.io/HetCLOP/">https://peterponyu.github.io/HetCLOP/</a>.</p>
+<main>
+  <h1>Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders</h1>
+  <p class="byline">Zeyu Fu · <a href="https://orcid.org/0009-0001-8329-0108">ORCID 0009-0001-8329-0108</a></p>
+
+  <p>Single-cell count decoders are often judged by how closely their samples match within-cell-type variance.
+  The article compares dispersion choices at fixed predicted means on public GEO datasets and scores variance
+  calibration, marker recovery, cell-type classification and end-to-end generation separately. This page links the
+  code, result records and data behind it.</p>
+
+  <h2>Archive and code</h2>
+  <ul>
+    <li>Archive, version 3.0.0: <a href="https://doi.org/10.5281/zenodo.23922327">doi:10.5281/zenodo.23922327</a>. It holds the code archive and the
+      analysed corpus (counts, cell-type labels and splits) as two files.</li>
+    <li>All versions: <a href="https://doi.org/10.5281/zenodo.21524011">doi:10.5281/zenodo.21524011</a> resolves to the latest one.</li>
+    <li>Code: <a href="https://github.com/PeterPonyu/HetCLOP-site">github.com/PeterPonyu/HetCLOP-site</a>, the same
+      tree as the code archive.</li>
+    <li>Source data: the public GEO accessions listed in
+      <code>revisions/major-revision/manuscript/figs/dataset_table.csv</code>.</li>
+  </ul>
+
+  <h2>Reproducing the results</h2>
+  <pre><code>git clone https://github.com/PeterPonyu/HetCLOP-site.git
+cd HetCLOP-site
+# download hetclop-corpus-3.0.0.tar from the archive and unpack it, then
+python scripts/restore_corpus.py /path/to/hetclop-corpus-3.0.0
+python revisions/major-revision/evidence/round_e_macros.py
+python revisions/major-revision/evidence/verify_round_e_experiments.py</code></pre>
+  <p>The README in the repository lists the requirements, the analyses that need the scGPT or Geneformer
+  embeddings (recomputed from the public model weights) and the figure build.</p>
+
+  <h2>License</h2>
+  <p>Code: MIT. Result records, figures and the corpus: CC BY 4.0. The source datasets remain under their GEO
+  terms.</p>
+
+  <footer>Please cite the article and the archive DOI; <code>CITATION.cff</code> in the repository has the details.</footer>
+</main>
 </body>
 </html>

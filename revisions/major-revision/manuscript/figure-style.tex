@@ -1,0 +1,6 @@
+% Shared figure style for every composed figure (included after figure-fonts.tex).
+% \panellabel{(x)} places a 9 pt bold panel label at a fixed offset from the top-left corner of the
+% current axis; all plot blocks use it, so label positions cannot drift between figures.
+\newcommand{\panellabel}[1]{\node[anchor=base west,font=\small\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {#1};}
+% Variant for labels placed after an axis has been closed (refers to the named axis).
+\newcommand{\panellabelat}[2]{\node[anchor=base west,font=\small\bfseries,xshift=-19pt,yshift=12pt] at (#1.north west) {#2};}

@@ -1,0 +1,16 @@
+{
+  "analysis": "implementation_fixture_only",
+  "n_rows": 576,
+  "n_datasets": 12,
+  "n_groups": 576,
+  "slope": -0.5102492802232377,
+  "ci_low": -0.5628822289742607,
+  "ci_high": -0.42716659067531204,
+  "residual_variance": 0.950674242648272,
+  "dataset_variance": 1.1524810397052756,
+  "reference_max_coefficient_error": 1.4000285653015254e-10,
+  "n_bootstrap": 20,
+  "direction": "supports negative association",
+  "reference_converged": true,
+  "reference_warnings": ""
+}

@@ -1,0 +1,4 @@
+{
+  "scfoundation": "EXCLUDED: only 1236 of 1250 genes mapped to the scFoundation 19,264-gene panel (species=human); refusing to embed on near-zero overlap",
+  "uce": "EXCLUDED: human-symbol overlap 1241 < 2000; refusing to embed uce_probe_gin"
+}

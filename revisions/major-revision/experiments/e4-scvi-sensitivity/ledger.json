@@ -1,0 +1,33 @@
+{
+  "design_sha256": "836d78d3190461aea033572368e6b7da5b42bd9711ac3bc1d9ad0b41432d979e",
+  "fits_complete": 48,
+  "fits_expected": 48,
+  "stable": "14/14",
+  "epochs_trained": [
+    28,
+    85,
+    86,
+    87,
+    89
+  ],
+  "seconds_per_fit_median": 298.15239667892456,
+  "scvi_settings": {
+    "scvi_version": "1.4.3",
+    "n_latent": 10,
+    "n_hidden": 128,
+    "n_layers": 1,
+    "gene_likelihood": "nb",
+    "latent_distribution": "normal",
+    "encode_covariates": false
+  },
+  "scvi_dropout": 0.1,
+  "scvi_use_observed_lib_size": true,
+  "scvi_optimizer": {
+    "optimizer": "Adam",
+    "lr": "0.001",
+    "weight_decay": "1e-06",
+    "eps": "0.01",
+    "n_epochs_kl_warmup": "400"
+  },
+  "scvi_batch_size": "128"
+}

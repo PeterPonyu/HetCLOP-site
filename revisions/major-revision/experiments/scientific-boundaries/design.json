@@ -1,0 +1,15 @@
+{
+  "status": "Fixed before execution; retain every seed and condition; exploratory revision experiments",
+  "question": "Does validation-selected marginal calibration remain informative under mean misspecification and correlated non-NB residuals?",
+  "seeds": [52000, 52019],
+  "fixture": "12 synthetic datasets x 6 groups x 150 genes. Independent 400 training, 200 validation and 200 test cells/group; an independent second 200-cell test draw supplies a sampling reference.",
+  "truth": ["Independent NB, heterogeneous group theta log-uniform 0.3--8", "Shared lognormal-Poisson residual multiplier per cell with mean one and variance 1/theta; same conditional count means and variances as NB, different marginal higher moments and gene dependence"],
+  "mean_predictions": ["Correct conditional means", "Attenuate observed within-group size variation by 75%, preserving population group means", "Multiply alternating gene means by 0.6 or 1.4"],
+  "scope": "Controlled predicted-mean perturbations, NOT trained neural mean models. Known group base rates and observed size covariates, oracle group labels. Shared residual factor is omitted from all model means.",
+  "fitting": "Poisson versus pooled per-gene and group-per-gene NB; estimate theta from training residual moments using predicted means; clip to [0.05,1000]. Do not refit means. Independent RNG streams for fixture, each split, and generation.",
+  "selection": "Within each synthetic dataset, choose the arm minimizing the median validation expressed-gene absolute log2 variance-ratio error over six groups; ties favor Poisson then pooled then conditional. Never inspect test outcomes during selection.",
+  "endpoints": "Test calibration (primary), energy distance, median absolute off-diagonal log-expression correlation error on 30 genes ranked by training count mean, and median absolute log2 group count-mean ratio on test-expressed genes. Training-ranked genes fixed for validation/test. Correlation metric new and exploratory, not a biological score.",
+  "aggregation": "Group -> dataset medians -> seed medians. Report 20 seeds, medians and central 95% seed intervals, not population confidence intervals. Report paired selected-minus-Poisson changes, selected-minus-best-test-arm calibration regret and selection frequencies. No significance tests or optional stopping.",
+  "biological_reanalysis": "Use frozen three-seed per-type Welch marker recalls. Intersect scoreable types over every fixed-mean and end-to-end arm and seed. Report each stage on this common support; never pair seed IDs across independently fitted stages. Also report coverage-adjusted recall where unscoreable original target types count as failures (explicit new composite, not original recall). No cell-type bootstrap as if datasets independent.",
+  "protection": "Only isolated revision outputs. Original data and ledgers unchanged. No new dependency or neural architecture. Negative findings must be integrated."
+}

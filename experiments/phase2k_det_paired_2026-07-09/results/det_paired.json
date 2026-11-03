@@ -1,0 +1,201 @@
+{
+  "purpose": "Missing paired test for paper.tex:436 ('the deterministic decoder loses every group').",
+  "source": "experiments/phase2b_stochastic_2026-07-09/results/phase2b_v3_paired.json",
+  "metric": "energy_distance",
+  "convention": "diff = det - opponent; energy is lower-is-better; diff>0 => deterministic worse",
+  "inference": "dataset-clustered (collapse 314 groups to 50 dataset medians), plus sign-flip permutation",
+  "claim_under_test": "deterministic decoder loses EVERY group on energy distance",
+  "claim_is_true": false,
+  "groups_the_deterministic_decoder_wins": {
+    "pca_512": {
+      "matched_noise": 117,
+      "matched_noise_per_type": 98,
+      "stochastic_betanll": 122
+    },
+    "randproj_512": {
+      "matched_noise": 100,
+      "matched_noise_per_type": 87,
+      "stochastic_betanll": 78
+    },
+    "scgpt_512": {
+      "matched_noise": 56,
+      "matched_noise_per_type": 48,
+      "stochastic_betanll": 8
+    },
+    "geneformer": {
+      "matched_noise": 55,
+      "matched_noise_per_type": 45,
+      "stochastic_betanll": 8
+    }
+  },
+  "supported_restatement": "The deterministic decoder is significantly worse than every stochastic variant on all four encoders (dataset-clustered Wilcoxon over 50 datasets, max p = 2.55e-02), but it does not lose every group: it wins 2.5%-38.9% of the 314 groups depending on encoder and opponent.",
+  "max_clustered_wilcoxon_p": 0.025500083179634814,
+  "det_win_fraction_groups_min": 0.025477707006369428,
+  "det_win_fraction_groups_max": 0.3885350318471338,
+  "results": {
+    "pca_512": {
+      "matched_noise": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.37261146496815284,
+        "det_win_fraction_datasets": 0.38,
+        "n_groups_det_wins": 117,
+        "median_paired_diff_det_minus_opp": 0.1948704398969383,
+        "naive_p": 9.560735812750202e-06,
+        "clustered_wilcoxon_p": 0.025500083179634814,
+        "clustered_sign_p": 0.11892045255943628,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 0.024297570242975703,
+        "within_dataset_signflip_perm_p": 0.023897610238976102
+      },
+      "matched_noise_per_type": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.31210191082802546,
+        "det_win_fraction_datasets": 0.26,
+        "n_groups_det_wins": 98,
+        "median_paired_diff_det_minus_opp": 0.2501503626506034,
+        "naive_p": 3.729298626837188e-09,
+        "clustered_wilcoxon_p": 4.028586058524297e-06,
+        "clustered_sign_p": 0.000936222910851825,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      },
+      "stochastic_betanll": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.3885350318471338,
+        "det_win_fraction_datasets": 0.34,
+        "n_groups_det_wins": 122,
+        "median_paired_diff_det_minus_opp": 0.09013671755139807,
+        "naive_p": 2.8902406816796988e-08,
+        "clustered_wilcoxon_p": 0.0050721514649119115,
+        "clustered_sign_p": 0.032839137564268484,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 0.0040995900409959,
+        "within_dataset_signflip_perm_p": 0.0058994100589941
+      }
+    },
+    "randproj_512": {
+      "matched_noise": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.3184713375796178,
+        "det_win_fraction_datasets": 0.3,
+        "n_groups_det_wins": 100,
+        "median_paired_diff_det_minus_opp": 0.29346485038181314,
+        "naive_p": 7.172994440207091e-10,
+        "clustered_wilcoxon_p": 0.001654895925714328,
+        "clustered_sign_p": 0.006600447966810918,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 0.0018998100189981002,
+        "within_dataset_signflip_perm_p": 0.0017998200179982
+      },
+      "matched_noise_per_type": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.2770700636942675,
+        "det_win_fraction_datasets": 0.16,
+        "n_groups_det_wins": 87,
+        "median_paired_diff_det_minus_opp": 0.3659810393347813,
+        "naive_p": 5.153193502513857e-13,
+        "clustered_wilcoxon_p": 2.2451841275028528e-08,
+        "clustered_sign_p": 1.163555804595262e-06,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      },
+      "stochastic_betanll": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.2484076433121019,
+        "det_win_fraction_datasets": 0.22,
+        "n_groups_det_wins": 78,
+        "median_paired_diff_det_minus_opp": 0.21387291410396347,
+        "naive_p": 6.423968611536642e-23,
+        "clustered_wilcoxon_p": 1.5471859846627467e-06,
+        "clustered_sign_p": 9.021490107130603e-05,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      }
+    },
+    "scgpt_512": {
+      "matched_noise": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.17834394904458598,
+        "det_win_fraction_datasets": 0.14,
+        "n_groups_det_wins": 56,
+        "median_paired_diff_det_minus_opp": 0.854017237593534,
+        "naive_p": 6.565617044880879e-29,
+        "clustered_wilcoxon_p": 6.220717985172541e-08,
+        "clustered_sign_p": 2.098677427397888e-07,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      },
+      "matched_noise_per_type": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.15286624203821655,
+        "det_win_fraction_datasets": 0.02,
+        "n_groups_det_wins": 48,
+        "median_paired_diff_det_minus_opp": 1.0143026454237174,
+        "naive_p": 2.5454290089891817e-25,
+        "clustered_wilcoxon_p": 1.0192735544478637e-11,
+        "clustered_sign_p": 9.059419880941277e-14,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      },
+      "stochastic_betanll": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.025477707006369428,
+        "det_win_fraction_datasets": 0.02,
+        "n_groups_det_wins": 8,
+        "median_paired_diff_det_minus_opp": 0.9700650500622987,
+        "naive_p": 6.90268022839615e-53,
+        "clustered_wilcoxon_p": 3.552713678800501e-15,
+        "clustered_sign_p": 9.059419880941277e-14,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      }
+    },
+    "geneformer": {
+      "matched_noise": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.1751592356687898,
+        "det_win_fraction_datasets": 0.14,
+        "n_groups_det_wins": 55,
+        "median_paired_diff_det_minus_opp": 0.9093501925609573,
+        "naive_p": 1.2461846717668872e-30,
+        "clustered_wilcoxon_p": 2.8573925447972215e-08,
+        "clustered_sign_p": 2.098677427397888e-07,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      },
+      "matched_noise_per_type": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.14331210191082802,
+        "det_win_fraction_datasets": 0.02,
+        "n_groups_det_wins": 45,
+        "median_paired_diff_det_minus_opp": 1.0431052188527263,
+        "naive_p": 8.437904670275696e-27,
+        "clustered_wilcoxon_p": 7.65609797781508e-12,
+        "clustered_sign_p": 9.059419880941277e-14,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      },
+      "stochastic_betanll": {
+        "n_groups": 314,
+        "det_win_fraction_groups": 0.025477707006369428,
+        "det_win_fraction_datasets": 0.02,
+        "n_groups_det_wins": 8,
+        "median_paired_diff_det_minus_opp": 0.9202619044684468,
+        "naive_p": 5.436364085618049e-53,
+        "clustered_wilcoxon_p": 3.552713678800501e-15,
+        "clustered_sign_p": 9.059419880941277e-14,
+        "clustered_n_datasets": 50,
+        "dataset_signflip_perm_p": 9.999000099990002e-05,
+        "within_dataset_signflip_perm_p": 9.999000099990002e-05
+      }
+    }
+  }
+}

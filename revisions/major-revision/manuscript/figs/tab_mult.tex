@@ -1,0 +1,30 @@
+\begin{tabular}{l l S[table-format=+1.2e+1,retain-explicit-plus,group-digits=false] S[table-format=+1.2e+1,retain-explicit-plus,group-digits=false] c}
+\toprule
+{test id} & {family} & {raw $p$} & {BH $q$} & {Holm} \\
+\midrule
+Arm B energy, PCA & Held-out genes & 1.13e-06 & 2.27e-06 & $\checkmark$ \\
+Arm B energy, random projection & Held-out genes & 1.78e-04 & 2.30e-04 & $\checkmark$ \\
+Arm B energy, scGPT & Held-out genes & 2.30e-02 & 2.49e-02 & $\times$ \\
+Arm B energy, Geneformer & Held-out genes & 6.21e-04 & 7.59e-04 & $\checkmark$ \\
+CFGen variance calibration & Decoder control & 3.38e-09 & 1.06e-08 & $\checkmark$ \\
+scVI shared dispersion & Decoder control & 2.97e-05 & 4.36e-05 & $\checkmark$ \\
+scVI conditional dispersion & Decoder control & 7.16e-05 & 9.84e-05 & $\checkmark$ \\
+Conditional versus Poisson: expressed & Fixed mean & 1.52e-05 & 2.39e-05 & $\checkmark$ \\
+Conditional versus Poisson: variable & Fixed mean & 2.10e-06 & 3.85e-06 & $\checkmark$ \\
+Conditional versus Poisson: energy & Fixed mean & 1.78e-15 & 6.51e-15 & $\checkmark$ \\
+Global versus Poisson: expressed & Fixed mean & 6.34e-09 & 1.55e-08 & $\checkmark$ \\
+Global versus Poisson: variable & Fixed mean & 2.25e-08 & 4.94e-08 & $\checkmark$ \\
+Global versus Poisson: energy & Fixed mean & 5.31e-09 & 1.46e-08 & $\checkmark$ \\
+Conditional versus global: expressed & Fixed mean & 1.78e-15 & 6.51e-15 & $\checkmark$ \\
+Conditional versus global: variable & Fixed mean & 1.78e-15 & 6.51e-15 & $\checkmark$ \\
+Conditional versus global: energy & Fixed mean & 1.78e-15 & 6.51e-15 & $\checkmark$ \\
+PCA truncation: endpoint contrast & Sensitivity & 1.78e-15 & 6.51e-15 & $\checkmark$ \\
+PCA truncation: ordering & Sensitivity & 2.78e-03 & 3.22e-03 & $\checkmark$ \\
+Mean-fit association, expanded & Exploratory & 2.38e-02 & 2.49e-02 & $\times$ \\
+Zero-inflated versus NB: energy & Seen genes & 1.78e-15 & 6.51e-15 & $\checkmark$ \\
+Zero-inflated versus NB: variance & Seen genes & 1.10e-05 & 1.87e-05 & $\checkmark$ \\
+Deterministic versus stochastic & Geometry control & 2.55e-02 & 2.55e-02 & $\times$ \\
+\midrule
+\multicolumn{2}{l}{survivors (BH / Holm)} & & & 22 / 19 of 22 \\
+\bottomrule
+\end{tabular}

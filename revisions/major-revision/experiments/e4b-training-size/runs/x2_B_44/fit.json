@@ -1,0 +1,8 @@
+{
+  "size": "x2",
+  "arm": "B",
+  "seed": 44,
+  "n_train": 233502,
+  "best_validation_nll": 0.2996619939804077,
+  "seconds": 184.34719896316528
+}

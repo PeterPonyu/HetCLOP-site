@@ -1,0 +1,99 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}, group style={group size=3 by 3, horizontal sep=0.55cm, vertical sep=1.8cm}, width=3.55cm, height=2.75cm, ymin=0.4, ymax=8.6, ytick={8,7,6,5,4,3,2,1}, yticklabels={}, scaled x ticks=false, x tick label style={/pgf/number format/fixed, /pgf/number format/precision=3}, xticklabel style={font=\scriptsize}]
+\nextgroupplot[title={Arm A: per-cell $-$ Poisson}, xlabel={calibration error}, xmin=-0.0021, xmax=0.0300, yticklabels={{reference},{uniform, seed 1},{uniform, seed 2},{uniform, seed 3},{cell-type stratified},{batch balanced},{outlier QC},{10,000-cell cap}}, y tick label style={font=\scriptsize}]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0190,8) -= (0.0063,0) += (0.0089,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0198,7) -= (0.0049,0) += (0.0069,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0171,6) -= (0.0047,0) += (0.0055,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0167,5) -= (0.0046,0) += (0.0056,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0191,4) -= (0.0047,0) += (0.0065,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0181,3) -= (0.0048,0) += (0.0063,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0176,2) -= (0.0046,0) += (0.0052,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0126,1) -= (0.0055,0) += (0.0098,0)};
+\panellabel{(a)}
+\nextgroupplot[title={Arm B: per-cell $-$ Poisson}, xlabel={calibration error}, xmin=-0.0781, xmax=0.0212]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0048,8) -= (0.0234,0) += (0.0177,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0153,7) -= (0.0253,0) += (0.0177,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0125,6) -= (0.0278,0) += (0.0208,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0138,5) -= (0.0248,0) += (0.0173,0)};
+\addplot[black, only marks, mark=o, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0189,4) -= (0.0294,0) += (0.0187,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0124,3) -= (0.0238,0) += (0.0173,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0148,2) -= (0.0309,0) += (0.0211,0)};
+\addplot[black, only marks, mark=o, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0394,1) -= (0.0304,0) += (0.0212,0)};
+\panellabel{(b)}
+\nextgroupplot[title={Arm B: per-cell $-$ shared}, xlabel={calibration error}, xmin=-0.1463, xmax=0.0046]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1155,8) -= (0.0195,0) += (0.0193,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1233,7) -= (0.0185,0) += (0.0177,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1209,6) -= (0.0178,0) += (0.0170,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1150,5) -= (0.0187,0) += (0.0177,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1208,4) -= (0.0167,0) += (0.0159,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1215,3) -= (0.0190,0) += (0.0182,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1205,2) -= (0.0188,0) += (0.0175,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1166,1) -= (0.0175,0) += (0.0160,0)};
+\panellabel{(c)}
+\nextgroupplot[title={Arm B: per-cell $-$ Poisson}, xlabel={Welch recall}, xmin=-0.0220, xmax=0.0075, yticklabels={{reference},{uniform, seed 1},{uniform, seed 2},{uniform, seed 3},{cell-type stratified},{batch balanced},{outlier QC},{10,000-cell cap}}, y tick label style={font=\scriptsize}]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0129,8) -= (0.0047,0) += (0.0047,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0102,7) -= (0.0043,0) += (0.0043,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0101,6) -= (0.0040,0) += (0.0040,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0148,5) -= (0.0047,0) += (0.0046,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0096,4) -= (0.0045,0) += (0.0044,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0124,3) -= (0.0047,0) += (0.0047,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0116,2) -= (0.0050,0) += (0.0053,0)};
+\addplot[black, only marks, mark=o, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0003,1) -= (0.0041,0) += (0.0047,0)};
+\panellabel{(d)}
+\nextgroupplot[title={Arm B: per-cell $-$ shared}, xlabel={Welch recall}, xmin=-0.0021, xmax=0.0743]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0630,8) -= (0.0082,0) += (0.0084,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0636,7) -= (0.0076,0) += (0.0074,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0619,6) -= (0.0081,0) += (0.0083,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0608,5) -= (0.0077,0) += (0.0076,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0641,4) -= (0.0089,0) += (0.0081,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0604,3) -= (0.0089,0) += (0.0085,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0624,2) -= (0.0078,0) += (0.0086,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0604,1) -= (0.0083,0) += (0.0078,0)};
+\panellabel{(e)}
+\nextgroupplot[title={Deficit--effect slope}, xlabel={slope (both arms)}, xmin=-0.2407, xmax=0.1265]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0346,8) -= (0.0492,0) += (0.0874,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0112,7) -= (0.0855,0) += (0.0701,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0040,6) -= (0.1158,0) += (0.0999,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0717,5) -= (0.0344,0) += (0.0986,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0538,4) -= (0.0741,0) += (0.0711,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0674,3) -= (0.0595,0) += (0.0717,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0384,2) -= (0.0824,0) += (0.0643,0)};
+\addplot[black, only marks, mark=o, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.1159,1) -= (0.0942,0) += (0.1096,0)};
+\panellabel{(f)}
+\nextgroupplot[title={scVI: shared $-$ Poisson}, xlabel={calibration error}, xmin=-0.0424, xmax=0.0863, yticklabels={{reference},{uniform, seed 1},{uniform, seed 2},{uniform, seed 3},{cell-type stratified},{batch balanced},{outlier QC},{10,000-cell cap}}, y tick label style={font=\scriptsize}]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0419,8) -= (0.0448,0) += (0.0337,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0369,7) -= (0.0475,0) += (0.0346,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0324,6) -= (0.0511,0) += (0.0351,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0342,5) -= (0.0493,0) += (0.0335,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0284,4) -= (0.0548,0) += (0.0375,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0349,3) -= (0.0477,0) += (0.0336,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0278,2) -= (0.0532,0) += (0.0379,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(0.0135,1) -= (0.0452,0) += (0.0314,0)};
+\panellabel{(g)}
+\nextgroupplot[title={scVI: per-cell $-$ Poisson}, xlabel={calibration error}, xmin=-0.1310, xmax=0.0100]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,8.6)};
+\addplot[black, only marks, mark=diamond*, mark size=2.3pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0481,8) -= (0.0426,0) += (0.0276,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0606,7) -= (0.0452,0) += (0.0286,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0619,6) -= (0.0506,0) += (0.0315,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0586,5) -= (0.0454,0) += (0.0279,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0625,4) -= (0.0537,0) += (0.0326,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0552,3) -= (0.0437,0) += (0.0273,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0645,2) -= (0.0564,0) += (0.0334,0)};
+\addplot[black, only marks, mark=*, mark size=1.5pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0653,1) -= (0.0475,0) += (0.0290,0)};
+\panellabel{(h)}
+\nextgroupplot[title={Arm B: training size}, xlabel={per-cell $-$ Poisson}, xmin=-0.0658, xmax=0.0208, ymin=0.4, ymax=3.6, ytick={3,2,1}, yticklabels={{93,673},{233,502},{373,317}}, yticklabel pos=right, ylabel={training cells}, ylabel near ticks, ylabel style={font=\scriptsize}, y tick label style={font=\scriptsize}]
+\addplot[hgray, dashed, forget plot] coordinates {(0,0.4) (0,3.6)};
+\addplot[black, only marks, mark=*, mark size=1.6pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0048,3.14) -= (0.0234,0) += (0.0177,0) (-0.0203,2.14) -= (0.0273,0) += (0.0196,0) (-0.0277,1.14) -= (0.0309,0) += (0.0217,0)};
+\addplot[hviolet, only marks, mark=square*, mark size=1.6pt, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0129,2.86) -= (0.0047,0) += (0.0047,0) (-0.0106,1.86) -= (0.0035,0) += (0.0036,0) (-0.0075,0.86) -= (0.0045,0) += (0.0050,0)};
+\panellabel{(i)}
+\end{groupplot}
+\end{tikzpicture}
+\endgroup

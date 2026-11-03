@@ -1,0 +1,11 @@
+{
+  "experiment": "E5: end-to-end generation with ten seeds",
+  "created": "2026-11-03",
+  "status": "fixed before execution",
+  "question": "Is the end-to-end ordering of Poisson, shared per-gene and per-cell scVI draws on marker recall, TSTR macro-F1 and rare-type F1 stable across ten seeds?",
+  "protocol": "unchanged archived end-to-end protocol (experiments/phase2v_e2e_2026-07-19/run_e2e_multiseed.py run_one_seed): scVI gene and gene-cell fits, latents sampled from the prior, nearest-neighbour label transfer in the model latent, Poisson draw from the per-cell model's mean",
+  "seeds": {"archived": [1, 2, 3], "new": [4, 5, 6, 7, 8, 9, 10]},
+  "endpoints": ["marker_recall_mean", "tstr_macro_f1", "tstr_rare_f1"],
+  "summary": "per arm: mean, standard deviation and range over ten seeds; per seed: ordering of the three draws; paired per-seed differences (per-cell minus Poisson, shared minus Poisson) with the number of seeds below zero and a seed-level 95% percentile bootstrap (10,000 resamples, seed 20261108)",
+  "retention": "all seeds retained; archived seeds are not refitted"
+}

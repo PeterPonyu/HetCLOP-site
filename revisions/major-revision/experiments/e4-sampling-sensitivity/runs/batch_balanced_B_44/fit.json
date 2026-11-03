@@ -1,0 +1,13 @@
+{
+  "variant": "batch_balanced",
+  "arm": "B",
+  "seed": 44,
+  "best_validation_nll": 0.3095910847187042,
+  "n_parameters": 7753156,
+  "n_train": 92635,
+  "n_validation": 19832,
+  "n_test": 19897,
+  "seconds": 52.32751393318176,
+  "device": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "torch": "2.12.1+cu130"
+}

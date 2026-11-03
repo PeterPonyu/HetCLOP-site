@@ -1,0 +1,42 @@
+{
+  "purpose": "Arm-B replication of F3: does deterministic decoding still destroy within-type variance, and does Gaussian matched noise still under-inflate, when the decoder predicts genes no encoder ever saw?",
+  "arm": "B (encoder sees G_in only; decoder predicts disjoint G_out)",
+  "g_in": 1250,
+  "g_out": 1250,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "statistic": "expression-restricted signed r_var = var(decoded)/var(real), median over genes then groups",
+  "per_seed": {
+    "42": {
+      "deterministic_signed_rvar_median": 0.19442965967417342,
+      "matched_noise_signed_rvar_median": 0.6153967943892562,
+      "deterministic_frac_groups_below_one": 1.0,
+      "matched_noise_frac_groups_below_one": 0.9872611464968153,
+      "n_groups": 314
+    },
+    "43": {
+      "deterministic_signed_rvar_median": 0.20848092923798625,
+      "matched_noise_signed_rvar_median": 0.6251924781657979,
+      "deterministic_frac_groups_below_one": 1.0,
+      "matched_noise_frac_groups_below_one": 0.9904458598726115,
+      "n_groups": 314
+    },
+    "44": {
+      "deterministic_signed_rvar_median": 0.202271700355377,
+      "matched_noise_signed_rvar_median": 0.6050217292560307,
+      "deterministic_frac_groups_below_one": 1.0,
+      "matched_noise_frac_groups_below_one": 0.9808917197452229,
+      "n_groups": 314
+    }
+  },
+  "deterministic_median_across_seeds": 0.202271700355377,
+  "matched_noise_median_across_seeds": 0.6153967943892562,
+  "claims": {
+    "det_destroys_variance_every_seed": true,
+    "gaussian_under_inflates_every_seed": true,
+    "noise_restores_some_variance_every_seed": true
+  }
+}

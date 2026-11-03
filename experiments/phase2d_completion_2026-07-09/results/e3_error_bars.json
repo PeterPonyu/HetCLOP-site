@@ -1,0 +1,340 @@
+{
+  "purpose": "Phase 2d E3: error bars (3 seeds, decoder init/shuffle) on the two Phase 2a Arm B headline claims -- encoder-irrelevance in Pearson and the retained within-type variance fraction (signed r_var) of deterministic decoding.",
+  "geometry": "Arm B: encoders see G_in=1250; decoder predicts G_out=1250 disjoint genes; metric on log1p(G_out).",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "encoders": [
+    "oracle_1250",
+    "pca_512",
+    "randproj_512",
+    "pca_50",
+    "randproj_50",
+    "scgpt_512",
+    "geneformer"
+  ],
+  "g_in": 1250,
+  "g_out": 1250,
+  "energy_subsample": 300,
+  "per_encoder": {
+    "oracle_1250": {
+      "dim": 1250,
+      "pearson_per_seed": [
+        0.6737631671560859,
+        0.6738262208205222,
+        0.6735936296138383
+      ],
+      "pearson_mean": 0.6737276725301488,
+      "pearson_sd": 0.00012028952036434214,
+      "rvar_signed_per_seed": [
+        0.11179140058914123,
+        0.11110857844399015,
+        0.11129261025612922
+      ],
+      "rvar_signed_mean": 0.11139752976308687,
+      "rvar_signed_sd": 0.0003532953405896544,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.06408138087416254,
+          0.19318246106857825
+        ],
+        [
+          0.06183337732202572,
+          0.19313215633422878
+        ],
+        [
+          0.06289752826049926,
+          0.193935166100014
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.1975749736016338,
+        0.19851750844344876,
+        0.19848085503531016
+      ],
+      "rvar_signed_expressed_mean": 0.1981911123601309,
+      "rvar_signed_expressed_sd": 0.0005339064481478013,
+      "energy_per_seed": [
+        1.8574262192640507,
+        1.8598651643374526,
+        1.8655726597615439
+      ]
+    },
+    "pca_512": {
+      "dim": 512,
+      "pearson_per_seed": [
+        0.672356179059243,
+        0.6729256114679486,
+        0.6728163972896835
+      ],
+      "pearson_mean": 0.6726993959389583,
+      "pearson_sd": 0.0003022090403589406,
+      "rvar_signed_per_seed": [
+        0.11262539062634709,
+        0.11618939880107118,
+        0.11862643795122585
+      ],
+      "rvar_signed_mean": 0.11581374245954805,
+      "rvar_signed_sd": 0.0030181087644506016,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.06503162097901534,
+          0.19492448250379177
+        ],
+        [
+          0.06526176276909156,
+          0.20381127638442645
+        ],
+        [
+          0.0647430482195965,
+          0.2011840992251387
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.19442965967417342,
+        0.20848092923798625,
+        0.202271700355377
+      ],
+      "rvar_signed_expressed_mean": 0.20172742975584557,
+      "rvar_signed_expressed_sd": 0.007041428615903805,
+      "energy_per_seed": [
+        1.8602623463501673,
+        1.8119727938794634,
+        1.8522278507294878
+      ]
+    },
+    "randproj_512": {
+      "dim": 512,
+      "pearson_per_seed": [
+        0.6721423568891818,
+        0.6725592141749407,
+        0.6721695665537867
+      ],
+      "pearson_mean": 0.6722903792059697,
+      "pearson_sd": 0.0002332150764170186,
+      "rvar_signed_per_seed": [
+        0.11336662232425149,
+        0.1134485409989319,
+        0.10984061627064695
+      ],
+      "rvar_signed_mean": 0.11221859319794343,
+      "rvar_signed_sd": 0.002059795710108457,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.05931066164949981,
+          0.18882937574876357
+        ],
+        [
+          0.06071854555241925,
+          0.19443346758140134
+        ],
+        [
+          0.06026277095073614,
+          0.19000726560815084
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.20034444153310077,
+        0.2045783746895405,
+        0.19679577967626716
+      ],
+      "rvar_signed_expressed_mean": 0.20057286529963614,
+      "rvar_signed_expressed_sd": 0.003896322541576272,
+      "energy_per_seed": [
+        1.905968903352159,
+        1.870970383620091,
+        1.887745313135432
+      ]
+    },
+    "pca_50": {
+      "dim": 50,
+      "pearson_per_seed": [
+        0.6746034211236559,
+        0.6745877713888258,
+        0.6752279594956087
+      ],
+      "pearson_mean": 0.6748063840026969,
+      "pearson_sd": 0.00036517892972895877,
+      "rvar_signed_per_seed": [
+        0.10374271971227238,
+        0.10460431863148835,
+        0.10932322829963749
+      ],
+      "rvar_signed_mean": 0.10589008888113273,
+      "rvar_signed_sd": 0.003004234157745845,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.05509424882093794,
+          0.19055015293245053
+        ],
+        [
+          0.05685923434437017,
+          0.1978548303434678
+        ],
+        [
+          0.05578114254192913,
+          0.19575082995315193
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.20863716742985053,
+        0.20858278651448592,
+        0.20781622407683398
+      ],
+      "rvar_signed_expressed_mean": 0.20834539267372346,
+      "rvar_signed_expressed_sd": 0.0004590793765128997,
+      "energy_per_seed": [
+        1.8478158882467075,
+        1.8201675028358044,
+        1.8400878001134702
+      ]
+    },
+    "randproj_50": {
+      "dim": 50,
+      "pearson_per_seed": [
+        0.6479658012529594,
+        0.6472315133549222,
+        0.6477112027824217
+      ],
+      "pearson_mean": 0.6476361724634344,
+      "pearson_sd": 0.00037284962233649296,
+      "rvar_signed_per_seed": [
+        0.10718487375571144,
+        0.1098790292138993,
+        0.11203137436012775
+      ],
+      "rvar_signed_mean": 0.10969842577657951,
+      "rvar_signed_sd": 0.0024282926570598357,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.06658435456192568,
+          0.18673081204557862
+        ],
+        [
+          0.06529063041911387,
+          0.18971310799062968
+        ],
+        [
+          0.06812873959841396,
+          0.19477286158383736
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.19007577131845538,
+        0.1907353284709275,
+        0.19759485318164138
+      ],
+      "rvar_signed_expressed_mean": 0.19280198432367476,
+      "rvar_signed_expressed_sd": 0.00416382610426925,
+      "energy_per_seed": [
+        1.9673147050842865,
+        1.9696816076954313,
+        1.9592004620717507
+      ]
+    },
+    "scgpt_512": {
+      "dim": 512,
+      "pearson_per_seed": [
+        0.6705054533901997,
+        0.6703454056726356,
+        0.6707505959873746
+      ],
+      "pearson_mean": 0.6705338183500699,
+      "pearson_sd": 0.00020407897001140646,
+      "rvar_signed_per_seed": [
+        0.11244405686431623,
+        0.11175333162880696,
+        0.11033362730071022
+      ],
+      "rvar_signed_mean": 0.11151033859794447,
+      "rvar_signed_sd": 0.0010759937014320129,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.05766027196023378,
+          0.20196407340658798
+        ],
+        [
+          0.05676107296604921,
+          0.1957588744419438
+        ],
+        [
+          0.05455389395772571,
+          0.19192605979423738
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.21162681320087723,
+        0.2035350399622771,
+        0.20699048415100352
+      ],
+      "rvar_signed_expressed_mean": 0.20738411243805263,
+      "rvar_signed_expressed_sd": 0.004060222402468274,
+      "energy_per_seed": [
+        1.8803365118465254,
+        1.8778150975658894,
+        1.9205991693638595
+      ]
+    },
+    "geneformer": {
+      "dim": 768,
+      "pearson_per_seed": [
+        0.6755097193742773,
+        0.6748365689173905,
+        0.6748020775837557
+      ],
+      "pearson_mean": 0.6750494552918078,
+      "pearson_sd": 0.0003989732851113855,
+      "rvar_signed_per_seed": [
+        0.11041640297243907,
+        0.10588138560624266,
+        0.10782588090260144
+      ],
+      "rvar_signed_mean": 0.10804122316042773,
+      "rvar_signed_sd": 0.002275164794895096,
+      "rvar_signed_iqr_per_seed": [
+        [
+          0.055705072648723396,
+          0.1968229347331054
+        ],
+        [
+          0.05360103494669377,
+          0.1956008635965225
+        ],
+        [
+          0.051419510770700866,
+          0.19406066770518693
+        ]
+      ],
+      "rvar_signed_expressed_per_seed": [
+        0.21115945633966315,
+        0.20917069936397137,
+        0.20330885821544978
+      ],
+      "rvar_signed_expressed_mean": 0.20787967130636142,
+      "rvar_signed_expressed_sd": 0.004081425953159962,
+      "energy_per_seed": [
+        1.8034057163523636,
+        1.8339375867093999,
+        1.8386935123094688
+      ]
+    }
+  },
+  "claim_a_encoder_irrelevance": {
+    "between_encoder_pearson_spread_all": 0.02741328282837341,
+    "between_encoder_pearson_spread_excl_oracle": 0.02741328282837341,
+    "mean_across_seed_sd": 0.00028525634918979216,
+    "max_across_seed_sd": 0.0003989732851113855,
+    "spread_smaller_than_mean_seed_sd_all": false,
+    "spread_smaller_than_mean_seed_sd_excl_oracle": false,
+    "interpretation": "If the between-encoder spread is SMALLER than the across-seed sd, encoder choice moves the decoded Pearson less than reshuffling the decoder does -> the 0.003 encoder-irrelevance claim is STRENGTHENED."
+  },
+  "claim_b_retained_variance": {
+    "rvar_signed_range_over_encoders_mean": [
+      0.10589008888113273,
+      0.11581374245954805
+    ],
+    "note": "Phase 2a single-seed reported signed r_var median 0.117-0.259; means +/- sd per encoder above put error bars on the retained within-type variance fraction of deterministic decoding."
+  }
+}

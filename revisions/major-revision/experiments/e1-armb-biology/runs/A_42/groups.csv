@@ -1,0 +1,1257 @@
+arm,seed,variant,dataset,cell_type,n_test,calibration,welch,auroc
+A,42,poisson,GSE115571_LPSMmDev,Macrophages,22,0.4389319729866613,0.44,0.52
+A,42,poisson,GSE115571_LPSMmDev,Microglia,28,0.3069272959349575,0.1,0.32
+A,42,poisson,GSE117988_MCCPBMCCancer,CD4+ T cells,63,0.39216217765062084,0.46,0.52
+A,42,poisson,GSE117988_MCCPBMCCancer,CD8+ T cells,44,0.477493323342261,0.36,0.46
+A,42,poisson,GSE117988_MCCPBMCCancer,MHC-II high APCs,87,0.3099950963500969,0.56,0.62
+A,42,poisson,GSE117988_MCCPBMCCancer,Monocytes,101,0.3255053523503308,0.8,0.8
+A,42,poisson,GSE117988_MCCPBMCCancer,NK cells,89,0.5256043473317361,0.42,0.54
+A,42,poisson,GSE117988_MCCTumorCancer,Cycling cells,101,0.2386061041714932,0.82,0.8
+A,42,poisson,GSE117988_MCCTumorCancer,Merkel cells,286,0.3936985822827225,0.38,0.42
+A,42,poisson,GSE117988_MCCTumorCancer,Stress-response cells,46,0.29189034604811354,0.6,0.58
+A,42,poisson,GSE120505_bloodAged,B cells,225,0.35601927624846097,0.58,0.7
+A,42,poisson,GSE120505_bloodAged,CD4+ T cells,53,0.4220777425422218,0.54,0.62
+A,42,poisson,GSE120505_bloodAged,CD8+ T cells,37,0.36996599759681736,0.58,0.7
+A,42,poisson,GSE120505_bloodAged,Macrophages,22,0.3862679830378327,0.78,0.78
+A,42,poisson,GSE120505_bloodAged,Monocytes,31,0.30865671582876064,0.78,0.8
+A,42,poisson,GSE120505_bloodAged,Müller glia,39,0.24627389709377964,0.72,0.76
+A,42,poisson,GSE123813_bccHmCancer,Basal cells,29,0.29556925503995,0.76,0.78
+A,42,poisson,GSE123813_bccHmCancer,CD8+ T cells,154,0.16172939045151027,0.74,0.76
+A,42,poisson,GSE123813_bccHmCancer,MHC-II high APCs,82,0.25698431235012126,0.82,0.84
+A,42,poisson,GSE123813_bccHmCancer,NK cells,45,0.1985272053195514,0.7,0.72
+A,42,poisson,GSE123813_bccHmCancer,Regulatory T cells,31,0.28754678526029326,0.72,0.7
+A,42,poisson,GSE123813_bccHmCancer,Stress-response cells,34,0.23853147368783145,0.58,0.6
+A,42,poisson,GSE123813_sccHmCancer,CD4+ T cells,59,0.2167892775986365,0.5,0.54
+A,42,poisson,GSE123813_sccHmCancer,CD8+ T cells,103,0.19981596962406978,0.56,0.66
+A,42,poisson,GSE123813_sccHmCancer,MHC-II high APCs,24,0.32678581027967707,0.5,0.62
+A,42,poisson,GSE123813_sccHmCancer,NK cells,47,0.2156216888489272,0.6,0.62
+A,42,poisson,GSE123813_sccHmCancer,Regulatory T cells,49,0.22625834929224856,0.72,0.78
+A,42,poisson,GSE123813_sccHmCancer,Stress-response cells,148,0.14238829906475042,0.72,0.68
+A,42,poisson,GSE123902_LungAdreHmCancer,Alpha cells,37,0.4899164823064839,0.08,0.14
+A,42,poisson,GSE123902_LungAdreHmCancer,CD8+ T cells,72,0.2202607758569138,0.64,0.68
+A,42,poisson,GSE123902_LungAdreHmCancer,Epithelial cells,36,0.23587256155587108,0.78,0.8
+A,42,poisson,GSE123902_LungAdreHmCancer,MHC-II high APCs,52,0.1868911496199565,0.7,0.68
+A,42,poisson,GSE123902_LungAdreHmCancer,Macrophages,31,0.23509812465175656,0.86,0.84
+A,42,poisson,GSE123902_LungAdreHmCancer,Monocytes,37,0.2346944203557522,0.82,0.84
+A,42,poisson,GSE123902_LungAdreHmCancer,NK cells,80,0.12983335979352925,0.5,0.54
+A,42,poisson,GSE123902_LungAdreHmCancer,Regulatory T cells,48,0.19650239063422284,0.58,0.62
+A,42,poisson,GSE124310_MMHmCancer,Collecting duct,95,0.3091444552716138,0.38,0.42
+A,42,poisson,GSE124310_MMHmCancer,Cycling cells,29,0.32108080061996747,0.62,0.68
+A,42,poisson,GSE124310_MMHmCancer,Erythrocytes,22,0.48010624755397313,0.44,0.5
+A,42,poisson,GSE124310_MMHmCancer,Erythroid progenitors,29,0.29253184965195483,0.56,0.6
+A,42,poisson,GSE124310_MMHmCancer,MHC-II high APCs,43,0.21082767250809148,0.52,0.62
+A,42,poisson,GSE124310_MMHmCancer,Monocytes,83,0.31844489233991835,0.84,0.8
+A,42,poisson,GSE124310_MMHmCancer,NK cells,90,0.4041941694856784,0.36,0.42
+A,42,poisson,GSE124310_MMHmCancer,Plasma cells,33,0.4496678216891391,0.76,0.76
+A,42,poisson,GSE130148_LungHmDev,Alveolar type 1,20,0.5206515529655443,0.64,0.68
+A,42,poisson,GSE130148_LungHmDev,Alveolar type 2,117,0.3812918484764466,0.68,0.74
+A,42,poisson,GSE130148_LungHmDev,Ciliated cells,26,0.45046110600705414,0.56,0.56
+A,42,poisson,GSE130148_LungHmDev,Club cells,21,0.7147380378208912,0.08,0.12
+A,42,poisson,GSE130148_LungHmDev,Macrophages,87,0.31841863890330535,0.8,0.8
+A,42,poisson,GSE130148_LungHmDev,Mast cells,28,0.4019595212641381,0.5,0.5
+A,42,poisson,GSE130148_LungHmDev,Monocytes,61,0.46969243432867946,0.74,0.76
+A,42,poisson,GSE130148_LungHmDev,NK cells,41,0.3348754460907892,0.38,0.44
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,B cells,88,0.23259375911348631,0.58,0.58
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,CD4+ T cells,115,0.20136629314408952,0.7,0.78
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,Erythrocytes,31,0.3387107538720042,0.64,0.66
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,Erythroid progenitors,63,0.25545918065894146,0.82,0.76
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,MHC-II high APCs,31,0.3402139076449424,0.72,0.7
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,Monocytes,43,0.22580538075060766,0.66,0.68
+A,42,poisson,GSE132509_acutelymluekPBMCHmCancer,Stress-response cells,63,0.2751023489217251,0.86,0.88
+A,42,poisson,GSE138709_LiverCancer,CD8+ T cells,122,0.24721438260858616,0.78,0.86
+A,42,poisson,GSE138709_LiverCancer,Cholangiocytes,109,0.141848764715308,0.92,0.92
+A,42,poisson,GSE138709_LiverCancer,Cycling cells,21,0.2965898036194569,0.7,0.72
+A,42,poisson,GSE138709_LiverCancer,Fibroblasts,41,0.2553626790962176,0.7,0.72
+A,42,poisson,GSE138709_LiverCancer,MHC-II high APCs,22,0.3217287104007751,0.82,0.8
+A,42,poisson,GSE138709_LiverCancer,Monocytes,29,0.2256786803581179,0.8,0.82
+A,42,poisson,GSE138709_LiverCancer,Müller glia,35,0.26273947573215684,0.74,0.74
+A,42,poisson,GSE142653pitHmDev,Corticotrophs,22,0.4520568680612847,0.62,0.58
+A,42,poisson,GSE142653pitHmDev,Epithelial cells,29,0.5178663312625016,0.7,0.62
+A,42,poisson,GSE142653pitHmDev,Fibroblasts,99,0.36525694932721936,0.86,0.82
+A,42,poisson,GSE142653pitHmDev,Gonadotrophs,60,0.23930156781530715,0.64,0.58
+A,42,poisson,GSE142653pitHmDev,Immature neurons,40,0.3301448634643951,0.64,0.68
+A,42,poisson,GSE142653pitHmDev,MHC-II high APCs,23,0.45603641870909684,0.76,0.7
+A,42,poisson,GSE142653pitHmDev,Neuroendocrine cells,35,0.45359494613353984,0.72,0.66
+A,42,poisson,GSE142653pitHmDev,Somatotrophs,66,0.30371264675434906,0.82,0.78
+A,42,poisson,GSE143423_lbm_CancerBrainHm,Alveolar type 2,170,0.23106216669542487,0.88,0.92
+A,42,poisson,GSE143423_lbm_CancerBrainHm,Cholangiocytes,130,0.26557723869642924,0.6,0.7
+A,42,poisson,GSE143423_lbm_CancerBrainHm,Cycling cells,24,0.29265870930364635,0.54,0.6
+A,42,poisson,GSE143423_lbm_CancerBrainHm,MHC-II high APCs,42,0.33243628919465557,0.52,0.7
+A,42,poisson,GSE143423_lbm_CancerBrainHm,Macrophages,21,0.32119626648463545,0.76,0.72
+A,42,poisson,GSE143423_tnbc_CancerBrainHm,Luminal epithelial,56,0.20410212282691167,0.22,0.38
+A,42,poisson,GSE143423_tnbc_CancerBrainHm,Plasma cells,35,0.23060697659918292,0.8,0.82
+A,42,poisson,GSE143423_tnbc_CancerBrainHm,Proliferating cells,32,0.262600471716301,0.7,0.76
+A,42,poisson,GSE143423_tnbc_CancerBrainHm,Retinal ganglion cells,137,0.49054650007813483,0.16,0.14
+A,42,poisson,GSE143423_tnbc_CancerBrainHm,Stress-response cells,57,0.1869969938202265,0.78,0.68
+A,42,poisson,GSE145929_ProgastinMmDev,Basal cells,57,0.4146963334676519,0.64,0.78
+A,42,poisson,GSE145929_ProgastinMmDev,Fibroblasts,26,0.3304921699187492,0.64,0.7
+A,42,poisson,GSE145929_ProgastinMmDev,MHC-II high APCs,22,0.3456802544730492,0.7,0.76
+A,42,poisson,GSE145929_ProgastinMmDev,Prostate epithelial,182,0.1981691884002507,0.52,0.7
+A,42,poisson,GSE145929_ProgastinMmDev,Stress-response cells,44,0.1754071630832965,0.62,0.6
+A,42,poisson,GSE145929_ProgastinMmDev,Urothelial cells,77,0.26127429321417905,0.82,0.78
+A,42,poisson,GSE145929_UrineMmDev,Basal cells,41,0.48532821964235845,0.08,0.12
+A,42,poisson,GSE145929_UrineMmDev,Fibroblasts,23,0.32804082043210303,0.74,0.7
+A,42,poisson,GSE145929_UrineMmDev,Prostate epithelial,79,0.20314577880875506,0.44,0.54
+A,42,poisson,GSE145929_UrineMmDev,Sertoli cells,31,0.38258042218348987,0.56,0.62
+A,42,poisson,GSE145929_UrineMmDev,Urothelial cells,166,0.1629589466747731,0.8,0.74
+A,42,poisson,GSE148218_bmALLHmCancer,B cells,31,0.48860272010536593,0.6,0.58
+A,42,poisson,GSE148218_bmALLHmCancer,CD4+ T cells,56,0.5824026232160534,0.68,0.72
+A,42,poisson,GSE148218_bmALLHmCancer,CD8+ T cells,20,0.42781816521474186,0.76,0.8
+A,42,poisson,GSE148218_bmALLHmCancer,Cycling cells,74,0.19452028491882925,0.84,0.8
+A,42,poisson,GSE148218_bmALLHmCancer,Erythroid progenitors,89,0.2026391654695918,0.6,0.66
+A,42,poisson,GSE148218_bmALLHmCancer,IFN-stimulated cells,33,0.29878208944927587,0.54,0.62
+A,42,poisson,GSE148218_bmALLHmCancer,Macrophages,39,0.13038862739727666,0.06,0.04
+A,42,poisson,GSE148218_bmALLHmCancer,Plasma cells,78,0.24785649728619163,0.58,0.72
+A,42,poisson,GSE149655_CAHmCancer,Alveolar type 1,28,0.2935108874500338,0.7,0.72
+A,42,poisson,GSE149655_CAHmCancer,Alveolar type 2,50,0.2459594566346067,0.88,0.82
+A,42,poisson,GSE149655_CAHmCancer,CD8+ T cells,31,0.3273234092629685,0.26,0.32
+A,42,poisson,GSE149655_CAHmCancer,Endothelial cells,51,0.22666060127873017,0.82,0.84
+A,42,poisson,GSE149655_CAHmCancer,Epithelial cells,20,0.3913945631520388,0.68,0.74
+A,42,poisson,GSE149655_CAHmCancer,Fibroblasts,20,0.3522440857848843,0.7,0.74
+A,42,poisson,GSE149655_CAHmCancer,Macrophages,20,0.2880484043939774,0.68,0.64
+A,42,poisson,GSE149655_CAHmCancer,Mast cells,24,0.3224464238030959,0.54,0.56
+A,42,poisson,GSE149655_CAHmCancer,Plasma cells,28,0.4972188680931556,0.38,0.4
+A,42,poisson,GSE155109_bcECHmCancer,Capillary endothelial,111,0.21749889930142616,0.5,0.62
+A,42,poisson,GSE155109_bcECHmCancer,IFN-stimulated cells,56,0.277298318991774,0.62,0.6
+A,42,poisson,GSE155109_bcECHmCancer,Lymphatic endothelial,26,0.3759595754515953,0.66,0.66
+A,42,poisson,GSE155109_bcECHmCancer,Tip cells,121,0.2050067474192577,0.6,0.76
+A,42,poisson,GSE155109_bcECHmCancer,Venous endothelial,136,0.2213494479013842,0.78,0.78
+A,42,poisson,GSE155109_bcStromaHmCancer,CD8+ T cells,51,0.29807781064626765,0.8,0.8
+A,42,poisson,GSE155109_bcStromaHmCancer,Endothelial cells,33,0.3768019644546382,0.6,0.66
+A,42,poisson,GSE155109_bcStromaHmCancer,Epithelial cells,77,0.20233036713848124,0.78,0.78
+A,42,poisson,GSE155109_bcStromaHmCancer,Fibroblasts,86,0.1746655751118416,0.82,0.84
+A,42,poisson,GSE155109_bcStromaHmCancer,MHC-II high APCs,32,0.2230597102948556,0.76,0.76
+A,42,poisson,GSE155109_bcStromaHmCancer,Myoepithelial cells,24,0.3247984213216073,0.8,0.84
+A,42,poisson,GSE155109_bcStromaHmCancer,Smooth muscle cells,37,0.29848383803159034,0.72,0.72
+A,42,poisson,GSE155109_bcStromaHmCancer,Tip cells,64,0.30611203461768344,0.78,0.74
+A,42,poisson,GSE163558_stomachHmCancer,B cells,42,0.323051931912315,0.78,0.84
+A,42,poisson,GSE163558_stomachHmCancer,Cycling cells,110,0.17796419118698575,0.36,0.5
+A,42,poisson,GSE163558_stomachHmCancer,Epithelial cells,26,0.25344619591914086,0.7,0.74
+A,42,poisson,GSE163558_stomachHmCancer,NK cells,81,0.29026511323811444,0.44,0.58
+A,42,poisson,GSE163558_stomachHmCancer,Neutrophils,35,0.4170678801974026,0.92,0.86
+A,42,poisson,GSE163558_stomachHmCancer,Regulatory T cells,41,0.2898725224285623,0.74,0.66
+A,42,poisson,GSE165784_RetinaHmDev,CD4+ T cells,22,0.4306351783937476,0.36,0.38
+A,42,poisson,GSE165784_RetinaHmDev,MHC-II high APCs,97,0.16161465828939114,0.66,0.74
+A,42,poisson,GSE165784_RetinaHmDev,Monocytes,23,0.3038277773170979,0.68,0.72
+A,42,poisson,GSE165784_RetinaHmDev,Müller glia,84,0.16817244220603908,0.82,0.86
+A,42,poisson,GSE165784_RetinaHmDev,Neutrophils,110,0.19525948540539284,0.78,0.8
+A,42,poisson,GSE165784_RetinaHmDev,Smooth muscle cells,36,0.28134579179011426,0.7,0.72
+A,42,poisson,GSE165844_LSKMmBatch,Cycling cells,25,0.3310859060642505,0.66,0.68
+A,42,poisson,GSE165844_LSKMmBatch,Stress-response cells,148,0.19019297514654646,0.12,0.2
+A,42,poisson,GSE167597_spineMm,Dorsal horn neurons,51,0.27939374165790865,0.72,0.74
+A,42,poisson,GSE167597_spineMm,Excitatory neurons,53,0.21798431547469974,0.7,0.7
+A,42,poisson,GSE167597_spineMm,Inhibitory neurons,104,0.18796625161566058,0.66,0.64
+A,42,poisson,GSE167597_spineMm,Mast cells,29,0.4215490645535309,0.72,0.76
+A,42,poisson,GSE167597_spineMm,Retinal ganglion cells,31,0.3993883334247853,0.82,0.8
+A,42,poisson,GSE167597_spineMm,Spinal interneurons,37,0.2589847146772176,0.68,0.76
+A,42,poisson,GSE168181_BreastHmCancer,CD8+ T cells,128,0.31573792925150734,0.38,0.46
+A,42,poisson,GSE168181_BreastHmCancer,Endothelial cells,66,0.29103193426746793,0.64,0.6
+A,42,poisson,GSE168181_BreastHmCancer,Fibroblasts,33,0.24718063527817877,0.72,0.7
+A,42,poisson,GSE168181_BreastHmCancer,IFN-stimulated cells,25,0.42319044759986413,0.68,0.8
+A,42,poisson,GSE168181_BreastHmCancer,Luminal epithelial,48,0.22084977455847987,0.74,0.72
+A,42,poisson,GSE168181_BreastHmCancer,Macrophages,90,0.19875195984522437,0.9,0.92
+A,42,poisson,GSE168181_BreastHmCancer,Stress-response cells,29,0.47371707226804594,0.36,0.34
+A,42,poisson,GSE183904_GastricHmCancer,CD8+ T cells,127,0.30349095043518626,0.88,0.88
+A,42,poisson,GSE183904_GastricHmCancer,Epithelial cells,82,0.18696104272274994,0.7,0.7
+A,42,poisson,GSE183904_GastricHmCancer,Fibroblasts,33,0.3042286703523054,0.72,0.76
+A,42,poisson,GSE183904_GastricHmCancer,MHC-II high APCs,72,0.20320575183707248,0.7,0.72
+A,42,poisson,GSE183904_GastricHmCancer,Neuroendocrine cells,21,0.38703668983050415,0.32,0.22
+A,42,poisson,GSE183904_GastricHmCancer,Plasma cells,44,0.3008793693365002,0.84,0.82
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Adipocytes,80,0.2155451946309208,0.82,0.82
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Cycling cells,33,0.24656228129339555,0.74,0.82
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Erythroid progenitors,37,0.4527163021819833,0.3,0.28
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Fibroblasts,42,0.24654651713596562,0.8,0.84
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Microglia,59,0.27888246491080626,0.68,0.7
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Monocytes,28,0.3204757416191783,0.46,0.48
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Neutrophils,81,0.2710163229749176,0.74,0.76
+A,42,poisson,GSE189070_astrocytesSCIMmDev,Oligodendrocytes,20,0.40730382447587177,0.68,0.72
+A,42,poisson,GSE189357_lungAdreHmCancer,Endothelial cells,27,0.3434823443836875,0.8,0.76
+A,42,poisson,GSE189357_lungAdreHmCancer,Epithelial cells,24,0.28437258567078716,0.7,0.7
+A,42,poisson,GSE189357_lungAdreHmCancer,MHC-II high APCs,181,0.15172699480996507,0.72,0.72
+A,42,poisson,GSE189357_lungAdreHmCancer,NK cells,29,0.29279354642166805,0.54,0.58
+A,42,poisson,GSE189357_lungAdreHmCancer,Regulatory T cells,127,0.3854424866820729,0.32,0.34
+A,42,poisson,GSE192857_hESCHmTimes,Cycling cells,23,0.2908504315321202,0.72,0.7
+A,42,poisson,GSE192857_hESCHmTimes,Immature neurons,27,0.2868142942512298,0.72,0.74
+A,42,poisson,GSE192857_hESCHmTimes,Melanocytes,76,0.20800627380149556,0.72,0.76
+A,42,poisson,GSE192857_hESCHmTimes,Pluripotent stem cells,84,0.15456881365082067,0.84,0.82
+A,42,poisson,GSE192857_hESCHmTimes,Proliferating cells,96,0.18111135913625573,0.82,0.82
+A,42,poisson,GSE192857_hESCHmTimes,Radial glia,72,0.2066259572667562,0.6,0.7
+A,42,poisson,GSE213740_ADHm,CD4+ T cells,34,0.4225603732622395,0.62,0.64
+A,42,poisson,GSE213740_ADHm,CD8+ T cells,47,0.2671335520902873,0.68,0.74
+A,42,poisson,GSE213740_ADHm,Capillary endothelial,32,0.2681461056932203,0.86,0.76
+A,42,poisson,GSE213740_ADHm,Fibroblasts,88,0.1600890635323418,0.86,0.88
+A,42,poisson,GSE213740_ADHm,MHC-II high APCs,54,0.1914661860236915,0.74,0.76
+A,42,poisson,GSE213740_ADHm,Monocytes,24,0.3100794802285048,0.66,0.72
+A,42,poisson,GSE213740_ADHm,Smooth muscle cells,102,0.16171744502227606,0.88,0.88
+A,42,poisson,GSE222002_TcellsHmCancer,CD8+ T cells,103,0.16937835092770565,0.76,0.76
+A,42,poisson,GSE222002_TcellsHmCancer,Fibroblasts,34,0.33674210803568366,0.44,0.62
+A,42,poisson,GSE222002_TcellsHmCancer,MHC-II high APCs,47,0.23630688485700418,0.84,0.86
+A,42,poisson,GSE222002_TcellsHmCancer,Regulatory T cells,189,0.22458783546414007,0.22,0.24
+A,42,poisson,GSE222002_TcellsHmCancer,Stress-response cells,26,0.3077442021689093,0.7,0.58
+A,42,poisson,GSE222002_TcellsHmCancer,Tip cells,25,0.32035967027587414,0.84,0.76
+A,42,poisson,GSE222369_NKsLymphomaHmCancer,CD8+ T cells,60,0.2339586304853243,0.7,0.72
+A,42,poisson,GSE222369_NKsLymphomaHmCancer,Fibroblasts,29,0.35524813300109864,0.72,0.7
+A,42,poisson,GSE222369_NKsLymphomaHmCancer,IFN-stimulated cells,130,0.22344991139096468,0.42,0.6
+A,42,poisson,GSE222369_NKsLymphomaHmCancer,MHC-II high APCs,44,0.28320731085695144,0.62,0.64
+A,42,poisson,GSE222369_NKsLymphomaHmCancer,NK cells,118,0.23622317670399656,0.58,0.66
+A,42,poisson,GSE225600_breast_CancerHm,CD4+ T cells,77,0.26816358637815463,0.24,0.28
+A,42,poisson,GSE225600_breast_CancerHm,Endothelial cells,58,0.220647195599418,0.76,0.72
+A,42,poisson,GSE225600_breast_CancerHm,Epithelial cells,26,0.3340053561548433,0.64,0.6
+A,42,poisson,GSE225600_breast_CancerHm,MHC-II high APCs,46,0.2546229759172439,0.76,0.74
+A,42,poisson,GSE225600_breast_CancerHm,NK cells,33,0.3220625969342994,0.66,0.66
+A,42,poisson,GSE225600_breast_CancerHm,Regulatory T cells,46,0.18523968855874368,0.68,0.72
+A,42,poisson,GSE225600_breast_CancerHm,Smooth muscle cells,42,0.24891662500313877,0.74,0.76
+A,42,poisson,GSE225857_liverColonMetasisHmCancer,Epithelial cells,56,0.13545060059881547,0.74,0.76
+A,42,poisson,GSE225857_liverColonMetasisHmCancer,Goblet cells,122,0.13436117924200883,0.56,0.6
+A,42,poisson,GSE225857_liverColonMetasisHmCancer,Hepatocytes,138,0.1681191405193303,0.54,0.64
+A,42,poisson,GSE225857_liverColonMetasisHmCancer,Smooth muscle cells,81,0.2104361587237523,0.74,0.78
+A,42,poisson,GSE226131_HSCMmAged,Cycling cells,29,0.2197649930369979,0.64,0.68
+A,42,poisson,GSE226131_HSCMmAged,Erythroid progenitors,37,0.22861400000063237,0.62,0.58
+A,42,poisson,GSE226131_HSCMmAged,Immature neurons,107,0.5157075986898715,0.14,0.14
+A,42,poisson,GSE226131_HSCMmAged,Neutrophils,92,0.14278390723579706,0.8,0.84
+A,42,poisson,GSE226131_HSCMmAged,Proliferating cells,65,0.3206522516062086,0.18,0.22
+A,42,poisson,GSE226131_HSCMmAged,Stress-response cells,42,0.21348960671703215,0.7,0.72
+A,42,poisson,GSE228499_breastHmCancer,CD4+ T cells,56,0.19487622624562229,0.76,0.8
+A,42,poisson,GSE228499_breastHmCancer,Cholangiocytes,37,0.2689468269311895,0.78,0.78
+A,42,poisson,GSE228499_breastHmCancer,Goblet cells,80,0.18172464019424445,0.84,0.84
+A,42,poisson,GSE228499_breastHmCancer,IFN-stimulated cells,26,0.3392733102357081,0.62,0.66
+A,42,poisson,GSE228499_breastHmCancer,Inhibitory neurons,25,0.36382222703709766,0.74,0.78
+A,42,poisson,GSE228499_breastHmCancer,Luminal epithelial,66,0.19092131994460612,0.7,0.66
+A,42,poisson,GSE228499_breastHmCancer,Neutrophils,21,0.29155225788481287,0.08,0.02
+A,42,poisson,GSE235787_bcellsALLHmCancer,B cells,68,0.21362718203441974,0.84,0.84
+A,42,poisson,GSE235787_bcellsALLHmCancer,Cycling cells,65,0.1727414495034239,0.8,0.82
+A,42,poisson,GSE235787_bcellsALLHmCancer,Erythroid progenitors,50,0.2910175965843731,0.76,0.78
+A,42,poisson,GSE235787_bcellsALLHmCancer,Exhausted T cells,72,0.2599233551320239,0.82,0.78
+A,42,poisson,GSE235787_bcellsALLHmCancer,HSCs/Progenitors,22,0.35157151543173104,0.8,0.8
+A,42,poisson,GSE235787_bcellsALLHmCancer,Plasmacytoid DCs,106,0.33716449106738405,0.46,0.52
+A,42,poisson,GSE235787_bcellsALLHmCancer,Stress-response cells,29,0.3116521581112414,0.74,0.76
+A,42,poisson,GSE253355_bmNicheHm,B cells,28,0.3557674236026704,0.76,0.76
+A,42,poisson,GSE253355_bmNicheHm,CD8+ T cells,27,0.36087012011344854,0.9,0.92
+A,42,poisson,GSE253355_bmNicheHm,Endothelial cells,23,0.28528082995359266,0.66,0.66
+A,42,poisson,GSE253355_bmNicheHm,Erythrocytes,24,0.30544843251378834,0.74,0.72
+A,42,poisson,GSE253355_bmNicheHm,Fibroblasts,68,0.22376397914228308,0.78,0.74
+A,42,poisson,GSE253355_bmNicheHm,HSCs/Progenitors,48,0.22078370562384655,0.74,0.72
+A,42,poisson,GSE253355_bmNicheHm,Mesenchymal stem cells,46,0.2633393281964703,0.88,0.88
+A,42,poisson,GSE253355_bmNicheHm,Monocytes,65,0.23432553259211875,0.92,0.94
+A,42,poisson,GSE253355_bmNicheHm,Plasma cells,78,0.21444860625053253,0.84,0.82
+A,42,poisson,GSE262288_breastMetasisHmCancer,Fibroblasts,34,0.21884169738163345,0.66,0.58
+A,42,poisson,GSE262288_breastMetasisHmCancer,Goblet cells,81,0.2561697496564926,0.4,0.56
+A,42,poisson,GSE262288_breastMetasisHmCancer,MHC-II high APCs,48,0.19000549784905282,0.72,0.74
+A,42,poisson,GSE262288_breastMetasisHmCancer,Macrophages,44,0.2299180000331143,0.72,0.6
+A,42,poisson,GSE262288_breastMetasisHmCancer,NK cells,40,0.25468362172837683,0.64,0.72
+A,42,poisson,GSE262288_breastMetasisHmCancer,Stress-response cells,20,0.32194177148381625,0.7,0.7
+A,42,poisson,GSE275119_TeethMmDev,Basal cells,26,0.2636683551534827,0.7,0.7
+A,42,poisson,GSE275119_TeethMmDev,Fibroblasts,136,0.14048558384869136,0.84,0.86
+A,42,poisson,GSE275119_TeethMmDev,Macrophages,31,0.29565499737568635,0.82,0.84
+A,42,poisson,GSE275119_TeethMmDev,Odontoblasts,25,0.39306769377510253,0.62,0.64
+A,42,poisson,GSE275119_TeethMmDev,Stress-response cells,101,0.19592775272772595,0.78,0.82
+A,42,poisson,GSE283205_hepatoblastomaCancer,CD4+ T cells,31,0.25394268991964786,0.5,0.46
+A,42,poisson,GSE283205_hepatoblastomaCancer,CD8+ T cells,22,0.3889846654135862,0.58,0.6
+A,42,poisson,GSE283205_hepatoblastomaCancer,Endothelial cells,29,0.33435940170533524,0.76,0.72
+A,42,poisson,GSE283205_hepatoblastomaCancer,Fibroblasts,78,0.2572874973870636,0.74,0.76
+A,42,poisson,GSE283205_hepatoblastomaCancer,Hepatocytes,83,0.25616789895221403,0.7,0.76
+A,42,poisson,GSE283205_hepatoblastomaCancer,Macrophages,37,0.26786054365860257,0.76,0.78
+A,42,poisson,GSE283205_hepatoblastomaCancer,Mammary secretory,62,0.23495947818040153,0.7,0.74
+A,42,poisson,GSE283205_hepatoblastomaCancer,Monocytes,41,0.25996023105249655,0.68,0.7
+A,42,poisson,GSE283205_hepatoblastomaCancer,Radial glia,37,0.320334094840895,0.7,0.74
+A,42,poisson,GSE283205_hepatoblastomaCancer,Spinal interneurons,30,0.23969986585504352,0.44,0.44
+A,42,poisson,GSE98638_TcellLiverHmCancer,CD4+ T cells,126,0.7356239692621225,0.7,0.68
+A,42,poisson,GSE98638_TcellLiverHmCancer,CD8+ T cells,175,0.7275321811153566,0.76,0.7
+A,42,poisson,GSE98638_TcellLiverHmCancer,NK cells,31,0.9244921816106737,0.8,0.72
+A,42,poisson,GSE98638_TcellLiverHmCancer,Regulatory T cells,64,0.9241083779232002,0.7,0.56
+A,42,poisson,GSE98638_TcellLiverHmCancer,Stress-response cells,37,0.8447108448358995,0.66,0.54
+A,42,poisson,bm_GSE120446,Cycling cells,22,0.2649018206982872,0.64,0.66
+A,42,poisson,bm_GSE120446,Erythrocytes,28,0.29017718062537984,0.68,0.78
+A,42,poisson,bm_GSE120446,Erythroid progenitors,68,0.48450303777081255,0.62,0.8
+A,42,poisson,bm_GSE120446,MHC-II high APCs,31,0.23201612366528795,0.64,0.62
+A,42,poisson,bm_GSE120446,Monocytes,43,0.323901083595889,0.88,0.84
+A,42,poisson,bm_GSE120446,NK cells,61,0.3803297889910505,0.5,0.64
+A,42,poisson,bm_GSE120446,Radial glia,146,0.38810466339499217,0.26,0.32
+A,42,poisson,dentate,Astrocytes,48,0.2439927111446853,0.8,0.8
+A,42,poisson,dentate,Cycling cells,25,0.40911934034151176,0.62,0.66
+A,42,poisson,dentate,Excitatory neurons,21,0.42208431493584003,0.7,0.72
+A,42,poisson,dentate,Granule cells,110,0.2968254519040521,0.46,0.52
+A,42,poisson,dentate,Immature neurons,167,0.13988730329076493,0.88,0.88
+A,42,poisson,dentate,Intermediate progenitors,32,0.44554582529468006,0.28,0.4
+A,42,poisson,dentate,Radial glia,28,0.36827435477359977,0.72,0.78
+A,42,poisson,endo,Alpha cells,91,0.21943116899987766,0.64,0.7
+A,42,poisson,endo,Beta cells,86,0.2593054376515829,0.74,0.8
+A,42,poisson,endo,Cholangiocytes,45,0.26840031375461154,0.76,0.76
+A,42,poisson,endo,Delta cells,28,0.32878550534371387,0.34,0.44
+A,42,poisson,endo,Immature neurons,51,0.24778537311247567,0.8,0.8
+A,42,poisson,endo,Neuroendocrine cells,63,0.2055834733929917,0.46,0.5
+A,42,poisson,hESC_GSE144024,Cycling cells,89,0.17115810764048656,0.7,0.74
+A,42,poisson,hESC_GSE144024,Erythrocytes,56,0.21083963409056852,0.8,0.84
+A,42,poisson,hESC_GSE144024,Erythroid progenitors,188,0.14126649412541406,0.78,0.84
+A,42,poisson,hESC_GSE144024,Megakaryocytes,24,0.35490914392102185,0.8,0.82
+A,42,poisson,hESC_GSE144024,Microglia,44,0.233753028648233,0.74,0.76
+A,42,poisson,hESC_GSE144024,Thyrotrophs,34,0.2646981523716928,0.6,0.66
+A,42,poisson,hemato,Dendritic cells,30,0.32411710177228453,0.86,0.82
+A,42,poisson,hemato,Erythrocytes,90,0.21219367574593195,0.74,0.84
+A,42,poisson,hemato,Erythroid progenitors,45,0.3057147904768931,0.82,0.84
+A,42,poisson,hemato,HSCs/Progenitors,53,0.1768204733005444,0.84,0.86
+A,42,poisson,hemato,Macrophages,27,0.3695003596812022,0.6,0.64
+A,42,poisson,hemato,Müller glia,28,0.2971411240463389,0.68,0.72
+A,42,poisson,hemato,Neutrophils,84,0.16685909723191833,0.88,0.88
+A,42,poisson,hemato,Proliferating cells,74,0.18338213934089403,0.78,0.74
+A,42,poisson,ifnHSPC_GSE226824,Cycling cells,39,0.2299085749999586,0.78,0.82
+A,42,poisson,ifnHSPC_GSE226824,HSCs/Progenitors,95,0.1980682965514716,0.68,0.68
+A,42,poisson,ifnHSPC_GSE226824,IFN-stimulated cells,55,0.21931521289695843,0.46,0.5
+A,42,poisson,ifnHSPC_GSE226824,Megakaryocytes,32,0.2879673504459154,0.6,0.6
+A,42,poisson,ifnHSPC_GSE226824,Müller glia,30,0.32926393558050987,0.46,0.56
+A,42,poisson,ifnHSPC_GSE226824,Neutrophils,97,0.14228178022904417,0.78,0.86
+A,42,poisson,ifnHSPC_GSE226824,Stress-response cells,27,0.31570517526753056,0.76,0.76
+A,42,poisson,lung,Alveolar type 2,162,0.2379680525881992,0.58,0.78
+A,42,poisson,lung,Ciliated cells,90,0.3314624048464668,0.74,0.78
+A,42,poisson,lung,Club cells,89,0.154747059312554,0.42,0.44
+A,42,poisson,lung,Cycling cells,21,0.26893567038200733,0.7,0.72
+A,42,poisson,lung,Epithelial cells,88,0.19998221792886442,0.7,0.72
+A,42,poisson,setty,B cells,47,0.31540557568892424,0.42,0.58
+A,42,poisson,setty,Erythroid progenitors,80,0.20096562177829705,0.76,0.74
+A,42,poisson,setty,Merkel cells,68,0.3408516724439824,0.56,0.68
+A,42,poisson,setty,Neutrophils,89,0.27450707564664867,0.8,0.76
+A,42,poisson,setty,Plasmacytoid DCs,32,0.26470532700077715,0.7,0.66
+A,42,poisson,setty,Proliferating cells,33,0.2886619585524925,0.78,0.82
+A,42,poisson,setty,Stress-response cells,82,0.4075521282578435,0.38,0.44
+A,42,shared_per_gene,GSE115571_LPSMmDev,Macrophages,22,0.5563997802683298,0.42,0.42
+A,42,shared_per_gene,GSE115571_LPSMmDev,Microglia,28,0.5792260642597865,0.14,0.26
+A,42,shared_per_gene,GSE117988_MCCPBMCCancer,CD4+ T cells,63,0.6458685856162668,0.36,0.48
+A,42,shared_per_gene,GSE117988_MCCPBMCCancer,CD8+ T cells,44,0.4128659892604073,0.34,0.42
+A,42,shared_per_gene,GSE117988_MCCPBMCCancer,MHC-II high APCs,87,0.16002285681191514,0.54,0.64
+A,42,shared_per_gene,GSE117988_MCCPBMCCancer,Monocytes,101,0.4291772964913117,0.82,0.78
+A,42,shared_per_gene,GSE117988_MCCPBMCCancer,NK cells,89,0.6722864916417168,0.3,0.5
+A,42,shared_per_gene,GSE117988_MCCTumorCancer,Cycling cells,101,0.3110739942812059,0.82,0.82
+A,42,shared_per_gene,GSE117988_MCCTumorCancer,Merkel cells,286,0.4295350980239242,0.36,0.6
+A,42,shared_per_gene,GSE117988_MCCTumorCancer,Stress-response cells,46,0.2815608773221472,0.66,0.68
+A,42,shared_per_gene,GSE120505_bloodAged,B cells,225,0.43472557044181875,0.58,0.7
+A,42,shared_per_gene,GSE120505_bloodAged,CD4+ T cells,53,0.4852532605601482,0.5,0.58
+A,42,shared_per_gene,GSE120505_bloodAged,CD8+ T cells,37,0.40169272480511686,0.56,0.58
+A,42,shared_per_gene,GSE120505_bloodAged,Macrophages,22,0.40977595846503645,0.74,0.76
+A,42,shared_per_gene,GSE120505_bloodAged,Monocytes,31,0.41398875268579255,0.86,0.9
+A,42,shared_per_gene,GSE120505_bloodAged,Müller glia,39,0.35083638917573284,0.72,0.74
+A,42,shared_per_gene,GSE123813_bccHmCancer,Basal cells,29,0.37449206618386427,0.7,0.74
+A,42,shared_per_gene,GSE123813_bccHmCancer,CD8+ T cells,154,0.18665607810099188,0.7,0.84
+A,42,shared_per_gene,GSE123813_bccHmCancer,MHC-II high APCs,82,0.2318743141263385,0.8,0.74
+A,42,shared_per_gene,GSE123813_bccHmCancer,NK cells,45,0.25302326820946863,0.66,0.64
+A,42,shared_per_gene,GSE123813_bccHmCancer,Regulatory T cells,31,0.37347218473665467,0.76,0.72
+A,42,shared_per_gene,GSE123813_bccHmCancer,Stress-response cells,34,0.3363136003403468,0.6,0.62
+A,42,shared_per_gene,GSE123813_sccHmCancer,CD4+ T cells,59,0.2346353176000199,0.44,0.52
+A,42,shared_per_gene,GSE123813_sccHmCancer,CD8+ T cells,103,0.2808330212023289,0.54,0.7
+A,42,shared_per_gene,GSE123813_sccHmCancer,MHC-II high APCs,24,0.3241216725307146,0.46,0.48
+A,42,shared_per_gene,GSE123813_sccHmCancer,NK cells,47,0.2721598519958854,0.58,0.62
+A,42,shared_per_gene,GSE123813_sccHmCancer,Regulatory T cells,49,0.3160366467305151,0.72,0.74
+A,42,shared_per_gene,GSE123813_sccHmCancer,Stress-response cells,148,0.14790414766560916,0.62,0.68
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,Alpha cells,37,0.48561289216874237,0.16,0.16
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,CD8+ T cells,72,0.25256159501191533,0.66,0.72
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,Epithelial cells,36,0.31423825475974565,0.74,0.72
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,MHC-II high APCs,52,0.22185346936404055,0.74,0.7
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,Macrophages,31,0.3051972723952139,0.76,0.74
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,Monocytes,37,0.3155459168229506,0.74,0.84
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,NK cells,80,0.13345881661389147,0.44,0.48
+A,42,shared_per_gene,GSE123902_LungAdreHmCancer,Regulatory T cells,48,0.29986298791742316,0.58,0.64
+A,42,shared_per_gene,GSE124310_MMHmCancer,Collecting duct,95,0.35358383815858263,0.38,0.42
+A,42,shared_per_gene,GSE124310_MMHmCancer,Cycling cells,29,0.3055061046106913,0.7,0.72
+A,42,shared_per_gene,GSE124310_MMHmCancer,Erythrocytes,22,0.42421935730882954,0.42,0.48
+A,42,shared_per_gene,GSE124310_MMHmCancer,Erythroid progenitors,29,0.3018481747638234,0.6,0.7
+A,42,shared_per_gene,GSE124310_MMHmCancer,MHC-II high APCs,43,0.3168407039323772,0.5,0.56
+A,42,shared_per_gene,GSE124310_MMHmCancer,Monocytes,83,0.3814549826840874,0.8,0.84
+A,42,shared_per_gene,GSE124310_MMHmCancer,NK cells,90,0.4891961264502171,0.28,0.28
+A,42,shared_per_gene,GSE124310_MMHmCancer,Plasma cells,33,0.51547149818809,0.72,0.76
+A,42,shared_per_gene,GSE130148_LungHmDev,Alveolar type 1,20,0.5872086145317748,0.64,0.62
+A,42,shared_per_gene,GSE130148_LungHmDev,Alveolar type 2,117,0.48950871874086704,0.66,0.68
+A,42,shared_per_gene,GSE130148_LungHmDev,Ciliated cells,26,0.4259927112118838,0.6,0.64
+A,42,shared_per_gene,GSE130148_LungHmDev,Club cells,21,0.6192703276896693,0.14,0.18
+A,42,shared_per_gene,GSE130148_LungHmDev,Macrophages,87,0.35374819795749035,0.74,0.82
+A,42,shared_per_gene,GSE130148_LungHmDev,Mast cells,28,0.4170375963483784,0.42,0.42
+A,42,shared_per_gene,GSE130148_LungHmDev,Monocytes,61,0.46910819995962233,0.72,0.68
+A,42,shared_per_gene,GSE130148_LungHmDev,NK cells,41,0.6311155851927812,0.44,0.52
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,B cells,88,0.25566603677251587,0.54,0.66
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,CD4+ T cells,115,0.16765468900795608,0.72,0.8
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,Erythrocytes,31,0.3798251896664362,0.62,0.66
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,Erythroid progenitors,63,0.269492899781133,0.78,0.74
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,MHC-II high APCs,31,0.31471762949948545,0.64,0.7
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,Monocytes,43,0.2601162107129115,0.64,0.64
+A,42,shared_per_gene,GSE132509_acutelymluekPBMCHmCancer,Stress-response cells,63,0.2583693209395232,0.8,0.8
+A,42,shared_per_gene,GSE138709_LiverCancer,CD8+ T cells,122,0.2398962078689354,0.78,0.82
+A,42,shared_per_gene,GSE138709_LiverCancer,Cholangiocytes,109,0.1861330995166084,0.82,0.82
+A,42,shared_per_gene,GSE138709_LiverCancer,Cycling cells,21,0.29843884567214596,0.74,0.78
+A,42,shared_per_gene,GSE138709_LiverCancer,Fibroblasts,41,0.2951825543200371,0.76,0.76
+A,42,shared_per_gene,GSE138709_LiverCancer,MHC-II high APCs,22,0.34188379677015657,0.7,0.76
+A,42,shared_per_gene,GSE138709_LiverCancer,Monocytes,29,0.2507464559584973,0.8,0.86
+A,42,shared_per_gene,GSE138709_LiverCancer,Müller glia,35,0.3321208896665761,0.76,0.78
+A,42,shared_per_gene,GSE142653pitHmDev,Corticotrophs,22,0.4847254661366505,0.68,0.64
+A,42,shared_per_gene,GSE142653pitHmDev,Epithelial cells,29,0.45616076092094715,0.72,0.68
+A,42,shared_per_gene,GSE142653pitHmDev,Fibroblasts,99,0.3286731323076123,0.84,0.82
+A,42,shared_per_gene,GSE142653pitHmDev,Gonadotrophs,60,0.27834824580363404,0.62,0.56
+A,42,shared_per_gene,GSE142653pitHmDev,Immature neurons,40,0.3659779693732479,0.68,0.66
+A,42,shared_per_gene,GSE142653pitHmDev,MHC-II high APCs,23,0.48422549634914785,0.74,0.74
+A,42,shared_per_gene,GSE142653pitHmDev,Neuroendocrine cells,35,0.40000931712895893,0.72,0.72
+A,42,shared_per_gene,GSE142653pitHmDev,Somatotrophs,66,0.3053466526711501,0.8,0.78
+A,42,shared_per_gene,GSE143423_lbm_CancerBrainHm,Alveolar type 2,170,0.3258784818389695,0.82,0.84
+A,42,shared_per_gene,GSE143423_lbm_CancerBrainHm,Cholangiocytes,130,0.30210369982060636,0.62,0.6
+A,42,shared_per_gene,GSE143423_lbm_CancerBrainHm,Cycling cells,24,0.44318970824125,0.5,0.56
+A,42,shared_per_gene,GSE143423_lbm_CancerBrainHm,MHC-II high APCs,42,0.28510705513399526,0.42,0.56
+A,42,shared_per_gene,GSE143423_lbm_CancerBrainHm,Macrophages,21,0.4636566377120586,0.72,0.76
+A,42,shared_per_gene,GSE143423_tnbc_CancerBrainHm,Luminal epithelial,56,0.253325760515317,0.3,0.34
+A,42,shared_per_gene,GSE143423_tnbc_CancerBrainHm,Plasma cells,35,0.264947744814799,0.76,0.7
+A,42,shared_per_gene,GSE143423_tnbc_CancerBrainHm,Proliferating cells,32,0.4026142604312596,0.68,0.74
+A,42,shared_per_gene,GSE143423_tnbc_CancerBrainHm,Retinal ganglion cells,137,0.4099995526387226,0.26,0.18
+A,42,shared_per_gene,GSE143423_tnbc_CancerBrainHm,Stress-response cells,57,0.2477171976675344,0.62,0.56
+A,42,shared_per_gene,GSE145929_ProgastinMmDev,Basal cells,57,0.39781946670590973,0.66,0.76
+A,42,shared_per_gene,GSE145929_ProgastinMmDev,Fibroblasts,26,0.4517068436895568,0.72,0.76
+A,42,shared_per_gene,GSE145929_ProgastinMmDev,MHC-II high APCs,22,0.39352142739215534,0.72,0.7
+A,42,shared_per_gene,GSE145929_ProgastinMmDev,Prostate epithelial,182,0.23828200538984867,0.56,0.72
+A,42,shared_per_gene,GSE145929_ProgastinMmDev,Stress-response cells,44,0.20867651314787528,0.58,0.48
+A,42,shared_per_gene,GSE145929_ProgastinMmDev,Urothelial cells,77,0.25857874306064677,0.76,0.72
+A,42,shared_per_gene,GSE145929_UrineMmDev,Basal cells,41,0.6827921533911805,0.1,0.08
+A,42,shared_per_gene,GSE145929_UrineMmDev,Fibroblasts,23,0.3806391862052599,0.7,0.72
+A,42,shared_per_gene,GSE145929_UrineMmDev,Prostate epithelial,79,0.19860700681100385,0.42,0.5
+A,42,shared_per_gene,GSE145929_UrineMmDev,Sertoli cells,31,0.5077621836110982,0.52,0.58
+A,42,shared_per_gene,GSE145929_UrineMmDev,Urothelial cells,166,0.20218982855344442,0.8,0.8
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,B cells,31,0.6649999880189552,0.64,0.68
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,CD4+ T cells,56,0.5050781143915841,0.64,0.8
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,CD8+ T cells,20,0.4149270357496714,0.7,0.7
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,Cycling cells,74,0.30515786625379215,0.78,0.8
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,Erythroid progenitors,89,0.23276592631854964,0.66,0.56
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,IFN-stimulated cells,33,0.3117571776529227,0.52,0.62
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,Macrophages,39,0.4986191192497223,0.06,0.06
+A,42,shared_per_gene,GSE148218_bmALLHmCancer,Plasma cells,78,0.3964746220343969,0.48,0.5
+A,42,shared_per_gene,GSE149655_CAHmCancer,Alveolar type 1,28,0.3255350847932229,0.66,0.72
+A,42,shared_per_gene,GSE149655_CAHmCancer,Alveolar type 2,50,0.28542507378382986,0.92,0.8
+A,42,shared_per_gene,GSE149655_CAHmCancer,CD8+ T cells,31,0.48768516210547325,0.26,0.3
+A,42,shared_per_gene,GSE149655_CAHmCancer,Endothelial cells,51,0.2781181457591035,0.78,0.76
+A,42,shared_per_gene,GSE149655_CAHmCancer,Epithelial cells,20,0.4010707929544912,0.7,0.66
+A,42,shared_per_gene,GSE149655_CAHmCancer,Fibroblasts,20,0.4141977231948164,0.68,0.76
+A,42,shared_per_gene,GSE149655_CAHmCancer,Macrophages,20,0.3410173501669487,0.66,0.7
+A,42,shared_per_gene,GSE149655_CAHmCancer,Mast cells,24,0.38809006363176946,0.44,0.42
+A,42,shared_per_gene,GSE149655_CAHmCancer,Plasma cells,28,0.4385978431818737,0.24,0.26
+A,42,shared_per_gene,GSE155109_bcECHmCancer,Capillary endothelial,111,0.269387190004868,0.46,0.6
+A,42,shared_per_gene,GSE155109_bcECHmCancer,IFN-stimulated cells,56,0.3435491552488396,0.56,0.6
+A,42,shared_per_gene,GSE155109_bcECHmCancer,Lymphatic endothelial,26,0.3990505259740524,0.64,0.68
+A,42,shared_per_gene,GSE155109_bcECHmCancer,Tip cells,121,0.17395432553515922,0.6,0.6
+A,42,shared_per_gene,GSE155109_bcECHmCancer,Venous endothelial,136,0.26367339188012556,0.82,0.78
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,CD8+ T cells,51,0.3602085161965149,0.78,0.8
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,Endothelial cells,33,0.3469648231323541,0.5,0.58
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,Epithelial cells,77,0.21605994511505955,0.78,0.8
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,Fibroblasts,86,0.3083207017930849,0.92,0.86
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,MHC-II high APCs,32,0.29548746463764575,0.76,0.82
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,Myoepithelial cells,24,0.4062538849309074,0.68,0.7
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,Smooth muscle cells,37,0.341354716274324,0.64,0.66
+A,42,shared_per_gene,GSE155109_bcStromaHmCancer,Tip cells,64,0.24549488558813892,0.72,0.78
+A,42,shared_per_gene,GSE163558_stomachHmCancer,B cells,42,0.3565643172769365,0.76,0.76
+A,42,shared_per_gene,GSE163558_stomachHmCancer,Cycling cells,110,0.1718032350448533,0.32,0.44
+A,42,shared_per_gene,GSE163558_stomachHmCancer,Epithelial cells,26,0.3357028557208493,0.72,0.7
+A,42,shared_per_gene,GSE163558_stomachHmCancer,NK cells,81,0.2401821345034303,0.44,0.46
+A,42,shared_per_gene,GSE163558_stomachHmCancer,Neutrophils,35,0.48937526033625667,0.86,0.82
+A,42,shared_per_gene,GSE163558_stomachHmCancer,Regulatory T cells,41,0.23713528694523014,0.62,0.68
+A,42,shared_per_gene,GSE165784_RetinaHmDev,CD4+ T cells,22,0.4330841753646673,0.36,0.36
+A,42,shared_per_gene,GSE165784_RetinaHmDev,MHC-II high APCs,97,0.20187153638398087,0.7,0.74
+A,42,shared_per_gene,GSE165784_RetinaHmDev,Monocytes,23,0.43768164650706143,0.68,0.74
+A,42,shared_per_gene,GSE165784_RetinaHmDev,Müller glia,84,0.2283965990903593,0.84,0.88
+A,42,shared_per_gene,GSE165784_RetinaHmDev,Neutrophils,110,0.22625926312104688,0.72,0.76
+A,42,shared_per_gene,GSE165784_RetinaHmDev,Smooth muscle cells,36,0.2981157733168957,0.74,0.76
+A,42,shared_per_gene,GSE165844_LSKMmBatch,Cycling cells,25,0.3304890696012168,0.64,0.64
+A,42,shared_per_gene,GSE165844_LSKMmBatch,Stress-response cells,148,0.2647240702160749,0.06,0.2
+A,42,shared_per_gene,GSE167597_spineMm,Dorsal horn neurons,51,0.6466110920038686,0.6,0.64
+A,42,shared_per_gene,GSE167597_spineMm,Excitatory neurons,53,0.48097027468449993,0.58,0.64
+A,42,shared_per_gene,GSE167597_spineMm,Inhibitory neurons,104,0.41824200999503236,0.58,0.64
+A,42,shared_per_gene,GSE167597_spineMm,Mast cells,29,0.7199159410230731,0.58,0.6
+A,42,shared_per_gene,GSE167597_spineMm,Retinal ganglion cells,31,0.6855751051760468,0.62,0.68
+A,42,shared_per_gene,GSE167597_spineMm,Spinal interneurons,37,0.5676802411422815,0.72,0.66
+A,42,shared_per_gene,GSE168181_BreastHmCancer,CD8+ T cells,128,0.3376529675375611,0.36,0.36
+A,42,shared_per_gene,GSE168181_BreastHmCancer,Endothelial cells,66,0.3379914519551821,0.6,0.56
+A,42,shared_per_gene,GSE168181_BreastHmCancer,Fibroblasts,33,0.3227531814347909,0.7,0.72
+A,42,shared_per_gene,GSE168181_BreastHmCancer,IFN-stimulated cells,25,0.38851463717506873,0.7,0.8
+A,42,shared_per_gene,GSE168181_BreastHmCancer,Luminal epithelial,48,0.21743346239028272,0.8,0.8
+A,42,shared_per_gene,GSE168181_BreastHmCancer,Macrophages,90,0.227315587296835,0.86,0.9
+A,42,shared_per_gene,GSE168181_BreastHmCancer,Stress-response cells,29,0.35538175499047386,0.18,0.22
+A,42,shared_per_gene,GSE183904_GastricHmCancer,CD8+ T cells,127,0.30607407201250536,0.88,0.86
+A,42,shared_per_gene,GSE183904_GastricHmCancer,Epithelial cells,82,0.2542963286568324,0.74,0.78
+A,42,shared_per_gene,GSE183904_GastricHmCancer,Fibroblasts,33,0.3599478741018074,0.74,0.76
+A,42,shared_per_gene,GSE183904_GastricHmCancer,MHC-II high APCs,72,0.23346065180790676,0.74,0.72
+A,42,shared_per_gene,GSE183904_GastricHmCancer,Neuroendocrine cells,21,0.49745131939064025,0.26,0.28
+A,42,shared_per_gene,GSE183904_GastricHmCancer,Plasma cells,44,0.40063746588133803,0.84,0.84
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Adipocytes,80,0.2804806268889258,0.8,0.76
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Cycling cells,33,0.3206605898547809,0.68,0.74
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Erythroid progenitors,37,0.4085187451894208,0.26,0.2
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Fibroblasts,42,0.2853986465069281,0.78,0.78
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Microglia,59,0.3972639906336867,0.6,0.68
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Monocytes,28,0.3970557099399983,0.44,0.52
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Neutrophils,81,0.24682494353577086,0.78,0.72
+A,42,shared_per_gene,GSE189070_astrocytesSCIMmDev,Oligodendrocytes,20,0.4037686412154708,0.68,0.68
+A,42,shared_per_gene,GSE189357_lungAdreHmCancer,Endothelial cells,27,0.35561567307746766,0.78,0.82
+A,42,shared_per_gene,GSE189357_lungAdreHmCancer,Epithelial cells,24,0.3457063265393725,0.72,0.74
+A,42,shared_per_gene,GSE189357_lungAdreHmCancer,MHC-II high APCs,181,0.17336685518684616,0.72,0.76
+A,42,shared_per_gene,GSE189357_lungAdreHmCancer,NK cells,29,0.5074881710408845,0.48,0.58
+A,42,shared_per_gene,GSE189357_lungAdreHmCancer,Regulatory T cells,127,0.41326285174789257,0.34,0.38
+A,42,shared_per_gene,GSE192857_hESCHmTimes,Cycling cells,23,0.45262297598744416,0.58,0.62
+A,42,shared_per_gene,GSE192857_hESCHmTimes,Immature neurons,27,0.5076998549097401,0.8,0.74
+A,42,shared_per_gene,GSE192857_hESCHmTimes,Melanocytes,76,0.29033328850678985,0.66,0.7
+A,42,shared_per_gene,GSE192857_hESCHmTimes,Pluripotent stem cells,84,0.2841932855008298,0.74,0.8
+A,42,shared_per_gene,GSE192857_hESCHmTimes,Proliferating cells,96,0.30350957821025565,0.66,0.74
+A,42,shared_per_gene,GSE192857_hESCHmTimes,Radial glia,72,0.2699620262274399,0.6,0.72
+A,42,shared_per_gene,GSE213740_ADHm,CD4+ T cells,34,0.3826391737971071,0.52,0.62
+A,42,shared_per_gene,GSE213740_ADHm,CD8+ T cells,47,0.29452826967896145,0.78,0.74
+A,42,shared_per_gene,GSE213740_ADHm,Capillary endothelial,32,0.3224972977313087,0.76,0.8
+A,42,shared_per_gene,GSE213740_ADHm,Fibroblasts,88,0.22857978920184324,0.82,0.8
+A,42,shared_per_gene,GSE213740_ADHm,MHC-II high APCs,54,0.2919131896837336,0.7,0.66
+A,42,shared_per_gene,GSE213740_ADHm,Monocytes,24,0.42977604437829026,0.7,0.76
+A,42,shared_per_gene,GSE213740_ADHm,Smooth muscle cells,102,0.2491766109088155,0.86,0.86
+A,42,shared_per_gene,GSE222002_TcellsHmCancer,CD8+ T cells,103,0.19140820204895173,0.8,0.78
+A,42,shared_per_gene,GSE222002_TcellsHmCancer,Fibroblasts,34,0.4152256129292103,0.46,0.64
+A,42,shared_per_gene,GSE222002_TcellsHmCancer,MHC-II high APCs,47,0.2737131947135787,0.88,0.84
+A,42,shared_per_gene,GSE222002_TcellsHmCancer,Regulatory T cells,189,0.2353018618025933,0.28,0.2
+A,42,shared_per_gene,GSE222002_TcellsHmCancer,Stress-response cells,26,0.3893372423823197,0.64,0.58
+A,42,shared_per_gene,GSE222002_TcellsHmCancer,Tip cells,25,0.3832513159978978,0.74,0.74
+A,42,shared_per_gene,GSE222369_NKsLymphomaHmCancer,CD8+ T cells,60,0.28873982682834626,0.64,0.7
+A,42,shared_per_gene,GSE222369_NKsLymphomaHmCancer,Fibroblasts,29,0.34546648570141947,0.68,0.72
+A,42,shared_per_gene,GSE222369_NKsLymphomaHmCancer,IFN-stimulated cells,130,0.32952028193981137,0.44,0.54
+A,42,shared_per_gene,GSE222369_NKsLymphomaHmCancer,MHC-II high APCs,44,0.34313430660367,0.56,0.7
+A,42,shared_per_gene,GSE222369_NKsLymphomaHmCancer,NK cells,118,0.2878042549815841,0.58,0.66
+A,42,shared_per_gene,GSE225600_breast_CancerHm,CD4+ T cells,77,0.25639370567459147,0.26,0.24
+A,42,shared_per_gene,GSE225600_breast_CancerHm,Endothelial cells,58,0.2712123309941716,0.66,0.64
+A,42,shared_per_gene,GSE225600_breast_CancerHm,Epithelial cells,26,0.3885610726918282,0.6,0.56
+A,42,shared_per_gene,GSE225600_breast_CancerHm,MHC-II high APCs,46,0.3514847506865301,0.78,0.76
+A,42,shared_per_gene,GSE225600_breast_CancerHm,NK cells,33,0.2420847137372249,0.62,0.54
+A,42,shared_per_gene,GSE225600_breast_CancerHm,Regulatory T cells,46,0.24951648655645686,0.64,0.7
+A,42,shared_per_gene,GSE225600_breast_CancerHm,Smooth muscle cells,42,0.28525932753580374,0.68,0.72
+A,42,shared_per_gene,GSE225857_liverColonMetasisHmCancer,Epithelial cells,56,0.22876258605275657,0.64,0.66
+A,42,shared_per_gene,GSE225857_liverColonMetasisHmCancer,Goblet cells,122,0.17469861108504733,0.5,0.52
+A,42,shared_per_gene,GSE225857_liverColonMetasisHmCancer,Hepatocytes,138,0.2212308283985829,0.52,0.56
+A,42,shared_per_gene,GSE225857_liverColonMetasisHmCancer,Smooth muscle cells,81,0.2656678504641259,0.66,0.76
+A,42,shared_per_gene,GSE226131_HSCMmAged,Cycling cells,29,0.32432994579061475,0.66,0.52
+A,42,shared_per_gene,GSE226131_HSCMmAged,Erythroid progenitors,37,0.3056648765293037,0.58,0.52
+A,42,shared_per_gene,GSE226131_HSCMmAged,Immature neurons,107,0.4589244465000415,0.18,0.18
+A,42,shared_per_gene,GSE226131_HSCMmAged,Neutrophils,92,0.16627420644348356,0.8,0.84
+A,42,shared_per_gene,GSE226131_HSCMmAged,Proliferating cells,65,0.34773915598021043,0.04,0.14
+A,42,shared_per_gene,GSE226131_HSCMmAged,Stress-response cells,42,0.276444765950925,0.82,0.82
+A,42,shared_per_gene,GSE228499_breastHmCancer,CD4+ T cells,56,0.25137890157776804,0.74,0.76
+A,42,shared_per_gene,GSE228499_breastHmCancer,Cholangiocytes,37,0.3289956880589002,0.72,0.7
+A,42,shared_per_gene,GSE228499_breastHmCancer,Goblet cells,80,0.16836531222757845,0.88,0.88
+A,42,shared_per_gene,GSE228499_breastHmCancer,IFN-stimulated cells,26,0.40007486076885146,0.62,0.64
+A,42,shared_per_gene,GSE228499_breastHmCancer,Inhibitory neurons,25,0.34884670228673176,0.8,0.8
+A,42,shared_per_gene,GSE228499_breastHmCancer,Luminal epithelial,66,0.259444345101754,0.78,0.76
+A,42,shared_per_gene,GSE228499_breastHmCancer,Neutrophils,21,0.456740839669931,0.1,0.1
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,B cells,68,0.25488792659021653,0.8,0.84
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,Cycling cells,65,0.2271566666317869,0.74,0.72
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,Erythroid progenitors,50,0.27150046198442246,0.72,0.74
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,Exhausted T cells,72,0.29930676190652966,0.82,0.86
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,HSCs/Progenitors,22,0.4407383100382697,0.7,0.72
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,Plasmacytoid DCs,106,0.39592320201666825,0.4,0.42
+A,42,shared_per_gene,GSE235787_bcellsALLHmCancer,Stress-response cells,29,0.345441796566132,0.62,0.64
+A,42,shared_per_gene,GSE253355_bmNicheHm,B cells,28,0.40782892530625126,0.82,0.78
+A,42,shared_per_gene,GSE253355_bmNicheHm,CD8+ T cells,27,0.3665282387427457,0.84,0.86
+A,42,shared_per_gene,GSE253355_bmNicheHm,Endothelial cells,23,0.38831538816153854,0.64,0.64
+A,42,shared_per_gene,GSE253355_bmNicheHm,Erythrocytes,24,0.3703726649732325,0.68,0.62
+A,42,shared_per_gene,GSE253355_bmNicheHm,Fibroblasts,68,0.28999161300211834,0.7,0.68
+A,42,shared_per_gene,GSE253355_bmNicheHm,HSCs/Progenitors,48,0.26626246960005406,0.74,0.78
+A,42,shared_per_gene,GSE253355_bmNicheHm,Mesenchymal stem cells,46,0.32733245286570545,0.74,0.78
+A,42,shared_per_gene,GSE253355_bmNicheHm,Monocytes,65,0.24509237158002203,0.94,0.92
+A,42,shared_per_gene,GSE253355_bmNicheHm,Plasma cells,78,0.2704029224846889,0.9,0.86
+A,42,shared_per_gene,GSE262288_breastMetasisHmCancer,Fibroblasts,34,0.27094622503594734,0.58,0.58
+A,42,shared_per_gene,GSE262288_breastMetasisHmCancer,Goblet cells,81,0.2769886556165268,0.36,0.6
+A,42,shared_per_gene,GSE262288_breastMetasisHmCancer,MHC-II high APCs,48,0.2983174882740188,0.7,0.68
+A,42,shared_per_gene,GSE262288_breastMetasisHmCancer,Macrophages,44,0.30612991531975436,0.64,0.56
+A,42,shared_per_gene,GSE262288_breastMetasisHmCancer,NK cells,40,0.3403358695157247,0.62,0.68
+A,42,shared_per_gene,GSE262288_breastMetasisHmCancer,Stress-response cells,20,0.34577344717834285,0.58,0.58
+A,42,shared_per_gene,GSE275119_TeethMmDev,Basal cells,26,0.358771327960373,0.64,0.64
+A,42,shared_per_gene,GSE275119_TeethMmDev,Fibroblasts,136,0.24479377936825342,0.76,0.78
+A,42,shared_per_gene,GSE275119_TeethMmDev,Macrophages,31,0.36200511946551694,0.8,0.78
+A,42,shared_per_gene,GSE275119_TeethMmDev,Odontoblasts,25,0.5538534535537282,0.6,0.62
+A,42,shared_per_gene,GSE275119_TeethMmDev,Stress-response cells,101,0.33783618579426344,0.76,0.8
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,CD4+ T cells,31,0.6171339126304751,0.58,0.6
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,CD8+ T cells,22,0.47846115211505774,0.52,0.52
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Endothelial cells,29,0.46256909691535997,0.66,0.64
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Fibroblasts,78,0.3700374890645011,0.78,0.7
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Hepatocytes,83,0.2896644024172146,0.76,0.7
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Macrophages,37,0.4376676102243782,0.78,0.82
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Mammary secretory,62,0.26898484582906856,0.7,0.72
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Monocytes,41,0.2879982575308614,0.56,0.6
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Radial glia,37,0.3558566681781713,0.7,0.68
+A,42,shared_per_gene,GSE283205_hepatoblastomaCancer,Spinal interneurons,30,0.5772403958442979,0.34,0.4
+A,42,shared_per_gene,GSE98638_TcellLiverHmCancer,CD4+ T cells,126,0.7258016973685915,0.74,0.72
+A,42,shared_per_gene,GSE98638_TcellLiverHmCancer,CD8+ T cells,175,0.7156856328991943,0.78,0.76
+A,42,shared_per_gene,GSE98638_TcellLiverHmCancer,NK cells,31,0.8636853264668857,0.7,0.7
+A,42,shared_per_gene,GSE98638_TcellLiverHmCancer,Regulatory T cells,64,0.8960059492779797,0.76,0.72
+A,42,shared_per_gene,GSE98638_TcellLiverHmCancer,Stress-response cells,37,0.833042197328965,0.62,0.54
+A,42,shared_per_gene,bm_GSE120446,Cycling cells,22,0.3289042031605813,0.68,0.72
+A,42,shared_per_gene,bm_GSE120446,Erythrocytes,28,0.3399505023419921,0.78,0.78
+A,42,shared_per_gene,bm_GSE120446,Erythroid progenitors,68,0.46626271831262583,0.6,0.78
+A,42,shared_per_gene,bm_GSE120446,MHC-II high APCs,31,0.195482436406308,0.56,0.64
+A,42,shared_per_gene,bm_GSE120446,Monocytes,43,0.4559923294692589,0.8,0.82
+A,42,shared_per_gene,bm_GSE120446,NK cells,61,0.3400742060373837,0.5,0.6
+A,42,shared_per_gene,bm_GSE120446,Radial glia,146,0.43616305044043596,0.28,0.34
+A,42,shared_per_gene,dentate,Astrocytes,48,0.32583150914268744,0.8,0.84
+A,42,shared_per_gene,dentate,Cycling cells,25,0.44638344397698665,0.66,0.68
+A,42,shared_per_gene,dentate,Excitatory neurons,21,0.5877056854857948,0.64,0.7
+A,42,shared_per_gene,dentate,Granule cells,110,0.46535749237251617,0.34,0.5
+A,42,shared_per_gene,dentate,Immature neurons,167,0.275437114870988,0.8,0.84
+A,42,shared_per_gene,dentate,Intermediate progenitors,32,0.3965595545072134,0.24,0.36
+A,42,shared_per_gene,dentate,Radial glia,28,0.4208368203688611,0.68,0.7
+A,42,shared_per_gene,endo,Alpha cells,91,0.31647345197145904,0.62,0.68
+A,42,shared_per_gene,endo,Beta cells,86,0.40234360032222655,0.66,0.7
+A,42,shared_per_gene,endo,Cholangiocytes,45,0.3678720508517204,0.8,0.8
+A,42,shared_per_gene,endo,Delta cells,28,0.40377809413466614,0.34,0.52
+A,42,shared_per_gene,endo,Immature neurons,51,0.36849553299960114,0.78,0.76
+A,42,shared_per_gene,endo,Neuroendocrine cells,63,0.332026745992231,0.44,0.52
+A,42,shared_per_gene,hESC_GSE144024,Cycling cells,89,0.2263019641490223,0.74,0.76
+A,42,shared_per_gene,hESC_GSE144024,Erythrocytes,56,0.2801450616369852,0.76,0.8
+A,42,shared_per_gene,hESC_GSE144024,Erythroid progenitors,188,0.19427581074220096,0.68,0.78
+A,42,shared_per_gene,hESC_GSE144024,Megakaryocytes,24,0.35948622669901903,0.74,0.78
+A,42,shared_per_gene,hESC_GSE144024,Microglia,44,0.2784501569907206,0.7,0.72
+A,42,shared_per_gene,hESC_GSE144024,Thyrotrophs,34,0.2994811321562326,0.56,0.58
+A,42,shared_per_gene,hemato,Dendritic cells,30,0.4517896672265497,0.76,0.76
+A,42,shared_per_gene,hemato,Erythrocytes,90,0.49106578160437264,0.78,0.76
+A,42,shared_per_gene,hemato,Erythroid progenitors,45,0.5132313669110893,0.78,0.82
+A,42,shared_per_gene,hemato,HSCs/Progenitors,53,0.2585178765723939,0.78,0.76
+A,42,shared_per_gene,hemato,Macrophages,27,0.47597554448005436,0.5,0.58
+A,42,shared_per_gene,hemato,Müller glia,28,0.36234285900751106,0.62,0.64
+A,42,shared_per_gene,hemato,Neutrophils,84,0.2956049470889167,0.86,0.84
+A,42,shared_per_gene,hemato,Proliferating cells,74,0.3461523689108354,0.62,0.66
+A,42,shared_per_gene,ifnHSPC_GSE226824,Cycling cells,39,0.29349532851512256,0.78,0.78
+A,42,shared_per_gene,ifnHSPC_GSE226824,HSCs/Progenitors,95,0.2661108480574929,0.64,0.68
+A,42,shared_per_gene,ifnHSPC_GSE226824,IFN-stimulated cells,55,0.2997382508863857,0.38,0.48
+A,42,shared_per_gene,ifnHSPC_GSE226824,Megakaryocytes,32,0.3468943519057328,0.68,0.56
+A,42,shared_per_gene,ifnHSPC_GSE226824,Müller glia,30,0.3493490230187969,0.44,0.48
+A,42,shared_per_gene,ifnHSPC_GSE226824,Neutrophils,97,0.2394348656378392,0.68,0.76
+A,42,shared_per_gene,ifnHSPC_GSE226824,Stress-response cells,27,0.3956464747798918,0.68,0.68
+A,42,shared_per_gene,lung,Alveolar type 2,162,0.3071246473452154,0.58,0.74
+A,42,shared_per_gene,lung,Ciliated cells,90,0.3661845285968572,0.76,0.8
+A,42,shared_per_gene,lung,Club cells,89,0.11698530629341819,0.4,0.52
+A,42,shared_per_gene,lung,Cycling cells,21,0.3799488764207407,0.5,0.52
+A,42,shared_per_gene,lung,Epithelial cells,88,0.2399499717798278,0.7,0.68
+A,42,shared_per_gene,setty,B cells,47,0.2546735140621177,0.44,0.46
+A,42,shared_per_gene,setty,Erythroid progenitors,80,0.2821854261158359,0.8,0.86
+A,42,shared_per_gene,setty,Merkel cells,68,0.35915428631728796,0.58,0.64
+A,42,shared_per_gene,setty,Neutrophils,89,0.3234190990955604,0.76,0.76
+A,42,shared_per_gene,setty,Plasmacytoid DCs,32,0.34996772840158835,0.72,0.72
+A,42,shared_per_gene,setty,Proliferating cells,33,0.4192922733336218,0.78,0.7
+A,42,shared_per_gene,setty,Stress-response cells,82,0.4106983090363434,0.3,0.44
+A,42,per_cell_type,GSE115571_LPSMmDev,Macrophages,22,0.43154820428773893,0.42,0.54
+A,42,per_cell_type,GSE115571_LPSMmDev,Microglia,28,0.3460283563480964,0.08,0.16
+A,42,per_cell_type,GSE117988_MCCPBMCCancer,CD4+ T cells,63,0.39626277099125184,0.4,0.56
+A,42,per_cell_type,GSE117988_MCCPBMCCancer,CD8+ T cells,44,0.47647691769441786,0.4,0.54
+A,42,per_cell_type,GSE117988_MCCPBMCCancer,MHC-II high APCs,87,0.23206563330252,0.56,0.6
+A,42,per_cell_type,GSE117988_MCCPBMCCancer,Monocytes,101,0.41961654077961524,0.8,0.8
+A,42,per_cell_type,GSE117988_MCCPBMCCancer,NK cells,89,0.5598981944501894,0.32,0.48
+A,42,per_cell_type,GSE117988_MCCTumorCancer,Cycling cells,101,0.24901987318344496,0.82,0.84
+A,42,per_cell_type,GSE117988_MCCTumorCancer,Merkel cells,286,0.402996255363491,0.24,0.44
+A,42,per_cell_type,GSE117988_MCCTumorCancer,Stress-response cells,46,0.2827488314639148,0.7,0.7
+A,42,per_cell_type,GSE120505_bloodAged,B cells,225,0.38589410510727784,0.58,0.8
+A,42,per_cell_type,GSE120505_bloodAged,CD4+ T cells,53,0.4709312100133656,0.56,0.6
+A,42,per_cell_type,GSE120505_bloodAged,CD8+ T cells,37,0.27749949401306795,0.6,0.66
+A,42,per_cell_type,GSE120505_bloodAged,Macrophages,22,0.4927367146247634,0.8,0.8
+A,42,per_cell_type,GSE120505_bloodAged,Monocytes,31,0.34420084411609336,0.84,0.82
+A,42,per_cell_type,GSE120505_bloodAged,Müller glia,39,0.33042252224134644,0.62,0.76
+A,42,per_cell_type,GSE123813_bccHmCancer,Basal cells,29,0.3292830353937649,0.66,0.72
+A,42,per_cell_type,GSE123813_bccHmCancer,CD8+ T cells,154,0.1834284605471177,0.76,0.84
+A,42,per_cell_type,GSE123813_bccHmCancer,MHC-II high APCs,82,0.2352462220828655,0.82,0.84
+A,42,per_cell_type,GSE123813_bccHmCancer,NK cells,45,0.31102710602016154,0.72,0.72
+A,42,per_cell_type,GSE123813_bccHmCancer,Regulatory T cells,31,0.3026601053659094,0.66,0.7
+A,42,per_cell_type,GSE123813_bccHmCancer,Stress-response cells,34,0.2835777883835889,0.48,0.58
+A,42,per_cell_type,GSE123813_sccHmCancer,CD4+ T cells,59,0.21088491395466474,0.44,0.5
+A,42,per_cell_type,GSE123813_sccHmCancer,CD8+ T cells,103,0.2159176880307738,0.52,0.68
+A,42,per_cell_type,GSE123813_sccHmCancer,MHC-II high APCs,24,0.34284259734719713,0.52,0.64
+A,42,per_cell_type,GSE123813_sccHmCancer,NK cells,47,0.23788259546273124,0.58,0.54
+A,42,per_cell_type,GSE123813_sccHmCancer,Regulatory T cells,49,0.25455936285734043,0.7,0.72
+A,42,per_cell_type,GSE123813_sccHmCancer,Stress-response cells,148,0.16195256023079158,0.64,0.66
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,Alpha cells,37,0.37822213563212104,0.18,0.16
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,CD8+ T cells,72,0.21060111508866097,0.6,0.72
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,Epithelial cells,36,0.30685633869726114,0.72,0.68
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,MHC-II high APCs,52,0.21998882115993587,0.66,0.72
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,Macrophages,31,0.28832620344630994,0.8,0.84
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,Monocytes,37,0.2428369050729862,0.76,0.76
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,NK cells,80,0.15812974409243394,0.4,0.56
+A,42,per_cell_type,GSE123902_LungAdreHmCancer,Regulatory T cells,48,0.2518193869328694,0.54,0.64
+A,42,per_cell_type,GSE124310_MMHmCancer,Collecting duct,95,0.37012808811641257,0.36,0.4
+A,42,per_cell_type,GSE124310_MMHmCancer,Cycling cells,29,0.38156802952519664,0.68,0.7
+A,42,per_cell_type,GSE124310_MMHmCancer,Erythrocytes,22,0.513398830881594,0.42,0.48
+A,42,per_cell_type,GSE124310_MMHmCancer,Erythroid progenitors,29,0.2852146010264403,0.58,0.6
+A,42,per_cell_type,GSE124310_MMHmCancer,MHC-II high APCs,43,0.31339246372794016,0.46,0.54
+A,42,per_cell_type,GSE124310_MMHmCancer,Monocytes,83,0.31670120760460146,0.82,0.8
+A,42,per_cell_type,GSE124310_MMHmCancer,NK cells,90,0.2427347010533317,0.34,0.44
+A,42,per_cell_type,GSE124310_MMHmCancer,Plasma cells,33,0.45581100492368487,0.76,0.82
+A,42,per_cell_type,GSE130148_LungHmDev,Alveolar type 1,20,0.6851861004367381,0.64,0.7
+A,42,per_cell_type,GSE130148_LungHmDev,Alveolar type 2,117,0.4977007762989511,0.66,0.68
+A,42,per_cell_type,GSE130148_LungHmDev,Ciliated cells,26,0.42843868035073746,0.6,0.6
+A,42,per_cell_type,GSE130148_LungHmDev,Club cells,21,0.6767123948618855,0.12,0.14
+A,42,per_cell_type,GSE130148_LungHmDev,Macrophages,87,0.40685119607636916,0.82,0.84
+A,42,per_cell_type,GSE130148_LungHmDev,Mast cells,28,0.5137428298763979,0.46,0.56
+A,42,per_cell_type,GSE130148_LungHmDev,Monocytes,61,0.4087788489117621,0.74,0.74
+A,42,per_cell_type,GSE130148_LungHmDev,NK cells,41,0.6421141654301827,0.36,0.5
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,B cells,88,0.24915845752241567,0.54,0.58
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,CD4+ T cells,115,0.14204713869346033,0.68,0.72
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,Erythrocytes,31,0.27646800458179954,0.58,0.64
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,Erythroid progenitors,63,0.2322536517950281,0.76,0.74
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,MHC-II high APCs,31,0.32968444833989197,0.66,0.64
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,Monocytes,43,0.2446222209778584,0.66,0.62
+A,42,per_cell_type,GSE132509_acutelymluekPBMCHmCancer,Stress-response cells,63,0.25881924775657056,0.84,0.86
+A,42,per_cell_type,GSE138709_LiverCancer,CD8+ T cells,122,0.25644554217504006,0.78,0.84
+A,42,per_cell_type,GSE138709_LiverCancer,Cholangiocytes,109,0.16266463891497776,0.86,0.88
+A,42,per_cell_type,GSE138709_LiverCancer,Cycling cells,21,0.3499726722791485,0.72,0.76
+A,42,per_cell_type,GSE138709_LiverCancer,Fibroblasts,41,0.29703778440263867,0.8,0.8
+A,42,per_cell_type,GSE138709_LiverCancer,MHC-II high APCs,22,0.31057661794736685,0.82,0.78
+A,42,per_cell_type,GSE138709_LiverCancer,Monocytes,29,0.24865220372033192,0.78,0.84
+A,42,per_cell_type,GSE138709_LiverCancer,Müller glia,35,0.3110037171061918,0.7,0.74
+A,42,per_cell_type,GSE142653pitHmDev,Corticotrophs,22,0.4779384736077213,0.68,0.64
+A,42,per_cell_type,GSE142653pitHmDev,Epithelial cells,29,0.46241392012555016,0.74,0.7
+A,42,per_cell_type,GSE142653pitHmDev,Fibroblasts,99,0.32671885648367355,0.88,0.84
+A,42,per_cell_type,GSE142653pitHmDev,Gonadotrophs,60,0.3091577189318222,0.54,0.5
+A,42,per_cell_type,GSE142653pitHmDev,Immature neurons,40,0.3786266175364231,0.66,0.64
+A,42,per_cell_type,GSE142653pitHmDev,MHC-II high APCs,23,0.48628362439784295,0.8,0.8
+A,42,per_cell_type,GSE142653pitHmDev,Neuroendocrine cells,35,0.41275051626228804,0.7,0.66
+A,42,per_cell_type,GSE142653pitHmDev,Somatotrophs,66,0.3037533083979333,0.86,0.78
+A,42,per_cell_type,GSE143423_lbm_CancerBrainHm,Alveolar type 2,170,0.2529883220756309,0.88,0.88
+A,42,per_cell_type,GSE143423_lbm_CancerBrainHm,Cholangiocytes,130,0.3274208252288553,0.7,0.72
+A,42,per_cell_type,GSE143423_lbm_CancerBrainHm,Cycling cells,24,0.44473712612633043,0.5,0.54
+A,42,per_cell_type,GSE143423_lbm_CancerBrainHm,MHC-II high APCs,42,0.3145178594140262,0.6,0.6
+A,42,per_cell_type,GSE143423_lbm_CancerBrainHm,Macrophages,21,0.397920974675581,0.74,0.78
+A,42,per_cell_type,GSE143423_tnbc_CancerBrainHm,Luminal epithelial,56,0.22112658434378318,0.24,0.32
+A,42,per_cell_type,GSE143423_tnbc_CancerBrainHm,Plasma cells,35,0.2845834705457793,0.78,0.8
+A,42,per_cell_type,GSE143423_tnbc_CancerBrainHm,Proliferating cells,32,0.306956112075269,0.76,0.72
+A,42,per_cell_type,GSE143423_tnbc_CancerBrainHm,Retinal ganglion cells,137,0.46461941365458737,0.2,0.16
+A,42,per_cell_type,GSE143423_tnbc_CancerBrainHm,Stress-response cells,57,0.2692531486783032,0.66,0.62
+A,42,per_cell_type,GSE145929_ProgastinMmDev,Basal cells,57,0.41065980762334414,0.7,0.78
+A,42,per_cell_type,GSE145929_ProgastinMmDev,Fibroblasts,26,0.3485939169454357,0.7,0.68
+A,42,per_cell_type,GSE145929_ProgastinMmDev,MHC-II high APCs,22,0.32179315752058385,0.66,0.7
+A,42,per_cell_type,GSE145929_ProgastinMmDev,Prostate epithelial,182,0.23449218033045297,0.54,0.66
+A,42,per_cell_type,GSE145929_ProgastinMmDev,Stress-response cells,44,0.23423599024606828,0.62,0.56
+A,42,per_cell_type,GSE145929_ProgastinMmDev,Urothelial cells,77,0.20803476970894605,0.86,0.82
+A,42,per_cell_type,GSE145929_UrineMmDev,Basal cells,41,0.4811780575208904,0.16,0.12
+A,42,per_cell_type,GSE145929_UrineMmDev,Fibroblasts,23,0.4661258777412056,0.74,0.68
+A,42,per_cell_type,GSE145929_UrineMmDev,Prostate epithelial,79,0.21246425623885246,0.42,0.6
+A,42,per_cell_type,GSE145929_UrineMmDev,Sertoli cells,31,0.34064895926597816,0.5,0.56
+A,42,per_cell_type,GSE145929_UrineMmDev,Urothelial cells,166,0.1808821449579271,0.76,0.78
+A,42,per_cell_type,GSE148218_bmALLHmCancer,B cells,31,0.6088245532609458,0.5,0.58
+A,42,per_cell_type,GSE148218_bmALLHmCancer,CD4+ T cells,56,0.44446940158981324,0.64,0.78
+A,42,per_cell_type,GSE148218_bmALLHmCancer,CD8+ T cells,20,0.43783147418397317,0.7,0.76
+A,42,per_cell_type,GSE148218_bmALLHmCancer,Cycling cells,74,0.23435302754336912,0.74,0.76
+A,42,per_cell_type,GSE148218_bmALLHmCancer,Erythroid progenitors,89,0.227540904954491,0.68,0.68
+A,42,per_cell_type,GSE148218_bmALLHmCancer,IFN-stimulated cells,33,0.29574358979548415,0.56,0.64
+A,42,per_cell_type,GSE148218_bmALLHmCancer,Macrophages,39,0.2990225054729514,0.04,0.04
+A,42,per_cell_type,GSE148218_bmALLHmCancer,Plasma cells,78,0.36185245043348746,0.42,0.54
+A,42,per_cell_type,GSE149655_CAHmCancer,Alveolar type 1,28,0.32087289738026087,0.68,0.7
+A,42,per_cell_type,GSE149655_CAHmCancer,Alveolar type 2,50,0.2635766718284704,0.86,0.84
+A,42,per_cell_type,GSE149655_CAHmCancer,CD8+ T cells,31,0.431502536749011,0.26,0.32
+A,42,per_cell_type,GSE149655_CAHmCancer,Endothelial cells,51,0.26575104222286894,0.88,0.82
+A,42,per_cell_type,GSE149655_CAHmCancer,Epithelial cells,20,0.4553364444893961,0.68,0.72
+A,42,per_cell_type,GSE149655_CAHmCancer,Fibroblasts,20,0.4026344278095905,0.7,0.66
+A,42,per_cell_type,GSE149655_CAHmCancer,Macrophages,20,0.29906040946860735,0.66,0.64
+A,42,per_cell_type,GSE149655_CAHmCancer,Mast cells,24,0.3327079739061406,0.5,0.48
+A,42,per_cell_type,GSE149655_CAHmCancer,Plasma cells,28,0.33187073575023857,0.4,0.3
+A,42,per_cell_type,GSE155109_bcECHmCancer,Capillary endothelial,111,0.25717490239771607,0.44,0.56
+A,42,per_cell_type,GSE155109_bcECHmCancer,IFN-stimulated cells,56,0.3328989574720493,0.5,0.48
+A,42,per_cell_type,GSE155109_bcECHmCancer,Lymphatic endothelial,26,0.3760386786062103,0.64,0.66
+A,42,per_cell_type,GSE155109_bcECHmCancer,Tip cells,121,0.18621719130791692,0.66,0.66
+A,42,per_cell_type,GSE155109_bcECHmCancer,Venous endothelial,136,0.23219013308531683,0.82,0.84
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,CD8+ T cells,51,0.3557584557792997,0.8,0.82
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,Endothelial cells,33,0.3930086022988337,0.54,0.6
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,Epithelial cells,77,0.18476116474757537,0.78,0.8
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,Fibroblasts,86,0.2352246010788445,0.86,0.84
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,MHC-II high APCs,32,0.2663497250587893,0.76,0.74
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,Myoepithelial cells,24,0.4129158890482981,0.74,0.74
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,Smooth muscle cells,37,0.32387164044379313,0.62,0.64
+A,42,per_cell_type,GSE155109_bcStromaHmCancer,Tip cells,64,0.3417143840806681,0.82,0.8
+A,42,per_cell_type,GSE163558_stomachHmCancer,B cells,42,0.2957935299504393,0.74,0.8
+A,42,per_cell_type,GSE163558_stomachHmCancer,Cycling cells,110,0.20916231734133184,0.5,0.48
+A,42,per_cell_type,GSE163558_stomachHmCancer,Epithelial cells,26,0.303972199974643,0.76,0.66
+A,42,per_cell_type,GSE163558_stomachHmCancer,NK cells,81,0.3233171597396258,0.38,0.44
+A,42,per_cell_type,GSE163558_stomachHmCancer,Neutrophils,35,0.3707277494000334,0.94,0.9
+A,42,per_cell_type,GSE163558_stomachHmCancer,Regulatory T cells,41,0.3481299731128889,0.66,0.62
+A,42,per_cell_type,GSE165784_RetinaHmDev,CD4+ T cells,22,0.463339720476828,0.38,0.3
+A,42,per_cell_type,GSE165784_RetinaHmDev,MHC-II high APCs,97,0.20597989338618,0.64,0.74
+A,42,per_cell_type,GSE165784_RetinaHmDev,Monocytes,23,0.39027474956942443,0.76,0.78
+A,42,per_cell_type,GSE165784_RetinaHmDev,Müller glia,84,0.23380193212922523,0.84,0.88
+A,42,per_cell_type,GSE165784_RetinaHmDev,Neutrophils,110,0.22353946051218096,0.78,0.78
+A,42,per_cell_type,GSE165784_RetinaHmDev,Smooth muscle cells,36,0.29223025218492416,0.7,0.78
+A,42,per_cell_type,GSE165844_LSKMmBatch,Cycling cells,25,0.3188410595051663,0.64,0.68
+A,42,per_cell_type,GSE165844_LSKMmBatch,Stress-response cells,148,0.26065383111954243,0.12,0.24
+A,42,per_cell_type,GSE167597_spineMm,Dorsal horn neurons,51,0.2874367852972231,0.72,0.7
+A,42,per_cell_type,GSE167597_spineMm,Excitatory neurons,53,0.2582087474203758,0.64,0.68
+A,42,per_cell_type,GSE167597_spineMm,Inhibitory neurons,104,0.2000245599510925,0.58,0.6
+A,42,per_cell_type,GSE167597_spineMm,Mast cells,29,0.7522929043626688,0.56,0.62
+A,42,per_cell_type,GSE167597_spineMm,Retinal ganglion cells,31,0.5792954637017693,0.68,0.64
+A,42,per_cell_type,GSE167597_spineMm,Spinal interneurons,37,0.356978918560923,0.7,0.72
+A,42,per_cell_type,GSE168181_BreastHmCancer,CD8+ T cells,128,0.39910870901611784,0.36,0.44
+A,42,per_cell_type,GSE168181_BreastHmCancer,Endothelial cells,66,0.2800327120510646,0.58,0.62
+A,42,per_cell_type,GSE168181_BreastHmCancer,Fibroblasts,33,0.2858070135839855,0.78,0.8
+A,42,per_cell_type,GSE168181_BreastHmCancer,IFN-stimulated cells,25,0.4241782058294916,0.66,0.78
+A,42,per_cell_type,GSE168181_BreastHmCancer,Luminal epithelial,48,0.2292761864759334,0.76,0.78
+A,42,per_cell_type,GSE168181_BreastHmCancer,Macrophages,90,0.18770480897758518,0.9,0.88
+A,42,per_cell_type,GSE168181_BreastHmCancer,Stress-response cells,29,0.5692188734549456,0.22,0.24
+A,42,per_cell_type,GSE183904_GastricHmCancer,CD8+ T cells,127,0.36151905934813783,0.84,0.86
+A,42,per_cell_type,GSE183904_GastricHmCancer,Epithelial cells,82,0.243261520672717,0.76,0.78
+A,42,per_cell_type,GSE183904_GastricHmCancer,Fibroblasts,33,0.32388990429104825,0.78,0.78
+A,42,per_cell_type,GSE183904_GastricHmCancer,MHC-II high APCs,72,0.20044000835878253,0.74,0.76
+A,42,per_cell_type,GSE183904_GastricHmCancer,Neuroendocrine cells,21,0.5677978155487493,0.24,0.2
+A,42,per_cell_type,GSE183904_GastricHmCancer,Plasma cells,44,0.4100436730733425,0.84,0.82
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Adipocytes,80,0.24466580976890306,0.82,0.82
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Cycling cells,33,0.28968480105126976,0.7,0.7
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Erythroid progenitors,37,0.49919950358445775,0.22,0.14
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Fibroblasts,42,0.3270300731762241,0.74,0.76
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Microglia,59,0.29888717800273634,0.56,0.66
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Monocytes,28,0.32015414570090933,0.36,0.56
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Neutrophils,81,0.2762883704938286,0.74,0.74
+A,42,per_cell_type,GSE189070_astrocytesSCIMmDev,Oligodendrocytes,20,0.4289426706455376,0.66,0.68
+A,42,per_cell_type,GSE189357_lungAdreHmCancer,Endothelial cells,27,0.4076460122981558,0.72,0.74
+A,42,per_cell_type,GSE189357_lungAdreHmCancer,Epithelial cells,24,0.3612154657875978,0.78,0.76
+A,42,per_cell_type,GSE189357_lungAdreHmCancer,MHC-II high APCs,181,0.13633116404332507,0.7,0.68
+A,42,per_cell_type,GSE189357_lungAdreHmCancer,NK cells,29,0.3124577710932105,0.5,0.56
+A,42,per_cell_type,GSE189357_lungAdreHmCancer,Regulatory T cells,127,0.389269645043303,0.38,0.48
+A,42,per_cell_type,GSE192857_hESCHmTimes,Cycling cells,23,0.33657850177774207,0.62,0.62
+A,42,per_cell_type,GSE192857_hESCHmTimes,Immature neurons,27,0.3451286346661838,0.74,0.8
+A,42,per_cell_type,GSE192857_hESCHmTimes,Melanocytes,76,0.21652337105268177,0.76,0.68
+A,42,per_cell_type,GSE192857_hESCHmTimes,Pluripotent stem cells,84,0.1614269687805627,0.88,0.88
+A,42,per_cell_type,GSE192857_hESCHmTimes,Proliferating cells,96,0.21573989202445404,0.8,0.82
+A,42,per_cell_type,GSE192857_hESCHmTimes,Radial glia,72,0.2514254691202051,0.52,0.62
+A,42,per_cell_type,GSE213740_ADHm,CD4+ T cells,34,0.38043150254835034,0.64,0.74
+A,42,per_cell_type,GSE213740_ADHm,CD8+ T cells,47,0.2649632287200983,0.7,0.72
+A,42,per_cell_type,GSE213740_ADHm,Capillary endothelial,32,0.37557441985997286,0.8,0.76
+A,42,per_cell_type,GSE213740_ADHm,Fibroblasts,88,0.20454187161186965,0.82,0.8
+A,42,per_cell_type,GSE213740_ADHm,MHC-II high APCs,54,0.26442433278516325,0.76,0.8
+A,42,per_cell_type,GSE213740_ADHm,Monocytes,24,0.36166768569486374,0.66,0.66
+A,42,per_cell_type,GSE213740_ADHm,Smooth muscle cells,102,0.2113655610115919,0.9,0.92
+A,42,per_cell_type,GSE222002_TcellsHmCancer,CD8+ T cells,103,0.21282164978305534,0.72,0.76
+A,42,per_cell_type,GSE222002_TcellsHmCancer,Fibroblasts,34,0.37382076615739585,0.42,0.62
+A,42,per_cell_type,GSE222002_TcellsHmCancer,MHC-II high APCs,47,0.2872332189862007,0.86,0.86
+A,42,per_cell_type,GSE222002_TcellsHmCancer,Regulatory T cells,189,0.21246546697184393,0.16,0.24
+A,42,per_cell_type,GSE222002_TcellsHmCancer,Stress-response cells,26,0.40001953397859913,0.66,0.66
+A,42,per_cell_type,GSE222002_TcellsHmCancer,Tip cells,25,0.3541628973536541,0.76,0.7
+A,42,per_cell_type,GSE222369_NKsLymphomaHmCancer,CD8+ T cells,60,0.2996137249950418,0.66,0.74
+A,42,per_cell_type,GSE222369_NKsLymphomaHmCancer,Fibroblasts,29,0.34699330580848214,0.6,0.64
+A,42,per_cell_type,GSE222369_NKsLymphomaHmCancer,IFN-stimulated cells,130,0.2839503440253041,0.48,0.56
+A,42,per_cell_type,GSE222369_NKsLymphomaHmCancer,MHC-II high APCs,44,0.3692957007298481,0.66,0.7
+A,42,per_cell_type,GSE222369_NKsLymphomaHmCancer,NK cells,118,0.23308150070084907,0.64,0.7
+A,42,per_cell_type,GSE225600_breast_CancerHm,CD4+ T cells,77,0.2612314258464372,0.16,0.2
+A,42,per_cell_type,GSE225600_breast_CancerHm,Endothelial cells,58,0.2536809772824089,0.74,0.68
+A,42,per_cell_type,GSE225600_breast_CancerHm,Epithelial cells,26,0.37043667320310913,0.6,0.68
+A,42,per_cell_type,GSE225600_breast_CancerHm,MHC-II high APCs,46,0.3100628940908633,0.8,0.76
+A,42,per_cell_type,GSE225600_breast_CancerHm,NK cells,33,0.26365446671392656,0.64,0.62
+A,42,per_cell_type,GSE225600_breast_CancerHm,Regulatory T cells,46,0.23499221096149928,0.6,0.68
+A,42,per_cell_type,GSE225600_breast_CancerHm,Smooth muscle cells,42,0.3007250274144122,0.74,0.7
+A,42,per_cell_type,GSE225857_liverColonMetasisHmCancer,Epithelial cells,56,0.22734651191407418,0.68,0.72
+A,42,per_cell_type,GSE225857_liverColonMetasisHmCancer,Goblet cells,122,0.1627935320817775,0.5,0.54
+A,42,per_cell_type,GSE225857_liverColonMetasisHmCancer,Hepatocytes,138,0.19583487843073538,0.6,0.66
+A,42,per_cell_type,GSE225857_liverColonMetasisHmCancer,Smooth muscle cells,81,0.21310833347537023,0.76,0.82
+A,42,per_cell_type,GSE226131_HSCMmAged,Cycling cells,29,0.2790100592229382,0.6,0.62
+A,42,per_cell_type,GSE226131_HSCMmAged,Erythroid progenitors,37,0.25725139312955564,0.56,0.58
+A,42,per_cell_type,GSE226131_HSCMmAged,Immature neurons,107,0.5492438858321688,0.1,0.12
+A,42,per_cell_type,GSE226131_HSCMmAged,Neutrophils,92,0.15721505316960904,0.88,0.8
+A,42,per_cell_type,GSE226131_HSCMmAged,Proliferating cells,65,0.3103243207300102,0.12,0.2
+A,42,per_cell_type,GSE226131_HSCMmAged,Stress-response cells,42,0.2740677067469454,0.78,0.8
+A,42,per_cell_type,GSE228499_breastHmCancer,CD4+ T cells,56,0.2742768836800556,0.76,0.86
+A,42,per_cell_type,GSE228499_breastHmCancer,Cholangiocytes,37,0.26598434678991134,0.74,0.72
+A,42,per_cell_type,GSE228499_breastHmCancer,Goblet cells,80,0.18692166687211384,0.84,0.84
+A,42,per_cell_type,GSE228499_breastHmCancer,IFN-stimulated cells,26,0.35601909901914586,0.46,0.64
+A,42,per_cell_type,GSE228499_breastHmCancer,Inhibitory neurons,25,0.3846843533351522,0.68,0.7
+A,42,per_cell_type,GSE228499_breastHmCancer,Luminal epithelial,66,0.23551331099226144,0.7,0.74
+A,42,per_cell_type,GSE228499_breastHmCancer,Neutrophils,21,0.3830590603005354,0.08,0.08
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,B cells,68,0.24093234156026752,0.8,0.86
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,Cycling cells,65,0.19065504869937883,0.8,0.8
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,Erythroid progenitors,50,0.27271931244314773,0.78,0.76
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,Exhausted T cells,72,0.26677005426736833,0.84,0.88
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,HSCs/Progenitors,22,0.37251340558853724,0.78,0.74
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,Plasmacytoid DCs,106,0.2782003276361372,0.38,0.46
+A,42,per_cell_type,GSE235787_bcellsALLHmCancer,Stress-response cells,29,0.3013821907893835,0.7,0.72
+A,42,per_cell_type,GSE253355_bmNicheHm,B cells,28,0.415078520551851,0.74,0.74
+A,42,per_cell_type,GSE253355_bmNicheHm,CD8+ T cells,27,0.37962307171236004,0.88,0.9
+A,42,per_cell_type,GSE253355_bmNicheHm,Endothelial cells,23,0.41983471602672506,0.72,0.74
+A,42,per_cell_type,GSE253355_bmNicheHm,Erythrocytes,24,0.30824912722845293,0.7,0.72
+A,42,per_cell_type,GSE253355_bmNicheHm,Fibroblasts,68,0.28955836074036134,0.7,0.74
+A,42,per_cell_type,GSE253355_bmNicheHm,HSCs/Progenitors,48,0.24766502885892272,0.72,0.76
+A,42,per_cell_type,GSE253355_bmNicheHm,Mesenchymal stem cells,46,0.27987819897479593,0.9,0.86
+A,42,per_cell_type,GSE253355_bmNicheHm,Monocytes,65,0.25822479364302775,0.92,0.92
+A,42,per_cell_type,GSE253355_bmNicheHm,Plasma cells,78,0.3217318994019394,0.88,0.84
+A,42,per_cell_type,GSE262288_breastMetasisHmCancer,Fibroblasts,34,0.28737210053675477,0.6,0.62
+A,42,per_cell_type,GSE262288_breastMetasisHmCancer,Goblet cells,81,0.25379612623731357,0.42,0.56
+A,42,per_cell_type,GSE262288_breastMetasisHmCancer,MHC-II high APCs,48,0.2627322259881197,0.7,0.64
+A,42,per_cell_type,GSE262288_breastMetasisHmCancer,Macrophages,44,0.27077922853434633,0.7,0.62
+A,42,per_cell_type,GSE262288_breastMetasisHmCancer,NK cells,40,0.23943302172260353,0.62,0.66
+A,42,per_cell_type,GSE262288_breastMetasisHmCancer,Stress-response cells,20,0.3572785281714548,0.64,0.6
+A,42,per_cell_type,GSE275119_TeethMmDev,Basal cells,26,0.33587268612729915,0.66,0.7
+A,42,per_cell_type,GSE275119_TeethMmDev,Fibroblasts,136,0.2249965402487471,0.82,0.78
+A,42,per_cell_type,GSE275119_TeethMmDev,Macrophages,31,0.3512183142023618,0.84,0.82
+A,42,per_cell_type,GSE275119_TeethMmDev,Odontoblasts,25,0.4163632910614767,0.58,0.62
+A,42,per_cell_type,GSE275119_TeethMmDev,Stress-response cells,101,0.3550113833270455,0.78,0.84
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,CD4+ T cells,31,0.4702033049144787,0.52,0.56
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,CD8+ T cells,22,0.5216934817771003,0.58,0.54
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Endothelial cells,29,0.4834870769898953,0.76,0.74
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Fibroblasts,78,0.25842713709166326,0.74,0.74
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Hepatocytes,83,0.2647993525055915,0.7,0.76
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Macrophages,37,0.35535548339223155,0.76,0.78
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Mammary secretory,62,0.23962444954238607,0.74,0.78
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Monocytes,41,0.2501786369984425,0.52,0.48
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Radial glia,37,0.3329521362672362,0.76,0.82
+A,42,per_cell_type,GSE283205_hepatoblastomaCancer,Spinal interneurons,30,0.4656773107839119,0.36,0.36
+A,42,per_cell_type,GSE98638_TcellLiverHmCancer,CD4+ T cells,126,0.7472970065073434,0.74,0.74
+A,42,per_cell_type,GSE98638_TcellLiverHmCancer,CD8+ T cells,175,0.7423518425797917,0.84,0.82
+A,42,per_cell_type,GSE98638_TcellLiverHmCancer,NK cells,31,0.9022505357343915,0.76,0.7
+A,42,per_cell_type,GSE98638_TcellLiverHmCancer,Regulatory T cells,64,0.8746000634264999,0.8,0.74
+A,42,per_cell_type,GSE98638_TcellLiverHmCancer,Stress-response cells,37,0.7915849175237646,0.66,0.58
+A,42,per_cell_type,bm_GSE120446,Cycling cells,22,0.3301499171902379,0.7,0.72
+A,42,per_cell_type,bm_GSE120446,Erythrocytes,28,0.3260817073894548,0.76,0.72
+A,42,per_cell_type,bm_GSE120446,Erythroid progenitors,68,0.4847589523975071,0.6,0.76
+A,42,per_cell_type,bm_GSE120446,MHC-II high APCs,31,0.2505092377626252,0.58,0.6
+A,42,per_cell_type,bm_GSE120446,Monocytes,43,0.3411522829679238,0.82,0.9
+A,42,per_cell_type,bm_GSE120446,NK cells,61,0.332244008563323,0.52,0.58
+A,42,per_cell_type,bm_GSE120446,Radial glia,146,0.3612896220464802,0.3,0.3
+A,42,per_cell_type,dentate,Astrocytes,48,0.3115653694453975,0.82,0.84
+A,42,per_cell_type,dentate,Cycling cells,25,0.4072294145091527,0.68,0.7
+A,42,per_cell_type,dentate,Excitatory neurons,21,0.49501230424436793,0.68,0.68
+A,42,per_cell_type,dentate,Granule cells,110,0.3270269726944952,0.36,0.46
+A,42,per_cell_type,dentate,Immature neurons,167,0.1995180894692461,0.88,0.88
+A,42,per_cell_type,dentate,Intermediate progenitors,32,0.5117321437010325,0.28,0.3
+A,42,per_cell_type,dentate,Radial glia,28,0.4535710591173839,0.66,0.68
+A,42,per_cell_type,endo,Alpha cells,91,0.23598157883448453,0.62,0.7
+A,42,per_cell_type,endo,Beta cells,86,0.28003304166554865,0.68,0.74
+A,42,per_cell_type,endo,Cholangiocytes,45,0.2828455151290942,0.78,0.76
+A,42,per_cell_type,endo,Delta cells,28,0.39889912872923444,0.38,0.48
+A,42,per_cell_type,endo,Immature neurons,51,0.3500424221487154,0.8,0.76
+A,42,per_cell_type,endo,Neuroendocrine cells,63,0.2854189139862911,0.42,0.48
+A,42,per_cell_type,hESC_GSE144024,Cycling cells,89,0.22189814218658707,0.82,0.84
+A,42,per_cell_type,hESC_GSE144024,Erythrocytes,56,0.23554497928151777,0.78,0.82
+A,42,per_cell_type,hESC_GSE144024,Erythroid progenitors,188,0.16628210295799287,0.72,0.76
+A,42,per_cell_type,hESC_GSE144024,Megakaryocytes,24,0.32305087163245083,0.82,0.82
+A,42,per_cell_type,hESC_GSE144024,Microglia,44,0.2554459194615834,0.7,0.7
+A,42,per_cell_type,hESC_GSE144024,Thyrotrophs,34,0.2290458166761128,0.6,0.6
+A,42,per_cell_type,hemato,Dendritic cells,30,0.337673850041608,0.84,0.82
+A,42,per_cell_type,hemato,Erythrocytes,90,0.2645514811351998,0.86,0.84
+A,42,per_cell_type,hemato,Erythroid progenitors,45,0.3777927911054189,0.84,0.78
+A,42,per_cell_type,hemato,HSCs/Progenitors,53,0.21362959701185616,0.78,0.8
+A,42,per_cell_type,hemato,Macrophages,27,0.43959694879318634,0.54,0.56
+A,42,per_cell_type,hemato,Müller glia,28,0.32303035812210695,0.66,0.72
+A,42,per_cell_type,hemato,Neutrophils,84,0.23658998413562785,0.84,0.88
+A,42,per_cell_type,hemato,Proliferating cells,74,0.22840004144525264,0.74,0.7
+A,42,per_cell_type,ifnHSPC_GSE226824,Cycling cells,39,0.2725977624149838,0.78,0.82
+A,42,per_cell_type,ifnHSPC_GSE226824,HSCs/Progenitors,95,0.2121088576816104,0.7,0.7
+A,42,per_cell_type,ifnHSPC_GSE226824,IFN-stimulated cells,55,0.2546590615381843,0.42,0.44
+A,42,per_cell_type,ifnHSPC_GSE226824,Megakaryocytes,32,0.37731128707872086,0.58,0.58
+A,42,per_cell_type,ifnHSPC_GSE226824,Müller glia,30,0.3236396547036659,0.5,0.6
+A,42,per_cell_type,ifnHSPC_GSE226824,Neutrophils,97,0.18792521375387208,0.72,0.76
+A,42,per_cell_type,ifnHSPC_GSE226824,Stress-response cells,27,0.3487532671268561,0.78,0.78
+A,42,per_cell_type,lung,Alveolar type 2,162,0.3479194035792878,0.56,0.66
+A,42,per_cell_type,lung,Ciliated cells,90,0.3538685489103326,0.72,0.78
+A,42,per_cell_type,lung,Club cells,89,0.24926448527944417,0.5,0.54
+A,42,per_cell_type,lung,Cycling cells,21,0.4220914165038883,0.54,0.56
+A,42,per_cell_type,lung,Epithelial cells,88,0.2979756147099651,0.74,0.76
+A,42,per_cell_type,setty,B cells,47,0.47865451744076615,0.38,0.42
+A,42,per_cell_type,setty,Erythroid progenitors,80,0.21929509405235137,0.82,0.84
+A,42,per_cell_type,setty,Merkel cells,68,0.34769780110368415,0.64,0.68
+A,42,per_cell_type,setty,Neutrophils,89,0.3018019171447297,0.82,0.78
+A,42,per_cell_type,setty,Plasmacytoid DCs,32,0.3699649203943655,0.58,0.64
+A,42,per_cell_type,setty,Proliferating cells,33,0.35040846407236914,0.84,0.78
+A,42,per_cell_type,setty,Stress-response cells,82,0.4601022330694474,0.32,0.44
+A,42,per_cell,GSE115571_LPSMmDev,Macrophages,22,0.40903250531858754,0.36,0.4
+A,42,per_cell,GSE115571_LPSMmDev,Microglia,28,0.39174299656663136,0.14,0.18
+A,42,per_cell,GSE117988_MCCPBMCCancer,CD4+ T cells,63,0.5061396481892746,0.34,0.5
+A,42,per_cell,GSE117988_MCCPBMCCancer,CD8+ T cells,44,0.5235092465302235,0.3,0.48
+A,42,per_cell,GSE117988_MCCPBMCCancer,MHC-II high APCs,87,0.13753736854403312,0.6,0.66
+A,42,per_cell,GSE117988_MCCPBMCCancer,Monocytes,101,0.339827215200981,0.82,0.86
+A,42,per_cell,GSE117988_MCCPBMCCancer,NK cells,89,0.5108248934746282,0.5,0.54
+A,42,per_cell,GSE117988_MCCTumorCancer,Cycling cells,101,0.2909160935227265,0.82,0.78
+A,42,per_cell,GSE117988_MCCTumorCancer,Merkel cells,286,0.3650236248214601,0.26,0.46
+A,42,per_cell,GSE117988_MCCTumorCancer,Stress-response cells,46,0.2656596756168647,0.62,0.66
+A,42,per_cell,GSE120505_bloodAged,B cells,225,0.3965728425418622,0.56,0.68
+A,42,per_cell,GSE120505_bloodAged,CD4+ T cells,53,0.39660721954612393,0.56,0.66
+A,42,per_cell,GSE120505_bloodAged,CD8+ T cells,37,0.38669914173390585,0.58,0.66
+A,42,per_cell,GSE120505_bloodAged,Macrophages,22,0.4418188976928725,0.78,0.78
+A,42,per_cell,GSE120505_bloodAged,Monocytes,31,0.38066398544654073,0.82,0.82
+A,42,per_cell,GSE120505_bloodAged,Müller glia,39,0.3297711681070771,0.74,0.76
+A,42,per_cell,GSE123813_bccHmCancer,Basal cells,29,0.3563267311939509,0.76,0.76
+A,42,per_cell,GSE123813_bccHmCancer,CD8+ T cells,154,0.17378348622823572,0.74,0.82
+A,42,per_cell,GSE123813_bccHmCancer,MHC-II high APCs,82,0.25950882225631455,0.82,0.82
+A,42,per_cell,GSE123813_bccHmCancer,NK cells,45,0.2599067525625224,0.66,0.7
+A,42,per_cell,GSE123813_bccHmCancer,Regulatory T cells,31,0.3170142379073349,0.72,0.72
+A,42,per_cell,GSE123813_bccHmCancer,Stress-response cells,34,0.22960525872241083,0.6,0.66
+A,42,per_cell,GSE123813_sccHmCancer,CD4+ T cells,59,0.22775706130552092,0.44,0.58
+A,42,per_cell,GSE123813_sccHmCancer,CD8+ T cells,103,0.20549839519183077,0.48,0.62
+A,42,per_cell,GSE123813_sccHmCancer,MHC-II high APCs,24,0.30788495904469304,0.46,0.5
+A,42,per_cell,GSE123813_sccHmCancer,NK cells,47,0.25634292665692554,0.54,0.6
+A,42,per_cell,GSE123813_sccHmCancer,Regulatory T cells,49,0.2533108008711411,0.66,0.72
+A,42,per_cell,GSE123813_sccHmCancer,Stress-response cells,148,0.11257725515323437,0.74,0.68
+A,42,per_cell,GSE123902_LungAdreHmCancer,Alpha cells,37,0.4185169611691099,0.1,0.04
+A,42,per_cell,GSE123902_LungAdreHmCancer,CD8+ T cells,72,0.2180605653967988,0.64,0.68
+A,42,per_cell,GSE123902_LungAdreHmCancer,Epithelial cells,36,0.30911495730708294,0.72,0.74
+A,42,per_cell,GSE123902_LungAdreHmCancer,MHC-II high APCs,52,0.1862057720679824,0.72,0.76
+A,42,per_cell,GSE123902_LungAdreHmCancer,Macrophages,31,0.2946094613181671,0.78,0.82
+A,42,per_cell,GSE123902_LungAdreHmCancer,Monocytes,37,0.28633559232102473,0.82,0.88
+A,42,per_cell,GSE123902_LungAdreHmCancer,NK cells,80,0.17785566349404802,0.38,0.56
+A,42,per_cell,GSE123902_LungAdreHmCancer,Regulatory T cells,48,0.22230837707060164,0.66,0.72
+A,42,per_cell,GSE124310_MMHmCancer,Collecting duct,95,0.38563603720461653,0.38,0.38
+A,42,per_cell,GSE124310_MMHmCancer,Cycling cells,29,0.3050062502380377,0.68,0.72
+A,42,per_cell,GSE124310_MMHmCancer,Erythrocytes,22,0.315302249298274,0.42,0.48
+A,42,per_cell,GSE124310_MMHmCancer,Erythroid progenitors,29,0.27036414806208414,0.7,0.7
+A,42,per_cell,GSE124310_MMHmCancer,MHC-II high APCs,43,0.19970308172981804,0.54,0.54
+A,42,per_cell,GSE124310_MMHmCancer,Monocytes,83,0.43678459270973524,0.86,0.84
+A,42,per_cell,GSE124310_MMHmCancer,NK cells,90,0.3245054272823419,0.36,0.44
+A,42,per_cell,GSE124310_MMHmCancer,Plasma cells,33,0.39771687420606616,0.8,0.8
+A,42,per_cell,GSE130148_LungHmDev,Alveolar type 1,20,0.5414047391805885,0.7,0.72
+A,42,per_cell,GSE130148_LungHmDev,Alveolar type 2,117,0.5474927141329321,0.7,0.78
+A,42,per_cell,GSE130148_LungHmDev,Ciliated cells,26,0.34382911989027276,0.56,0.6
+A,42,per_cell,GSE130148_LungHmDev,Club cells,21,0.632495712096368,0.18,0.14
+A,42,per_cell,GSE130148_LungHmDev,Macrophages,87,0.34083700367482095,0.8,0.84
+A,42,per_cell,GSE130148_LungHmDev,Mast cells,28,0.6196229057482137,0.42,0.52
+A,42,per_cell,GSE130148_LungHmDev,Monocytes,61,0.5358153326816413,0.74,0.74
+A,42,per_cell,GSE130148_LungHmDev,NK cells,41,0.2103233421871806,0.4,0.48
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,B cells,88,0.24948319648677184,0.62,0.64
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,CD4+ T cells,115,0.19535357994838481,0.72,0.74
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,Erythrocytes,31,0.37286850522634307,0.68,0.68
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,Erythroid progenitors,63,0.2030548576155337,0.82,0.76
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,MHC-II high APCs,31,0.24815380293692202,0.68,0.7
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,Monocytes,43,0.24686927431694228,0.62,0.72
+A,42,per_cell,GSE132509_acutelymluekPBMCHmCancer,Stress-response cells,63,0.29765348630723154,0.82,0.82
+A,42,per_cell,GSE138709_LiverCancer,CD8+ T cells,122,0.22752589899076497,0.76,0.84
+A,42,per_cell,GSE138709_LiverCancer,Cholangiocytes,109,0.16436925399598154,0.84,0.86
+A,42,per_cell,GSE138709_LiverCancer,Cycling cells,21,0.32884706932554647,0.74,0.74
+A,42,per_cell,GSE138709_LiverCancer,Fibroblasts,41,0.2788562023624857,0.84,0.86
+A,42,per_cell,GSE138709_LiverCancer,MHC-II high APCs,22,0.35472880688934616,0.78,0.76
+A,42,per_cell,GSE138709_LiverCancer,Monocytes,29,0.2660248349325819,0.78,0.84
+A,42,per_cell,GSE138709_LiverCancer,Müller glia,35,0.27783158475093284,0.76,0.78
+A,42,per_cell,GSE142653pitHmDev,Corticotrophs,22,0.48903720726398153,0.68,0.66
+A,42,per_cell,GSE142653pitHmDev,Epithelial cells,29,0.45195014605222894,0.86,0.84
+A,42,per_cell,GSE142653pitHmDev,Fibroblasts,99,0.2930240998915714,0.96,0.92
+A,42,per_cell,GSE142653pitHmDev,Gonadotrophs,60,0.31426531858691387,0.6,0.52
+A,42,per_cell,GSE142653pitHmDev,Immature neurons,40,0.4590609328794681,0.54,0.58
+A,42,per_cell,GSE142653pitHmDev,MHC-II high APCs,23,0.4960217630830103,0.78,0.8
+A,42,per_cell,GSE142653pitHmDev,Neuroendocrine cells,35,0.3829749547330026,0.78,0.74
+A,42,per_cell,GSE142653pitHmDev,Somatotrophs,66,0.3125266815413498,0.9,0.86
+A,42,per_cell,GSE143423_lbm_CancerBrainHm,Alveolar type 2,170,0.23089865133686188,0.9,0.88
+A,42,per_cell,GSE143423_lbm_CancerBrainHm,Cholangiocytes,130,0.27833879867207934,0.64,0.66
+A,42,per_cell,GSE143423_lbm_CancerBrainHm,Cycling cells,24,0.3834549375770272,0.52,0.6
+A,42,per_cell,GSE143423_lbm_CancerBrainHm,MHC-II high APCs,42,0.3028753576877637,0.62,0.66
+A,42,per_cell,GSE143423_lbm_CancerBrainHm,Macrophages,21,0.38058573562043063,0.74,0.74
+A,42,per_cell,GSE143423_tnbc_CancerBrainHm,Luminal epithelial,56,0.21516938405876962,0.3,0.42
+A,42,per_cell,GSE143423_tnbc_CancerBrainHm,Plasma cells,35,0.2585256096598608,0.8,0.76
+A,42,per_cell,GSE143423_tnbc_CancerBrainHm,Proliferating cells,32,0.2801767417468523,0.72,0.7
+A,42,per_cell,GSE143423_tnbc_CancerBrainHm,Retinal ganglion cells,137,0.45120216638451915,0.06,0.16
+A,42,per_cell,GSE143423_tnbc_CancerBrainHm,Stress-response cells,57,0.20902799136538877,0.76,0.66
+A,42,per_cell,GSE145929_ProgastinMmDev,Basal cells,57,0.3578156262053447,0.64,0.68
+A,42,per_cell,GSE145929_ProgastinMmDev,Fibroblasts,26,0.4392931463089221,0.7,0.7
+A,42,per_cell,GSE145929_ProgastinMmDev,MHC-II high APCs,22,0.2822325561703017,0.74,0.72
+A,42,per_cell,GSE145929_ProgastinMmDev,Prostate epithelial,182,0.28647347925296884,0.48,0.76
+A,42,per_cell,GSE145929_ProgastinMmDev,Stress-response cells,44,0.22968073521182925,0.64,0.56
+A,42,per_cell,GSE145929_ProgastinMmDev,Urothelial cells,77,0.20605268379604977,0.82,0.76
+A,42,per_cell,GSE145929_UrineMmDev,Basal cells,41,0.4911142963038455,0.1,0.08
+A,42,per_cell,GSE145929_UrineMmDev,Fibroblasts,23,0.3802115502708584,0.72,0.7
+A,42,per_cell,GSE145929_UrineMmDev,Prostate epithelial,79,0.17553263246229311,0.4,0.52
+A,42,per_cell,GSE145929_UrineMmDev,Sertoli cells,31,0.33716625471799705,0.46,0.62
+A,42,per_cell,GSE145929_UrineMmDev,Urothelial cells,166,0.1787002587076257,0.8,0.84
+A,42,per_cell,GSE148218_bmALLHmCancer,B cells,31,0.6028693875577582,0.6,0.62
+A,42,per_cell,GSE148218_bmALLHmCancer,CD4+ T cells,56,0.42013219643340804,0.7,0.74
+A,42,per_cell,GSE148218_bmALLHmCancer,CD8+ T cells,20,0.3961451382318675,0.76,0.76
+A,42,per_cell,GSE148218_bmALLHmCancer,Cycling cells,74,0.24097369518615247,0.78,0.82
+A,42,per_cell,GSE148218_bmALLHmCancer,Erythroid progenitors,89,0.17510801004070412,0.64,0.66
+A,42,per_cell,GSE148218_bmALLHmCancer,IFN-stimulated cells,33,0.3291370498030266,0.6,0.68
+A,42,per_cell,GSE148218_bmALLHmCancer,Macrophages,39,0.0889019039186559,0.04,0.06
+A,42,per_cell,GSE148218_bmALLHmCancer,Plasma cells,78,0.36389690039985906,0.5,0.56
+A,42,per_cell,GSE149655_CAHmCancer,Alveolar type 1,28,0.2838561684055134,0.7,0.7
+A,42,per_cell,GSE149655_CAHmCancer,Alveolar type 2,50,0.22606253442831267,0.86,0.82
+A,42,per_cell,GSE149655_CAHmCancer,CD8+ T cells,31,0.39597667714586227,0.28,0.34
+A,42,per_cell,GSE149655_CAHmCancer,Endothelial cells,51,0.2613604797298954,0.9,0.86
+A,42,per_cell,GSE149655_CAHmCancer,Epithelial cells,20,0.40168528199583486,0.76,0.76
+A,42,per_cell,GSE149655_CAHmCancer,Fibroblasts,20,0.46800160684136377,0.68,0.7
+A,42,per_cell,GSE149655_CAHmCancer,Macrophages,20,0.31276373326557627,0.66,0.64
+A,42,per_cell,GSE149655_CAHmCancer,Mast cells,24,0.36622189600998845,0.48,0.46
+A,42,per_cell,GSE149655_CAHmCancer,Plasma cells,28,0.293705167762086,0.36,0.4
+A,42,per_cell,GSE155109_bcECHmCancer,Capillary endothelial,111,0.25117988040392875,0.52,0.62
+A,42,per_cell,GSE155109_bcECHmCancer,IFN-stimulated cells,56,0.2975037125567789,0.54,0.58
+A,42,per_cell,GSE155109_bcECHmCancer,Lymphatic endothelial,26,0.2531326184195358,0.64,0.7
+A,42,per_cell,GSE155109_bcECHmCancer,Tip cells,121,0.21746910674063955,0.64,0.7
+A,42,per_cell,GSE155109_bcECHmCancer,Venous endothelial,136,0.19915176990156921,0.8,0.84
+A,42,per_cell,GSE155109_bcStromaHmCancer,CD8+ T cells,51,0.3643394072560071,0.8,0.82
+A,42,per_cell,GSE155109_bcStromaHmCancer,Endothelial cells,33,0.3109641613187945,0.58,0.58
+A,42,per_cell,GSE155109_bcStromaHmCancer,Epithelial cells,77,0.17017167186388188,0.76,0.76
+A,42,per_cell,GSE155109_bcStromaHmCancer,Fibroblasts,86,0.2196721566775399,0.88,0.84
+A,42,per_cell,GSE155109_bcStromaHmCancer,MHC-II high APCs,32,0.22622468559676454,0.72,0.68
+A,42,per_cell,GSE155109_bcStromaHmCancer,Myoepithelial cells,24,0.30595102536312213,0.76,0.76
+A,42,per_cell,GSE155109_bcStromaHmCancer,Smooth muscle cells,37,0.3559875695487797,0.7,0.7
+A,42,per_cell,GSE155109_bcStromaHmCancer,Tip cells,64,0.3738269001828016,0.8,0.76
+A,42,per_cell,GSE163558_stomachHmCancer,B cells,42,0.32113888442547833,0.72,0.76
+A,42,per_cell,GSE163558_stomachHmCancer,Cycling cells,110,0.1912544887064161,0.38,0.46
+A,42,per_cell,GSE163558_stomachHmCancer,Epithelial cells,26,0.2865831864241069,0.72,0.72
+A,42,per_cell,GSE163558_stomachHmCancer,NK cells,81,0.2277271384473972,0.4,0.44
+A,42,per_cell,GSE163558_stomachHmCancer,Neutrophils,35,0.41082424870619827,0.9,0.88
+A,42,per_cell,GSE163558_stomachHmCancer,Regulatory T cells,41,0.3319825025771562,0.66,0.6
+A,42,per_cell,GSE165784_RetinaHmDev,CD4+ T cells,22,0.4434220260439441,0.46,0.4
+A,42,per_cell,GSE165784_RetinaHmDev,MHC-II high APCs,97,0.16795022347635136,0.72,0.76
+A,42,per_cell,GSE165784_RetinaHmDev,Monocytes,23,0.417614681626156,0.66,0.68
+A,42,per_cell,GSE165784_RetinaHmDev,Müller glia,84,0.1851428657147558,0.88,0.94
+A,42,per_cell,GSE165784_RetinaHmDev,Neutrophils,110,0.22016978310958638,0.78,0.8
+A,42,per_cell,GSE165784_RetinaHmDev,Smooth muscle cells,36,0.2832804820098156,0.76,0.76
+A,42,per_cell,GSE165844_LSKMmBatch,Cycling cells,25,0.34296064446347313,0.64,0.7
+A,42,per_cell,GSE165844_LSKMmBatch,Stress-response cells,148,0.21967443127837127,0.14,0.36
+A,42,per_cell,GSE167597_spineMm,Dorsal horn neurons,51,0.35873927859555965,0.74,0.74
+A,42,per_cell,GSE167597_spineMm,Excitatory neurons,53,0.26040962518170774,0.66,0.72
+A,42,per_cell,GSE167597_spineMm,Inhibitory neurons,104,0.22862028252081928,0.66,0.68
+A,42,per_cell,GSE167597_spineMm,Mast cells,29,0.43454709167845923,0.66,0.62
+A,42,per_cell,GSE167597_spineMm,Retinal ganglion cells,31,0.3326958390715879,0.74,0.78
+A,42,per_cell,GSE167597_spineMm,Spinal interneurons,37,0.3455697732189291,0.66,0.74
+A,42,per_cell,GSE168181_BreastHmCancer,CD8+ T cells,128,0.33830620294296593,0.36,0.42
+A,42,per_cell,GSE168181_BreastHmCancer,Endothelial cells,66,0.22134021099839502,0.54,0.6
+A,42,per_cell,GSE168181_BreastHmCancer,Fibroblasts,33,0.2643793254087551,0.8,0.82
+A,42,per_cell,GSE168181_BreastHmCancer,IFN-stimulated cells,25,0.42782495710793444,0.6,0.7
+A,42,per_cell,GSE168181_BreastHmCancer,Luminal epithelial,48,0.23441973655009452,0.78,0.8
+A,42,per_cell,GSE168181_BreastHmCancer,Macrophages,90,0.2107583492959528,0.92,0.9
+A,42,per_cell,GSE168181_BreastHmCancer,Stress-response cells,29,0.5117609519134888,0.16,0.14
+A,42,per_cell,GSE183904_GastricHmCancer,CD8+ T cells,127,0.29909756800142656,0.88,0.84
+A,42,per_cell,GSE183904_GastricHmCancer,Epithelial cells,82,0.22582165350521044,0.8,0.82
+A,42,per_cell,GSE183904_GastricHmCancer,Fibroblasts,33,0.3264432557757814,0.76,0.74
+A,42,per_cell,GSE183904_GastricHmCancer,MHC-II high APCs,72,0.22747943696171,0.7,0.7
+A,42,per_cell,GSE183904_GastricHmCancer,Neuroendocrine cells,21,0.5053382273177449,0.34,0.38
+A,42,per_cell,GSE183904_GastricHmCancer,Plasma cells,44,0.3727404417552127,0.84,0.86
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Adipocytes,80,0.2299526348824651,0.84,0.84
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Cycling cells,33,0.251417157487802,0.76,0.74
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Erythroid progenitors,37,0.3793361385441498,0.36,0.28
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Fibroblasts,42,0.27319662358140634,0.76,0.78
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Microglia,59,0.33620112121480605,0.62,0.66
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Monocytes,28,0.36058377475583386,0.4,0.42
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Neutrophils,81,0.23952858120945109,0.76,0.74
+A,42,per_cell,GSE189070_astrocytesSCIMmDev,Oligodendrocytes,20,0.3717149800607797,0.68,0.7
+A,42,per_cell,GSE189357_lungAdreHmCancer,Endothelial cells,27,0.43253832854478164,0.74,0.76
+A,42,per_cell,GSE189357_lungAdreHmCancer,Epithelial cells,24,0.31258086679138897,0.78,0.76
+A,42,per_cell,GSE189357_lungAdreHmCancer,MHC-II high APCs,181,0.1444816716033346,0.7,0.74
+A,42,per_cell,GSE189357_lungAdreHmCancer,NK cells,29,0.382001123998355,0.52,0.6
+A,42,per_cell,GSE189357_lungAdreHmCancer,Regulatory T cells,127,0.3442678621164101,0.32,0.36
+A,42,per_cell,GSE192857_hESCHmTimes,Cycling cells,23,0.36870585268512435,0.72,0.74
+A,42,per_cell,GSE192857_hESCHmTimes,Immature neurons,27,0.3162243490265725,0.76,0.76
+A,42,per_cell,GSE192857_hESCHmTimes,Melanocytes,76,0.2169896270129283,0.72,0.72
+A,42,per_cell,GSE192857_hESCHmTimes,Pluripotent stem cells,84,0.17050921856699933,0.84,0.84
+A,42,per_cell,GSE192857_hESCHmTimes,Proliferating cells,96,0.18150363571056916,0.84,0.84
+A,42,per_cell,GSE192857_hESCHmTimes,Radial glia,72,0.21188109120491702,0.58,0.7
+A,42,per_cell,GSE213740_ADHm,CD4+ T cells,34,0.3497352592209768,0.62,0.74
+A,42,per_cell,GSE213740_ADHm,CD8+ T cells,47,0.28760347078754217,0.66,0.7
+A,42,per_cell,GSE213740_ADHm,Capillary endothelial,32,0.2949282230186532,0.8,0.7
+A,42,per_cell,GSE213740_ADHm,Fibroblasts,88,0.1706536989374851,0.86,0.82
+A,42,per_cell,GSE213740_ADHm,MHC-II high APCs,54,0.21835412941226373,0.74,0.8
+A,42,per_cell,GSE213740_ADHm,Monocytes,24,0.296483451087029,0.72,0.72
+A,42,per_cell,GSE213740_ADHm,Smooth muscle cells,102,0.18907092855105545,0.84,0.86
+A,42,per_cell,GSE222002_TcellsHmCancer,CD8+ T cells,103,0.2306516449557009,0.82,0.74
+A,42,per_cell,GSE222002_TcellsHmCancer,Fibroblasts,34,0.26401942330002814,0.48,0.56
+A,42,per_cell,GSE222002_TcellsHmCancer,MHC-II high APCs,47,0.24470032205375572,0.84,0.84
+A,42,per_cell,GSE222002_TcellsHmCancer,Regulatory T cells,189,0.22435418236587,0.3,0.28
+A,42,per_cell,GSE222002_TcellsHmCancer,Stress-response cells,26,0.33064098619134996,0.6,0.56
+A,42,per_cell,GSE222002_TcellsHmCancer,Tip cells,25,0.28420668169332863,0.8,0.76
+A,42,per_cell,GSE222369_NKsLymphomaHmCancer,CD8+ T cells,60,0.2710339853924564,0.72,0.76
+A,42,per_cell,GSE222369_NKsLymphomaHmCancer,Fibroblasts,29,0.3339064491557214,0.7,0.7
+A,42,per_cell,GSE222369_NKsLymphomaHmCancer,IFN-stimulated cells,130,0.2567435580150796,0.38,0.6
+A,42,per_cell,GSE222369_NKsLymphomaHmCancer,MHC-II high APCs,44,0.3427508358792492,0.6,0.6
+A,42,per_cell,GSE222369_NKsLymphomaHmCancer,NK cells,118,0.2417961590368894,0.64,0.78
+A,42,per_cell,GSE225600_breast_CancerHm,CD4+ T cells,77,0.20526173584801005,0.16,0.22
+A,42,per_cell,GSE225600_breast_CancerHm,Endothelial cells,58,0.21522206455798576,0.72,0.7
+A,42,per_cell,GSE225600_breast_CancerHm,Epithelial cells,26,0.35805165692571916,0.64,0.6
+A,42,per_cell,GSE225600_breast_CancerHm,MHC-II high APCs,46,0.25110651051587,0.78,0.8
+A,42,per_cell,GSE225600_breast_CancerHm,NK cells,33,0.3395562467166833,0.6,0.56
+A,42,per_cell,GSE225600_breast_CancerHm,Regulatory T cells,46,0.3198325114098919,0.68,0.76
+A,42,per_cell,GSE225600_breast_CancerHm,Smooth muscle cells,42,0.26321860050577295,0.84,0.8
+A,42,per_cell,GSE225857_liverColonMetasisHmCancer,Epithelial cells,56,0.15388743260146448,0.7,0.78
+A,42,per_cell,GSE225857_liverColonMetasisHmCancer,Goblet cells,122,0.1393175295970115,0.48,0.6
+A,42,per_cell,GSE225857_liverColonMetasisHmCancer,Hepatocytes,138,0.19284908400145642,0.58,0.72
+A,42,per_cell,GSE225857_liverColonMetasisHmCancer,Smooth muscle cells,81,0.21855785215450885,0.72,0.8
+A,42,per_cell,GSE226131_HSCMmAged,Cycling cells,29,0.2496254642899654,0.6,0.62
+A,42,per_cell,GSE226131_HSCMmAged,Erythroid progenitors,37,0.23363858272166016,0.7,0.62
+A,42,per_cell,GSE226131_HSCMmAged,Immature neurons,107,0.456790037998403,0.06,0.06
+A,42,per_cell,GSE226131_HSCMmAged,Neutrophils,92,0.14207603785524053,0.88,0.86
+A,42,per_cell,GSE226131_HSCMmAged,Proliferating cells,65,0.26659482641474297,0.0,0.04
+A,42,per_cell,GSE226131_HSCMmAged,Stress-response cells,42,0.22387595496961707,0.78,0.78
+A,42,per_cell,GSE228499_breastHmCancer,CD4+ T cells,56,0.21918600423944956,0.8,0.82
+A,42,per_cell,GSE228499_breastHmCancer,Cholangiocytes,37,0.27059626172502454,0.8,0.76
+A,42,per_cell,GSE228499_breastHmCancer,Goblet cells,80,0.21017893293941903,0.9,0.84
+A,42,per_cell,GSE228499_breastHmCancer,IFN-stimulated cells,26,0.3294223129845013,0.54,0.66
+A,42,per_cell,GSE228499_breastHmCancer,Inhibitory neurons,25,0.2564119124148341,0.8,0.76
+A,42,per_cell,GSE228499_breastHmCancer,Luminal epithelial,66,0.20849651853517426,0.72,0.78
+A,42,per_cell,GSE228499_breastHmCancer,Neutrophils,21,0.4295512119966481,0.1,0.1
+A,42,per_cell,GSE235787_bcellsALLHmCancer,B cells,68,0.2235479250101134,0.9,0.86
+A,42,per_cell,GSE235787_bcellsALLHmCancer,Cycling cells,65,0.18217912843817968,0.8,0.8
+A,42,per_cell,GSE235787_bcellsALLHmCancer,Erythroid progenitors,50,0.27530892862815215,0.76,0.8
+A,42,per_cell,GSE235787_bcellsALLHmCancer,Exhausted T cells,72,0.24934313378425138,0.8,0.86
+A,42,per_cell,GSE235787_bcellsALLHmCancer,HSCs/Progenitors,22,0.43640265012110835,0.72,0.72
+A,42,per_cell,GSE235787_bcellsALLHmCancer,Plasmacytoid DCs,106,0.3041255436859938,0.36,0.46
+A,42,per_cell,GSE235787_bcellsALLHmCancer,Stress-response cells,29,0.27119335205526546,0.68,0.66
+A,42,per_cell,GSE253355_bmNicheHm,B cells,28,0.40135467007330805,0.78,0.82
+A,42,per_cell,GSE253355_bmNicheHm,CD8+ T cells,27,0.4700501225149361,0.88,0.88
+A,42,per_cell,GSE253355_bmNicheHm,Endothelial cells,23,0.39565505691228064,0.68,0.68
+A,42,per_cell,GSE253355_bmNicheHm,Erythrocytes,24,0.3748906422590687,0.64,0.64
+A,42,per_cell,GSE253355_bmNicheHm,Fibroblasts,68,0.2564462318749069,0.76,0.74
+A,42,per_cell,GSE253355_bmNicheHm,HSCs/Progenitors,48,0.25775405865119694,0.78,0.78
+A,42,per_cell,GSE253355_bmNicheHm,Mesenchymal stem cells,46,0.2713532118939559,0.92,0.86
+A,42,per_cell,GSE253355_bmNicheHm,Monocytes,65,0.24394901160632523,0.9,0.9
+A,42,per_cell,GSE253355_bmNicheHm,Plasma cells,78,0.26074025542790674,0.9,0.88
+A,42,per_cell,GSE262288_breastMetasisHmCancer,Fibroblasts,34,0.25806216076371224,0.62,0.54
+A,42,per_cell,GSE262288_breastMetasisHmCancer,Goblet cells,81,0.24440897323555116,0.48,0.56
+A,42,per_cell,GSE262288_breastMetasisHmCancer,MHC-II high APCs,48,0.2171727432711265,0.68,0.66
+A,42,per_cell,GSE262288_breastMetasisHmCancer,Macrophages,44,0.26031641795390403,0.76,0.7
+A,42,per_cell,GSE262288_breastMetasisHmCancer,NK cells,40,0.23987899562339224,0.62,0.68
+A,42,per_cell,GSE262288_breastMetasisHmCancer,Stress-response cells,20,0.3295582215811194,0.66,0.68
+A,42,per_cell,GSE275119_TeethMmDev,Basal cells,26,0.35481189598601237,0.68,0.62
+A,42,per_cell,GSE275119_TeethMmDev,Fibroblasts,136,0.16328011243365373,0.86,0.82
+A,42,per_cell,GSE275119_TeethMmDev,Macrophages,31,0.2628951342705736,0.8,0.74
+A,42,per_cell,GSE275119_TeethMmDev,Odontoblasts,25,0.3271752691224044,0.62,0.68
+A,42,per_cell,GSE275119_TeethMmDev,Stress-response cells,101,0.2271241621200116,0.8,0.82
+A,42,per_cell,GSE283205_hepatoblastomaCancer,CD4+ T cells,31,0.36731858122837957,0.54,0.56
+A,42,per_cell,GSE283205_hepatoblastomaCancer,CD8+ T cells,22,0.44244832257594335,0.66,0.66
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Endothelial cells,29,0.4731179901013272,0.7,0.7
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Fibroblasts,78,0.35773328199044446,0.7,0.7
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Hepatocytes,83,0.2693960346171368,0.76,0.66
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Macrophages,37,0.3665564977414231,0.78,0.76
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Mammary secretory,62,0.24666286847096466,0.78,0.74
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Monocytes,41,0.26226610561736463,0.58,0.58
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Radial glia,37,0.3168355185890019,0.78,0.76
+A,42,per_cell,GSE283205_hepatoblastomaCancer,Spinal interneurons,30,0.4469383486321979,0.42,0.4
+A,42,per_cell,GSE98638_TcellLiverHmCancer,CD4+ T cells,126,1.0635985811126198,0.72,0.8
+A,42,per_cell,GSE98638_TcellLiverHmCancer,CD8+ T cells,175,0.9596022848067807,0.8,0.84
+A,42,per_cell,GSE98638_TcellLiverHmCancer,NK cells,31,0.9893888159478598,0.64,0.7
+A,42,per_cell,GSE98638_TcellLiverHmCancer,Regulatory T cells,64,0.9077001878380797,0.84,0.88
+A,42,per_cell,GSE98638_TcellLiverHmCancer,Stress-response cells,37,0.9438717215717217,0.5,0.62
+A,42,per_cell,bm_GSE120446,Cycling cells,22,0.3224595375882138,0.64,0.7
+A,42,per_cell,bm_GSE120446,Erythrocytes,28,0.26933318649035815,0.7,0.74
+A,42,per_cell,bm_GSE120446,Erythroid progenitors,68,0.4430646743076986,0.62,0.78
+A,42,per_cell,bm_GSE120446,MHC-II high APCs,31,0.26156315138217157,0.56,0.66
+A,42,per_cell,bm_GSE120446,Monocytes,43,0.3490217531005285,0.8,0.8
+A,42,per_cell,bm_GSE120446,NK cells,61,0.37694943828978034,0.54,0.64
+A,42,per_cell,bm_GSE120446,Radial glia,146,0.4161722135849839,0.22,0.22
+A,42,per_cell,dentate,Astrocytes,48,0.2546340648817331,0.84,0.86
+A,42,per_cell,dentate,Cycling cells,25,0.41313674085919944,0.72,0.7
+A,42,per_cell,dentate,Excitatory neurons,21,0.36496462730949497,0.74,0.78
+A,42,per_cell,dentate,Granule cells,110,0.302575354592772,0.38,0.56
+A,42,per_cell,dentate,Immature neurons,167,0.19186762927558587,0.84,0.86
+A,42,per_cell,dentate,Intermediate progenitors,32,0.40860033684860686,0.24,0.34
+A,42,per_cell,dentate,Radial glia,28,0.3890216299147006,0.72,0.7
+A,42,per_cell,endo,Alpha cells,91,0.2363684978501857,0.56,0.66
+A,42,per_cell,endo,Beta cells,86,0.28261278518395144,0.74,0.78
+A,42,per_cell,endo,Cholangiocytes,45,0.3028549048035489,0.86,0.8
+A,42,per_cell,endo,Delta cells,28,0.32960056427769846,0.38,0.42
+A,42,per_cell,endo,Immature neurons,51,0.28216557185890556,0.78,0.82
+A,42,per_cell,endo,Neuroendocrine cells,63,0.29726000334336666,0.5,0.56
+A,42,per_cell,hESC_GSE144024,Cycling cells,89,0.20781020941032533,0.72,0.74
+A,42,per_cell,hESC_GSE144024,Erythrocytes,56,0.21820860345865647,0.76,0.76
+A,42,per_cell,hESC_GSE144024,Erythroid progenitors,188,0.15961599612192895,0.72,0.78
+A,42,per_cell,hESC_GSE144024,Megakaryocytes,24,0.3354278913146227,0.82,0.78
+A,42,per_cell,hESC_GSE144024,Microglia,44,0.2424793826844105,0.78,0.8
+A,42,per_cell,hESC_GSE144024,Thyrotrophs,34,0.28204426390310955,0.5,0.54
+A,42,per_cell,hemato,Dendritic cells,30,0.30885525387110346,0.88,0.88
+A,42,per_cell,hemato,Erythrocytes,90,0.2161875650785221,0.82,0.86
+A,42,per_cell,hemato,Erythroid progenitors,45,0.2875789326149239,0.86,0.92
+A,42,per_cell,hemato,HSCs/Progenitors,53,0.21256602828699528,0.84,0.86
+A,42,per_cell,hemato,Macrophages,27,0.38138429487633674,0.58,0.6
+A,42,per_cell,hemato,Müller glia,28,0.31055404031949807,0.64,0.7
+A,42,per_cell,hemato,Neutrophils,84,0.18621127098211535,0.9,0.92
+A,42,per_cell,hemato,Proliferating cells,74,0.1969865173337202,0.8,0.72
+A,42,per_cell,ifnHSPC_GSE226824,Cycling cells,39,0.24974868246842333,0.76,0.78
+A,42,per_cell,ifnHSPC_GSE226824,HSCs/Progenitors,95,0.2245035161996617,0.7,0.74
+A,42,per_cell,ifnHSPC_GSE226824,IFN-stimulated cells,55,0.21913309900789996,0.44,0.48
+A,42,per_cell,ifnHSPC_GSE226824,Megakaryocytes,32,0.33960003151046275,0.6,0.64
+A,42,per_cell,ifnHSPC_GSE226824,Müller glia,30,0.3632301441324736,0.5,0.56
+A,42,per_cell,ifnHSPC_GSE226824,Neutrophils,97,0.16553217584412028,0.8,0.84
+A,42,per_cell,ifnHSPC_GSE226824,Stress-response cells,27,0.29426423735407714,0.78,0.78
+A,42,per_cell,lung,Alveolar type 2,162,0.3253503969304463,0.52,0.76
+A,42,per_cell,lung,Ciliated cells,90,0.3664271652482942,0.76,0.82
+A,42,per_cell,lung,Club cells,89,0.16244808542381628,0.54,0.56
+A,42,per_cell,lung,Cycling cells,21,0.30217571298516716,0.52,0.56
+A,42,per_cell,lung,Epithelial cells,88,0.2540659517878918,0.7,0.78
+A,42,per_cell,setty,B cells,47,0.2834731620960359,0.46,0.5
+A,42,per_cell,setty,Erythroid progenitors,80,0.22399152243369955,0.82,0.8
+A,42,per_cell,setty,Merkel cells,68,0.2925856404901214,0.56,0.62
+A,42,per_cell,setty,Neutrophils,89,0.27260836649306563,0.76,0.78
+A,42,per_cell,setty,Plasmacytoid DCs,32,0.3273828840628341,0.72,0.76
+A,42,per_cell,setty,Proliferating cells,33,0.337780908996156,0.78,0.76
+A,42,per_cell,setty,Stress-response cells,82,0.4024560689262766,0.38,0.42

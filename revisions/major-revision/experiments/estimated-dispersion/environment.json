@@ -1,0 +1,9 @@
+{
+  "python": "3.13.7 | packaged by Anaconda, Inc. | (main, Sep  9 2025, 19:59:03) [GCC 11.2.0]",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.16.2",
+  "torch": "2.12.1+cu130",
+  "device": "CPU",
+  "workers": 3
+}

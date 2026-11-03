@@ -1,0 +1,16 @@
+{
+  "note": "post hoc restriction of the saved per-type recalls; descriptive only",
+  "pooled_rare_types": 19,
+  "pooled_rare_types_scored": 19,
+  "type_dataset_pairs": 26,
+  "datasets": 21,
+  "mean_recall": 0.898630774455341,
+  "median_recall": 0.8973684210526316,
+  "min_recall": 0.5833333333333334,
+  "min_recall_pair": {
+    "dataset": "GSE143423_lbm_CancerBrainHm",
+    "cell_type": "Schwann cells",
+    "n": "24"
+  },
+  "pairs_recall_ge_0.8": 24
+}

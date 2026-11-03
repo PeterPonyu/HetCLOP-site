@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "design-hash": {
+      "pass": true,
+      "detail": ""
+    },
+    "ten-seeds-three-arms": {
+      "pass": true,
+      "detail": ""
+    },
+    "archived-seeds-not-refitted": {
+      "pass": true,
+      "detail": ""
+    },
+    "per-seed-table-matches-results": {
+      "pass": true,
+      "detail": []
+    }
+  }
+}

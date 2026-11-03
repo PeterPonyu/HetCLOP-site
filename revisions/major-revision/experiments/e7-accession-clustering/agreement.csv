@@ -1,0 +1,92 @@
+analysis,contrast,agree
+armb_energy,"Arm B per-cell minus Poisson energy, pca_512",True
+armb_energy,"Arm B per-cell minus Poisson energy, randproj_512",True
+armb_energy,"Arm B per-cell minus Poisson energy, scgpt_512",True
+armb_energy,"Arm B per-cell minus Poisson energy, geneformer",True
+e1_matched,Arm A per_cell minus poisson: auroc,True
+e1_matched,Arm A per_cell minus shared_per_gene: auroc,True
+e1_matched,Arm A per_cell_type minus poisson: auroc,True
+e1_matched,Arm A per_cell_type minus shared_per_gene: auroc,True
+e1_matched,Arm A shared_per_gene minus poisson: auroc,True
+e1_matched,Arm A per_cell minus poisson: calibration,True
+e1_matched,Arm A per_cell minus shared_per_gene: calibration,True
+e1_matched,Arm A per_cell_type minus poisson: calibration,True
+e1_matched,Arm A per_cell_type minus shared_per_gene: calibration,True
+e1_matched,Arm A shared_per_gene minus poisson: calibration,True
+e1_matched,Arm A per_cell minus poisson: macro_f1,True
+e1_matched,Arm A per_cell minus shared_per_gene: macro_f1,True
+e1_matched,Arm A per_cell_type minus poisson: macro_f1,True
+e1_matched,Arm A per_cell_type minus shared_per_gene: macro_f1,True
+e1_matched,Arm A shared_per_gene minus poisson: macro_f1,True
+e1_matched,Arm A per_cell minus poisson: rare_f1_full,True
+e1_matched,Arm A per_cell minus shared_per_gene: rare_f1_full,True
+e1_matched,Arm A per_cell_type minus poisson: rare_f1_full,True
+e1_matched,Arm A per_cell_type minus shared_per_gene: rare_f1_full,True
+e1_matched,Arm A shared_per_gene minus poisson: rare_f1_full,True
+e1_matched,Arm A per_cell minus poisson: rare_f1_masked,True
+e1_matched,Arm A per_cell minus shared_per_gene: rare_f1_masked,True
+e1_matched,Arm A per_cell_type minus poisson: rare_f1_masked,True
+e1_matched,Arm A per_cell_type minus shared_per_gene: rare_f1_masked,True
+e1_matched,Arm A shared_per_gene minus poisson: rare_f1_masked,True
+e1_matched,Arm A per_cell minus poisson: welch,True
+e1_matched,Arm A per_cell minus shared_per_gene: welch,True
+e1_matched,Arm A per_cell_type minus poisson: welch,True
+e1_matched,Arm A per_cell_type minus shared_per_gene: welch,True
+e1_matched,Arm A shared_per_gene minus poisson: welch,True
+e1_matched,Arm B per_cell minus poisson: auroc,True
+e1_matched,Arm B per_cell minus shared_per_gene: auroc,True
+e1_matched,Arm B per_cell_type minus poisson: auroc,True
+e1_matched,Arm B per_cell_type minus shared_per_gene: auroc,True
+e1_matched,Arm B shared_per_gene minus poisson: auroc,True
+e1_matched,Arm B per_cell minus poisson: calibration,True
+e1_matched,Arm B per_cell minus shared_per_gene: calibration,True
+e1_matched,Arm B per_cell_type minus poisson: calibration,True
+e1_matched,Arm B per_cell_type minus shared_per_gene: calibration,True
+e1_matched,Arm B shared_per_gene minus poisson: calibration,True
+e1_matched,Arm B per_cell minus poisson: macro_f1,True
+e1_matched,Arm B per_cell minus shared_per_gene: macro_f1,True
+e1_matched,Arm B per_cell_type minus poisson: macro_f1,True
+e1_matched,Arm B per_cell_type minus shared_per_gene: macro_f1,True
+e1_matched,Arm B shared_per_gene minus poisson: macro_f1,True
+e1_matched,Arm B per_cell minus poisson: rare_f1_full,True
+e1_matched,Arm B per_cell minus shared_per_gene: rare_f1_full,True
+e1_matched,Arm B per_cell_type minus poisson: rare_f1_full,True
+e1_matched,Arm B per_cell_type minus shared_per_gene: rare_f1_full,True
+e1_matched,Arm B shared_per_gene minus poisson: rare_f1_full,True
+e1_matched,Arm B per_cell minus poisson: rare_f1_masked,True
+e1_matched,Arm B per_cell minus shared_per_gene: rare_f1_masked,True
+e1_matched,Arm B per_cell_type minus poisson: rare_f1_masked,True
+e1_matched,Arm B per_cell_type minus shared_per_gene: rare_f1_masked,True
+e1_matched,Arm B shared_per_gene minus poisson: rare_f1_masked,True
+e1_matched,Arm B per_cell minus poisson: welch,True
+e1_matched,Arm B per_cell minus shared_per_gene: welch,True
+e1_matched,Arm B per_cell_type minus poisson: welch,True
+e1_matched,Arm B per_cell_type minus shared_per_gene: welch,True
+e1_matched,Arm B shared_per_gene minus poisson: welch,True
+e2_slope,"deficit-effect slope, pooled",True
+e2_slope,"deficit-effect slope, Arm_A",True
+e2_slope,"deficit-effect slope, Arm_B",True
+e4_reference,Arm A per-cell minus Poisson calibration error,True
+e4_reference,Arm B per-cell minus Poisson calibration error,True
+e4_reference,Arm B per-cell minus shared calibration error,True
+e4_reference,Arm B per-cell minus Poisson Welch recall,True
+e4_reference,Arm B per-cell minus shared Welch recall,True
+e4_reference,"deficit-effect slope, pooled",True
+e4_scvi_reference,scVI shared per-gene NB minus Poisson calibration error,True
+e4_scvi_reference,scVI per-cell NB minus Poisson calibration error,True
+e3_selection,Arm A regret relative to the best option on test,True
+e3_selection,Arm A selected minus always-Poisson,True
+e3_selection,Arm A selected minus always-per-cell,True
+e3_selection,Arm B regret relative to the best option on test,True
+e3_selection,Arm B selected minus always-Poisson,True
+e3_selection,Arm B selected minus always-per-cell,True
+e6_dependence,Arm A cell minus poisson correlation error,True
+e6_dependence,Arm A shared minus poisson correlation error,True
+e6_dependence,Arm A cell minus shared correlation error,True
+e6_dependence,Arm A cell minus poisson calibration error,True
+e6_dependence,Arm A shared minus poisson calibration error,True
+e6_dependence,Arm B cell minus poisson correlation error,True
+e6_dependence,Arm B shared minus poisson correlation error,True
+e6_dependence,Arm B cell minus shared correlation error,True
+e6_dependence,Arm B cell minus poisson calibration error,True
+e6_dependence,Arm B shared minus poisson calibration error,True

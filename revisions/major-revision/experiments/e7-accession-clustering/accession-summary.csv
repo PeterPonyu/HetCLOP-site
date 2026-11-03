@@ -1,0 +1,183 @@
+analysis,contrast,unit,effect,ci_low,ci_high,classification,n_clusters,wilcoxon_p_worst,sign_p_worst,signflip_p_worst,signflip_p
+armb_energy,"Arm B per-cell minus Poisson energy, pca_512",dataset,,,,,50,1.1326234101716182e-06,0.000936222910851825,9.999000099990002e-05,
+armb_energy,"Arm B per-cell minus Poisson energy, pca_512",accession,,,,,45,3.7699676909142e-06,0.002458900322096724,9.999000099990002e-05,
+armb_energy,"Arm B per-cell minus Poisson energy, randproj_512",dataset,,,,,50,0.0001778852638985029,0.000936222910851825,0.0004999500049995,
+armb_energy,"Arm B per-cell minus Poisson energy, randproj_512",accession,,,,,45,0.0004927158825012157,0.006608822842281368,0.0005999400059994001,
+armb_energy,"Arm B per-cell minus Poisson energy, scgpt_512",dataset,,,,,50,0.022974872408266123,0.887724827340783,0.021997800219978002,
+armb_energy,"Arm B per-cell minus Poisson energy, scgpt_512",accession,,,,,45,0.03694055216936931,0.765991824244793,0.0344965503449655,
+armb_energy,"Arm B per-cell minus Poisson energy, geneformer",dataset,,,,,50,0.0006207713421488847,0.11892045255943628,0.0006999300069993001,
+armb_energy,"Arm B per-cell minus Poisson energy, geneformer",accession,,,,,45,0.001736840082969593,0.1351564508456704,0.0014998500149985001,
+e1_matched,Arm A per_cell minus poisson: auroc,dataset,0.0031924338624338,-0.0033553822751322,0.0110570462962962,spans zero,50,,,,0.4526547345265473
+e1_matched,Arm A per_cell minus poisson: auroc,accession,0.0041273956496178646,-0.0029955761316872408,0.012567402998236315,spans zero,45,,,,0.35426457354264573
+e1_matched,Arm A per_cell minus shared_per_gene: auroc,dataset,0.0200451322751322,0.0144820119047619,0.0259647195767195,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell minus shared_per_gene: auroc,accession,0.02114706055261608,0.015603268665490866,0.027149420194003508,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus poisson: auroc,dataset,-0.0074428571428571,-0.0127310238095238,-0.0015736455026455,below zero,50,,,,0.0105989401059894
+e1_matched,Arm A per_cell_type minus poisson: auroc,accession,-0.00691305114638447,-0.01252723398001174,-0.0008139682539682609,below zero,45,,,,0.022497750224977502
+e1_matched,Arm A per_cell_type minus shared_per_gene: auroc,dataset,0.0094098412698412,0.0053887433862433,0.0134149589947089,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus shared_per_gene: auroc,accession,0.010106613756613744,0.005951626984126978,0.014241477072310396,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A shared_per_gene minus poisson: auroc,dataset,-0.0168526984126984,-0.0234140383597883,-0.0098604497354497,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A shared_per_gene minus poisson: auroc,accession,-0.017019664902998218,-0.024099986037624893,-0.009768850676072891,below zero,45,,,,0.00019998000199980003
+e1_matched,Arm A per_cell minus poisson: calibration,dataset,0.0224394664409463,0.0167775020771227,0.0295923099662986,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell minus poisson: calibration,accession,0.023441956709350713,0.01753651557839291,0.03090575547670776,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell minus shared_per_gene: calibration,dataset,-0.0363711428122013,-0.0506967219119192,-0.0224797929728181,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell minus shared_per_gene: calibration,accession,-0.0363445238719463,-0.05189239908896716,-0.0211401341252709,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus poisson: calibration,dataset,0.0347364824538154,0.0292281665024944,0.0405333242466792,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus poisson: calibration,accession,0.035893279802256525,0.030206023623911223,0.04198903756533256,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus shared_per_gene: calibration,dataset,-0.0240741267993322,-0.0330514972587685,-0.0165891607568718,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus shared_per_gene: calibration,accession,-0.02389320077904051,-0.03376120160628736,-0.015485704903276975,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A shared_per_gene minus poisson: calibration,dataset,0.0588106092531477,0.0481675187909124,0.0721380529756345,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A shared_per_gene minus poisson: calibration,accession,0.05978648058129704,0.04796667077160499,0.07430051319768173,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell minus poisson: macro_f1,dataset,-0.0047702017253837,-0.0131095886968141,0.0033766678557373,spans zero,50,,,,0.2827717228277172
+e1_matched,Arm A per_cell minus poisson: macro_f1,accession,-0.004404190683466184,-0.013611752269696886,0.0044780655509491065,spans zero,45,,,,0.34296570342965704
+e1_matched,Arm A per_cell minus shared_per_gene: macro_f1,dataset,0.0022115623893574,-0.0069719727954787,0.0111115019398057,spans zero,50,,,,0.6362363763623637
+e1_matched,Arm A per_cell minus shared_per_gene: macro_f1,accession,0.002854340707196058,-0.006789255666169456,0.012303644635439002,spans zero,45,,,,0.5726427357264273
+e1_matched,Arm A per_cell_type minus poisson: macro_f1,dataset,-0.0018240308845651,-0.0104048648351085,0.0066649031184869,spans zero,50,,,,0.6741325867413258
+e1_matched,Arm A per_cell_type minus poisson: macro_f1,accession,-0.001603079805278596,-0.009872394252029525,0.007047707157397524,spans zero,45,,,,0.7227277272272773
+e1_matched,Arm A per_cell_type minus shared_per_gene: macro_f1,dataset,0.005157733230176,-0.0020558531258264,0.0121753087528908,spans zero,50,,,,0.1616838316168383
+e1_matched,Arm A per_cell_type minus shared_per_gene: macro_f1,accession,0.005655451585383644,-0.002061515064908067,0.013306064993924241,spans zero,45,,,,0.1620837916208379
+e1_matched,Arm A shared_per_gene minus poisson: macro_f1,dataset,-0.0069817641147412,-0.0155871217594234,0.0013648777262374,spans zero,50,,,,0.116988301169883
+e1_matched,Arm A shared_per_gene minus poisson: macro_f1,accession,-0.007258531390662249,-0.016278535790484477,0.001164159837055811,spans zero,45,,,,0.1197880211978802
+e1_matched,Arm A per_cell minus poisson: rare_f1_full,dataset,0.0041209707258252,-0.05462438777853,0.0692795332558159,spans zero,19,,,,0.913908609139086
+e1_matched,Arm A per_cell minus poisson: rare_f1_full,accession,0.007612770016277409,-0.054894970040544194,0.07828490118948217,spans zero,18,,,,0.8484151584841516
+e1_matched,Arm A per_cell minus shared_per_gene: rare_f1_full,dataset,-0.0108953225422396,-0.0692825756828542,0.0448891451742655,spans zero,19,,,,0.7217278272172782
+e1_matched,Arm A per_cell minus shared_per_gene: rare_f1_full,accession,-0.00892981542593424,-0.07057084007266681,0.04973093533019209,spans zero,18,,,,0.7865213478652134
+e1_matched,Arm A per_cell_type minus poisson: rare_f1_full,dataset,0.0055638045100175,-0.0353572100826544,0.0462000483104516,spans zero,19,,,,0.7943205679432057
+e1_matched,Arm A per_cell_type minus poisson: rare_f1_full,accession,0.009273959499142457,-0.033453427933513254,0.05249582963107033,spans zero,18,,,,0.682031796820318
+e1_matched,Arm A per_cell_type minus shared_per_gene: rare_f1_full,dataset,-0.0094524887580473,-0.0702422026467099,0.0487340019027679,spans zero,19,,,,0.7647235276472353
+e1_matched,Arm A per_cell_type minus shared_per_gene: rare_f1_full,accession,-0.007268625943069189,-0.07417111987975955,0.05206308896584157,spans zero,18,,,,0.8323167683231677
+e1_matched,Arm A shared_per_gene minus poisson: rare_f1_full,dataset,0.0150162932680648,-0.0577176648767165,0.093760572929381,spans zero,19,,,,0.712928707129287
+e1_matched,Arm A shared_per_gene minus poisson: rare_f1_full,accession,0.016542585442211655,-0.05798134025100195,0.09980659524319042,spans zero,18,,,,0.7041295870412959
+e1_matched,Arm A per_cell minus poisson: rare_f1_masked,dataset,0.0060167628513834,-0.0536083055430506,0.0741034289233571,spans zero,19,,,,0.8734126587341265
+e1_matched,Arm A per_cell minus poisson: rare_f1_masked,accession,0.008844636833812373,-0.055914542516905384,0.07948559339787925,spans zero,18,,,,0.8174182581741826
+e1_matched,Arm A per_cell minus shared_per_gene: rare_f1_masked,dataset,-0.0059198473066543,-0.0626712695475746,0.0487805720725605,spans zero,19,,,,0.839016098390161
+e1_matched,Arm A per_cell minus shared_per_gene: rare_f1_masked,accession,-0.004447171992259534,-0.06603458000652924,0.05515651597371085,spans zero,18,,,,0.883011698830117
+e1_matched,Arm A per_cell_type minus poisson: rare_f1_masked,dataset,0.0017408705208557,-0.0488357609969476,0.0468699339109864,spans zero,19,,,,0.9473052694730528
+e1_matched,Arm A per_cell_type minus poisson: rare_f1_masked,accession,0.005238640288360547,-0.04673110024309247,0.05319923135850028,spans zero,18,,,,0.8455154484551545
+e1_matched,Arm A per_cell_type minus shared_per_gene: rare_f1_masked,dataset,-0.010195739637182,-0.0812124564852133,0.0555997531864807,spans zero,19,,,,0.7829217078292171
+e1_matched,Arm A per_cell_type minus shared_per_gene: rare_f1_masked,accession,-0.00805316853771136,-0.08478337594684246,0.061819262621761295,spans zero,18,,,,0.8367163283671633
+e1_matched,Arm A shared_per_gene minus poisson: rare_f1_masked,dataset,0.0119366101580377,-0.0662827704494474,0.0957647920783909,spans zero,19,,,,0.7712228777122287
+e1_matched,Arm A shared_per_gene minus poisson: rare_f1_masked,accession,0.013291808826071902,-0.06832771829175902,0.10105372960132922,spans zero,18,,,,0.7707229277072293
+e1_matched,Arm A per_cell minus poisson: welch,dataset,0.0003166137566137,-0.0037771534391534,0.0043605873015872,spans zero,50,,,,0.8837116288371163
+e1_matched,Arm A per_cell minus poisson: welch,accession,0.0007067313345091081,-0.0035234369488536103,0.00488053350970017,spans zero,45,,,,0.7493250674932507
+e1_matched,Arm A per_cell minus shared_per_gene: welch,dataset,0.01960291005291,0.0143898333333333,0.0251642261904761,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell minus shared_per_gene: welch,accession,0.02078162845385064,0.015474126249265118,0.0264750565843621,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A per_cell_type minus poisson: welch,dataset,-0.0092372486772486,-0.0140473597883598,-0.0043935238095238,below zero,50,,,,0.0004999500049995
+e1_matched,Arm A per_cell_type minus poisson: welch,accession,-0.009076572604350372,-0.01408986405055848,-0.0038930599647266253,below zero,45,,,,0.0011998800119988001
+e1_matched,Arm A per_cell_type minus shared_per_gene: welch,dataset,0.0100490476190476,0.0053218783068782,0.0147626018518518,above zero,50,,,,0.0001999800019998
+e1_matched,Arm A per_cell_type minus shared_per_gene: welch,accession,0.010998324514991154,0.0060066409465020345,0.015931784979423835,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm A shared_per_gene minus poisson: welch,dataset,-0.0192862962962962,-0.0252277698412698,-0.0137356772486772,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm A shared_per_gene minus poisson: welch,accession,-0.020074897119341538,-0.026461072898295086,-0.014015393885949424,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus poisson: auroc,dataset,-0.0083404232804232,-0.013891828042328,-0.0020744828042328,below zero,50,,,,0.0065993400659934
+e1_matched,Arm B per_cell minus poisson: auroc,accession,-0.00865108759553203,-0.01447127865961198,-0.0019423206937095833,below zero,45,,,,0.0071992800719928
+e1_matched,Arm B per_cell minus shared_per_gene: auroc,dataset,0.0653565079365079,0.05551141005291,0.0756040476190476,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus shared_per_gene: auroc,accession,0.06633315696649027,0.05584508377425041,0.07705425191064076,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus poisson: auroc,dataset,-0.0440392063492063,-0.0519968849206349,-0.0360391706349206,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus poisson: auroc,accession,-0.04416331569664899,-0.0524839153439153,-0.03602494708994705,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus shared_per_gene: auroc,dataset,0.0296577248677248,0.0227936587301587,0.0368884722222222,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus shared_per_gene: auroc,accession,0.030820928865373284,0.023820615814226922,0.038328968253968226,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B shared_per_gene minus poisson: auroc,dataset,-0.0736969312169312,-0.0822175595238095,-0.0655369761904762,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B shared_per_gene minus poisson: auroc,accession,-0.0749842445620223,-0.08379006319811873,-0.06663454438565546,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus poisson: calibration,dataset,-0.0051160446223665,-0.028980305366276,0.0127202971652318,spans zero,50,,,,0.7296270372962703
+e1_matched,Arm B per_cell minus poisson: calibration,accession,-0.006246924628343119,-0.03294617524919819,0.01292625805365974,spans zero,45,,,,0.7038296170382962
+e1_matched,Arm B per_cell minus shared_per_gene: calibration,dataset,-0.1206414818088316,-0.1397923190321533,-0.1039913996972637,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus shared_per_gene: calibration,accession,-0.1208083631402895,-0.14167223779950705,-0.10234074806591184,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus poisson: calibration,dataset,0.0540015531924408,0.0265777585567208,0.0743082967132963,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus poisson: calibration,accession,0.0532481716794509,0.023413739452226048,0.07532766699969846,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus shared_per_gene: calibration,dataset,-0.0615238839940242,-0.0768364700012503,-0.0473795221344137,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus shared_per_gene: calibration,accession,-0.06131326683249545,-0.0780864015294384,-0.04587181265413061,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B shared_per_gene minus poisson: calibration,dataset,0.1155254371864651,0.0825761620097122,0.1442056079883657,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B shared_per_gene minus poisson: calibration,accession,0.11456143851194638,0.07687642441765624,0.14637771314473424,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus poisson: macro_f1,dataset,-0.002016250942472,-0.0130900061693239,0.0091517324950203,spans zero,50,,,,0.7263273672632736
+e1_matched,Arm B per_cell minus poisson: macro_f1,accession,-0.004442007816895095,-0.016110640621421854,0.0067901437821301,spans zero,45,,,,0.45845415458454153
+e1_matched,Arm B per_cell minus shared_per_gene: macro_f1,dataset,0.0176649832197701,0.0072370439618082,0.0293033726195138,above zero,50,,,,0.0023997600239976
+e1_matched,Arm B per_cell minus shared_per_gene: macro_f1,accession,0.017428670032134753,0.0071390321989491775,0.02878182706732725,above zero,45,,,,0.0014998500149985001
+e1_matched,Arm B per_cell_type minus poisson: macro_f1,dataset,-0.0267413177552322,-0.0412106928779528,-0.0124087008646169,below zero,50,,,,0.0011998800119988
+e1_matched,Arm B per_cell_type minus poisson: macro_f1,accession,-0.02899898413902003,-0.04432497235809011,-0.013316828977269131,below zero,45,,,,0.0012998700129987
+e1_matched,Arm B per_cell_type minus shared_per_gene: macro_f1,dataset,-0.00706008359299,-0.0159904021554133,0.0018737218207587,spans zero,50,,,,0.1406859314068593
+e1_matched,Arm B per_cell_type minus shared_per_gene: macro_f1,accession,-0.0071283062899901726,-0.016101883225710423,0.0015753392356164465,spans zero,45,,,,0.12008799120087991
+e1_matched,Arm B shared_per_gene minus poisson: macro_f1,dataset,-0.0196812341622421,-0.0348795601448873,-0.0060591923135705,below zero,50,,,,0.0084991500849915
+e1_matched,Arm B shared_per_gene minus poisson: macro_f1,accession,-0.021870677849029855,-0.03810082130436356,-0.007331739193205848,below zero,45,,,,0.0053994600539946005
+e1_matched,Arm B per_cell minus poisson: rare_f1_full,dataset,-0.0674724852433806,-0.1272912533027544,-0.0112856485145858,below zero,19,,,,0.0378962103789621
+e1_matched,Arm B per_cell minus poisson: rare_f1_full,accession,-0.07145330154655215,-0.13403543243354255,-0.014714684464699103,below zero,18,,,,0.03519648035196481
+e1_matched,Arm B per_cell minus shared_per_gene: rare_f1_full,dataset,0.0747276064778063,0.0232090763654276,0.1406406731184883,above zero,19,,,,0.0090990900909909
+e1_matched,Arm B per_cell minus shared_per_gene: rare_f1_full,accession,0.07559416580331206,0.021926246864012188,0.14190775951935516,above zero,18,,,,0.011698830116988301
+e1_matched,Arm B per_cell_type minus poisson: rare_f1_full,dataset,-0.0737660618335832,-0.1708548998495342,0.0121147313705932,spans zero,19,,,,0.1444855514448555
+e1_matched,Arm B per_cell_type minus poisson: rare_f1_full,accession,-0.08169623824279543,-0.17833769128506724,0.007869392900625575,spans zero,18,,,,0.12098790120987901
+e1_matched,Arm B per_cell_type minus shared_per_gene: rare_f1_full,dataset,0.0684340298876036,0.0241084476905189,0.116710928308783,above zero,19,,,,0.0091990800919908
+e1_matched,Arm B per_cell_type minus shared_per_gene: rare_f1_full,accession,0.06535122910706878,0.019543624132181626,0.11517917524712908,above zero,18,,,,0.010998900109989001
+e1_matched,Arm B shared_per_gene minus poisson: rare_f1_full,dataset,-0.1422000917211869,-0.2210680283494032,-0.0774751058147655,below zero,19,,,,0.0002999700029997
+e1_matched,Arm B shared_per_gene minus poisson: rare_f1_full,accession,-0.1470474673498642,-0.22859376978594217,-0.07893430962675728,below zero,18,,,,0.0004999500049995
+e1_matched,Arm B per_cell minus poisson: rare_f1_masked,dataset,-0.0652666345159412,-0.1266632520549269,-0.0102867121558042,below zero,19,,,,0.0437956204379562
+e1_matched,Arm B per_cell minus poisson: rare_f1_masked,accession,-0.0685901948711838,-0.13173979826065002,-0.011467982212057555,below zero,18,,,,0.04609539046095391
+e1_matched,Arm B per_cell minus shared_per_gene: rare_f1_masked,dataset,0.0848846915879623,0.0314311201401514,0.1500029747939411,above zero,19,,,,0.0040995900409959
+e1_matched,Arm B per_cell minus shared_per_gene: rare_f1_masked,accession,0.08620301868719013,0.030907780927578045,0.15787252878849845,above zero,18,,,,0.004199580041995801
+e1_matched,Arm B per_cell_type minus poisson: rare_f1_masked,dataset,-0.0665836376397152,-0.1624324720429398,0.0208537043193987,spans zero,19,,,,0.1872812718728127
+e1_matched,Arm B per_cell_type minus poisson: rare_f1_masked,accession,-0.0731469000775765,-0.17510357622370587,0.017575343308871783,spans zero,18,,,,0.1715828417158284
+e1_matched,Arm B per_cell_type minus shared_per_gene: rare_f1_masked,dataset,0.0835676884641884,0.0306531274645756,0.1381122735376982,above zero,19,,,,0.0056994300569943
+e1_matched,Arm B per_cell_type minus shared_per_gene: rare_f1_masked,accession,0.0816463134807974,0.029046478024667918,0.1357223636481339,above zero,18,,,,0.008899110088991101
+e1_matched,Arm B shared_per_gene minus poisson: rare_f1_masked,dataset,-0.1501513261039036,-0.2297091292056557,-0.082545283595816,below zero,19,,,,0.0001999800019998
+e1_matched,Arm B shared_per_gene minus poisson: rare_f1_masked,accession,-0.15479321355837394,-0.23737218475804667,-0.08538757672370385,below zero,18,,,,0.00029997000299970003
+e1_matched,Arm B per_cell minus poisson: welch,dataset,-0.0141113756613756,-0.0182515899470899,-0.0099783994708994,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus poisson: welch,accession,-0.01460708406819516,-0.018909756760728962,-0.010390223398001159,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus shared_per_gene: welch,dataset,0.0613377248677248,0.0526553201058201,0.0702154365079365,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell minus shared_per_gene: welch,accession,0.06258883009994116,0.053578918283362705,0.07217748089359198,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus poisson: welch,dataset,-0.0490721693121693,-0.0566718293650793,-0.0413762883597883,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus poisson: welch,accession,-0.05020673133450907,-0.05836212301587297,-0.04225868165784828,below zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus shared_per_gene: welch,dataset,0.0263769312169312,0.0203346362433862,0.0327113849206349,above zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B per_cell_type minus shared_per_gene: welch,accession,0.026989182833627254,0.02060809376837153,0.033641629923574334,above zero,45,,,,9.999000099990002e-05
+e1_matched,Arm B shared_per_gene minus poisson: welch,dataset,-0.0754491005291005,-0.0845577314814814,-0.0669292513227513,below zero,50,,,,9.999000099990002e-05
+e1_matched,Arm B shared_per_gene minus poisson: welch,accession,-0.07719591416813634,-0.08681387639623747,-0.06817266093474424,below zero,45,,,,9.999000099990002e-05
+e2_slope,"deficit-effect slope, pooled",dataset,-0.0399316417030368,-0.0867988017965388,-0.0079302320047308,below zero,50,,,,
+e2_slope,"deficit-effect slope, pooled",accession,-0.0395394961746649,-0.08824460795482773,-0.007996529853245598,below zero,45,,,,
+e2_slope,"deficit-effect slope, Arm_A",dataset,-0.020858228270783,-0.0722021490894717,0.016322461143763,spans zero,50,,,,
+e2_slope,"deficit-effect slope, Arm_A",accession,-0.01995474362872305,-0.06812542493148864,0.01722000324091632,spans zero,45,,,,
+e2_slope,"deficit-effect slope, Arm_B",dataset,-0.0688750867551584,-0.1324754055666255,-0.0119588787435832,below zero,50,,,,
+e2_slope,"deficit-effect slope, Arm_B",accession,-0.06789876356554593,-0.1282298391901878,-0.010685781870663966,below zero,45,,,,
+e4_reference,Arm A per-cell minus Poisson calibration error,dataset,0.0190471575278473,0.0127186631675118,0.0279151171002626,above zero,50,,,,
+e4_reference,Arm A per-cell minus Poisson calibration error,accession,0.01980057128201559,0.013285564308440398,0.02839551154517696,above zero,45,,,,
+e4_reference,Arm B per-cell minus Poisson calibration error,dataset,-0.004832329417327,-0.0282502371943784,0.0128940469369173,spans zero,50,,,,
+e4_reference,Arm B per-cell minus Poisson calibration error,accession,-0.0065859330088643515,-0.03273621096767102,0.013441207096732015,spans zero,45,,,,
+e4_reference,Arm B per-cell minus shared calibration error,dataset,-0.115509028057139,-0.1349685112665093,-0.0962226090422883,below zero,50,,,,
+e4_reference,Arm B per-cell minus shared calibration error,accession,-0.11632939800545299,-0.13699388840975554,-0.09709582645094224,below zero,45,,,,
+e4_reference,Arm B per-cell minus Poisson Welch recall,dataset,-0.0128897354497354,-0.0175694801587301,-0.0082106746031746,below zero,50,,,,
+e4_reference,Arm B per-cell minus Poisson Welch recall,accession,-0.012457113462669018,-0.017275424750146973,-0.0077153365667254545,below zero,45,,,,
+e4_reference,Arm B per-cell minus shared Welch recall,dataset,0.0629935978835978,0.0547471547619047,0.0714123875661375,above zero,50,,,,
+e4_reference,Arm B per-cell minus shared Welch recall,accession,0.06529103468547913,0.05681360229276896,0.07394298647854204,above zero,45,,,,
+e4_reference,"deficit-effect slope, pooled",dataset,-0.0345745899615061,-0.083820218403082,0.052779087813325,spans zero,50,,,,
+e4_reference,"deficit-effect slope, pooled",accession,-0.03169075320651893,-0.0812773184767356,0.04870061502881885,spans zero,45,,,,
+e4_scvi_reference,scVI shared per-gene NB minus Poisson calibration error,dataset,0.04194025412235321,-0.001458203970584462,0.07536547600944275,spans zero,50,,,,
+e4_scvi_reference,scVI shared per-gene NB minus Poisson calibration error,accession,0.04118922315921602,-0.006080326602153789,0.07748499512325371,spans zero,45,,,,
+e4_scvi_reference,scVI per-cell NB minus Poisson calibration error,dataset,-0.04811797957812978,-0.08771165691355576,-0.021290177389771188,below zero,50,,,,
+e4_scvi_reference,scVI per-cell NB minus Poisson calibration error,accession,-0.04960292959659872,-0.09492105437212177,-0.020357570869778612,below zero,45,,,,
+e3_selection,Arm A regret relative to the best option on test,dataset,0.008080777064354566,0.006239782705797875,0.010171746511787516,above zero,50,,,,
+e3_selection,Arm A regret relative to the best option on test,accession,0.008068152791460748,0.006303774840161474,0.009851409103300299,above zero,45,,,,
+e3_selection,Arm A selected minus always-Poisson,dataset,-0.012509697822332619,-0.032589168989810374,0.00010726429494905058,spans zero,50,,,,
+e3_selection,Arm A selected minus always-Poisson,accession,-0.013915478185507537,-0.036713061334499655,2.4766090822753066e-05,spans zero,45,,,,
+e3_selection,Arm A selected minus always-per-cell,dataset,-0.009990442959249552,-0.013117133310156686,-0.006957704705725279,below zero,50,,,,
+e3_selection,Arm A selected minus always-per-cell,accession,-0.010107796925083427,-0.013560378081802164,-0.00702644623250449,below zero,45,,,,
+e3_selection,Arm B regret relative to the best option on test,dataset,0.014634967524928703,0.011626359911660276,0.01800183235968498,above zero,50,,,,
+e3_selection,Arm B regret relative to the best option on test,accession,0.0143800427859929,0.01129071150746072,0.017948317039735602,above zero,45,,,,
+e3_selection,Arm B selected minus always-Poisson,dataset,-0.020406148267999878,-0.051524189293454585,-0.00047170529445417344,below zero,50,,,,
+e3_selection,Arm B selected minus always-Poisson,accession,-0.022521079161226556,-0.05806000084732257,-0.0006334126562771331,below zero,45,,,,
+e3_selection,Arm B selected minus always-per-cell,dataset,-0.003571831435339522,-0.009752143630049028,0.0010276072186895617,spans zero,50,,,,
+e3_selection,Arm B selected minus always-per-cell,accession,-0.003003284076724252,-0.009299111364545625,0.001664149164612671,spans zero,45,,,,
+e6_dependence,Arm A cell minus poisson correlation error,dataset,0.006119309226908336,0.002359144953904105,0.008951041695294022,above zero,50,,,,
+e6_dependence,Arm A cell minus poisson correlation error,accession,0.006312688351742801,0.0021373109932189484,0.009257065629582109,above zero,45,,,,
+e6_dependence,Arm A shared minus poisson correlation error,dataset,0.02208945722647552,0.01728937430856974,0.027292864946224578,above zero,50,,,,
+e6_dependence,Arm A shared minus poisson correlation error,accession,0.02249947860779516,0.016786383858314907,0.0284726031524771,above zero,45,,,,
+e6_dependence,Arm A cell minus shared correlation error,dataset,-0.015970147999567183,-0.02008788842618663,-0.01221431405535911,below zero,50,,,,
+e6_dependence,Arm A cell minus shared correlation error,accession,-0.01618679025605236,-0.020290743226893674,-0.012331529115552284,below zero,45,,,,
+e6_dependence,Arm A cell minus poisson calibration error,dataset,0.01970935892449027,0.014509465488895755,0.02771060180022516,above zero,50,,,,
+e6_dependence,Arm A cell minus poisson calibration error,accession,0.02035986424235213,0.014709214785639047,0.0289066694297998,above zero,45,,,,
+e6_dependence,Arm A shared minus poisson calibration error,dataset,0.05545526261707726,0.04601346376995723,0.06589373002785477,above zero,50,,,,
+e6_dependence,Arm A shared minus poisson calibration error,accession,0.05675691053773554,0.04638961653029997,0.06867772528328647,above zero,45,,,,
+e6_dependence,Arm B cell minus poisson correlation error,dataset,-0.018043285179320075,-0.02980544970533639,-0.009076573580007775,below zero,50,,,,
+e6_dependence,Arm B cell minus poisson correlation error,accession,-0.018543747631310146,-0.031132825618796888,-0.008816655528189594,below zero,45,,,,
+e6_dependence,Arm B shared minus poisson correlation error,dataset,0.0618952446569993,0.04485067411431441,0.07950741843494855,above zero,50,,,,
+e6_dependence,Arm B shared minus poisson correlation error,accession,0.06235979930701206,0.042289735851939944,0.08102348212615387,above zero,45,,,,
+e6_dependence,Arm B cell minus shared correlation error,dataset,-0.07993852983631938,-0.09451791093660743,-0.06688432207416253,below zero,50,,,,
+e6_dependence,Arm B cell minus shared correlation error,accession,-0.0809035469383222,-0.09524858823411443,-0.06663702491390971,below zero,45,,,,
+e6_dependence,Arm B cell minus poisson calibration error,dataset,-0.005797989802944884,-0.030752637205935934,0.012347473924999236,spans zero,50,,,,
+e6_dependence,Arm B cell minus poisson calibration error,accession,-0.007050821506396853,-0.0318649597781221,0.012839986244375908,spans zero,45,,,,
+e6_dependence,Arm B shared minus poisson calibration error,dataset,0.1146183459786346,0.08028422637786435,0.1431245213938192,above zero,50,,,,
+e6_dependence,Arm B shared minus poisson calibration error,accession,0.11334815755617333,0.07715147892441612,0.14594299697525703,above zero,45,,,,

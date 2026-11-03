@@ -1,0 +1,368 @@
+{
+  "purpose": "G5: does zero-inflation help/hurt/nothing? ZINB decoder (NB + learned per-gene zero-inflation logit) on raw counts with the G_in-derived library offset, same acceptance gate; vs nb_stochastic and poisson_on_nb_mean on energy_distance and expression-restricted |log2 r_var|, pca_512, Arm A, 3 seeds, naive + clustered.",
+  "arm": "A",
+  "encoder": "pca_512",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "metrics": [
+    "energy_distance",
+    "r_var_abs_log2_expr"
+  ],
+  "n_datasets": 50,
+  "comparison_convention": "diff = a - b (both metrics lower-is-better); a wins a group when diff < 0. a_favored_all_seeds means median paired diff < 0 in every seed.",
+  "zero_inflation_note": "Svensson 2020: droplet scRNA-seq is not zero-inflated once a proper NB is fit. A null (ZINB ~ NB, learned pi ~ 0) corroborates that.",
+  "per_seed": {
+    "42": {
+      "gate": {
+        "det_log_pearson": 0.741955478023618,
+        "nb_mean_log_pearson": 0.7479297008337323,
+        "zinb_mean_log_pearson": 0.7454380995437425,
+        "nb_gate_passed": true,
+        "zinb_gate_passed": true,
+        "zinb_val_nll": 0.2669347822666168,
+        "zinb_params": 12878156
+      },
+      "zi_logit_stats": {
+        "zi_logit_min": -2.4122438430786133,
+        "zi_logit_median": -2.2217079401016235,
+        "zi_logit_max": -1.9165213108062744,
+        "pi_min": 0.08224379457020234,
+        "pi_median": 0.09781797690434169,
+        "pi_max": 0.12824998777989302,
+        "frac_genes_pi_gt_0.5": 0.0,
+        "frac_genes_pi_gt_0.1": 0.44
+      },
+      "comparisons": {
+        "zinb_stochastic_vs_nb_stochastic__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.7104891763445673,
+          "median_b": 0.5974813621954453,
+          "median_paired_diff_a_minus_b": 0.10339552576913569,
+          "a_win_fraction": 0.028662420382165606,
+          "naive_p": 1.1226935670120683e-52,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_median_of_medians": 0.10102978731138679,
+          "clustered_a_win_fraction_datasets": 0.0
+        },
+        "zinb_stochastic_vs_nb_stochastic__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.31520166528822935,
+          "median_b": 0.3012058862642273,
+          "median_paired_diff_a_minus_b": 0.015886404714633276,
+          "a_win_fraction": 0.31528662420382164,
+          "naive_p": 3.9072674144766404e-11,
+          "clustered_wilcoxon_p": 1.1033688904760197e-05,
+          "clustered_sign_p": 2.3861331676755526e-05,
+          "clustered_median_of_medians": 0.016189811533711337,
+          "clustered_a_win_fraction_datasets": 0.2
+        },
+        "zinb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.7104891763445673,
+          "median_b": 0.6011812155328258,
+          "median_paired_diff_a_minus_b": 0.10101209501890729,
+          "a_win_fraction": 0.07961783439490445,
+          "naive_p": 4.710336504895535e-36,
+          "clustered_wilcoxon_p": 8.22989321136447e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_median_of_medians": 0.09980328269757033,
+          "clustered_a_win_fraction_datasets": 0.04
+        },
+        "zinb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.31520166528822935,
+          "median_b": 0.27177636654431436,
+          "median_paired_diff_a_minus_b": 0.03990590906009811,
+          "a_win_fraction": 0.1910828025477707,
+          "naive_p": 1.4622655398539365e-28,
+          "clustered_wilcoxon_p": 1.616786704516926e-10,
+          "clustered_sign_p": 3.708322537931963e-11,
+          "clustered_median_of_medians": 0.04153224899383744,
+          "clustered_a_win_fraction_datasets": 0.06
+        },
+        "nb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.5974813621954453,
+          "median_b": 0.6011812155328258,
+          "median_paired_diff_a_minus_b": 0.004689741268716574,
+          "a_win_fraction": 0.37579617834394907,
+          "naive_p": 1.8768820963442644e-05,
+          "clustered_wilcoxon_p": 0.0006983914307809869,
+          "clustered_sign_p": 0.0026021714567221466,
+          "clustered_median_of_medians": 0.005584107591855236,
+          "clustered_a_win_fraction_datasets": 0.28
+        },
+        "nb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.3012058862642273,
+          "median_b": 0.27177636654431436,
+          "median_paired_diff_a_minus_b": 0.020954359887186857,
+          "a_win_fraction": 0.23248407643312102,
+          "naive_p": 1.7604580171997082e-23,
+          "clustered_wilcoxon_p": 7.638334409421077e-14,
+          "clustered_sign_p": 3.708322537931963e-11,
+          "clustered_median_of_medians": 0.020521598183943224,
+          "clustered_a_win_fraction_datasets": 0.06
+        }
+      }
+    },
+    "43": {
+      "gate": {
+        "det_log_pearson": 0.7420573073556134,
+        "nb_mean_log_pearson": 0.7484156041492585,
+        "zinb_mean_log_pearson": 0.745899413429422,
+        "nb_gate_passed": true,
+        "zinb_gate_passed": true,
+        "zinb_val_nll": 0.26662561297416687,
+        "zinb_params": 12878156
+      },
+      "zi_logit_stats": {
+        "zi_logit_min": -2.4118642807006836,
+        "zi_logit_median": -2.2199811935424805,
+        "zi_logit_max": -1.9268392324447632,
+        "pi_min": 0.08227244838780547,
+        "pi_median": 0.09797046812689471,
+        "pi_max": 0.12710084220157794,
+        "frac_genes_pi_gt_0.5": 0.0,
+        "frac_genes_pi_gt_0.1": 0.4452
+      },
+      "comparisons": {
+        "zinb_stochastic_vs_nb_stochastic__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.7253656416891703,
+          "median_b": 0.5976536857793882,
+          "median_paired_diff_a_minus_b": 0.10170351232244546,
+          "a_win_fraction": 0.01910828025477707,
+          "naive_p": 4.576920086918918e-53,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_median_of_medians": 0.0991159354460609,
+          "clustered_a_win_fraction_datasets": 0.0
+        },
+        "zinb_stochastic_vs_nb_stochastic__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.3196883749535717,
+          "median_b": 0.29763985015314864,
+          "median_paired_diff_a_minus_b": 0.019662038381758895,
+          "a_win_fraction": 0.3057324840764331,
+          "naive_p": 2.580832382577427e-12,
+          "clustered_wilcoxon_p": 2.8338981969966426e-06,
+          "clustered_sign_p": 2.3861331676755526e-05,
+          "clustered_median_of_medians": 0.018639469543088177,
+          "clustered_a_win_fraction_datasets": 0.2
+        },
+        "zinb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.7253656416891703,
+          "median_b": 0.5997964836872098,
+          "median_paired_diff_a_minus_b": 0.10528401447524338,
+          "a_win_fraction": 0.07006369426751592,
+          "naive_p": 2.0973681844752795e-36,
+          "clustered_wilcoxon_p": 8.22989321136447e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_median_of_medians": 0.10434218572214649,
+          "clustered_a_win_fraction_datasets": 0.04
+        },
+        "zinb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.3196883749535717,
+          "median_b": 0.2780265561009009,
+          "median_paired_diff_a_minus_b": 0.03737257017497661,
+          "a_win_fraction": 0.17834394904458598,
+          "naive_p": 4.304933092538089e-30,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_median_of_medians": 0.037949378615688395,
+          "clustered_a_win_fraction_datasets": 0.0
+        },
+        "nb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.5976536857793882,
+          "median_b": 0.5997964836872098,
+          "median_paired_diff_a_minus_b": 0.005439288188829217,
+          "a_win_fraction": 0.35987261146496813,
+          "naive_p": 0.00013510697041892945,
+          "clustered_wilcoxon_p": 0.0004506016805585489,
+          "clustered_sign_p": 0.00030586400160359517,
+          "clustered_median_of_medians": 0.006030196550732114,
+          "clustered_a_win_fraction_datasets": 0.24
+        },
+        "nb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.29763985015314864,
+          "median_b": 0.2780265561009009,
+          "median_paired_diff_a_minus_b": 0.022722734948874765,
+          "a_win_fraction": 0.22929936305732485,
+          "naive_p": 5.598659611215767e-22,
+          "clustered_wilcoxon_p": 2.6343371928305714e-12,
+          "clustered_sign_p": 4.209852022540872e-09,
+          "clustered_median_of_medians": 0.019544874787612382,
+          "clustered_a_win_fraction_datasets": 0.1
+        }
+      }
+    },
+    "44": {
+      "gate": {
+        "det_log_pearson": 0.7420775111299235,
+        "nb_mean_log_pearson": 0.7478999102686777,
+        "zinb_mean_log_pearson": 0.7453917482303438,
+        "nb_gate_passed": true,
+        "zinb_gate_passed": true,
+        "zinb_val_nll": 0.26679593324661255,
+        "zinb_params": 12878156
+      },
+      "zi_logit_stats": {
+        "zi_logit_min": -2.4108328819274902,
+        "zi_logit_median": -2.220673084259033,
+        "zi_logit_max": -1.9304205179214478,
+        "pi_min": 0.08235035636300214,
+        "pi_median": 0.09790933987596062,
+        "pi_max": 0.12670404245558495,
+        "frac_genes_pi_gt_0.5": 0.0,
+        "frac_genes_pi_gt_0.1": 0.4424
+      },
+      "comparisons": {
+        "zinb_stochastic_vs_nb_stochastic__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.7035224058408387,
+          "median_b": 0.5869096557412519,
+          "median_paired_diff_a_minus_b": 0.10330296359524027,
+          "a_win_fraction": 0.012738853503184714,
+          "naive_p": 6.90268022839615e-53,
+          "clustered_wilcoxon_p": 1.7763568394002505e-15,
+          "clustered_sign_p": 1.7763568394002505e-15,
+          "clustered_median_of_medians": 0.10057504174514165,
+          "clustered_a_win_fraction_datasets": 0.0
+        },
+        "zinb_stochastic_vs_nb_stochastic__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.3158265554392703,
+          "median_b": 0.298600506385722,
+          "median_paired_diff_a_minus_b": 0.016545182069016506,
+          "a_win_fraction": 0.3089171974522293,
+          "naive_p": 2.199955386687168e-10,
+          "clustered_wilcoxon_p": 6.358623311442102e-06,
+          "clustered_sign_p": 2.3861331676755526e-05,
+          "clustered_median_of_medians": 0.013677350749502853,
+          "clustered_a_win_fraction_datasets": 0.2
+        },
+        "zinb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.7035224058408387,
+          "median_b": 0.6010378011952033,
+          "median_paired_diff_a_minus_b": 0.09974678754939781,
+          "a_win_fraction": 0.07006369426751592,
+          "naive_p": 3.035505344366108e-36,
+          "clustered_wilcoxon_p": 8.22989321136447e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_median_of_medians": 0.09741339865907683,
+          "clustered_a_win_fraction_datasets": 0.04
+        },
+        "zinb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.3158265554392703,
+          "median_b": 0.2782199321969495,
+          "median_paired_diff_a_minus_b": 0.0385006216958015,
+          "a_win_fraction": 0.18789808917197454,
+          "naive_p": 8.594635462312497e-28,
+          "clustered_wilcoxon_p": 5.610267805877811e-11,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_median_of_medians": 0.03781559881625157,
+          "clustered_a_win_fraction_datasets": 0.04
+        },
+        "nb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+          "n_groups": 314,
+          "median_a": 0.5869096557412519,
+          "median_b": 0.6010378011952033,
+          "median_paired_diff_a_minus_b": 0.0035198626564421076,
+          "a_win_fraction": 0.3980891719745223,
+          "naive_p": 0.00582692698106142,
+          "clustered_wilcoxon_p": 0.01855822259070905,
+          "clustered_sign_p": 0.006600447966810918,
+          "clustered_median_of_medians": 0.005275997123099785,
+          "clustered_a_win_fraction_datasets": 0.3
+        },
+        "nb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+          "n_groups": 314,
+          "median_a": 0.298600506385722,
+          "median_b": 0.2782199321969495,
+          "median_paired_diff_a_minus_b": 0.021371257717539255,
+          "a_win_fraction": 0.25796178343949044,
+          "naive_p": 1.354203608925278e-19,
+          "clustered_wilcoxon_p": 4.9116266609416925e-12,
+          "clustered_sign_p": 3.708322537931963e-11,
+          "clustered_median_of_medians": 0.019499098598819473,
+          "clustered_a_win_fraction_datasets": 0.06
+        }
+      }
+    }
+  },
+  "verdict": {
+    "zinb_stochastic_vs_nb_stochastic__energy_distance": {
+      "mean_median_paired_diff": 0.10280066722894048,
+      "mean_a_win_fraction": 0.020169851380042462,
+      "worst_naive_p": 1.1226935670120683e-52,
+      "worst_clustered_wilcoxon_p": 1.7763568394002505e-15,
+      "clustered_significant_all_seeds_0.05": true,
+      "a_favored_all_seeds": false,
+      "b_favored_all_seeds": true
+    },
+    "zinb_stochastic_vs_nb_stochastic__r_var_abs_log2_expr": {
+      "mean_median_paired_diff": 0.017364541721802892,
+      "mean_a_win_fraction": 0.3099787685774947,
+      "worst_naive_p": 2.199955386687168e-10,
+      "worst_clustered_wilcoxon_p": 1.1033688904760197e-05,
+      "clustered_significant_all_seeds_0.05": true,
+      "a_favored_all_seeds": false,
+      "b_favored_all_seeds": true
+    },
+    "zinb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+      "mean_median_paired_diff": 0.10201429901451615,
+      "mean_a_win_fraction": 0.0732484076433121,
+      "worst_naive_p": 4.710336504895535e-36,
+      "worst_clustered_wilcoxon_p": 8.22989321136447e-09,
+      "clustered_significant_all_seeds_0.05": true,
+      "a_favored_all_seeds": false,
+      "b_favored_all_seeds": true
+    },
+    "zinb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+      "mean_median_paired_diff": 0.03859303364362541,
+      "mean_a_win_fraction": 0.18577494692144372,
+      "worst_naive_p": 8.594635462312497e-28,
+      "worst_clustered_wilcoxon_p": 1.616786704516926e-10,
+      "clustered_significant_all_seeds_0.05": true,
+      "a_favored_all_seeds": false,
+      "b_favored_all_seeds": true
+    },
+    "nb_stochastic_vs_poisson_on_nb_mean__energy_distance": {
+      "mean_median_paired_diff": 0.004549630704662633,
+      "mean_a_win_fraction": 0.3779193205944798,
+      "worst_naive_p": 0.00582692698106142,
+      "worst_clustered_wilcoxon_p": 0.01855822259070905,
+      "clustered_significant_all_seeds_0.05": true,
+      "a_favored_all_seeds": false,
+      "b_favored_all_seeds": true
+    },
+    "nb_stochastic_vs_poisson_on_nb_mean__r_var_abs_log2_expr": {
+      "mean_median_paired_diff": 0.021682784184533625,
+      "mean_a_win_fraction": 0.2399150743099788,
+      "worst_naive_p": 1.354203608925278e-19,
+      "worst_clustered_wilcoxon_p": 4.9116266609416925e-12,
+      "clustered_significant_all_seeds_0.05": true,
+      "a_favored_all_seeds": false,
+      "b_favored_all_seeds": true
+    }
+  },
+  "overall": {
+    "learned_pi_median_across_seeds": 0.09789926163573233,
+    "learned_pi_max_across_seeds": 0.12735162414568532,
+    "zinb_beats_nb_energy_all_seeds": false,
+    "zinb_beats_nb_rvar_all_seeds": false,
+    "zinb_worse_than_nb_energy_all_seeds": true,
+    "zinb_worse_than_nb_rvar_all_seeds": true
+  }
+}

@@ -1,0 +1,120 @@
+\begingroup\sffamily\mdseries\sansmath
+% Study logic at the final column width (146 mm): (a) roadmap with explanatory glyphs, (b) two-factor grid
+% with distribution sketches. Card language, accent bars and colours follow the earlier overview and schematic.
+\begin{tikzpicture}[x=1mm,y=1mm,font=\sffamily\mdseries,
+ nohyph/.style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000}},
+ card/.style={rounded corners=1.7pt,draw=hgray!70!black,line width=.55pt,fill=hgray!3,anchor=north west,inner sep=0pt},
+ txt/.style={nohyph,font=\fontsize{7.8}{9.3}\selectfont,align=left,anchor=north west,text=hgray!20!black},
+ heading/.style={font=\fontsize{8.6}{10}\selectfont,anchor=north,text=hgray!15!black},
+ accent/.style={draw=hgray!60,line width=1.2pt},
+ flow/.style={-{Stealth[length=1.6mm,width=1.1mm]},line width=.65pt,draw=hgray!65!black},
+ grid/.style={nohyph,rectangle,rounded corners=2pt,minimum width=62mm,minimum height=24mm,align=center,
+   text width=58mm,inner sep=2pt,anchor=north west,font=\fontsize{8.6}{10.2}\selectfont},
+ neutral/.style={grid,fill=hgray!5,draw=hgray,line width=.75pt},
+ lose/.style={grid,fill=hred!9,draw=hred!70!black,line width=1pt},
+ win/.style={grid,fill=hgreen!11,draw=hgreen!75!black,line width=1.1pt},
+ small/.style={font=\fontsize{7.6}{9}\selectfont},
+ dot/.style={circle,inner sep=0pt,minimum size=1.1mm}]
+\def\bell#1#2#3#4{plot[domain=-1:1,samples=26](#1+\x*#3,{#2+#4*exp(-2.6*\x*\x)})}
+
+% ======================= (a) roadmap =======================
+\node[anchor=base west,font=\fontsize{10}{12}\selectfont\bfseries] at (-1.5,4) {(a)};
+% Question
+\node[card,minimum width=27mm,minimum height=67mm] at (0,0) {};
+\draw[accent] (1.2,-1.5)--(1.2,-65.5);
+\node[heading] at (14,-1.8) {Question};
+\node[txt,text width=22mm] at (3,-8.5) {When does count dispersion improve within-type variation?};
+\node[txt,text width=22mm] at (3,-30) {Freeze the predicted mean; compare draws on the same targets.};
+\draw[hgray!70,line width=.8pt] \bell{14}{-62}{9}{9};
+\draw[hblue,line width=.9pt] \bell{14}{-62}{4.5}{12};
+\node[small,text=hgray!45!black] at (14,-64.6) {real \textcolor{hblue}{decoded}};
+
+% F1-F3
+\foreach \y in {0,-23,-46}{\node[card,minimum width=40mm,minimum height=21mm] at (31,\y) {};
+  \draw[accent] (32.2,\y-1.5)--(32.2,\y-19.5);}
+\node[heading] at (51,-1.6) {F1 geometry};
+\node[txt,text width=24mm] at (34,-7) {Tightness rewards random projection and noise.};
+\foreach \px/\py in {60/-9,61.4/-10.6,59.2/-11.4,61/-12.2,62.6/-9.6}{\node[dot,fill=hblue] at (\px,\py) {};}
+\foreach \px/\py in {65.8/-14.6,67.2/-13.4,66.4/-16,68/-15.4,64.8/-15.8}{\node[dot,fill=hgreen] at (\px,\py) {};}
+\foreach \px/\py in {59/-16.6,63.6/-12.8,68.6/-10,62.4/-16.8,65/-9.4}{\node[dot,fill=horange!80] at (\px,\py) {};}
+\node[heading] at (51,-24.6) {F2 reconstruction};
+\node[txt,text width=24mm] at (34,-30) {Encoders differ little on held-out genes.};
+\draw[hgray!60] (58,-38.5)--(69.5,-38.5);
+\foreach \px in {66.2,66.8,67.3,67.7,68.1}{\node[dot,fill=hblue] at (\px,-36) {};}
+\node[dot,fill=hred] at (59.6,-36) {};
+\draw[hgray!60,dashed] (67.2,-31.5)--(67.2,-38.5);
+\node[heading] at (51,-47.6) {F3 variance};
+\node[txt,text width=24mm] at (34,-53) {Expressed genes reveal a deficit that sparse genes hide.};
+\fill[hgray!65] (60,-64)rectangle(62.6,-55.4);
+\fill[hblue] (64.4,-64)rectangle(67,-58.9);
+\draw[hgray!80,dashed,line width=.45pt] (58.6,-55.9)--(68.6,-55.9);
+\node[font=\fontsize{6.4}{7}\selectfont,text=hgray!45!black,anchor=north] at (61.3,-64.3) {all};
+\node[font=\fontsize{6.4}{7}\selectfont,text=hgray!45!black,anchor=north] at (65.7,-64.3) {expr.};
+\draw[flow] (27,-33.5)--(31,-33.5);
+
+% F4
+\node[card,draw=hviolet!65!black,fill=hviolet!4,minimum width=32mm,minimum height=67mm] at (75,0) {};
+\draw[draw=hviolet!55,line width=1.2pt] (76.2,-1.5)--(76.2,-65.5);
+\node[heading] at (91,-1.8) {F4 dispersion};
+\node[txt,text width=27mm] at (78,-8.5) {A measured deficit predicts calibration effects; allocation decides the harm.};
+\node[txt,text width=27mm] at (78,-32) {No biological benefit over Poisson is established.};
+\draw[hblue,line width=.85pt] \bell{91}{-62}{5}{11};
+\draw[horange,line width=.85pt,densely dashed] \bell{91}{-62}{10}{7};
+\draw[hgreen!70!black,line width=.75pt] \bell{87.5}{-62}{3.4}{8};
+\draw[hgreen,line width=.75pt] \bell{94.5}{-62}{3.4}{9};
+\foreach \y in {-10.5,-33.5,-56.5}{\draw[flow] (71,\y)--(75,\y);}
+
+% Three checks
+\node[card,minimum width=36mm,minimum height=67mm] at (110,0) {};
+\draw[accent] (111.2,-1.5)--(111.2,-65.5);
+\node[heading] at (128,-1.8) {Three checks};
+\draw[flow] (107,-33.5)--(110,-33.5);
+\foreach \n/\y/\t in {1/-8.5/{Check the mean and measure the deficit on held-out cells.},
+                      2/-29/{Validate dispersion at a level the data can estimate.},
+                      3/-49.5/{Test dependence, biology and full generation.}}{
+  \node[circle,draw=hgray!70!black,fill=white,inner sep=0pt,minimum size=4.2mm,font=\fontsize{7.6}{8}\selectfont] at (115.6,\y-2.2) {\n};
+  \node[txt,text width=26mm] at (119,\y) {\t};}
+\draw[hgray!40] (113,-25.5)--(144,-25.5);
+\draw[hgray!40] (113,-46)--(144,-46);
+
+% bottom strip
+\draw[hgray!35] (0,-70)--(146,-70);
+\node[small,anchor=west] at (0,-73) {\textbf{\mdseries Fixed mean:} isolates dispersion};
+\node[small,anchor=west] at (46,-73) {End-to-end: tests the whole generator};
+\node[small,anchor=east] at (146,-73) {\textcolor{hblue}{Poisson}\, / \,\textcolor{horange}{shared}\, / \,\textcolor{hgreen}{per-cell}};
+
+% ======================= (b) two factors =======================
+\node[anchor=base west,font=\fontsize{10}{12}\selectfont\bfseries] at (-1.5,-80) {(b)};
+\node[font=\fontsize{8.6}{10}\selectfont] at (81,-80) {Dispersion allocation};
+\node[small] (lg) at (52,-85.5) {shared $\theta_g$};
+\node[small] (lc) at (117,-85.5) {per-cell $\theta_{ng}$};
+\draw[horange,line width=.85pt] \bell{43}{-86.6}{2.4}{1.6};
+\draw[hgreen!70!black,line width=.7pt] \bell{106.2}{-86.6}{1.6}{1.2};
+\draw[hgreen,line width=.85pt] \bell{108.6}{-86.6}{1.6}{1.6};
+\draw[hgray!40,line width=.5pt] (18,-88.5)--(146,-88.5);
+
+% grid cards: fixed boxes, text at the top, sketch in a band below
+\foreach \x/\y/\sty in {18/-90/neutral,84/-90/neutral,18/-118/lose,84/-118/win}{\node[\sty,text width=0mm,minimum height=26mm] at (\x,\y) {};}
+\node[nohyph,anchor=north,text width=58mm,align=center,font=\fontsize{8.6}{10.2}\selectfont] at (49,-92) {Poisson may suffice\\[1pt]{\fontsize{7.6}{9}\selectfont added dispersion can over-inflate variation}};
+\node[nohyph,anchor=north,text width=58mm,align=center,font=\fontsize{8.6}{10.2}\selectfont] at (115,-92) {Poisson may suffice\\[1pt]{\fontsize{7.6}{9}\selectfont no clear benefit from added dispersion}};
+\node[nohyph,anchor=north,text width=58mm,align=center,font=\fontsize{8.6}{10.2}\selectfont] at (49,-120) {Allocation can fail\\[1pt]{\fontsize{7.6}{9}\selectfont a pooled value restores average variance yet misplaces it}};
+\node[nohyph,anchor=north,text width=58mm,align=center,font=\fontsize{8.6}{10.2}\selectfont] at (115,-120) {Per-cell $\theta$ may help calibration\\[1pt]{\fontsize{7.6}{9}\selectfont variance placed at the relevant level; biology checked separately}};
+\draw[hblue,line width=.85pt] \bell{49}{-114}{5}{6};
+\draw[horange,line width=.6pt,densely dotted] \bell{49}{-114}{8}{4.6};
+\draw[hblue,line width=.85pt] \bell{115}{-114}{5}{6};
+\draw[hgreen!70!black,line width=.6pt,densely dotted] \bell{113}{-114}{3}{4};
+\draw[hgreen,line width=.6pt,densely dotted] \bell{117}{-114}{3}{5.4};
+\draw[hgray!55,line width=.5pt,densely dotted] \bell{45.6}{-142}{3}{5.4};
+\draw[hgray!55,line width=.5pt,densely dotted] \bell{52.4}{-142}{3}{3.2};
+\draw[horange,line width=.9pt] \bell{49}{-142}{6.5}{4.4};
+\draw[hgreen!70!black,line width=.85pt] \bell{111.6}{-142}{3}{3.4};
+\draw[hgreen,line width=.95pt] \bell{118.4}{-142}{3}{5.4};
+
+\node[small,rotate=90] at (2.5,-117) {Variance after Poisson};
+\node[small,align=center,text width=12mm] at (11,-107) {no deficit};
+\node[small,align=center,text width=12mm] at (11,-135) {deficit};
+\draw[hgray!55!black,line width=.8pt] \bell{11}{-102}{2.2}{2.4};
+\draw[hred!80!black,line width=.8pt] \bell{11}{-130}{3.4}{1.7};
+\node[small,anchor=north west,text=hgray!40!black] at (18,-145.2) {A shared parameter may suffice when residual variation is homogeneous.};
+\end{tikzpicture}
+\endgroup

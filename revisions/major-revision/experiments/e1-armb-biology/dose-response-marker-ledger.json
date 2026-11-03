@@ -1,0 +1,39 @@
+{
+  "source": "E1 validation deficit on the common target genes joined to E1 test marker effects",
+  "seed": 20261108,
+  "inference": [
+    {
+      "analysis": "welch",
+      "n_rows": 1752,
+      "n_datasets": 50,
+      "n_groups": 292,
+      "slope": 0.0022747036953620387,
+      "ci_low": -0.01797363104769523,
+      "ci_high": 0.013078992206811805,
+      "residual_variance": 0.0031664621467553,
+      "dataset_variance": 4.37673012588136e-06,
+      "reference_max_coefficient_error": 3.197020414526762e-07,
+      "n_bootstrap": 2000,
+      "direction": "inconclusive",
+      "reference_converged": true,
+      "reference_warnings": "The MLE may be on the boundary of the parameter space."
+    },
+    {
+      "analysis": "auroc",
+      "n_rows": 1752,
+      "n_datasets": 50,
+      "n_groups": 292,
+      "slope": 0.03236590265694486,
+      "ci_low": -0.0072864558328188216,
+      "ci_high": 0.05256749463358859,
+      "residual_variance": 0.003314323295176637,
+      "dataset_variance": 0.00015158145406085895,
+      "reference_max_coefficient_error": 2.9724125938379586e-11,
+      "n_bootstrap": 2000,
+      "direction": "inconclusive",
+      "reference_converged": true,
+      "reference_warnings": "The MLE may be on the boundary of the parameter space."
+    }
+  ],
+  "primary": false
+}

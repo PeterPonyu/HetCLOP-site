@@ -1,0 +1,13 @@
+{
+  "note": "These source files were pinned by SHA-256 before the analyses ran. In this release one docstring or comment line in each was reworded; the syntax tree without docstrings is identical, which the release build checks. Both digests are listed so that the pins remain checkable.",
+  "files": {
+    "experiments/phase2m_lawgrid_2026-07-09/run_lawgrid.py": {
+      "analysed": "c2b64c0f338a95131465361a3027b6a0b5c828cad552f87606923338a920d292",
+      "released": "4117e9a3bc605bafc5c185e3b4e4b7799bf97cdc03cae2cb0e7b95f70013fe49"
+    },
+    "src/architecture/stochastic_decoder.py": {
+      "analysed": "87331352650eb6a83c14c8916d0b97df44eaf3aa996f3757675cd7f17427eb32",
+      "released": "d49028388e7174eb7f59d830fe43cd2f291cac0891f8681da38078f8e6b4c9d0"
+    }
+  }
+}

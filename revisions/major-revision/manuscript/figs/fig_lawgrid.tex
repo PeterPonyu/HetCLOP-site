@@ -1,0 +1,51 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=1.6cm},width=6.1cm, height=5.4cm, tick label style={font=\footnotesize}, label style={font=\footnotesize}, ybar, /pgf/bar width=9pt, enlarge x limits=0.12,symbolic x coords={no_deficit,deficit_homog,deficit_hetero,deficit_mixed}, xtick=data,x tick label style={font=\footnotesize, align=center},legend style={font=\footnotesize, at={(1.13,1.19)}, anchor=south, legend columns=3, draw=none}, legend cell align=left]
+\nextgroupplot[title={calibration error (lower is better)}, ylabel={$|\log_2 r_{\mathrm{var}}|$ (expressed)}, ymin=0, ymax=0.68,xticklabels={{no deficit},{deficit,\\homog.\ $\theta$},{deficit,\\hetero.\ $\theta$},{deficit,\\bimodal $\theta$}}]
+\addplot[draw=black!30, fill=hblue] coordinates {
+  (no_deficit,0.1070)
+  (deficit_homog,0.6155)
+  (deficit_hetero,0.4906)
+  (deficit_mixed,0.3775)
+}; \addlegendentry{Poisson}
+\addplot[draw=black!30, fill=horange] coordinates {
+  (no_deficit,0.1093)
+  (deficit_homog,0.1293)
+  (deficit_hetero,0.2221)
+  (deficit_mixed,0.3821)
+}; \addlegendentry{NB global $\theta_g$}
+\addplot[draw=black!30, fill=hgreen] coordinates {
+  (no_deficit,0.1093)
+  (deficit_homog,0.1293)
+  (deficit_hetero,0.1165)
+  (deficit_mixed,0.1206)
+}; \addlegendentry{Oracle conditional}
+\node[font=\footnotesize, black, anchor=north, align=center] at (rel axis cs:0.66,0.99){oracle conditional\\lowest error in deficit regimes};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={signed $r_{\mathrm{var}}$ ($=1$ calibrated)}, ylabel={signed $r_{\mathrm{var}}$ (expressed)}, ymin=0, ymax=1.10,xticklabels={{no deficit},{deficit,\\homog.\ $\theta$},{deficit,\\hetero.\ $\theta$},{deficit,\\bimodal $\theta$}}]
+\addplot[draw=black!30, fill=hblue] coordinates {
+  (no_deficit,0.9915)
+  (deficit_homog,0.6527)
+  (deficit_hetero,0.7117)
+  (deficit_mixed,0.8046)
+};
+\addplot[draw=black!30, fill=horange] coordinates {
+  (no_deficit,0.9939)
+  (deficit_homog,0.9958)
+  (deficit_hetero,0.9897)
+  (deficit_mixed,0.8077)
+};
+\addplot[draw=black!30, fill=hgreen] coordinates {
+  (no_deficit,0.9939)
+  (deficit_homog,0.9958)
+  (deficit_hetero,0.9958)
+  (deficit_mixed,0.9930)
+};
+\draw[hgray, dashed] ({rel axis cs:0,0}|-{axis cs:no_deficit,1.0}) -- ({rel axis cs:1,0}|-{axis cs:deficit_mixed,1.0});
+\node[font=\footnotesize, black, anchor=north east] at (rel axis cs:0.99,0.995){$=1$ calibrated};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}
+
+\endgroup

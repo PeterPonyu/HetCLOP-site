@@ -1,0 +1,9 @@
+{
+  "python": "3.13.7",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+  "numpy": "2.2.6",
+  "scipy": "1.16.2",
+  "pandas": "2.3.3",
+  "process_workers": 3,
+  "new_dependencies": false
+}

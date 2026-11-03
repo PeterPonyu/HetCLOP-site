@@ -1,0 +1,35 @@
+{
+  "experiment": "E4 sampling and quality-control sensitivity (Reviewer 1)",
+  "created": "2026-11-02T20:45-08:00",
+  "status": "fixed before execution",
+  "question": "Do the headline fixed-mean dispersion contrasts depend on the realised 3000-cell subsample, on stratification by cell type or batch, on the cap, or on the local quality-control rule?",
+  "sources": "original GEO-derived source matrices listed in the sampling audit; each dataset keeps its original 8000-gene list and the fixed 2500-gene shared panel; no gene re-selection",
+  "variants": {
+    "reference": "uniform without replacement, seed 0, cap 3000, original fixed QC; must reproduce the analysed cache cells, order, labels and split exactly",
+    "uniform_s1": "uniform without replacement, seed 1, cap 3000, original QC",
+    "uniform_s2": "uniform without replacement, seed 2, cap 3000, original QC",
+    "uniform_s3": "uniform without replacement, seed 3, cap 3000, original QC",
+    "type_floor": "cell-type stratified, cap 3000: each label stratum receives max(proportional share, min(50, stratum size)); proportional strata shrink to meet the cap; within-stratum uniform, seed 0; original QC",
+    "batch_balanced": "equal allocation across source batch levels with redistribution of unused quota, cap 3000, seed 0; datasets with fewer than two batch levels use the reference sample and are flagged; original QC",
+    "cap10000": "uniform without replacement, seed 0, cap 10000, original QC",
+    "mad_qc": "reference sample; fixed thresholds replaced by harmonised outlier QC: keep cells within median +/- 3 scaled MAD of log1p total counts and log1p detected genes, and with mitochondrial fraction <= median + 3 scaled MAD"
+  },
+  "original_qc": "cells with >=200 detected genes; genes detected in >=3 retained cells define the mitochondrial fraction denominator; mitochondrial fraction <20%; unlabeled cells removed; datasets with <50 remaining cells excluded",
+  "labels": "cells in the original annotated subsample keep their original labels; other cells receive labels by 15-nearest-neighbour majority vote from the original annotated cells of the same dataset, in a 30-component PCA of log1p counts-per-10k over the dataset's original 8000 genes; vote share <0.5 or a majority for unlabeled reference cells leaves the cell unlabeled",
+  "split": "70/15/15 per dataset with one generator seeded 42 iterated in the original dataset order, as in the original corpus",
+  "model": "PCA-512 encoder fitted on training cells; negative-binomial MLP decoder with the E2 training recipe (hidden 1024/2048, 50 epochs, batch 256, lr 1e-3, weight decay 1e-4, 15 warm-up epochs, log-theta lr scale 0.1, bounds [-4,8], best post-warm-up validation NLL); Arm A predicts all 2500 genes from all 2500; Arm B predicts the fixed held-out 1250 genes from the other 1250 with input-gene library size",
+  "fit_seeds": [42, 43, 44],
+  "draws": "Poisson on the fitted mean; shared per-gene NB with theta = median validation decoder theta per gene; per-cell NB with decoder theta; every draw shares the fitted mean",
+  "endpoints": {
+    "calibration": "median absolute log2 within-group variance ratio over expressed genes (real mean count >=0.5), log1p scale, on each arm's decoded genes",
+    "marker": "Welch recall@50 against real held-out cells on the 1250 held-out genes in both arms",
+    "deficit": "validation-only negative mean log2 Poisson-to-real variance ratio (E2 definition)"
+  },
+  "groups": "dataset x cell type with >=20 test cells; deficit additionally requires >=20 validation cells",
+  "contrasts": ["per-cell NB minus Poisson calibration (Arm A, Arm B)", "per-cell minus shared calibration (Arm B)", "per-cell NB minus Poisson Welch recall (Arm B)", "per-cell minus shared Welch recall (Arm B)", "E2 deficit-effect slope (pooled arms)"],
+  "inference": "average seeds within group, then groups within dataset; equal-weight mean over datasets; 2000-resample dataset-cluster percentile bootstrap, seed 20261105; group-level Poisson-win fraction also reported; slope uses the E2 random-intercept estimator with 1000 dataset-cluster resamples",
+  "stability_rule": "a contrast is stable when its interval classification (below zero / spans zero / above zero) matches the reference variant; all effects and differences from the reference are reported regardless",
+  "composition": "per variant and dataset: source, sampled, post-QC and analysed cells; label types; rare types (<50 test cells); batch levels retained; label-transfer share",
+  "retention": "all variants, datasets, seeds and signed effects retained; no outcome-based exclusion",
+  "storage": "panel counts stored sparse; fitted means not stored"
+}

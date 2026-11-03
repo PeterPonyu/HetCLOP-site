@@ -1,0 +1,11 @@
+{
+  "design_sha256": "041e0df19c75ad934fe02db99d0367a4491fa9d65d769ad9ba13ae5821c7ace3",
+  "n_accessions": 45,
+  "comparisons": 91,
+  "agreeing": 91,
+  "disagreements": [],
+  "replay_rows": 48,
+  "replay_effects_match": 48,
+  "replay_ci_within_tolerance": 48,
+  "replay_classification_match": 48
+}

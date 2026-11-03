@@ -1,0 +1,237 @@
+{
+  "purpose": "rare-type TSTR robustness: abundance-based rarity (bottom quartile of true corpus abundance) vs the original <50-held-out-test-cells definition, on the identical mean-fixed draws and TSTR split as phase2q.",
+  "seed": 0,
+  "mu_theta_cache": "experiments/phase2t_umap_2026-07-10/cache_mu_theta.npz",
+  "rarity_definitions": {
+    "original": "types with < 50 held-out test cells (split artefact)",
+    "abundance": "types with total corpus abundance <= Q1 (the 25% quantile = 377 cells) of per-type corpus totals over all 133845 cells"
+  },
+  "n_types_corpus": 79,
+  "rare_types_original": [
+    "Alveolar type 1",
+    "Bipolar cells",
+    "Corticotrophs",
+    "Definitive endoderm",
+    "Delta cells",
+    "Dendritic cells",
+    "Gamma-delta T cells",
+    "Intermediate progenitors",
+    "Kupffer cells",
+    "Lymphatic endothelial",
+    "Mesenchymal stem cells",
+    "Myoepithelial cells",
+    "OPCs",
+    "Odontoblasts",
+    "Oligodendrocytes",
+    "Proximal tubule",
+    "Schwann cells",
+    "Sertoli cells",
+    "Thyrotrophs"
+  ],
+  "rare_types_abundance": [
+    "Alveolar type 1",
+    "Bipolar cells",
+    "Corticotrophs",
+    "Definitive endoderm",
+    "Delta cells",
+    "Dendritic cells",
+    "Dorsal horn neurons",
+    "Gamma-delta T cells",
+    "Intermediate progenitors",
+    "Kupffer cells",
+    "Lymphatic endothelial",
+    "Mesenchymal stem cells",
+    "Myoepithelial cells",
+    "OPCs",
+    "Odontoblasts",
+    "Oligodendrocytes",
+    "Proximal tubule",
+    "Schwann cells",
+    "Sertoli cells",
+    "Thyrotrophs"
+  ],
+  "rare_set_overlap": [
+    "Alveolar type 1",
+    "Bipolar cells",
+    "Corticotrophs",
+    "Definitive endoderm",
+    "Delta cells",
+    "Dendritic cells",
+    "Gamma-delta T cells",
+    "Intermediate progenitors",
+    "Kupffer cells",
+    "Lymphatic endothelial",
+    "Mesenchymal stem cells",
+    "Myoepithelial cells",
+    "OPCs",
+    "Odontoblasts",
+    "Oligodendrocytes",
+    "Proximal tubule",
+    "Schwann cells",
+    "Sertoli cells",
+    "Thyrotrophs"
+  ],
+  "abundance_rare_support": {
+    "Schwann cells": {
+      "corpus_cells": 24,
+      "test_cells": 4
+    },
+    "Kupffer cells": {
+      "corpus_cells": 29,
+      "test_cells": 5
+    },
+    "Gamma-delta T cells": {
+      "corpus_cells": 38,
+      "test_cells": 5
+    },
+    "Definitive endoderm": {
+      "corpus_cells": 43,
+      "test_cells": 7
+    },
+    "Proximal tubule": {
+      "corpus_cells": 77,
+      "test_cells": 14
+    },
+    "Bipolar cells": {
+      "corpus_cells": 89,
+      "test_cells": 8
+    },
+    "Corticotrophs": {
+      "corpus_cells": 108,
+      "test_cells": 22
+    },
+    "Oligodendrocytes": {
+      "corpus_cells": 118,
+      "test_cells": 20
+    },
+    "Delta cells": {
+      "corpus_cells": 142,
+      "test_cells": 28
+    },
+    "OPCs": {
+      "corpus_cells": 144,
+      "test_cells": 22
+    },
+    "Sertoli cells": {
+      "corpus_cells": 197,
+      "test_cells": 31
+    },
+    "Dendritic cells": {
+      "corpus_cells": 204,
+      "test_cells": 30
+    },
+    "Odontoblasts": {
+      "corpus_cells": 209,
+      "test_cells": 25
+    },
+    "Myoepithelial cells": {
+      "corpus_cells": 242,
+      "test_cells": 27
+    },
+    "Alveolar type 1": {
+      "corpus_cells": 247,
+      "test_cells": 48
+    },
+    "Thyrotrophs": {
+      "corpus_cells": 295,
+      "test_cells": 43
+    },
+    "Mesenchymal stem cells": {
+      "corpus_cells": 295,
+      "test_cells": 46
+    },
+    "Dorsal horn neurons": {
+      "corpus_cells": 299,
+      "test_cells": 51
+    },
+    "Lymphatic endothelial": {
+      "corpus_cells": 317,
+      "test_cells": 42
+    },
+    "Intermediate progenitors": {
+      "corpus_cells": 358,
+      "test_cells": 47
+    }
+  },
+  "tstr_original_definition": {
+    "poisson": {
+      "macro_f1": 0.6397976877022544,
+      "rare_macro_f1": 0.3953621245367113,
+      "rare_macro_f1_unmasked": 0.3781893414700076
+    },
+    "nb_global": {
+      "macro_f1": 0.5198501478715023,
+      "rare_macro_f1": 0.15678710347443323,
+      "rare_macro_f1_unmasked": 0.14727734287306843
+    },
+    "nb_conditional": {
+      "macro_f1": 0.6394745136167355,
+      "rare_macro_f1": 0.38540372905450754,
+      "rare_macro_f1_unmasked": 0.36117829304577265
+    },
+    "real_ceiling": {
+      "macro_f1": 0.774846353629463,
+      "rare_macro_f1": 0.6572603655025816,
+      "rare_macro_f1_unmasked": 0.6420602094885333
+    }
+  },
+  "tstr_abundance_definition": {
+    "poisson": {
+      "macro_f1": 0.6397976877022544,
+      "rare_macro_f1": 0.42559401830987575,
+      "rare_macro_f1_unmasked": 0.4081687632853962
+    },
+    "nb_global": {
+      "macro_f1": 0.5198501478715023,
+      "rare_macro_f1": 0.19656679591975917,
+      "rare_macro_f1_unmasked": 0.1791291620039248
+    },
+    "nb_conditional": {
+      "macro_f1": 0.6394745136167355,
+      "rare_macro_f1": 0.4149707519041077,
+      "rare_macro_f1_unmasked": 0.3919565876958096
+    },
+    "real_ceiling": {
+      "macro_f1": 0.774846353629463,
+      "rare_macro_f1": 0.6743973472274526,
+      "rare_macro_f1_unmasked": 0.6599571990141067
+    }
+  },
+  "headline_ratio_original": {
+    "global_over_conditional": 0.4068126270056377,
+    "global": 0.15678710347443323,
+    "conditional": 0.38540372905450754
+  },
+  "headline_ratio_abundance": {
+    "global_over_conditional": 0.4736883142192687,
+    "global": 0.19656679591975917,
+    "conditional": 0.4149707519041077
+  },
+  "elapsed_s": 2051.2575566768646,
+  "validation_vs_phase2q_seed0": [
+    {
+      "arm": "poisson",
+      "phase2x": 0.3953621245367113,
+      "phase2q": 0.3953621245367113,
+      "abs_diff": 0.0
+    },
+    {
+      "arm": "nb_global",
+      "phase2x": 0.15678710347443323,
+      "phase2q": 0.15678710347443323,
+      "abs_diff": 0.0
+    },
+    {
+      "arm": "nb_conditional",
+      "phase2x": 0.38540372905450754,
+      "phase2q": 0.38540372905450754,
+      "abs_diff": 0.0
+    },
+    {
+      "arm": "real_ceiling",
+      "phase2x": 0.6572603655025816,
+      "phase2q": 0.6572603655025816,
+      "abs_diff": 0.0
+    }
+  ]
+}

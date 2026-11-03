@@ -1,0 +1,37 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=1.7cm},width=6.1cm, height=5.3cm, xmode=log, log basis x=10, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}]
+\nextgroupplot[title={energy distance vs dispersion}, xlabel={NB dispersion $\theta$ (log; $\infty=$Poisson)}, ylabel={energy distance to real}, xmin=0.2, xmax=300, ymin=0.5, ymax=2.2, xtick={0.25,1,5,20,100,300}, xticklabels={0.25,1,5,20,100,$\infty$}]
+\addplot[draw=none, fill=hgreen!12] coordinates {(20,0.5) (300,0.5) (300,2.2) (20,2.2)} -- cycle;
+\node[font=\footnotesize, black, anchor=north] at (axis cs:35,2.12){Poisson-like plateau};
+\addplot[color=hblue, mark=*, thick, mark size=1.5pt, error bars/.cd, y dir=both, y explicit] coordinates {
+  (0.25,2.0745) +- (0,0.0182)
+  (0.5,1.3646) +- (0,0.0140)
+  (1,0.9301) +- (0,0.0070)
+  (2,0.7239) +- (0,0.0055)
+  (5,0.6218) +- (0,0.0057)
+  (20,0.6063) +- (0,0.0032)
+  (100,0.5959) +- (0,0.0037)
+  (300,0.5989)
+};
+\draw[hgray, dotted] (axis cs:1.312,0.5) -- (axis cs:1.312,2.2); \node[font=\footnotesize, black, anchor=west, rotate=90] at ([xshift=5pt]axis cs:1.312,1.5){$\hat\theta=1.31$};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={expressed signed $r_{\mathrm{var}}$}, xlabel={NB dispersion $\theta$ (log)}, ylabel={signed $r_{\mathrm{var}}$ (expressed)}, xmin=0.2, xmax=300, ymin=0.96, ymax=1.28, ytick={1.0,1.1,1.2}, xtick={0.25,1,5,20,100,300}, xticklabels={0.25,1,5,20,100,$\infty$}]
+\addplot[color=hblue, mark=square*, thick, mark size=1.4pt] coordinates {
+  (0.25,1.2301)
+  (0.5,1.2291)
+  (1,1.1972)
+  (2,1.1481)
+  (5,1.1100)
+  (20,1.0784)
+  (100,1.0720)
+  (300,1.0718)
+};
+\addplot[hgray, dashed, thick, domain=0.2:300]{1.0}; \node[font=\footnotesize, black, anchor=south east] at (axis cs:300,1.02){calibrated $=1.00$};
+\draw[hgray, dotted] (axis cs:1.312,0.96) -- (axis cs:1.312,1.28); \node[font=\footnotesize, black, anchor=north west] at ([xshift=4pt]axis cs:1.312,1.255){$\hat\theta=1.31$};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}
+
+\endgroup

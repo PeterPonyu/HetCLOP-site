@@ -1,0 +1,51 @@
+{
+  "purpose": "separate task-saturation (H2a) from MLP-capacity ceiling (H2b); and check whether decoder capacity rescues decoded heterogeneity",
+  "n_train": 93673,
+  "n_val": 20059,
+  "n_test": 20113,
+  "results": [
+    {
+      "model": "ridge_linear_gin_to_gout",
+      "best_alpha": 1000.0,
+      "val_mse": 0.08459787553433751,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6467156981235419,
+        "n_genes_scored": 1250,
+        "mse": 0.08527901494252788
+      },
+      "decoded_tightness": {
+        "median": 0.824547595206774,
+        "iqr": [
+          0.7977420352549468,
+          0.870834457058763
+        ],
+        "n_datasets": 50
+      }
+    },
+    {
+      "model": "big_mlp_oracle_input",
+      "decoder_params": 21923042,
+      "val_mse": 0.07603026926517487,
+      "reconstruction": {
+        "mean_gene_pearson": 0.6791900451879357,
+        "n_genes_scored": 1250,
+        "mse": 0.07673986943626941
+      },
+      "decoded_tightness": {
+        "median": 0.7457922543970559,
+        "iqr": [
+          0.6743273055964154,
+          0.7851528831792978
+        ],
+        "n_datasets": 50
+      },
+      "val_curve_last5": [
+        0.08167708665132523,
+        0.08166878670454025,
+        0.08166370540857315,
+        0.08166588097810745,
+        0.08166659623384476
+      ]
+    }
+  ]
+}

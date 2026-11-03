@@ -1,0 +1,77 @@
+{
+  "shard": 0,
+  "rows": [
+    {
+      "input_genes": 250,
+      "encoder": "oracle_identity",
+      "embed_dim": 250,
+      "recon_pearson": 0.6629040115234546,
+      "val_mse": 0.0806640237569809,
+      "best_epoch": 11
+    },
+    {
+      "input_genes": 250,
+      "encoder": "pca_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6619185750693175,
+      "val_mse": 0.08079950511455536,
+      "best_epoch": 19
+    },
+    {
+      "input_genes": 250,
+      "encoder": "randproj_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6458847445068674,
+      "val_mse": 0.08560770750045776,
+      "best_epoch": 21
+    },
+    {
+      "input_genes": 625,
+      "encoder": "oracle_identity",
+      "embed_dim": 625,
+      "recon_pearson": 0.6704268433179895,
+      "val_mse": 0.07830004394054413,
+      "best_epoch": 10
+    },
+    {
+      "input_genes": 625,
+      "encoder": "pca_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6709828562899866,
+      "val_mse": 0.07802863419055939,
+      "best_epoch": 17
+    },
+    {
+      "input_genes": 625,
+      "encoder": "randproj_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6467392337166077,
+      "val_mse": 0.08525490015745163,
+      "best_epoch": 18
+    },
+    {
+      "input_genes": 1250,
+      "encoder": "oracle_identity",
+      "embed_dim": 1250,
+      "recon_pearson": 0.6737631671560859,
+      "val_mse": 0.07733286917209625,
+      "best_epoch": 7
+    },
+    {
+      "input_genes": 1250,
+      "encoder": "pca_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6746034211236559,
+      "val_mse": 0.07679599523544312,
+      "best_epoch": 19
+    },
+    {
+      "input_genes": 1250,
+      "encoder": "randproj_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6442981094204413,
+      "val_mse": 0.08566740155220032,
+      "best_epoch": 18
+    }
+  ]
+}

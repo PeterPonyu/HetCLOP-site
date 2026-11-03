@@ -1,0 +1,13 @@
+{
+  "variant": "uniform_s3",
+  "arm": "A",
+  "seed": 43,
+  "best_validation_nll": 0.2660769522190094,
+  "n_parameters": 12875656,
+  "n_train": 92664,
+  "n_validation": 19835,
+  "n_test": 19911,
+  "seconds": 70.6616268157959,
+  "device": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "torch": "2.12.1+cu130"
+}

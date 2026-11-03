@@ -1,0 +1,26 @@
+{
+  "moment_estimator_boundaries": true,
+  "deterministic_full_run_reproduction": true,
+  "independent_primary_metric_arithmetic": true,
+  "identical_controls_match_exactly": true,
+  "conditional_better_than_pooled_seed_counts": {
+    "deficit_hetero-25": 30,
+    "deficit_hetero-100": 30,
+    "deficit_hetero-400": 30,
+    "deficit_homog-25": 0,
+    "deficit_homog-100": 0,
+    "deficit_homog-400": 0,
+    "deficit_mixed-25": 30,
+    "deficit_mixed-100": 30,
+    "deficit_mixed-400": 30,
+    "no_deficit-25": 0,
+    "no_deficit-100": 0,
+    "no_deficit-400": 11
+  },
+  "training_count_leakage_review": "Estimator uses independent train counts and known mean templates only; real_log is accessed exclusively inside evaluate. Group and gene truth enter training-count generation, not the moment estimate.",
+  "input_source_sha256": {
+    "experiments/phase2m_lawgrid_2026-07-09/run_lawgrid.py": "c2b64c0f338a95131465361a3027b6a0b5c828cad552f87606923338a920d292",
+    "src/architecture/stochastic_decoder.py": "87331352650eb6a83c14c8916d0b97df44eaf3aa996f3757675cd7f17427eb32",
+    "src/evaluation/distributional.py": "587cbae045326c37a1d8b559f46253fbf1b7a82ed1d74c3ca0cd59d6947f6735"
+  }
+}

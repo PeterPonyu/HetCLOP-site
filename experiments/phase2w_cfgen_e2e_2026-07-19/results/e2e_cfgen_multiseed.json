@@ -1,0 +1,122 @@
+{
+  "purpose": "3-seed CFGen end-to-end generation arm (global theta_g NB decoder; empirical-Gaussian latents; 1-NN label transfer)",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "n_synthetic_per_arm": 20113,
+  "n_types_real": 73,
+  "n_rare_types": 19,
+  "arms": {
+    "e2e_cfgen_nb": {
+      "marker_recall_mean_mean": 0.39444067796610166,
+      "marker_recall_mean_std": 0.008566820008382216,
+      "marker_recall_mean_median": 0.3918644067796611,
+      "marker_recall_mean_min": 0.38745762711864407,
+      "marker_recall_mean_max": 0.40399999999999997,
+      "marker_recall_median_mean": 0.39333333333333337,
+      "marker_recall_median_std": 0.011547005383792526,
+      "marker_recall_median_median": 0.4,
+      "marker_recall_median_min": 0.38,
+      "marker_recall_median_max": 0.4,
+      "tstr_macro_f1_mean": 0.28931628370178863,
+      "tstr_macro_f1_std": 0.013836583337376812,
+      "tstr_macro_f1_median": 0.29611774031110805,
+      "tstr_macro_f1_min": 0.27339532459071675,
+      "tstr_macro_f1_max": 0.2984357862035411,
+      "tstr_rare_f1_mean": 0.17806533994365778,
+      "tstr_rare_f1_std": 0.030482617020046794,
+      "tstr_rare_f1_median": 0.1680466309393021,
+      "tstr_rare_f1_min": 0.15385297234043294,
+      "tstr_rare_f1_max": 0.21229641655123827,
+      "tstr_rare_f1_unmasked_mean": 0.1205327425736245,
+      "tstr_rare_f1_unmasked_std": 0.0326928129304251,
+      "tstr_rare_f1_unmasked_median": 0.10539426882204987,
+      "tstr_rare_f1_unmasked_min": 0.09815302326295287,
+      "tstr_rare_f1_unmasked_max": 0.1580509356358707,
+      "per_seed": {
+        "marker_recall_mean": [
+          0.38745762711864407,
+          0.3918644067796611,
+          0.40399999999999997
+        ],
+        "marker_recall_median": [
+          0.38,
+          0.4,
+          0.4
+        ],
+        "tstr_macro_f1": [
+          0.27339532459071675,
+          0.29611774031110805,
+          0.2984357862035411
+        ],
+        "tstr_rare_f1": [
+          0.1680466309393021,
+          0.15385297234043294,
+          0.21229641655123827
+        ],
+        "tstr_rare_f1_unmasked": [
+          0.10539426882204987,
+          0.09815302326295287,
+          0.1580509356358707
+        ]
+      }
+    },
+    "e2e_cfgen_poisson": {
+      "marker_recall_mean_mean": 0.40279284369114876,
+      "marker_recall_mean_std": 0.002834201123976666,
+      "marker_recall_mean_median": 0.4027118644067797,
+      "marker_recall_mean_min": 0.4,
+      "marker_recall_mean_max": 0.40566666666666673,
+      "marker_recall_median_mean": 0.41333333333333333,
+      "marker_recall_median_std": 0.011547005383792493,
+      "marker_recall_median_median": 0.42,
+      "marker_recall_median_min": 0.4,
+      "marker_recall_median_max": 0.42,
+      "tstr_macro_f1_mean": 0.30303416810509204,
+      "tstr_macro_f1_std": 0.005262779098601863,
+      "tstr_macro_f1_median": 0.30333750814404575,
+      "tstr_macro_f1_min": 0.2976262796297045,
+      "tstr_macro_f1_max": 0.3081387165415259,
+      "tstr_rare_f1_mean": 0.19296341731023484,
+      "tstr_rare_f1_std": 0.007810458296264818,
+      "tstr_rare_f1_median": 0.18900262971471662,
+      "tstr_rare_f1_min": 0.18792687587848783,
+      "tstr_rare_f1_max": 0.20196074633750002,
+      "tstr_rare_f1_unmasked_mean": 0.12202051213060945,
+      "tstr_rare_f1_unmasked_std": 0.005231818971004215,
+      "tstr_rare_f1_unmasked_median": 0.1201728879039725,
+      "tstr_rare_f1_unmasked_min": 0.11796319552814295,
+      "tstr_rare_f1_unmasked_max": 0.12792545295971292,
+      "per_seed": {
+        "marker_recall_mean": [
+          0.4,
+          0.4027118644067797,
+          0.40566666666666673
+        ],
+        "marker_recall_median": [
+          0.42,
+          0.42,
+          0.4
+        ],
+        "tstr_macro_f1": [
+          0.2976262796297045,
+          0.3081387165415259,
+          0.30333750814404575
+        ],
+        "tstr_rare_f1": [
+          0.18792687587848783,
+          0.18900262971471662,
+          0.20196074633750002
+        ],
+        "tstr_rare_f1_unmasked": [
+          0.11796319552814295,
+          0.1201728879039725,
+          0.12792545295971292
+        ]
+      }
+    }
+  },
+  "elapsed_total_s": 3373.7
+}

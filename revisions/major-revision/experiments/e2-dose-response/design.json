@@ -1,0 +1,60 @@
+{
+  "experiment": "E2 validation-to-test dose response",
+  "created_utc": "2026-11-03T03:26:23.849372+00:00",
+  "status": "fixed before execution",
+  "source": "new replication; archived group-level validation deficits and predictions absent",
+  "arms": [
+    "A",
+    "B"
+  ],
+  "encoders": [
+    "pca_512",
+    "randproj_512",
+    "scgpt_512",
+    "geneformer"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "inputs": "unchanged cached corpus, gene partition, cell splits, foundation-model embeddings",
+  "training": {
+    "implementation": "src/architecture/stochastic_decoder.py:train_nb_decoder",
+    "hidden_dims": [
+      1024,
+      2048
+    ],
+    "epochs": 50,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 15,
+    "logtheta_lr_scale": 0.1,
+    "logtheta_min": -4.0,
+    "logtheta_max": 8.0,
+    "selection": "lowest post-warmup validation NB NLL",
+    "device": "cuda"
+  },
+  "arm_b_offset": "input-gene library size only",
+  "draws": {
+    "test_nb": "seed",
+    "test_poisson": "SeedSequence([seed,2])",
+    "validation_poisson": "SeedSequence([seed,202])"
+  },
+  "eligibility": "at least 20 cells in the same dataset-cell-type group in each of validation and test; retain exclusions",
+  "primary_predictor": "negative mean log2 Poisson-to-real variance ratio across expressed genes on validation only; positive means deficit",
+  "primary_response": "test per-cell NB minus Poisson median absolute log2 variance ratio across expressed genes",
+  "expressed_genes": "real mean count >=0.5 within the corresponding split/group; variance ddof=1; epsilon=1e-12",
+  "regression": "response ~ deficit + categorical arm + categorical encoder + categorical seed; dataset random intercept fitted by REML",
+  "inference": {
+    "method": "dataset-cluster bootstrap, resample all rows from each selected dataset together; duplicate sampled datasets receive new cluster identities",
+    "resamples": 2000,
+    "seed": 20261103,
+    "interval": "two-sided percentile 95%; no cell-level inference"
+  },
+  "secondary": "arm-specific slopes, expressed-deficit summaries, marker-recall slopes added only for the prespecified PCA biological experiment when available",
+  "direction": "negative primary slope supports factor (a); a CI spanning zero is inconclusive; an association does not prove a sufficient rule",
+  "retention": "all seeds and all signed effects, failures, exclusions; no result-dependent removal",
+  "reference": "https://www.statsmodels.org/stable/mixed_linear.html"
+}

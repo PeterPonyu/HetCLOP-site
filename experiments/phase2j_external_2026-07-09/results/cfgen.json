@@ -1,0 +1,405 @@
+{
+  "model_family": "CFGen decoder (real EncoderModel code, vendored verbatim; matched custom loop; NOT the full deployed pipeline; flow stage not run -- see cfgen_vendored/NOTICE.md)",
+  "arrangement": "mu = softmax(h_psi(z)) * size_factor; global gene-wise theta_g = exp(self.theta); covariate_specific_theta=False",
+  "deterministic_baseline_log_pearson": 0.7419554779881322,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "results": {
+    "0": {
+      "model": "cfgen_decoder_seed0",
+      "seed": 0,
+      "n_groups": 314,
+      "gate": {
+        "det_log_pearson": 0.7419554779881322,
+        "model_mean_log_pearson": 0.676088970990566,
+        "gap_vs_det": 0.06586650699756624,
+        "gate_passed": false,
+        "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+      },
+      "theta_summary": {
+        "median": 0.8908029496669769,
+        "min": 0.0820423811674118,
+        "max": 18.570356369018555,
+        "is_amortized": false
+      },
+      "contrasts": {
+        "rvar_expressed": {
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8980891719745223,
+          "median_paired_diff_nb_minus_pois": 0.07660246037471188,
+          "naive_p": 5.644941791872247e-37,
+          "clustered_wilcoxon_p": 2.1246773229677274e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.96,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "rvar_topk": {
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8343949044585988,
+          "median_paired_diff_nb_minus_pois": 0.06016071130564335,
+          "naive_p": 5.58453730073293e-25,
+          "clustered_wilcoxon_p": 1.158324636207908e-08,
+          "clustered_sign_p": 4.461782054931973e-10,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.92,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "energy": {
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8184713375796179,
+          "median_paired_diff_nb_minus_pois": 0.06544253704587177,
+          "naive_p": 4.2150656436367935e-23,
+          "clustered_wilcoxon_p": 1.3054913772236887e-07,
+          "clustered_sign_p": 4.461782054931973e-10,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.92,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        }
+      },
+      "direction": {
+        "nb_stochastic": {
+          "r_var_signed_expr_median": 1.049111476824366,
+          "r_var_frac_gt1_expr_median": 0.5421456985486973,
+          "r_var_abs_log2_expr_median": 0.40654004599313553,
+          "energy_median": 1.0018159445778352,
+          "r_var_signed_topk_median": 0.9910143711456131
+        },
+        "poisson_on_mean": {
+          "r_var_signed_expr_median": 0.9189392879489029,
+          "r_var_frac_gt1_expr_median": 0.3919498435954335,
+          "r_var_abs_log2_expr_median": 0.32991466451146256,
+          "energy_median": 0.8931521925549006,
+          "r_var_signed_topk_median": 0.8817467154351825
+        }
+      },
+      "energy_redraw": {
+        "n_redraws": 10,
+        "naive_p": [
+          2.3037415392665872e-23,
+          1.2234452041044168e-23,
+          3.8483772598374246e-24,
+          5.818537346947913e-23,
+          2.9383980531123397e-23,
+          3.367288539516888e-24,
+          7.773539657937224e-24,
+          3.433360978990783e-23,
+          3.261825021142e-24,
+          3.1395801534026318e-24
+        ],
+        "clustered_wilcoxon_p": [
+          1.8673260271384606e-07,
+          2.649707155910619e-07,
+          2.8391607465039215e-07,
+          5.572207957271758e-07,
+          2.8391607465039215e-07,
+          2.305757291765076e-07,
+          2.305757291765076e-07,
+          3.0412363649645613e-07,
+          1.8673260271384606e-07,
+          1.8673260271384606e-07
+        ],
+        "clustered_sign_p": [
+          2.098677427397888e-07,
+          2.098677427397888e-07,
+          2.098677427397888e-07,
+          3.243740565039843e-08,
+          4.209852022540872e-09,
+          3.243740565039843e-08,
+          3.243740565039843e-08,
+          3.243740565039843e-08,
+          4.209852022540872e-09,
+          2.098677427397888e-07
+        ],
+        "naive_p_min": 3.1395801534026318e-24,
+        "naive_p_max": 5.818537346947913e-23,
+        "naive_p_median": 1.0003995849490696e-23,
+        "clustered_wilcoxon_p_min": 1.8673260271384606e-07,
+        "clustered_wilcoxon_p_max": 5.572207957271758e-07,
+        "clustered_wilcoxon_p_median": 2.4777322238378474e-07,
+        "any_clustered_gt_0.05": false
+      },
+      "train_meta": {
+        "n_epochs_run": 28,
+        "best_val_nb_nll": 816.7479858398438,
+        "theta_global_median": 0.8908029794692993,
+        "encoder_dims": [
+          512,
+          256,
+          50
+        ]
+      }
+    },
+    "1": {
+      "model": "cfgen_decoder_seed1",
+      "seed": 1,
+      "n_groups": 314,
+      "gate": {
+        "det_log_pearson": 0.7419554779881322,
+        "model_mean_log_pearson": 0.6741827610156617,
+        "gap_vs_det": 0.06777271697247056,
+        "gate_passed": false,
+        "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+      },
+      "theta_summary": {
+        "median": 0.877503901720047,
+        "min": 0.06224048510193825,
+        "max": 20.364553451538086,
+        "is_amortized": false
+      },
+      "contrasts": {
+        "rvar_expressed": {
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.9235668789808917,
+          "median_paired_diff_nb_minus_pois": 0.08004269166297942,
+          "naive_p": 4.07857175182469e-39,
+          "clustered_wilcoxon_p": 3.3822118439275073e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.96,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "rvar_topk": {
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8471337579617835,
+          "median_paired_diff_nb_minus_pois": 0.06606639752845522,
+          "naive_p": 1.0769639912691539e-27,
+          "clustered_wilcoxon_p": 1.158324636207908e-08,
+          "clustered_sign_p": 3.708322537931963e-11,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.94,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "energy": {
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8152866242038217,
+          "median_paired_diff_nb_minus_pois": 0.06988263833967556,
+          "naive_p": 3.988005763569753e-21,
+          "clustered_wilcoxon_p": 4.578190981874286e-08,
+          "clustered_sign_p": 4.461782054931973e-10,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.92,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        }
+      },
+      "direction": {
+        "nb_stochastic": {
+          "r_var_signed_expr_median": 1.055123053594214,
+          "r_var_frac_gt1_expr_median": 0.5522198964415556,
+          "r_var_abs_log2_expr_median": 0.41700373724607204,
+          "energy_median": 1.0078592271131157,
+          "r_var_signed_topk_median": 1.001605361932433
+        },
+        "poisson_on_mean": {
+          "r_var_signed_expr_median": 0.9238002491363937,
+          "r_var_frac_gt1_expr_median": 0.3991978609625668,
+          "r_var_abs_log2_expr_median": 0.337281140563075,
+          "energy_median": 0.9324212895396373,
+          "r_var_signed_topk_median": 0.8809602322150416
+        }
+      },
+      "energy_redraw": {
+        "n_redraws": 10,
+        "naive_p": [
+          8.338575123364948e-22,
+          4.84791890472164e-21,
+          6.917044634111697e-22,
+          2.7422781709479556e-20,
+          2.5266779249293166e-22,
+          1.930576170734096e-21,
+          3.8450638791562684e-22,
+          5.366515440578392e-22,
+          8.091154321929087e-22,
+          8.140050297451027e-22
+        ],
+        "clustered_wilcoxon_p": [
+          2.649707155910619e-07,
+          1.3054913772236887e-07,
+          3.094002387626915e-08,
+          2.070065541204258e-08,
+          1.2141019567479816e-07,
+          1.0642100534141719e-08,
+          6.220717985172541e-08,
+          4.945666454148068e-08,
+          2.2451841275028528e-08,
+          7.798730550234723e-08
+        ],
+        "clustered_sign_p": [
+          4.209852022540872e-09,
+          4.461782054931973e-10,
+          4.461782054931973e-10,
+          4.461782054931973e-10,
+          4.461782054931973e-10,
+          4.461782054931973e-10,
+          3.243740565039843e-08,
+          3.243740565039843e-08,
+          4.461782054931973e-10,
+          4.209852022540872e-09
+        ],
+        "naive_p_min": 2.5266779249293166e-22,
+        "naive_p_max": 2.7422781709479556e-20,
+        "naive_p_median": 8.115602309690057e-22,
+        "clustered_wilcoxon_p_min": 1.0642100534141719e-08,
+        "clustered_wilcoxon_p_max": 2.649707155910619e-07,
+        "clustered_wilcoxon_p_median": 5.5831922196603045e-08,
+        "any_clustered_gt_0.05": false
+      },
+      "train_meta": {
+        "n_epochs_run": 26,
+        "best_val_nb_nll": 818.725341796875,
+        "theta_global_median": 0.8775038719177246,
+        "encoder_dims": [
+          512,
+          256,
+          50
+        ]
+      }
+    },
+    "2": {
+      "model": "cfgen_decoder_seed2",
+      "seed": 2,
+      "n_groups": 314,
+      "gate": {
+        "det_log_pearson": 0.7419554779881322,
+        "model_mean_log_pearson": 0.6765032960499763,
+        "gap_vs_det": 0.06545218193815594,
+        "gate_passed": false,
+        "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+      },
+      "theta_summary": {
+        "median": 0.9026849865913391,
+        "min": 0.1026548221707344,
+        "max": 18.691293716430664,
+        "is_amortized": false
+      },
+      "contrasts": {
+        "rvar_expressed": {
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8949044585987261,
+          "median_paired_diff_nb_minus_pois": 0.07582399557696046,
+          "naive_p": 8.259518791382595e-37,
+          "clustered_wilcoxon_p": 1.9326371614170057e-09,
+          "clustered_sign_p": 2.2666313270747196e-12,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.96,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "rvar_topk": {
+          "metric": "r_var_abs_log2_topk",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.802547770700637,
+          "median_paired_diff_nb_minus_pois": 0.05717944460246502,
+          "naive_p": 4.312124060015701e-27,
+          "clustered_wilcoxon_p": 9.772863407420118e-09,
+          "clustered_sign_p": 3.708322537931963e-11,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.94,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        },
+        "energy": {
+          "metric": "energy_distance",
+          "n_groups": 314,
+          "poisson_win_fraction_groups": 0.8152866242038217,
+          "median_paired_diff_nb_minus_pois": 0.05841471583706337,
+          "naive_p": 2.6953493733262976e-21,
+          "clustered_wilcoxon_p": 1.507920117660433e-07,
+          "clustered_sign_p": 4.209852022540872e-09,
+          "clustered_n_datasets": 50,
+          "poisson_win_fraction_datasets": 0.9,
+          "dataset_signflip_perm_p": 9.999000099990002e-05,
+          "within_dataset_signflip_perm_p": 9.999000099990002e-05
+        }
+      },
+      "direction": {
+        "nb_stochastic": {
+          "r_var_signed_expr_median": 1.0589834810460768,
+          "r_var_frac_gt1_expr_median": 0.5569805194805195,
+          "r_var_abs_log2_expr_median": 0.4058419480828689,
+          "energy_median": 0.9790548641166179,
+          "r_var_signed_topk_median": 1.0036961710211483
+        },
+        "poisson_on_mean": {
+          "r_var_signed_expr_median": 0.9334897486069476,
+          "r_var_frac_gt1_expr_median": 0.4067449791587723,
+          "r_var_abs_log2_expr_median": 0.32447129040388767,
+          "energy_median": 0.8988235911821114,
+          "r_var_signed_topk_median": 0.8886107546849364
+        }
+      },
+      "energy_redraw": {
+        "n_redraws": 10,
+        "naive_p": [
+          2.3181768765348397e-23,
+          4.640593204127048e-22,
+          6.345005968881574e-23,
+          2.0975947941833138e-23,
+          8.091154321929087e-22,
+          3.8483772598374246e-24,
+          3.608547222359758e-23,
+          1.4770651297766805e-23,
+          4.836501073927735e-24,
+          7.898459774323531e-22
+        ],
+        "clustered_wilcoxon_p": [
+          1.8673260271384606e-07,
+          4.2698192537216073e-07,
+          1.6198182883897516e-07,
+          2.649707155910619e-07,
+          1.6183291151605772e-08,
+          1.8673260271384606e-07,
+          2.649707155910619e-07,
+          1.6198182883897516e-07,
+          1.0490046520317264e-07,
+          6.78354924232849e-07
+        ],
+        "clustered_sign_p": [
+          4.209852022540872e-09,
+          3.243740565039843e-08,
+          4.209852022540872e-09,
+          4.461782054931973e-10,
+          4.209852022540872e-09,
+          4.461782054931973e-10,
+          4.461782054931973e-10,
+          4.209852022540872e-09,
+          3.708322537931963e-11,
+          4.209852022540872e-09
+        ],
+        "naive_p_min": 3.8483772598374246e-24,
+        "naive_p_max": 8.091154321929087e-22,
+        "naive_p_median": 2.963362049447299e-23,
+        "clustered_wilcoxon_p_min": 1.6183291151605772e-08,
+        "clustered_wilcoxon_p_max": 6.78354924232849e-07,
+        "clustered_wilcoxon_p_median": 1.8673260271384606e-07,
+        "any_clustered_gt_0.05": false
+      },
+      "train_meta": {
+        "n_epochs_run": 29,
+        "best_val_nb_nll": 816.4769897460938,
+        "theta_global_median": 0.9026849865913391,
+        "encoder_dims": [
+          512,
+          256,
+          50
+        ]
+      }
+    }
+  }
+}

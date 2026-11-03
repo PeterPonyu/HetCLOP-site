@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "matched_mean_fits": 6,
+  "variants": 4,
+  "seed_contrasts": 180,
+  "dataset_clustered_contrasts": 60,
+  "marker_dose_response_models": 2
+}

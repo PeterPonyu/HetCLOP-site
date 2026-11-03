@@ -1,0 +1,132 @@
+{
+  "purpose": "3-seed aggregation of the mean-fixed biological readout; claim gates decide wording.",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_types_scored": 73,
+  "n_rare_types": 19,
+  "topk": 50,
+  "marker_recall_mean_sd": {
+    "poisson": [
+      0.7512328767123287,
+      0.0028994534915775965
+    ],
+    "nb_global": [
+      0.5575342465753425,
+      0.00328767123287671
+    ],
+    "nb_conditional": [
+      0.7929680365296804,
+      0.0004185000634663965
+    ]
+  },
+  "tstr_macro_f1_mean_sd": {
+    "poisson": [
+      0.6391431890572248,
+      0.007969528216656254
+    ],
+    "nb_global": [
+      0.529363541670808,
+      0.010525596271628293
+    ],
+    "nb_conditional": [
+      0.6435369722510663,
+      0.008391264255860125
+    ]
+  },
+  "tstr_rare_f1_mean_sd": {
+    "poisson": [
+      0.41465264663603846,
+      0.017199998485555028
+    ],
+    "nb_global": [
+      0.17908709208466,
+      0.024231684901508826
+    ],
+    "nb_conditional": [
+      0.40218598841967806,
+      0.02557876969125372
+    ]
+  },
+  "real_ceiling_mean_sd": {
+    "macro": [
+      0.7725896546753463,
+      0.004356913779505201
+    ],
+    "rare": [
+      0.6578056758960417,
+      0.0006109674843349063
+    ]
+  },
+  "marker_auroc_mean_sd": {
+    "poisson": [
+      0.752785388127854,
+      0.0008806986996340366
+    ],
+    "nb_global": [
+      0.53324200913242,
+      0.0018648929549462828
+    ],
+    "nb_conditional": [
+      0.7968949771689497,
+      0.0037297859098925604
+    ]
+  },
+  "tstr_rare_unmasked_mean_sd": {
+    "poisson": [
+      0.3878847036965592,
+      0.01121693115899375
+    ],
+    "nb_global": [
+      0.1620669953608685,
+      0.013976041336526848
+    ],
+    "nb_conditional": [
+      0.37335024450467097,
+      0.02629786690833859
+    ]
+  },
+  "marker_ceiling_mean_sd": [
+    0.7781735159817352,
+    0.001674000253865065
+  ],
+  "marker_clustered_worst_across_seeds": {
+    "nb_conditional_vs_poisson": {
+      "worst_clustered_sign_p": 1.0,
+      "min_win_fraction_groups": 0.3853503184713376,
+      "min_ci_lo": 0.32051282051282054,
+      "min_ci_hi": 0.451615415536127,
+      "n_datasets": 50,
+      "n_groups": 314
+    },
+    "nb_conditional_vs_nb_global": {
+      "worst_clustered_sign_p": 9.059419880941277e-14,
+      "min_win_fraction_groups": 0.9203821656050956,
+      "min_ci_lo": 0.8881783882629898,
+      "min_ci_hi": 0.9488817891373802,
+      "n_datasets": 50,
+      "n_groups": 314
+    }
+  },
+  "marker_paired_worst_across_seeds": {
+    "nb_conditional_vs_poisson": {
+      "worst_wilcoxon_p": 1.3715162925245491e-05,
+      "min_win_fraction_types": 0.6301369863013698,
+      "mean_diff": 0.0417351598173516
+    },
+    "nb_conditional_vs_nb_global": {
+      "worst_wilcoxon_p": 1.248660123959767e-13,
+      "min_win_fraction_types": 0.9863013698630136,
+      "mean_diff": 0.23543378995433786
+    }
+  },
+  "claims": {
+    "global_is_worst_on_both_readouts_every_seed": true,
+    "conditional_beats_poisson_on_marker_every_seed": true,
+    "conditional_beats_poisson_on_tstr_beyond_noise": false
+  },
+  "tstr_cond_minus_pois_macro": 0.004393783193841538,
+  "tstr_across_seed_sd": 0.008391264255860125
+}

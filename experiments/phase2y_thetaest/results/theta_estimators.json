@@ -1,0 +1,105 @@
+{
+  "purpose": "pin the theta-hat estimator: MLE vs moment-matching, over stated gene sets",
+  "data": "train split of the shared corpus (raw counts, 2,500-gene panel)",
+  "expressed_min_mean": 0.5,
+  "topk_var": 200,
+  "marginal_train": {
+    "mom_all": {
+      "gene_set": "all",
+      "n_genes": 2500,
+      "n_finite": 2500,
+      "frac_poisson_indistinguishable": 0.0,
+      "median_theta": 0.005598871797876453,
+      "q25_theta": 0.001727922615082717,
+      "q75_theta": 0.019357495459452874
+    },
+    "mle_all": {
+      "gene_set": "all",
+      "n_genes": 2500,
+      "n_finite": 2500,
+      "frac_poisson_indistinguishable": 0.0,
+      "median_theta": 0.03581785744390234,
+      "q25_theta": 0.02142456254751233,
+      "q75_theta": 0.0629374086932272
+    },
+    "mom_expressed": {
+      "gene_set": "expressed",
+      "n_genes": 905,
+      "n_finite": 905,
+      "frac_poisson_indistinguishable": 0.0,
+      "median_theta": 0.004081084946927378,
+      "q25_theta": 0.002091807953440647,
+      "q75_theta": 0.013120080638869267
+    },
+    "mle_expressed": {
+      "gene_set": "expressed",
+      "n_genes": 905,
+      "n_finite": 905,
+      "frac_poisson_indistinguishable": 0.0,
+      "median_theta": 0.03845669559817777,
+      "q25_theta": 0.02310747806250909,
+      "q75_theta": 0.07062519810509861
+    },
+    "mom_top200var": {
+      "gene_set": "top200var",
+      "n_genes": 200,
+      "n_finite": 200,
+      "frac_poisson_indistinguishable": 0.0,
+      "median_theta": 0.004157894170288862,
+      "q25_theta": 0.0028940123039455585,
+      "q75_theta": 0.0060301277055537185
+    },
+    "mle_top200var": {
+      "gene_set": "top200var",
+      "n_genes": 200,
+      "n_finite": 200,
+      "frac_poisson_indistinguishable": 0.0,
+      "median_theta": 0.02870809269780422,
+      "q25_theta": 0.016525778944056848,
+      "q75_theta": 0.05674923114194552
+    }
+  },
+  "within_group_mom": {
+    "group_definition": "dataset x cell type, >= 20 train cells; genes with group mean >= 0.5 and var > mean",
+    "n_group_gene_pairs": 147747,
+    "median_theta": 0.6133363968241813,
+    "q25_theta": 0.2521695010980215,
+    "q75_theta": 1.36170791800235
+  },
+  "deployed_models": {
+    "hetclop_nb_decoder_amortised_mle_all_genes": {
+      "values_per_seed": {
+        "42": 1.3083529103806926,
+        "43": 1.3122823257613794,
+        "44": 1.3141219941317488
+      },
+      "gene_set": "all 2,500 panel genes; median over held-out cells x genes",
+      "source": "phase2d e1_theta_sweep.json (\\FfourFittedTheta)"
+    },
+    "scvi_gene_mode_per_gene_mle_all_genes": {
+      "values_per_seed": {
+        "0": 0.6016697287559509,
+        "1": 0.5999187231063843,
+        "2": 0.6029485464096069
+      },
+      "gene_set": "all 2,500 panel genes; median over genes",
+      "source": "phase2j scvi.json theta_summary"
+    },
+    "scvi_gene_cell_amortised_all_genes": {
+      "values_per_seed": {
+        "0": 0.28045012056827545,
+        "1": 0.2721173167228699,
+        "2": 0.2823766767978668
+      },
+      "gene_set": "all 2,500 panel genes; median over held-out cells x genes",
+      "source": "phase2j scvi.json theta_summary"
+    },
+    "scvi_gene_cell_amortised_expressed_only": {
+      "value": 0.4279041886329651,
+      "gene_set": "expressed (train mean >= 0.5); median over held-out cells x genes",
+      "source": "phase2t cache_mu_theta.npz"
+    },
+    "scvi_gene_cell_amortised_all_genes_phase2t_cache": 0.28045012056827545
+  },
+  "elapsed_s": 63.038737773895264
+}

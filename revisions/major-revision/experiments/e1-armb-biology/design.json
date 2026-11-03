@@ -1,0 +1,43 @@
+{
+  "experiment": "E1 matched fixed-mean biological comparison",
+  "created_utc": "2026-11-03T03:26:23.849372+00:00",
+  "status": "fixed before execution",
+  "arms": [
+    "A",
+    "B"
+  ],
+  "encoder": "pca_512",
+  "encoder_rationale": "PCA passes the archived mean acceptance gate in both arms; selected before new outcomes",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "means": "reuse new E2 fitted means and per-cell dispersions",
+  "variants": [
+    "poisson",
+    "shared_per_gene",
+    "per_cell_type",
+    "per_cell"
+  ],
+  "allocation": "shared per-gene theta is median validation theta; per-cell-type theta is median validation theta within type, with global fallback below20validationcells; per-cell theta is decoder output; no test targets used to allocate theta",
+  "draw_seed": "seed+1 for every variant",
+  "marker_support": "same1250targetgenesinbotharms; ArmA decoder predicts fullpanel but outputs restricted to the targetgenes for every E1 endpoint; ArmB encoder never saw targetgenes; within-dataset Welch and AUROC recall@50 with type>=20testcells",
+  "tstr": "mirror archived pooled multinomial logistic regression, log1p counts, C=1, lbfgs, max_iter=300; random equal halves of test cells using fit seed; train synthetic first half, evaluate real second half",
+  "rare": "fewer than50cells in full held-out test split; report masked and full-support rare F1",
+  "primary_biological_contrast": "per-cell minus Poisson Welch marker recall; macro-F1 and unmasked rare-F1 are separate outcomes, AUROC and masked rare-F1 sensitivity",
+  "inference": {
+    "cluster": "dataset",
+    "resamples": 10000,
+    "seed": 20261104,
+    "aggregation": "average seed effects within dataset, then equal-weight dataset mean; percentile95%clusterbootstrap; two-sided signflip permutation; all3seeds also separately reported",
+    "marker_unit": "dataset average over eligible types",
+    "classification_unit": "mean within-dataset F1 of the pooled classifier, distinct from pooled whole-corpus F1; report both; rare labels restricted to predefined rare identities present in that dataset evaluation set"
+  },
+  "calibration": "also report primary calibration contrast to determine whether a biological result supports the same endpoint",
+  "comparison_scope": "both arms use the same new MLP training recipe but retain their original output sizes; every biological endpoint uses identical1250gene support; not an exact reproduction of the earlier scVI ArmA experiment",
+  "retention": "all variants and seeds retained; no outcome-based filtering",
+  "interaction": "paired dataset difference of per-cell-minus-Poisson effects in Arm B versus Arm A, averaged over all three seeds; same cluster bootstrap and sign-flip test; separates arm interaction from separate significance tests",
+  "tstr_macro_support": "fixed true-class support within each evaluation dataset; pooled descriptive scores use all true evaluation classes; predictions outside support still count as false negatives",
+  "secondary_marker_dose_response": "negative mean log2 validation Poisson variance ratio on the same1250genes, independently drawn using SeedSequence([seed,202]); match validation/test groups with>=20cells; PCA-only regression with arm and seed effects and dataset random intercept;2000datasetbootstrapresamples"
+}

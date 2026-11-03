@@ -1,0 +1,19 @@
+{
+  "experiment": "E4b: fixed-evaluation-cell training-size experiment",
+  "created": "2026-11-03",
+  "status": "fixed before execution",
+  "question": "With validation and test cells, their labels and the gene panel held fixed, does adding training cells change the Arm B per-cell-minus-Poisson calibration and marker contrasts?",
+  "evaluation_cells": "the analysed corpus's validation and test cells with their original labels, unchanged",
+  "training_sets": {
+    "x1": "the analysed corpus's training cells",
+    "x2": "x1 plus a random half (seed 0, per dataset) of the extra cells",
+    "x3": "x1 plus all extra cells"
+  },
+  "extra_cells": "cells of the 10,000-cell uniform sample (seed 0) that lie outside the original 3000-cell sample, after the original fixed quality control applied to that extra set and with a transferred label (labels are not used in training; the filter keeps the training population comparable)",
+  "model": "E4 recipe: PCA-512 fitted on the training cells of each set; negative-binomial MLP decoder with the E2 training recipe; Arm A and Arm B",
+  "fit_seeds": [42, 43, 44],
+  "endpoints": "as E4: calibration error on each arm's decoded genes; Welch recall@50 on the 1250 held-out genes; draws Poisson, shared per-gene (median validation theta) and per-cell",
+  "contrasts": ["Arm A per-cell minus Poisson calibration error", "Arm B per-cell minus Poisson calibration error", "Arm B per-cell minus shared calibration error", "Arm B per-cell minus Poisson Welch recall", "Arm B per-cell minus shared Welch recall"],
+  "inference_stats": "as E4; 2000-resample dataset-cluster bootstrap, seed 20261107; trend reported as the paired x3-minus-x1 difference of dataset effects with its own dataset bootstrap interval",
+  "retention": "all sizes, seeds and signed effects retained"
+}

@@ -1,0 +1,135 @@
+{
+  "purpose": "Arm B at matched 512-d: fair test of whether the parent metric's maximizer (random projection) is actually a bad encoder once the near-invertibility advantage of Arm A is removed",
+  "n_test_cells": 20113,
+  "g_in": 1250,
+  "g_out": 1250,
+  "results": [
+    {
+      "encoder": "oracle_1250",
+      "dim": 1250,
+      "decoder_params": 5947618,
+      "val_mse": 0.07733286917209625,
+      "recon_pearson": 0.6737631671560859,
+      "recon_mse": 0.07795661978991172,
+      "latent_tightness_hetclop": 0.9686559975433559,
+      "decoded_tightness_hetclop": 0.7569017150518449,
+      "latent_tightness_parent": 0.9930949584406057,
+      "decoded_tightness_parent": 0.5901704857207815
+    },
+    {
+      "encoder": "pca_512",
+      "dim": 512,
+      "decoder_params": 5191906,
+      "val_mse": 0.0774177610874176,
+      "recon_pearson": 0.672356179059243,
+      "recon_mse": 0.07808766089918008,
+      "latent_tightness_hetclop": 0.9267955124935832,
+      "decoded_tightness_hetclop": 0.761248146104373,
+      "latent_tightness_parent": 0.8794500156555332,
+      "decoded_tightness_parent": 0.5975596831714168
+    },
+    {
+      "encoder": "pca_50",
+      "dim": 50,
+      "decoder_params": 4718818,
+      "val_mse": 0.07679599523544312,
+      "recon_pearson": 0.6746034211236559,
+      "recon_mse": 0.07748330456723988,
+      "latent_tightness_hetclop": 0.7894398508001467,
+      "decoded_tightness_hetclop": 0.7572674950118365,
+      "latent_tightness_parent": 0.65085690499715,
+      "decoded_tightness_parent": 0.5835634848400286
+    },
+    {
+      "encoder": "randproj_512",
+      "dim": 512,
+      "decoder_params": 5191906,
+      "val_mse": 0.07779830694198608,
+      "recon_pearson": 0.6721423568891818,
+      "recon_mse": 0.0784982046558047,
+      "latent_tightness_hetclop": 0.9687635764025919,
+      "decoded_tightness_hetclop": 0.7611339713968923,
+      "latent_tightness_parent": 1.0010729308206325,
+      "decoded_tightness_parent": 0.5921672427857085
+    },
+    {
+      "encoder": "randproj_50",
+      "dim": 50,
+      "decoder_params": 4718818,
+      "val_mse": 0.08480319380760193,
+      "recon_pearson": 0.6479658012529594,
+      "recon_mse": 0.08565974301659525,
+      "latent_tightness_hetclop": 0.9645713768328885,
+      "decoded_tightness_hetclop": 0.7898253261470332,
+      "latent_tightness_parent": 0.9885069370534637,
+      "decoded_tightness_parent": 0.645328899590494
+    },
+    {
+      "encoder": "scgpt_512",
+      "dim": 512,
+      "decoder_params": 5191906,
+      "val_mse": 0.07822888344526291,
+      "recon_pearson": 0.6705054533901997,
+      "recon_mse": 0.07897130186164825,
+      "latent_tightness_hetclop": 0.8868907089653384,
+      "decoded_tightness_hetclop": 0.7695077640275798,
+      "latent_tightness_parent": 0.8106619875082071,
+      "decoded_tightness_parent": 0.6067265101425863
+    },
+    {
+      "encoder": "geneformer",
+      "dim": 768,
+      "decoder_params": 5454050,
+      "val_mse": 0.07716366648674011,
+      "recon_pearson": 0.6755097193742773,
+      "recon_mse": 0.07778927856867762,
+      "latent_tightness_hetclop": 0.9231215673429038,
+      "decoded_tightness_hetclop": 0.7543293961860645,
+      "latent_tightness_parent": 0.8801224163016368,
+      "decoded_tightness_parent": 0.591780783467821
+    }
+  ],
+  "summary": {
+    "all_models": {
+      "n": 7,
+      "latent_vs_decoded_hetclop": {
+        "pearson_r": 0.2779867821178125,
+        "pearson_p": 0.5460960202956173,
+        "spearman_rho": 0.03571428571428572
+      },
+      "latent_vs_decoded_parent": {
+        "pearson_r": 0.3868540581276997,
+        "pearson_p": 0.3912752546190776,
+        "spearman_rho": 0.10714285714285716
+      },
+      "latent_spread_hetclop": 0.17932372560244525,
+      "decoded_spread_hetclop": 0.03549592996096862,
+      "latent_spread_parent": 0.35021602582348255,
+      "decoded_spread_parent": 0.061765414750465375
+    },
+    "real_encoders_only": {
+      "n": 4,
+      "latent_vs_decoded_hetclop": {
+        "pearson_r": 0.09738615066570372,
+        "pearson_p": 0.9026138493342963,
+        "spearman_rho": 0.0
+      },
+      "latent_vs_decoded_parent": {
+        "pearson_r": 0.5629782697015061,
+        "pearson_p": 0.4370217302984938,
+        "spearman_rho": 0.19999999999999998
+      },
+      "latent_spread_hetclop": 0.1373556616934365,
+      "decoded_spread_hetclop": 0.015178367841515272,
+      "latent_spread_parent": 0.2292655113044868,
+      "decoded_spread_parent": 0.02316302530255765
+    }
+  },
+  "verdict": {
+    "randproj_512_recon": 0.6721423568891818,
+    "oracle_1250_recon": 0.6737631671560859,
+    "randproj_512_parent_latent_tightness": 1.0010729308206325,
+    "question": "is the parent metric's maximizer (randproj-512) a BAD encoder in the circularity-broken arm?",
+    "answer": "NO -- it reconstructs within 0.0016 of the uncompressed oracle"
+  }
+}

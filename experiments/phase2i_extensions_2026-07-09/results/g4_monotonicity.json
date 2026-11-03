@@ -1,0 +1,159 @@
+{
+  "purpose": "G4: extend the mean-fit-gap vs signed-energy-effect monotonicity leg from n=4 to more encoders (pca_50, randproj_50, pca_1250) so the exact n!-permutation p can reach 0.05. Reuses phase2f's four-encoder effects verbatim; recomputes pca_512 as an identity cross-check. Arm A, 3 seeds.",
+  "arm": "A",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "control": "poisson_on_nb_mean",
+  "effect_definition": "energy_effect = mean over 3 seeds of median paired diff (nb_stochastic - poisson_on_nb_mean) on the metric; positive => Poisson better. gap = det_log_pearson - nb_mean_log_pearson (>0 => NB mean underfits).",
+  "reused_from_phase2f": [
+    "pca_512",
+    "randproj_512",
+    "scgpt_512",
+    "geneformer"
+  ],
+  "new_encoders": [
+    "pca_50",
+    "randproj_50",
+    "pca_1250"
+  ],
+  "pca_512_identity_cross_check": {
+    "recomputed": {
+      "mean_fit_gap": -0.006051639580837875,
+      "energy_effect": 0.004549630704662633,
+      "rvar_expr_effect": 0.021682784184533625,
+      "gate_pass_seeds": 3
+    },
+    "phase2f": {
+      "mean_fit_gap": -0.006051639580837875,
+      "energy_effect": 0.004549630704662633,
+      "rvar_expr_effect": 0.021682784184533625,
+      "gate_pass_seeds": 3,
+      "source": "phase2f.json"
+    },
+    "diffs": {
+      "d_gap": 0.0,
+      "d_energy_effect": 0.0,
+      "d_rvar_effect": 0.0,
+      "tol": 1e-06,
+      "passed": true
+    }
+  },
+  "per_encoder": {
+    "pca_512": {
+      "mean_fit_gap": -0.006051639580837875,
+      "energy_effect": 0.004549630704662633,
+      "rvar_expr_effect": 0.021682784184533625,
+      "gate_pass_seeds": 3,
+      "source": "phase2f.json"
+    },
+    "randproj_512": {
+      "mean_fit_gap": -0.03323026382146569,
+      "energy_effect": 0.014701099116444164,
+      "rvar_expr_effect": 0.021207582520277952,
+      "gate_pass_seeds": 3,
+      "source": "phase2f.json"
+    },
+    "scgpt_512": {
+      "mean_fit_gap": 0.022330373307923757,
+      "energy_effect": -0.020962794909029785,
+      "rvar_expr_effect": 0.00501802121981261,
+      "gate_pass_seeds": 0,
+      "source": "phase2f.json"
+    },
+    "geneformer": {
+      "mean_fit_gap": 0.031052580420692293,
+      "energy_effect": -0.021018490339327418,
+      "rvar_expr_effect": -0.003408762494429165,
+      "gate_pass_seeds": 0,
+      "source": "phase2f.json"
+    },
+    "pca_50": {
+      "mean_fit_gap": 0.013212147727218829,
+      "energy_effect": -0.005597000768308232,
+      "rvar_expr_effect": 0.009703561600355376,
+      "gate_pass_seeds": 3,
+      "source": "phase2i_g4"
+    },
+    "randproj_50": {
+      "mean_fit_gap": 0.011698363303878967,
+      "energy_effect": 0.011474134292814261,
+      "rvar_expr_effect": 0.02933414570473181,
+      "gate_pass_seeds": 3,
+      "source": "phase2i_g4"
+    },
+    "pca_1250": {
+      "mean_fit_gap": 0.0011985512774903933,
+      "energy_effect": 0.005757333236591815,
+      "rvar_expr_effect": 0.01583412049226965,
+      "gate_pass_seeds": 3,
+      "source": "phase2i_g4"
+    }
+  },
+  "statistics": {
+    "n_encoders": 7,
+    "encoders": [
+      "pca_512",
+      "randproj_512",
+      "scgpt_512",
+      "geneformer",
+      "pca_50",
+      "randproj_50",
+      "pca_1250"
+    ],
+    "mean_fit_gap": [
+      -0.006051639580837875,
+      -0.03323026382146569,
+      0.022330373307923757,
+      0.031052580420692293,
+      0.013212147727218829,
+      0.011698363303878967,
+      0.0011985512774903933
+    ],
+    "energy_effect_nb_minus_poisson": [
+      0.004549630704662633,
+      0.014701099116444164,
+      -0.020962794909029785,
+      -0.021018490339327418,
+      -0.005597000768308232,
+      0.011474134292814261,
+      0.005757333236591815
+    ],
+    "rvar_expr_effect_nb_minus_poisson": [
+      0.021682784184533625,
+      0.021207582520277952,
+      0.00501802121981261,
+      -0.003408762494429165,
+      0.009703561600355376,
+      0.02933414570473181,
+      0.01583412049226965
+    ],
+    "gap_vs_energy_effect": {
+      "spearman_rho": -0.8571428571428573,
+      "spearman_p_scipy_DEGENERATE_for_rho1": 0.013697326615325618,
+      "pearson_r": -0.8070079148326549,
+      "pearson_p": 0.0282395767366074,
+      "exact_permutation_p": {
+        "rho": -0.8571428571428573,
+        "n_perm": 5040,
+        "p_two_sided": 0.023809523809523808,
+        "p_one_sided": 0.011904761904761904
+      },
+      "reaches_significance_0.05_two_sided": true
+    },
+    "gap_vs_rvar_expr_effect": {
+      "spearman_rho": -0.7500000000000002,
+      "pearson_r": -0.6407447646775445,
+      "exact_permutation_p": {
+        "rho": -0.7500000000000002,
+        "n_perm": 5040,
+        "p_two_sided": 0.06626984126984127,
+        "p_one_sided": 0.033134920634920635
+      },
+      "reaches_significance_0.05_two_sided": false
+    },
+    "min_possible_two_sided_perm_p": 0.0003968253968253968
+  }
+}

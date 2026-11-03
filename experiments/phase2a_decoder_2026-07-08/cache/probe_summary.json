@@ -1,0 +1,418 @@
+{
+  "ordered_datasets": [
+    "GSE115571_LPSMmDev",
+    "GSE145929_ProgastinMmDev",
+    "GSE145929_UrineMmDev",
+    "GSE165844_LSKMmBatch",
+    "GSE167597_spineMm",
+    "GSE189070_astrocytesSCIMmDev",
+    "GSE226131_HSCMmAged",
+    "GSE275119_TeethMmDev",
+    "GSE132509_acutelymluekPBMCHmCancer",
+    "GSE123902_LungAdreHmCancer",
+    "GSE165784_RetinaHmDev",
+    "GSE192857_hESCHmTimes",
+    "GSE213740_ADHm",
+    "GSE222002_TcellsHmCancer",
+    "GSE98638_TcellLiverHmCancer",
+    "GSE117988_MCCPBMCCancer",
+    "GSE117988_MCCTumorCancer",
+    "GSE120505_bloodAged",
+    "GSE123813_bccHmCancer",
+    "GSE123813_sccHmCancer",
+    "GSE124310_MMHmCancer",
+    "GSE130148_LungHmDev",
+    "GSE138709_LiverCancer",
+    "GSE142653pitHmDev",
+    "GSE143423_lbm_CancerBrainHm",
+    "GSE143423_tnbc_CancerBrainHm",
+    "GSE148218_bmALLHmCancer",
+    "GSE149655_CAHmCancer",
+    "GSE155109_bcECHmCancer",
+    "GSE155109_bcStromaHmCancer",
+    "GSE163558_stomachHmCancer",
+    "GSE168181_BreastHmCancer",
+    "GSE183904_GastricHmCancer",
+    "GSE189357_lungAdreHmCancer",
+    "GSE222369_NKsLymphomaHmCancer",
+    "GSE225600_breast_CancerHm",
+    "GSE225857_liverColonMetasisHmCancer",
+    "GSE228499_breastHmCancer",
+    "GSE235787_bcellsALLHmCancer",
+    "GSE253355_bmNicheHm",
+    "GSE262288_breastMetasisHmCancer",
+    "GSE283205_hepatoblastomaCancer",
+    "bm_GSE120446",
+    "dentate",
+    "endo",
+    "hESC_GSE144024",
+    "hemato",
+    "ifnHSPC_GSE226824",
+    "lung",
+    "setty"
+  ],
+  "skipped": [],
+  "per_dataset": {
+    "GSE115571_LPSMmDev": {
+      "n_cells": 326,
+      "n_types": 2,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6587
+    },
+    "GSE145929_ProgastinMmDev": {
+      "n_cells": 2713,
+      "n_types": 6,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6471
+    },
+    "GSE145929_UrineMmDev": {
+      "n_cells": 2542,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6610
+    },
+    "GSE165844_LSKMmBatch": {
+      "n_cells": 1217,
+      "n_types": 3,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6618
+    },
+    "GSE167597_spineMm": {
+      "n_cells": 2169,
+      "n_types": 8,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 5258
+    },
+    "GSE189070_astrocytesSCIMmDev": {
+      "n_cells": 2960,
+      "n_types": 15,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6490
+    },
+    "GSE226131_HSCMmAged": {
+      "n_cells": 2590,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6447
+    },
+    "GSE275119_TeethMmDev": {
+      "n_cells": 2358,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6283
+    },
+    "GSE132509_acutelymluekPBMCHmCancer": {
+      "n_cells": 2984,
+      "n_types": 8,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE123902_LungAdreHmCancer": {
+      "n_cells": 2737,
+      "n_types": 11,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE165784_RetinaHmDev": {
+      "n_cells": 2622,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE192857_hESCHmTimes": {
+      "n_cells": 2696,
+      "n_types": 8,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE213740_ADHm": {
+      "n_cells": 2688,
+      "n_types": 10,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE222002_TcellsHmCancer": {
+      "n_cells": 2962,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6206
+    },
+    "GSE98638_TcellLiverHmCancer": {
+      "n_cells": 2932,
+      "n_types": 6,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE117988_MCCPBMCCancer": {
+      "n_cells": 2626,
+      "n_types": 7,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE117988_MCCTumorCancer": {
+      "n_cells": 2990,
+      "n_types": 5,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE120505_bloodAged": {
+      "n_cells": 3000,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6468
+    },
+    "GSE123813_bccHmCancer": {
+      "n_cells": 3000,
+      "n_types": 12,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE123813_sccHmCancer": {
+      "n_cells": 3000,
+      "n_types": 8,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE124310_MMHmCancer": {
+      "n_cells": 2833,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE130148_LungHmDev": {
+      "n_cells": 3000,
+      "n_types": 12,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE138709_LiverCancer": {
+      "n_cells": 2891,
+      "n_types": 12,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE142653pitHmDev": {
+      "n_cells": 2869,
+      "n_types": 13,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE143423_lbm_CancerBrainHm": {
+      "n_cells": 2765,
+      "n_types": 10,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE143423_tnbc_CancerBrainHm": {
+      "n_cells": 2319,
+      "n_types": 7,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE148218_bmALLHmCancer": {
+      "n_cells": 2807,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE149655_CAHmCancer": {
+      "n_cells": 2087,
+      "n_types": 13,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE155109_bcECHmCancer": {
+      "n_cells": 3000,
+      "n_types": 5,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE155109_bcStromaHmCancer": {
+      "n_cells": 3000,
+      "n_types": 11,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE163558_stomachHmCancer": {
+      "n_cells": 2467,
+      "n_types": 10,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE168181_BreastHmCancer": {
+      "n_cells": 2863,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6350
+    },
+    "GSE183904_GastricHmCancer": {
+      "n_cells": 3000,
+      "n_types": 12,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE189357_lungAdreHmCancer": {
+      "n_cells": 2868,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE222369_NKsLymphomaHmCancer": {
+      "n_cells": 2576,
+      "n_types": 6,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE225600_breast_CancerHm": {
+      "n_cells": 2314,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8004,
+      "n_mapped_human": 8004
+    },
+    "GSE225857_liverColonMetasisHmCancer": {
+      "n_cells": 2793,
+      "n_types": 6,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE228499_breastHmCancer": {
+      "n_cells": 2341,
+      "n_types": 11,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE235787_bcellsALLHmCancer": {
+      "n_cells": 2798,
+      "n_types": 8,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE253355_bmNicheHm": {
+      "n_cells": 2835,
+      "n_types": 10,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE262288_breastMetasisHmCancer": {
+      "n_cells": 2321,
+      "n_types": 15,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "GSE283205_hepatoblastomaCancer": {
+      "n_cells": 2994,
+      "n_types": 10,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "bm_GSE120446": {
+      "n_cells": 2843,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "dentate": {
+      "n_cells": 3000,
+      "n_types": 8,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6430
+    },
+    "endo": {
+      "n_cells": 2531,
+      "n_types": 7,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6500
+    },
+    "hESC_GSE144024": {
+      "n_cells": 3000,
+      "n_types": 7,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    },
+    "hemato": {
+      "n_cells": 3000,
+      "n_types": 9,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6040
+    },
+    "ifnHSPC_GSE226824": {
+      "n_cells": 2623,
+      "n_types": 8,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6259
+    },
+    "lung": {
+      "n_cells": 3000,
+      "n_types": 5,
+      "species": "mouse",
+      "n_native_genes": 8000,
+      "n_mapped_human": 6324
+    },
+    "setty": {
+      "n_cells": 2995,
+      "n_types": 9,
+      "species": "human",
+      "n_native_genes": 8000,
+      "n_mapped_human": 8000
+    }
+  },
+  "total_cells": 133845,
+  "panel_stats": {
+    "n_datasets": 50,
+    "n_unique_human_symbols": 36102,
+    "panel_size": 2500,
+    "panel_min_dataset_freq": 30,
+    "panel_max_dataset_freq": 50,
+    "panel_median_dataset_freq": 36.0
+  },
+  "g_in_size": 1250,
+  "g_out_size": 1250
+}

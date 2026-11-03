@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "design-hash": {
+      "pass": true,
+      "detail": ""
+    },
+    "choices-from-validation-medians": {
+      "pass": true,
+      "detail": ""
+    },
+    "both-splits-present": {
+      "pass": true,
+      "detail": ""
+    },
+    "fits": {
+      "pass": true,
+      "detail": ""
+    }
+  }
+}

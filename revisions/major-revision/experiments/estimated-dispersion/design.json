@@ -1,0 +1,14 @@
+{
+  "purpose": "Expand controlled-seed evidence and test finite-sample estimation of dispersion instead of oracle-only conditionality.",
+  "status": "Design fixed before execution; all outcomes retained.",
+  "seeds": "41000 through 41029 inclusive, independent of the original five seeds",
+  "regimes": ["no_deficit", "deficit_homog", "deficit_hetero", "deficit_mixed"],
+  "fixture": "Reuse the original generator: 12 datasets, 6 types each, 200 test cells/group, 150 genes, fixed perfect conditional means.",
+  "experiment_1": "30-seed replication of Poisson, oracle group dispersion, and the original median-true-dispersion global control.",
+  "experiment_2": "Independently sample training counts at 25, 100, and 400 cells/group; estimate pooled per-gene or group-per-gene dispersion using known mean residual moments. Evaluate on independent test counts at identical means.",
+  "estimator": "theta = sum(mu^2) / sum((Y-mu)^2-Y), clipped to [0.05,1000]; nonpositive denominator uses 1000. No test-count access and no fitted oracle truth.",
+  "primary": "Existing expressed-gene median absolute log2 variance-ratio error at count threshold 0.5, collapsed to dataset medians then seed medians; paired differences within seed. Show every seed and central 95% seed interval, not a confidence interval.",
+  "secondary": "Existing multivariate energy distance for replication and the largest training sample. No claims about marker/classification or end-to-end performance follow from this synthetic experiment.",
+  "scope": "Known means, negative-binomial ground truth, moment estimator, oracle group labels. Results do not validate amortized estimation or arbitrary real distributions.",
+  "protection": "Do not overwrite any original experiment, figure-number ledger, or frozen upload. No optional stopping based on findings. Record all clipping rates and all per-group outputs."
+}

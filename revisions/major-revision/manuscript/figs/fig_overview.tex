@@ -1,0 +1,23 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\tikzset{roadstep/.style={rectangle, draw=hgray!70!black, line width=0.6pt, fill=white, text width=5.9cm, minimum height=0.80cm, align=left, inner sep=3.5pt, font=\footnotesize}, arr/.style={-{Stealth[length=1.8mm]}, line width=0.6pt, draw=hgray!50!black}}
+\node[roadstep, anchor=north west] (s0) at (0,0) {\makebox[1.6em][l]{F1}tightness ratio as an encoder diagnostic};
+\node[roadstep, below=0.34cm of s0] (s1) {\makebox[1.6em][l]{F2}reconstruction of held-out genes};
+\draw[arr] (s0.south) -- (s1.north);
+\node[roadstep, below=0.34cm of s1] (s2) {\makebox[1.6em][l]{F3}variance calibration on expressed genes};
+\draw[arr] (s1.south) -- (s2.north);
+\node[roadstep, below=0.34cm of s2] (s3) {\makebox[1.6em][l]{F4}dispersion at a fixed mean and end to end:\\\makebox[1.6em]{}deficit, allocation, biological readouts};
+\draw[arr] (s2.south) -- (s3.north);
+\panellabelat{s0}{(a)}
+\begin{axis}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}, at={(7.45cm,0cm)}, anchor=north west, width=5.6cm, height=3.55cm, xmin=0.5, xmax=2.5, xtick={1,2}, xticklabels={{type 1\\(true variance 36)},{type 2\\(true variance 6)}}, x tick label style={align=center}, ymin=-3.6, ymax=2.3, ylabel={$\log_2$ decoded / real variance}, title={Worked example, known means}, legend style={font=\footnotesize, draw=none, fill=none, at={(0.98,0.03)}, anchor=south east}, legend cell align=left]
+\draw[hgray, dashed] (axis cs:0.5,0) -- (axis cs:2.5,0);
+\addplot[ycomb, color=hblue, line width=1.2pt, mark=square*, mark size=2.4pt] coordinates {(0.80,-3.1699) (1.80,-0.5850)};
+\addlegendentry{Poisson}
+\addplot[ycomb, color=horange, line width=1.2pt, mark=diamond*, mark size=2.4pt] coordinates {(1.00,-0.7776) (2.00,1.8074)};
+\addlegendentry{shared per-gene}
+\addplot[ycomb, color=hgreen, line width=1.2pt, mark=*, mark size=2.4pt] coordinates {(1.20,0.0000) (2.20,0.0000)};
+\addlegendentry{per-cell-type}
+\panellabel{(b)}
+\end{axis}
+\end{tikzpicture}
+\endgroup

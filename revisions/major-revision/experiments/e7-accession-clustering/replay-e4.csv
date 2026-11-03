@@ -1,0 +1,49 @@
+variant,contrast,effect_summary,effect_replay,effect_match,ci_summary,ci_replay,ci_within_tolerance,classification_match
+reference,Arm A per-cell minus Poisson calibration error,0.0190471575278473,0.019047157527847396,True,"[0.0127, 0.0279]","[0.0129, 0.0275]",True,True
+reference,Arm B per-cell minus Poisson calibration error,-0.004832329417327,-0.004832329417327059,True,"[-0.0283, 0.0129]","[-0.0300, 0.0137]",True,True
+reference,Arm B per-cell minus shared calibration error,-0.115509028057139,-0.115509028057139,True,"[-0.1350, -0.0962]","[-0.1358, -0.0976]",True,True
+reference,Arm B per-cell minus Poisson Welch recall,-0.0128897354497354,-0.01288973544973545,True,"[-0.0176, -0.0082]","[-0.0173, -0.0084]",True,True
+reference,Arm B per-cell minus shared Welch recall,0.0629935978835978,0.06299359788359789,True,"[0.0547, 0.0714]","[0.0547, 0.0715]",True,True
+uniform_s1,Arm A per-cell minus Poisson calibration error,0.0197575732245604,0.019757573224560482,True,"[0.0148, 0.0267]","[0.0150, 0.0266]",True,True
+uniform_s1,Arm B per-cell minus Poisson calibration error,-0.0153121448629577,-0.015312144862957794,True,"[-0.0406, 0.0024]","[-0.0399, 0.0030]",True,True
+uniform_s1,Arm B per-cell minus shared calibration error,-0.123290031193071,-0.12329003119307107,True,"[-0.1418, -0.1055]","[-0.1422, -0.1070]",True,True
+uniform_s1,Arm B per-cell minus Poisson Welch recall,-0.0101553968253968,-0.010155396825396828,True,"[-0.0144, -0.0059]","[-0.0144, -0.0058]",True,True
+uniform_s1,Arm B per-cell minus shared Welch recall,0.0635613227513227,0.06356132275132274,True,"[0.0560, 0.0710]","[0.0567, 0.0709]",True,True
+uniform_s2,Arm A per-cell minus Poisson calibration error,0.0170531291359251,0.017053129135925164,True,"[0.0124, 0.0225]","[0.0123, 0.0227]",True,True
+uniform_s2,Arm B per-cell minus Poisson calibration error,-0.0125260273598408,-0.012526027359840817,True,"[-0.0404, 0.0083]","[-0.0390, 0.0078]",True,True
+uniform_s2,Arm B per-cell minus shared calibration error,-0.1209443859602172,-0.12094438596021721,True,"[-0.1387, -0.1039]","[-0.1386, -0.1053]",True,True
+uniform_s2,Arm B per-cell minus Poisson Welch recall,-0.0100820105820105,-0.010082010582010583,True,"[-0.0141, -0.0060]","[-0.0138, -0.0062]",True,True
+uniform_s2,Arm B per-cell minus shared Welch recall,0.0619080952380952,0.06190809523809524,True,"[0.0538, 0.0702]","[0.0543, 0.0700]",True,True
+uniform_s3,Arm A per-cell minus Poisson calibration error,0.016697936611897,0.016697936611897002,True,"[0.0121, 0.0223]","[0.0123, 0.0222]",True,True
+uniform_s3,Arm B per-cell minus Poisson calibration error,-0.0138098685950161,-0.013809868595016143,True,"[-0.0386, 0.0035]","[-0.0371, 0.0027]",True,True
+uniform_s3,Arm B per-cell minus shared calibration error,-0.1150302591499426,-0.11503025914994267,True,"[-0.1337, -0.0974]","[-0.1336, -0.0992]",True,True
+uniform_s3,Arm B per-cell minus Poisson Welch recall,-0.0148320105820105,-0.014832010582010582,True,"[-0.0195, -0.0102]","[-0.0197, -0.0104]",True,True
+uniform_s3,Arm B per-cell minus shared Welch recall,0.0608060317460317,0.06080603174603175,True,"[0.0531, 0.0684]","[0.0535, 0.0687]",True,True
+type_floor,Arm A per-cell minus Poisson calibration error,0.0190531112935011,0.019053111293501138,True,"[0.0143, 0.0255]","[0.0144, 0.0251]",True,True
+type_floor,Arm B per-cell minus Poisson calibration error,-0.0188827607946459,-0.018882760794645955,True,"[-0.0483, -0.0002]","[-0.0471, -0.0002]",True,True
+type_floor,Arm B per-cell minus shared calibration error,-0.1208232655125024,-0.1208232655125024,True,"[-0.1375, -0.1049]","[-0.1379, -0.1065]",True,True
+type_floor,Arm B per-cell minus Poisson Welch recall,-0.0096381481481481,-0.009638148148148147,True,"[-0.0141, -0.0052]","[-0.0142, -0.0054]",True,True
+type_floor,Arm B per-cell minus shared Welch recall,0.0641220105820105,0.06412201058201059,True,"[0.0552, 0.0722]","[0.0555, 0.0725]",True,True
+batch_balanced,Arm A per-cell minus Poisson calibration error,0.0181402591870883,0.018140259187088306,True,"[0.0133, 0.0245]","[0.0135, 0.0241]",True,True
+batch_balanced,Arm B per-cell minus Poisson calibration error,-0.0123614994856113,-0.012361499485611367,True,"[-0.0361, 0.0049]","[-0.0354, 0.0051]",True,True
+batch_balanced,Arm B per-cell minus shared calibration error,-0.1214634152846998,-0.1214634152846999,True,"[-0.1405, -0.1032]","[-0.1396, -0.1030]",True,True
+batch_balanced,Arm B per-cell minus Poisson Welch recall,-0.0124471957671957,-0.012447195767195768,True,"[-0.0172, -0.0078]","[-0.0171, -0.0078]",True,True
+batch_balanced,Arm B per-cell minus shared Welch recall,0.0604110052910052,0.060411005291005286,True,"[0.0515, 0.0689]","[0.0517, 0.0694]",True,True
+cap10000,Arm A per-cell minus Poisson calibration error,0.0125674771534477,0.012567477153447726,True,"[0.0070, 0.0223]","[0.0071, 0.0219]",True,True
+cap10000,Arm B per-cell minus Poisson calibration error,-0.0394140739469932,-0.03941407394699328,True,"[-0.0698, -0.0182]","[-0.0713, -0.0169]",True,True
+cap10000,Arm B per-cell minus shared calibration error,-0.116611852484291,-0.11661185248429107,True,"[-0.1341, -0.1006]","[-0.1346, -0.0999]",True,True
+cap10000,Arm B per-cell minus Poisson Welch recall,0.000299247049247,0.00029924704924704935,True,"[-0.0038, 0.0050]","[-0.0042, 0.0048]",True,True
+cap10000,Arm B per-cell minus shared Welch recall,0.060442759092759,0.060442759092759084,True,"[0.0521, 0.0683]","[0.0524, 0.0686]",True,True
+mad_qc,Arm A per-cell minus Poisson calibration error,0.0175674320363595,0.01756743203635958,True,"[0.0130, 0.0228]","[0.0130, 0.0227]",True,True
+mad_qc,Arm B per-cell minus Poisson calibration error,-0.0147643546543251,-0.014764354654325115,True,"[-0.0456, 0.0064]","[-0.0425, 0.0063]",True,True
+mad_qc,Arm B per-cell minus shared calibration error,-0.1205430277056658,-0.12054302770566581,True,"[-0.1393, -0.1031]","[-0.1387, -0.1038]",True,True
+mad_qc,Arm B per-cell minus Poisson Welch recall,-0.0115603606521973,-0.011560360652197387,True,"[-0.0165, -0.0063]","[-0.0166, -0.0063]",True,True
+mad_qc,Arm B per-cell minus shared Welch recall,0.0623919123204837,0.062391912320483744,True,"[0.0546, 0.0709]","[0.0543, 0.0707]",True,True
+reference,Deficit-effect slope (pooled arms),-0.0345745899615061,-0.03457749132378475,True,"[-0.0838, 0.0528]","[-0.0831, 0.0470]",True,True
+uniform_s1,Deficit-effect slope (pooled arms),-0.0111526249568089,-0.011152890761466108,True,"[-0.0966, 0.0590]","[-0.0955, 0.0598]",True,True
+uniform_s2,Deficit-effect slope (pooled arms),-0.0039644921801819,-0.003962868183009774,True,"[-0.1198, 0.0959]","[-0.1222, 0.0979]",True,True
+uniform_s3,Deficit-effect slope (pooled arms),-0.0717304177403981,-0.07173041899448296,True,"[-0.1061, 0.0269]","[-0.1051, 0.0206]",True,True
+type_floor,Deficit-effect slope (pooled arms),-0.053798317321481,-0.053798319064950015,True,"[-0.1279, 0.0173]","[-0.1271, 0.0151]",True,True
+batch_balanced,Deficit-effect slope (pooled arms),-0.0673575075665026,-0.06735750647627436,True,"[-0.1269, 0.0043]","[-0.1312, 0.0015]",True,True
+cap10000,Deficit-effect slope (pooled arms),-0.1158933063166279,-0.11589433722353074,True,"[-0.2101, -0.0063]","[-0.2096, -0.0086]",True,True
+mad_qc,Deficit-effect slope (pooled arms),-0.0384017425892093,-0.03840406923594681,True,"[-0.1208, 0.0259]","[-0.1191, 0.0202]",True,True

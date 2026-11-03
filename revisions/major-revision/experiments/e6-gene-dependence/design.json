@@ -1,0 +1,16 @@
+{
+  "experiment": "E6: gene-gene dependence on real data at a fixed mean",
+  "created": "2026-11-03",
+  "status": "fixed before execution",
+  "question": "On real data, do dispersion choices that change calibration also change how well decoded cells reproduce gene-gene correlations?",
+  "fits": "the saved E2 PCA-512 negative-binomial decoders (Arm A and Arm B, fit seeds 42-44); fitted means and per-cell dispersions on validation and test cells",
+  "draws": "Poisson, shared per-gene (median validation dispersion) and per-cell, all at the same fitted mean; the E1 draw seeds",
+  "groups": "dataset x cell-type groups with at least 20 test and 20 validation cells",
+  "genes": "within each group, the 30 decoded genes with the highest mean count among the group's training cells",
+  "endpoint": "correlation error: median absolute difference between off-diagonal Pearson correlations of log1p expression in decoded and real test cells; pairs with an undefined correlation in either matrix are skipped",
+  "reference": "the same error between the group's real validation and real test cells (an independent real sample)",
+  "secondary": "expressed-gene calibration error of each draw on the same group",
+  "contrasts": ["per-cell minus Poisson correlation error", "shared minus Poisson correlation error", "per-cell minus shared correlation error"],
+  "inference_stats": "seeds averaged within group, groups within dataset; equal-weight mean over datasets; 2000-resample dataset-cluster bootstrap (seed 20261110); share of groups in which calibration improves while correlation error increases",
+  "retention": "all groups, seeds and arms retained"
+}

@@ -1,0 +1,12 @@
+{
+  "experiment": "E3: prospective, validation-only dispersion selection on real data",
+  "created": "2026-11-03",
+  "status": "fixed before execution",
+  "question": "If an analyst chooses a dispersion option per dataset using validation cells only, how does the choice perform on held-out test cells compared with always using Poisson, always using per-cell dispersion, or the best option in hindsight?",
+  "fits": "the 24 saved E2 decoders (four encoders x two arms x fit seeds 42-44)",
+  "options": ["Poisson", "shared per-gene (median validation dispersion)", "per-cell-type (median validation dispersion within type; shared value for types with fewer than 20 validation cells)", "per-cell (decoder output)"],
+  "selection": "within each dataset, the option with the lowest median validation expressed-gene calibration error across the dataset's groups with at least 20 validation cells; ties prefer Poisson, then shared, then per-type, then per-cell; test cells are never used",
+  "endpoints": "dataset-level median test calibration error of the selected option; regret relative to the best option on test; difference from always-Poisson and always-per-cell; for PCA-512 fits, Welch marker recall of the selected option taken from the matched E1 tables",
+  "inference_stats": "values averaged over seeds within dataset, then equal-weight over datasets; 2000-resample dataset bootstrap (seed 20261111); selection frequencies by arm",
+  "retention": "all fits, datasets and options retained"
+}

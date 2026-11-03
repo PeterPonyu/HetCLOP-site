@@ -1,0 +1,169 @@
+{
+  "target_types": 73,
+  "common_types": 69,
+  "excluded_from_common": [
+    "Collecting duct",
+    "Corticotrophs",
+    "Delta cells",
+    "Dendritic cells"
+  ],
+  "interpretation": "Descriptive support sensitivity from saved results; no new neural fit; stages have independent fit seeds and are not paired with each other. Unscoreable assigned zero only in explicitly named coverage-adjusted composite. Global-vs-conditional end-to-end includes separate fits; conditional-vs-Poisson shares means within a seed.",
+  "effects": [
+    {
+      "stage": "end_to_end",
+      "metric": "original_support_mean",
+      "control": "poisson",
+      "mean": -0.02466223265519037,
+      "minimum": -0.027042253521126713,
+      "maximum": -0.021388888888888846,
+      "seed_differences": [
+        -0.021388888888888846,
+        -0.025555555555555554,
+        -0.027042253521126713
+      ]
+    },
+    {
+      "stage": "end_to_end",
+      "metric": "original_support_mean",
+      "control": "nb_global",
+      "mean": -0.0030412474849094706,
+      "minimum": -0.010704225352112628,
+      "maximum": 0.0013809523809523716,
+      "seed_differences": [
+        0.00019953051643184505,
+        0.0013809523809523716,
+        -0.010704225352112628
+      ]
+    },
+    {
+      "stage": "end_to_end",
+      "metric": "common_support_mean",
+      "control": "poisson",
+      "mean": -0.024251207729468576,
+      "minimum": -0.027246376811594197,
+      "maximum": -0.02086956521739125,
+      "seed_differences": [
+        -0.02086956521739125,
+        -0.024637681159420277,
+        -0.027246376811594197
+      ]
+    },
+    {
+      "stage": "end_to_end",
+      "metric": "common_support_mean",
+      "control": "nb_global",
+      "mean": -0.0012560386473429719,
+      "minimum": -0.009565217391304282,
+      "maximum": 0.0031884057971014457,
+      "seed_differences": [
+        0.0031884057971014457,
+        0.00260869565217392,
+        -0.009565217391304282
+      ]
+    },
+    {
+      "stage": "end_to_end",
+      "metric": "coverage_adjusted",
+      "control": "poisson",
+      "mean": -0.024200913242009087,
+      "minimum": -0.026301369863013624,
+      "maximum": -0.021095890410958884,
+      "seed_differences": [
+        -0.021095890410958884,
+        -0.025205479452054758,
+        -0.026301369863013624
+      ]
+    },
+    {
+      "stage": "end_to_end",
+      "metric": "coverage_adjusted",
+      "control": "nb_global",
+      "mean": 0.0006392694063927044,
+      "minimum": -0.01041095890410948,
+      "maximum": 0.008493150684931422,
+      "seed_differences": [
+        0.003835616438356171,
+        0.008493150684931422,
+        -0.01041095890410948
+      ]
+    },
+    {
+      "stage": "fixed",
+      "metric": "original_support_mean",
+      "control": "poisson",
+      "mean": 0.04173515981735165,
+      "minimum": 0.04000000000000015,
+      "maximum": 0.04493150684931502,
+      "seed_differences": [
+        0.04493150684931502,
+        0.04000000000000015,
+        0.040273972602739794
+      ]
+    },
+    {
+      "stage": "fixed",
+      "metric": "original_support_mean",
+      "control": "nb_global",
+      "mean": 0.23543378995433792,
+      "minimum": 0.2320547945205479,
+      "maximum": 0.23835616438356155,
+      "seed_differences": [
+        0.2320547945205479,
+        0.23589041095890428,
+        0.23835616438356155
+      ]
+    },
+    {
+      "stage": "fixed",
+      "metric": "common_support_mean",
+      "control": "poisson",
+      "mean": 0.04299516908212575,
+      "minimum": 0.041159420289855086,
+      "maximum": 0.04579710144927551,
+      "seed_differences": [
+        0.04579710144927551,
+        0.041159420289855086,
+        0.04202898550724665
+      ]
+    },
+    {
+      "stage": "fixed",
+      "metric": "common_support_mean",
+      "control": "nb_global",
+      "mean": 0.2371014492753625,
+      "minimum": 0.23449275362318855,
+      "maximum": 0.23913043478260898,
+      "seed_differences": [
+        0.23449275362318855,
+        0.23768115942029,
+        0.23913043478260898
+      ]
+    },
+    {
+      "stage": "fixed",
+      "metric": "coverage_adjusted",
+      "control": "poisson",
+      "mean": 0.04173515981735165,
+      "minimum": 0.04000000000000015,
+      "maximum": 0.04493150684931502,
+      "seed_differences": [
+        0.04493150684931502,
+        0.04000000000000015,
+        0.040273972602739794
+      ]
+    },
+    {
+      "stage": "fixed",
+      "metric": "coverage_adjusted",
+      "control": "nb_global",
+      "mean": 0.23543378995433792,
+      "minimum": 0.2320547945205479,
+      "maximum": 0.23835616438356155,
+      "seed_differences": [
+        0.2320547945205479,
+        0.23589041095890428,
+        0.23835616438356155
+      ]
+    }
+  ]
+}

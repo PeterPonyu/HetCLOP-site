@@ -1,0 +1,70 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{axis}[width=10.2cm, height=5.0cm, ybar, /pgf/bar width=10pt, enlarge x limits=0.15, scale only axis=true, tick align=outside, tick pos=left,
+tick label style={font=\footnotesize}, label style={font=\footnotesize},
+symbolic x coords={mWelch,mAUROC,tstr,rare}, xtick=data,
+xticklabels={{marker recall\\(Welch)},{marker recall\\(AUROC)},{TSTR\\macro-F1},{rare-type\\F1}},
+x tick label style={font=\footnotesize, align=center}, ymin=0, ymax=0.86, ylabel={score (recall or macro-F1)},
+legend style={font=\footnotesize, at={(0.5,1.02)}, anchor=south, legend columns=4, draw=none}, legend cell align=left]
+\addplot[draw=black!30, fill=hblue, bar shift=-12pt, error bars/.cd, y dir=both, y explicit, error bar style={black, line width=0.35pt}] coordinates {
+  (mWelch,0.7510) +- (0,0.0029)
+  (mAUROC,0.7530) +- (0,0.0009)
+  (tstr,0.6390) +- (0,0.0080)
+  (rare,0.4150) +- (0,0.0172)
+}; \addlegendentry{Poisson}
+\addplot[draw=black!30, fill=horange, bar shift=0pt, error bars/.cd, y dir=both, y explicit, error bar style={black, line width=0.35pt}] coordinates {
+  (mWelch,0.5580) +- (0,0.0033)
+  (mAUROC,0.5330) +- (0,0.0019)
+  (tstr,0.5290) +- (0,0.0105)
+  (rare,0.1790) +- (0,0.0242)
+}; \addlegendentry{NB global $\theta_g$}
+\addplot[draw=black!30, fill=hgreen, bar shift=12pt, error bars/.cd, y dir=both, y explicit, error bar style={black, line width=0.35pt}] coordinates {
+  (mWelch,0.7930) +- (0,0.0004)
+  (mAUROC,0.7970) +- (0,0.0037)
+  (tstr,0.6440) +- (0,0.0084)
+  (rare,0.4020) +- (0,0.0256)
+}; \addlegendentry{NB conditional $\theta_{ng}$}
+\addplot[only marks, bar shift=24pt, mark=-, mark size=7pt, black, thick, line width=0.8pt] coordinates {
+  (mWelch,0.7780)
+  (tstr,0.7730)
+  (rare,0.6580)
+}; \addlegendentry{split-half reference}
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-13.9pt] at (axis cs:mWelch,0.747945205) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-13.9pt] at (axis cs:mAUROC,0.753424658) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-13.9pt] at (axis cs:tstr,0.639797688) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-13.9pt] at (axis cs:rare,0.395362125) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-12pt] at (axis cs:mWelch,0.753424658) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-12pt] at (axis cs:mAUROC,0.753150685) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-12pt] at (axis cs:tstr,0.630866594) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-12pt] at (axis cs:rare,0.420205626) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-10.1pt] at (axis cs:mWelch,0.752328767) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-10.1pt] at (axis cs:mAUROC,0.751780822) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-10.1pt] at (axis cs:tstr,0.646765286) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-10.1pt] at (axis cs:rare,0.428390189) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-1.9pt] at (axis cs:mWelch,0.560821918) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-1.9pt] at (axis cs:mAUROC,0.531780822) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-1.9pt] at (axis cs:tstr,0.519850148) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=-1.9pt] at (axis cs:rare,0.156787103) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=0pt] at (axis cs:mWelch,0.557534247) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=0pt] at (axis cs:mAUROC,0.532602740) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=0pt] at (axis cs:tstr,0.540670787) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=0pt] at (axis cs:rare,0.204872913) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=1.9pt] at (axis cs:mWelch,0.554246575) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=1.9pt] at (axis cs:mAUROC,0.535342466) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=1.9pt] at (axis cs:tstr,0.527569690) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=1.9pt] at (axis cs:rare,0.175601259) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=10.1pt] at (axis cs:mWelch,0.792876712) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=10.1pt] at (axis cs:mAUROC,0.793972603) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=10.1pt] at (axis cs:tstr,0.639474514) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=10.1pt] at (axis cs:rare,0.385403729) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=12pt] at (axis cs:mWelch,0.793424658) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=12pt] at (axis cs:mAUROC,0.801095890) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=12pt] at (axis cs:tstr,0.637950089) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=12pt] at (axis cs:rare,0.389528596) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=13.9pt] at (axis cs:mWelch,0.792602740) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=13.9pt] at (axis cs:mAUROC,0.795616438) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=13.9pt] at (axis cs:tstr,0.653186314) {};
+\node[circle,draw=black!80,fill=white,line width=0.35pt,inner sep=0pt,minimum size=2.5pt,xshift=13.9pt] at (axis cs:rare,0.431625640) {};
+\end{axis}\end{tikzpicture}
+
+\endgroup

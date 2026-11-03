@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+experiments/phase2a_decoder_2026-07-08/cache/*.npy
+revisions/major-revision/experiments/**/corpora/
+revisions/major-revision/experiments/e4b-training-size/extra_*.npz
+data/corpus_sources/
+data/foundation_models/
+data/models/

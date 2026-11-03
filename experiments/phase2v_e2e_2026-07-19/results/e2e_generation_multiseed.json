@@ -1,0 +1,145 @@
+{
+  "purpose": "3-seed end-to-end generation robustness",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "n_synthetic_per_arm": 20113,
+  "n_types_real": null,
+  "n_rare_types": null,
+  "arms": {
+    "e2e_nb_gene": {
+      "marker_recall_mean_mean": 0.26140979208584847,
+      "marker_recall_mean_std": 0.0037891556930931916,
+      "marker_recall_mean_median": 0.2602857142857143,
+      "marker_recall_mean_min": 0.2583098591549296,
+      "marker_recall_mean_max": 0.2656338028169015,
+      "marker_recall_median_mean": 0.21999999999999997,
+      "marker_recall_median_std": 0.01999999999999999,
+      "marker_recall_median_median": 0.22,
+      "marker_recall_median_min": 0.2,
+      "marker_recall_median_max": 0.24,
+      "tstr_macro_f1_mean": 0.15721969506606207,
+      "tstr_macro_f1_std": 0.004137191059774248,
+      "tstr_macro_f1_median": 0.15820226245174546,
+      "tstr_macro_f1_min": 0.15267967442640357,
+      "tstr_macro_f1_max": 0.16077714832003717,
+      "tstr_rare_f1_mean": 0.05152544843650469,
+      "tstr_rare_f1_std": 0.022096047030570786,
+      "tstr_rare_f1_median": 0.0461230880404673,
+      "tstr_rare_f1_min": 0.03263157894736842,
+      "tstr_rare_f1_max": 0.07582167832167833,
+      "per_seed": {
+        "marker_recall_mean": [
+          0.2656338028169015,
+          0.2602857142857143,
+          0.2583098591549296
+        ],
+        "marker_recall_median": [
+          0.24,
+          0.22,
+          0.2
+        ],
+        "tstr_macro_f1": [
+          0.15267967442640357,
+          0.16077714832003717,
+          0.15820226245174546
+        ],
+        "tstr_rare_f1": [
+          0.03263157894736842,
+          0.0461230880404673,
+          0.07582167832167833
+        ]
+      }
+    },
+    "e2e_nb_gene-cell": {
+      "marker_recall_mean_mean": 0.258368544600939,
+      "marker_recall_mean_std": 0.009550940498926096,
+      "marker_recall_mean_median": 0.26166666666666666,
+      "marker_recall_mean_min": 0.24760563380281697,
+      "marker_recall_mean_max": 0.26583333333333337,
+      "marker_recall_median_mean": 0.2066666666666667,
+      "marker_recall_median_std": 0.011547005383792509,
+      "marker_recall_median_median": 0.2,
+      "marker_recall_median_min": 0.2,
+      "marker_recall_median_max": 0.22,
+      "tstr_macro_f1_mean": 0.15243208888134155,
+      "tstr_macro_f1_std": 0.004294711412363342,
+      "tstr_macro_f1_median": 0.1502887264936615,
+      "tstr_macro_f1_min": 0.1496309101020102,
+      "tstr_macro_f1_max": 0.15737663004835292,
+      "tstr_rare_f1_mean": 0.051003928405761324,
+      "tstr_rare_f1_std": 0.016732703445931054,
+      "tstr_rare_f1_median": 0.05559304625000147,
+      "tstr_rare_f1_min": 0.032455497247517624,
+      "tstr_rare_f1_max": 0.06496324171976488,
+      "per_seed": {
+        "marker_recall_mean": [
+          0.26583333333333337,
+          0.26166666666666666,
+          0.24760563380281697
+        ],
+        "marker_recall_median": [
+          0.2,
+          0.22,
+          0.2
+        ],
+        "tstr_macro_f1": [
+          0.15737663004835292,
+          0.1502887264936615,
+          0.1496309101020102
+        ],
+        "tstr_rare_f1": [
+          0.06496324171976488,
+          0.032455497247517624,
+          0.05559304625000147
+        ]
+      }
+    },
+    "e2e_poisson": {
+      "marker_recall_mean_mean": 0.28303077725612935,
+      "marker_recall_mean_std": 0.007259795638401613,
+      "marker_recall_mean_median": 0.2872222222222222,
+      "marker_recall_mean_min": 0.2746478873239437,
+      "marker_recall_mean_max": 0.2872222222222222,
+      "marker_recall_median_mean": 0.24666666666666667,
+      "marker_recall_median_std": 0.023094010767585035,
+      "marker_recall_median_median": 0.26,
+      "marker_recall_median_min": 0.22,
+      "marker_recall_median_max": 0.26,
+      "tstr_macro_f1_mean": 0.13741857611137367,
+      "tstr_macro_f1_std": 0.008367700661770599,
+      "tstr_macro_f1_median": 0.13430903732930408,
+      "tstr_macro_f1_min": 0.13105081492265683,
+      "tstr_macro_f1_max": 0.14689587608216012,
+      "tstr_rare_f1_mean": 0.07773815823890563,
+      "tstr_rare_f1_std": 0.010418042200730426,
+      "tstr_rare_f1_median": 0.0718525299013904,
+      "tstr_rare_f1_min": 0.07159498662731567,
+      "tstr_rare_f1_max": 0.08976695818801082,
+      "per_seed": {
+        "marker_recall_mean": [
+          0.2872222222222222,
+          0.2872222222222222,
+          0.2746478873239437
+        ],
+        "marker_recall_median": [
+          0.26,
+          0.26,
+          0.22
+        ],
+        "tstr_macro_f1": [
+          0.14689587608216012,
+          0.13105081492265683,
+          0.13430903732930408
+        ],
+        "tstr_rare_f1": [
+          0.08976695818801082,
+          0.07159498662731567,
+          0.0718525299013904
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "rare_types_pooled": {
+    "reference": 19,
+    "uniform_s1": 19,
+    "uniform_s2": 18,
+    "uniform_s3": 18,
+    "type_floor": 18,
+    "batch_balanced": 20,
+    "cap10000": 7,
+    "mad_qc": 20
+  },
+  "datasets_with_batch_field": 22,
+  "datasets_with_sample_identity": 5,
+  "datasets_with_donor_identity": 0,
+  "batch_levels_fully_retained_reference": 22,
+  "sample_levels_fully_retained_reference": 5
+}

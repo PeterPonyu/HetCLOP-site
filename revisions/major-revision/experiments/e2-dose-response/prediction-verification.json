@@ -1,0 +1,199 @@
+{
+  "status": "PASS",
+  "fit_validation_predictors_replayed": 24,
+  "test_effects_replayed_from_full_draws": 2,
+  "records": [
+    {
+      "arm": "A",
+      "encoder": "geneformer",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "geneformer",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "geneformer",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "pca_512",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "pca_512",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "pca_512",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "randproj_512",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "randproj_512",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "randproj_512",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "scgpt_512",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "scgpt_512",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "A",
+      "encoder": "scgpt_512",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "geneformer",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "geneformer",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "geneformer",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "pca_512",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "pca_512",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "pca_512",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "randproj_512",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "randproj_512",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "randproj_512",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "scgpt_512",
+      "seed": 42,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "scgpt_512",
+      "seed": 43,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    },
+    {
+      "arm": "B",
+      "encoder": "scgpt_512",
+      "seed": 44,
+      "dataset": "GSE115571_LPSMmDev",
+      "cell_type": "Macrophages",
+      "validation_deficit_reproduced": true
+    }
+  ]
+}

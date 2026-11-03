@@ -1,0 +1,66 @@
+{
+  "purpose": "Dataset-level cluster bootstrap CI for F4's primary per-gene calibration claim (Poisson beats learned-theta NB on expression-restricted |log2 r_var|, pca_512, Arm A). Closes the 'seeds vary init only' limitation with a data-resampled interval.",
+  "metric": "r_var_abs_log2_expr",
+  "encoder": "pca_512",
+  "n_bootstrap": 10000,
+  "convention": "diff = NB - Poisson (lower better); diff>0 => Poisson wins; win = mean(diff>0)",
+  "per_seed": {
+    "42": {
+      "n_groups": 314,
+      "poisson_win_point": 0.767515923566879,
+      "poisson_win_ci95": [
+        0.721875,
+        0.8110749185667753
+      ],
+      "median_diff_point": 0.020954359887186857,
+      "median_diff_ci95": [
+        0.016517330315904896,
+        0.027538395589983444
+      ],
+      "ci_excludes_half": true
+    },
+    "43": {
+      "n_groups": 314,
+      "poisson_win_point": 0.7707006369426752,
+      "poisson_win_ci95": [
+        0.7231270358306189,
+        0.8173084365325077
+      ],
+      "median_diff_point": 0.022722734948874765,
+      "median_diff_ci95": [
+        0.01704971239336278,
+        0.027024777451392312
+      ],
+      "ci_excludes_half": true
+    },
+    "44": {
+      "n_groups": 314,
+      "poisson_win_point": 0.7420382165605095,
+      "poisson_win_ci95": [
+        0.6918233838540055,
+        0.7929854809437387
+      ],
+      "median_diff_point": 0.021371257717539255,
+      "median_diff_ci95": [
+        0.0166415679364689,
+        0.02466373280911696
+      ],
+      "ci_excludes_half": true
+    }
+  },
+  "pooled_over_seeds": {
+    "n_groups": 942,
+    "poisson_win_point": 0.7600849256900213,
+    "poisson_win_ci95": [
+      0.7261538461538461,
+      0.7948717948717948
+    ],
+    "median_diff_point": 0.02169140119528995,
+    "median_diff_ci95": [
+      0.017694240120595894,
+      0.024900452737801698
+    ],
+    "ci_excludes_half": true
+  },
+  "robust": true
+}

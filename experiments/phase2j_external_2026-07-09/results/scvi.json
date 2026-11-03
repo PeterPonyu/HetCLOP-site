@@ -1,0 +1,770 @@
+{
+  "model_family": "scVI (scvi-tools 1.4.3, real deployed model)",
+  "deterministic_baseline_log_pearson": 0.7419554779881322,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "modes": [
+    "gene",
+    "gene-cell"
+  ],
+  "n_param_samples": 10,
+  "results": {
+    "gene": {
+      "0": {
+        "model": "scvi_gene_seed0",
+        "seed": 0,
+        "n_groups": 314,
+        "gate": {
+          "det_log_pearson": 0.7419554779881322,
+          "model_mean_log_pearson": 0.6289622400759749,
+          "gap_vs_det": 0.11299323791215732,
+          "gate_passed": false,
+          "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+        },
+        "theta_summary": {
+          "median": 0.6016697287559509,
+          "min": 0.0360698439180851,
+          "max": 16.477991104125977,
+          "is_amortized": false
+        },
+        "contrasts": {
+          "rvar_expressed": {
+            "metric": "r_var_abs_log2_expr",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.732484076433121,
+            "median_paired_diff_nb_minus_pois": 0.04968609493999826,
+            "naive_p": 2.0453322965147916e-15,
+            "clustered_wilcoxon_p": 2.9747345218211763e-05,
+            "clustered_sign_p": 5.614100093254137e-06,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.82,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "rvar_topk": {
+            "metric": "r_var_abs_log2_topk",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.60828025477707,
+            "median_paired_diff_nb_minus_pois": 0.022016096850118905,
+            "naive_p": 0.004591453223802859,
+            "clustered_wilcoxon_p": 0.07556206690378708,
+            "clustered_sign_p": 0.006600447966810918,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.7,
+            "dataset_signflip_perm_p": 0.07439256074392561,
+            "within_dataset_signflip_perm_p": 0.07479252074792521
+          },
+          "energy": {
+            "metric": "energy_distance",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.6146496815286624,
+            "median_paired_diff_nb_minus_pois": 0.03583963240975585,
+            "naive_p": 5.96871361764777e-06,
+            "clustered_wilcoxon_p": 0.006525205201144857,
+            "clustered_sign_p": 0.032839137564268484,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.66,
+            "dataset_signflip_perm_p": 0.0053994600539946005,
+            "within_dataset_signflip_perm_p": 0.0066993300669933005
+          }
+        },
+        "direction": {
+          "nb_stochastic": {
+            "r_var_signed_expr_median": 1.019439381127549,
+            "r_var_frac_gt1_expr_median": 0.5218184703268803,
+            "r_var_abs_log2_expr_median": 0.436702914765732,
+            "energy_median": 1.2328723106365445,
+            "r_var_signed_topk_median": 0.9744030089261296
+          },
+          "poisson_on_mean": {
+            "r_var_signed_expr_median": 0.8302283207383445,
+            "r_var_frac_gt1_expr_median": 0.2842682316546108,
+            "r_var_abs_log2_expr_median": 0.3880096655200905,
+            "energy_median": 1.0952945655852826,
+            "r_var_signed_topk_median": 0.7878919414244323
+          }
+        },
+        "energy_redraw": {
+          "n_redraws": 10,
+          "naive_p": [
+            4.349293379796426e-06,
+            2.0419606010316466e-06,
+            2.2386423472564913e-06,
+            2.9887807622641857e-06,
+            5.262340704655332e-05,
+            8.516906799419394e-07,
+            4.480678677401079e-06,
+            6.089737230742245e-07,
+            1.1460108890058199e-06,
+            8.329620661422037e-07
+          ],
+          "clustered_wilcoxon_p": [
+            0.003913313547160513,
+            0.0021981232450851707,
+            0.005579489549422334,
+            0.00197803909377825,
+            0.01531204751384152,
+            0.001909205638362721,
+            0.001909205638362721,
+            0.0033148150460355907,
+            0.0009504084140701252,
+            0.001539555129280501
+          ],
+          "clustered_sign_p": [
+            0.032839137564268484,
+            0.032839137564268484,
+            0.015346677832630107,
+            0.015346677832630107,
+            0.032839137564268484,
+            0.006600447966810918,
+            0.015346677832630107,
+            0.000936222910851825,
+            0.006600447966810918,
+            0.006600447966810918
+          ],
+          "naive_p_min": 6.089737230742245e-07,
+          "naive_p_max": 5.262340704655332e-05,
+          "naive_p_median": 2.140301474144069e-06,
+          "clustered_wilcoxon_p_min": 0.0009504084140701252,
+          "clustered_wilcoxon_p_max": 0.01531204751384152,
+          "clustered_wilcoxon_p_median": 0.0020880811694317103,
+          "any_clustered_gt_0.05": false
+        },
+        "train_meta": {
+          "n_epochs_trained": 85,
+          "dispersion": "gene"
+        }
+      },
+      "1": {
+        "model": "scvi_gene_seed1",
+        "seed": 1,
+        "n_groups": 314,
+        "gate": {
+          "det_log_pearson": 0.7419554779881322,
+          "model_mean_log_pearson": 0.6292287716006884,
+          "gap_vs_det": 0.11272670638744386,
+          "gate_passed": false,
+          "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+        },
+        "theta_summary": {
+          "median": 0.5999187231063843,
+          "min": 0.03578491136431694,
+          "max": 18.875486373901367,
+          "is_amortized": false
+        },
+        "contrasts": {
+          "rvar_expressed": {
+            "metric": "r_var_abs_log2_expr",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.7356687898089171,
+            "median_paired_diff_nb_minus_pois": 0.05031237770549504,
+            "naive_p": 3.2908420049080835e-16,
+            "clustered_wilcoxon_p": 1.2965142769161275e-05,
+            "clustered_sign_p": 2.098677427397888e-07,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.86,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "rvar_topk": {
+            "metric": "r_var_abs_log2_topk",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.6305732484076433,
+            "median_paired_diff_nb_minus_pois": 0.018348497810016767,
+            "naive_p": 0.0004681726387620682,
+            "clustered_wilcoxon_p": 0.024847675451864504,
+            "clustered_sign_p": 0.006600447966810918,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.7,
+            "dataset_signflip_perm_p": 0.0225977402259774,
+            "within_dataset_signflip_perm_p": 0.024297570242975703
+          },
+          "energy": {
+            "metric": "energy_distance",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.5700636942675159,
+            "median_paired_diff_nb_minus_pois": 0.03361637534003581,
+            "naive_p": 0.0012033076790241154,
+            "clustered_wilcoxon_p": 0.07719592312590784,
+            "clustered_sign_p": 0.20263875106454066,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.6,
+            "dataset_signflip_perm_p": 0.07589241075892411,
+            "within_dataset_signflip_perm_p": 0.07389261073892611
+          }
+        },
+        "direction": {
+          "nb_stochastic": {
+            "r_var_signed_expr_median": 1.016509308201298,
+            "r_var_frac_gt1_expr_median": 0.5172268907563026,
+            "r_var_abs_log2_expr_median": 0.43734835433539515,
+            "energy_median": 1.20906438030657,
+            "r_var_signed_topk_median": 0.9732470599519116
+          },
+          "poisson_on_mean": {
+            "r_var_signed_expr_median": 0.8371089777760267,
+            "r_var_frac_gt1_expr_median": 0.291502624671916,
+            "r_var_abs_log2_expr_median": 0.38311451564890564,
+            "energy_median": 1.1103029071330042,
+            "r_var_signed_topk_median": 0.797365134526695
+          }
+        },
+        "energy_redraw": {
+          "n_redraws": 10,
+          "naive_p": [
+            0.0008066182698288675,
+            0.0010009230162039838,
+            0.0002573306420779239,
+            0.0012982945086102502,
+            0.0004078063201229944,
+            0.0007110175324424031,
+            0.0008820637156773435,
+            0.0007014244525998021,
+            0.0007523157251939194,
+            0.0003359049912898177
+          ],
+          "clustered_wilcoxon_p": [
+            0.029727315082014982,
+            0.031261656763490464,
+            0.01806109651468013,
+            0.055465717070337206,
+            0.02616696817119646,
+            0.020665866669398625,
+            0.02420949942225903,
+            0.039015525521861605,
+            0.033687793845592395,
+            0.045027510990479414
+          ],
+          "clustered_sign_p": [
+            0.032839137564268484,
+            0.032839137564268484,
+            0.06490864707227217,
+            0.20263875106454066,
+            0.032839137564268484,
+            0.11892045255943628,
+            0.11892045255943628,
+            0.06490864707227217,
+            0.06490864707227217,
+            0.11892045255943628
+          ],
+          "naive_p_min": 0.0002573306420779239,
+          "naive_p_max": 0.0012982945086102502,
+          "naive_p_median": 0.0007316666288181612,
+          "clustered_wilcoxon_p_min": 0.01806109651468013,
+          "clustered_wilcoxon_p_max": 0.055465717070337206,
+          "clustered_wilcoxon_p_median": 0.030494485922752723,
+          "any_clustered_gt_0.05": true
+        },
+        "train_meta": {
+          "n_epochs_trained": 85,
+          "dispersion": "gene"
+        }
+      },
+      "2": {
+        "model": "scvi_gene_seed2",
+        "seed": 2,
+        "n_groups": 314,
+        "gate": {
+          "det_log_pearson": 0.7419554779881322,
+          "model_mean_log_pearson": 0.6318843431136465,
+          "gap_vs_det": 0.11007113487448572,
+          "gate_passed": false,
+          "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+        },
+        "theta_summary": {
+          "median": 0.6029485464096069,
+          "min": 0.040338847786188126,
+          "max": 17.601579666137695,
+          "is_amortized": false
+        },
+        "contrasts": {
+          "rvar_expressed": {
+            "metric": "r_var_abs_log2_expr",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.7484076433121019,
+            "median_paired_diff_nb_minus_pois": 0.05782616254570641,
+            "naive_p": 8.581028955643229e-19,
+            "clustered_wilcoxon_p": 1.2841054282120012e-06,
+            "clustered_sign_p": 1.163555804595262e-06,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.84,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "rvar_topk": {
+            "metric": "r_var_abs_log2_topk",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.643312101910828,
+            "median_paired_diff_nb_minus_pois": 0.029075515132883034,
+            "naive_p": 6.385394891588861e-06,
+            "clustered_wilcoxon_p": 0.013686934524772099,
+            "clustered_sign_p": 0.015346677832630107,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.68,
+            "dataset_signflip_perm_p": 0.013598640135986401,
+            "within_dataset_signflip_perm_p": 0.012898710128987101
+          },
+          "energy": {
+            "metric": "energy_distance",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.5668789808917197,
+            "median_paired_diff_nb_minus_pois": 0.02176658577281998,
+            "naive_p": 0.04857571183398541,
+            "clustered_wilcoxon_p": 0.13807290852462017,
+            "clustered_sign_p": 0.11892045255943628,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.62,
+            "dataset_signflip_perm_p": 0.1391860813918608,
+            "within_dataset_signflip_perm_p": 0.1366863313668633
+          }
+        },
+        "direction": {
+          "nb_stochastic": {
+            "r_var_signed_expr_median": 1.0398084211516236,
+            "r_var_frac_gt1_expr_median": 0.5418256997455471,
+            "r_var_abs_log2_expr_median": 0.43504915881177764,
+            "energy_median": 1.1704887000507336,
+            "r_var_signed_topk_median": 0.9971247877939944
+          },
+          "poisson_on_mean": {
+            "r_var_signed_expr_median": 0.8435977447036254,
+            "r_var_frac_gt1_expr_median": 0.3073383084577115,
+            "r_var_abs_log2_expr_median": 0.37561604372700275,
+            "energy_median": 1.1329310679753428,
+            "r_var_signed_topk_median": 0.8025537665541638
+          }
+        },
+        "energy_redraw": {
+          "n_redraws": 10,
+          "naive_p": [
+            0.02787807835433794,
+            0.05390764523477486,
+            0.021434808303767393,
+            0.030257682858106087,
+            0.08077320081393112,
+            0.027701905613357912,
+            0.015071042465712088,
+            0.019188406196111105,
+            0.03516491843437689,
+            0.02850231058337422
+          ],
+          "clustered_wilcoxon_p": [
+            0.06780369678404519,
+            0.23352895058251377,
+            0.06780369678404519,
+            0.07719592312590784,
+            0.2999546071877397,
+            0.09130577606126522,
+            0.09130577606126522,
+            0.09130577606126522,
+            0.20795951830847592,
+            0.060701401498306495
+          ],
+          "clustered_sign_p": [
+            0.06490864707227217,
+            0.3222363203575469,
+            0.11892045255943628,
+            0.015346677832630107,
+            0.3222363203575469,
+            0.06490864707227217,
+            0.032839137564268484,
+            0.032839137564268484,
+            0.20263875106454066,
+            0.0026021714567221466
+          ],
+          "naive_p_min": 0.015071042465712088,
+          "naive_p_max": 0.08077320081393112,
+          "naive_p_median": 0.02819019446885608,
+          "clustered_wilcoxon_p_min": 0.060701401498306495,
+          "clustered_wilcoxon_p_max": 0.2999546071877397,
+          "clustered_wilcoxon_p_median": 0.09130577606126522,
+          "any_clustered_gt_0.05": true
+        },
+        "train_meta": {
+          "n_epochs_trained": 85,
+          "dispersion": "gene"
+        }
+      }
+    },
+    "gene-cell": {
+      "0": {
+        "model": "scvi_gene_cell_seed0",
+        "seed": 0,
+        "n_groups": 314,
+        "gate": {
+          "det_log_pearson": 0.7419554779881322,
+          "model_mean_log_pearson": 0.549296787366611,
+          "gap_vs_det": 0.1926586906215212,
+          "gate_passed": false,
+          "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+        },
+        "theta_summary": {
+          "median": 0.28045012056827545,
+          "min": 6.62366028691963e-09,
+          "max": 4002.821044921875,
+          "is_amortized": true
+        },
+        "contrasts": {
+          "rvar_expressed": {
+            "metric": "r_var_abs_log2_expr",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.321656050955414,
+            "median_paired_diff_nb_minus_pois": -0.02673139401608879,
+            "naive_p": 2.945606415751405e-14,
+            "clustered_wilcoxon_p": 1.5207189122179443e-05,
+            "clustered_sign_p": 9.021490107130603e-05,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.22,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "rvar_topk": {
+            "metric": "r_var_abs_log2_topk",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.2802547770700637,
+            "median_paired_diff_nb_minus_pois": -0.04259818362053912,
+            "naive_p": 3.7281214434783493e-19,
+            "clustered_wilcoxon_p": 2.1002898957789284e-06,
+            "clustered_sign_p": 1.163555804595262e-06,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.16,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "energy": {
+            "metric": "energy_distance",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.03503184713375796,
+            "median_paired_diff_nb_minus_pois": -0.28812738621171974,
+            "naive_p": 3.3180541827970605e-52,
+            "clustered_wilcoxon_p": 1.7763568394002505e-15,
+            "clustered_sign_p": 1.7763568394002505e-15,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.0,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          }
+        },
+        "direction": {
+          "nb_stochastic": {
+            "r_var_signed_expr_median": 0.961993287978968,
+            "r_var_frac_gt1_expr_median": 0.45255544566431627,
+            "r_var_abs_log2_expr_median": 0.3458236651014481,
+            "energy_median": 0.95507341515835,
+            "r_var_signed_topk_median": 0.9273278002589816
+          },
+          "poisson_on_mean": {
+            "r_var_signed_expr_median": 0.8294034787222582,
+            "r_var_frac_gt1_expr_median": 0.2749281117349035,
+            "r_var_abs_log2_expr_median": 0.3651408983103849,
+            "energy_median": 1.3190399093643634,
+            "r_var_signed_topk_median": 0.794992806983978
+          }
+        },
+        "energy_redraw": {
+          "n_redraws": 10,
+          "naive_p": [
+            3.0755875035846666e-52,
+            1.739491698710942e-52,
+            6.580884258769755e-53,
+            5.868225985071719e-53,
+            7.103229621966602e-53,
+            1.0603068885586722e-52,
+            1.8069304116707652e-52,
+            7.035743333358865e-53,
+            1.913000232015156e-52,
+            1.166301940746783e-52
+          ],
+          "clustered_wilcoxon_p": [
+            1.7763568394002505e-15,
+            3.552713678800501e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            3.552713678800501e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15
+          ],
+          "clustered_sign_p": [
+            1.7763568394002505e-15,
+            9.059419880941277e-14,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            9.059419880941277e-14,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15
+          ],
+          "naive_p_min": 5.868225985071719e-53,
+          "naive_p_max": 3.0755875035846666e-52,
+          "naive_p_median": 1.1133044146527277e-52,
+          "clustered_wilcoxon_p_min": 1.7763568394002505e-15,
+          "clustered_wilcoxon_p_max": 3.552713678800501e-15,
+          "clustered_wilcoxon_p_median": 1.7763568394002505e-15,
+          "any_clustered_gt_0.05": false
+        },
+        "train_meta": {
+          "n_epochs_trained": 85,
+          "dispersion": "gene-cell"
+        }
+      },
+      "1": {
+        "model": "scvi_gene_cell_seed1",
+        "seed": 1,
+        "n_groups": 314,
+        "gate": {
+          "det_log_pearson": 0.7419554779881322,
+          "model_mean_log_pearson": 0.5545965497120104,
+          "gap_vs_det": 0.18735892827612177,
+          "gate_passed": false,
+          "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+        },
+        "theta_summary": {
+          "median": 0.2721173167228699,
+          "min": 4.5779348312180446e-08,
+          "max": 2181.487060546875,
+          "is_amortized": true
+        },
+        "contrasts": {
+          "rvar_expressed": {
+            "metric": "r_var_abs_log2_expr",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.3248407643312102,
+            "median_paired_diff_nb_minus_pois": -0.0266769468003534,
+            "naive_p": 1.181328865533694e-12,
+            "clustered_wilcoxon_p": 7.155652345502972e-05,
+            "clustered_sign_p": 0.000936222910851825,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.26,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "rvar_topk": {
+            "metric": "r_var_abs_log2_topk",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.30254777070063693,
+            "median_paired_diff_nb_minus_pois": -0.04172894714379591,
+            "naive_p": 7.680170931791497e-17,
+            "clustered_wilcoxon_p": 9.040639391599825e-05,
+            "clustered_sign_p": 0.006600447966810918,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.3,
+            "dataset_signflip_perm_p": 0.00029997000299970003,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "energy": {
+            "metric": "energy_distance",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.03503184713375796,
+            "median_paired_diff_nb_minus_pois": -0.2915336231755852,
+            "naive_p": 3.349670944674337e-52,
+            "clustered_wilcoxon_p": 1.7763568394002505e-15,
+            "clustered_sign_p": 1.7763568394002505e-15,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.0,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          }
+        },
+        "direction": {
+          "nb_stochastic": {
+            "r_var_signed_expr_median": 0.962960954871311,
+            "r_var_frac_gt1_expr_median": 0.44922383847155883,
+            "r_var_abs_log2_expr_median": 0.3430506866348867,
+            "energy_median": 0.9401704383247376,
+            "r_var_signed_topk_median": 0.919255064151002
+          },
+          "poisson_on_mean": {
+            "r_var_signed_expr_median": 0.826307349766231,
+            "r_var_frac_gt1_expr_median": 0.2700235732690094,
+            "r_var_abs_log2_expr_median": 0.37134610150475633,
+            "energy_median": 1.3374356435713404,
+            "r_var_signed_topk_median": 0.7951599895145604
+          }
+        },
+        "energy_redraw": {
+          "n_redraws": 10,
+          "naive_p": [
+            1.9312716767109343e-52,
+            4.405124279387624e-53,
+            1.913000232015156e-52,
+            1.968337507128348e-52,
+            1.0502500812179745e-52,
+            1.894900922548342e-52,
+            8.354299760666723e-53,
+            1.566683115814858e-52,
+            5.13337280978985e-53,
+            1.3075077587070476e-52
+          ],
+          "clustered_wilcoxon_p": [
+            3.552713678800501e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            3.552713678800501e-15,
+            3.552713678800501e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            3.552713678800501e-15,
+            1.7763568394002505e-15
+          ],
+          "clustered_sign_p": [
+            9.059419880941277e-14,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            9.059419880941277e-14,
+            9.059419880941277e-14,
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            9.059419880941277e-14,
+            1.7763568394002505e-15
+          ],
+          "naive_p_min": 4.405124279387624e-53,
+          "naive_p_max": 1.968337507128348e-52,
+          "naive_p_median": 1.4370954372609528e-52,
+          "clustered_wilcoxon_p_min": 1.7763568394002505e-15,
+          "clustered_wilcoxon_p_max": 3.552713678800501e-15,
+          "clustered_wilcoxon_p_median": 1.7763568394002505e-15,
+          "any_clustered_gt_0.05": false
+        },
+        "train_meta": {
+          "n_epochs_trained": 85,
+          "dispersion": "gene-cell"
+        }
+      },
+      "2": {
+        "model": "scvi_gene_cell_seed2",
+        "seed": 2,
+        "n_groups": 314,
+        "gate": {
+          "det_log_pearson": 0.7419554779881322,
+          "model_mean_log_pearson": 0.5514654999233469,
+          "gap_vs_det": 0.1904899780647853,
+          "gate_passed": false,
+          "note": "one-sided underfit guard; governs mean/procedure conclusions only; does NOT gate the dispersion contrast (mu held fixed in both arms)."
+        },
+        "theta_summary": {
+          "median": 0.2823766767978668,
+          "min": 3.4204369114831934e-08,
+          "max": 2100.117919921875,
+          "is_amortized": true
+        },
+        "contrasts": {
+          "rvar_expressed": {
+            "metric": "r_var_abs_log2_expr",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.31528662420382164,
+            "median_paired_diff_nb_minus_pois": -0.026024790581757412,
+            "naive_p": 7.966122269332753e-14,
+            "clustered_wilcoxon_p": 7.239255257474042e-07,
+            "clustered_sign_p": 0.00030586400160359517,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.24,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "rvar_topk": {
+            "metric": "r_var_abs_log2_topk",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.25477707006369427,
+            "median_paired_diff_nb_minus_pois": -0.0433243901801984,
+            "naive_p": 2.1117307055426938e-20,
+            "clustered_wilcoxon_p": 7.239255257474042e-07,
+            "clustered_sign_p": 5.614100093254137e-06,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.18,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          },
+          "energy": {
+            "metric": "energy_distance",
+            "n_groups": 314,
+            "poisson_win_fraction_groups": 0.041401273885350316,
+            "median_paired_diff_nb_minus_pois": -0.2716513683972792,
+            "naive_p": 2.692963521521702e-52,
+            "clustered_wilcoxon_p": 3.552713678800501e-15,
+            "clustered_sign_p": 9.059419880941277e-14,
+            "clustered_n_datasets": 50,
+            "poisson_win_fraction_datasets": 0.02,
+            "dataset_signflip_perm_p": 9.999000099990002e-05,
+            "within_dataset_signflip_perm_p": 9.999000099990002e-05
+          }
+        },
+        "direction": {
+          "nb_stochastic": {
+            "r_var_signed_expr_median": 0.9594853447078289,
+            "r_var_frac_gt1_expr_median": 0.44950182499753377,
+            "r_var_abs_log2_expr_median": 0.3388791850912098,
+            "energy_median": 0.9374697801036405,
+            "r_var_signed_topk_median": 0.9182569285359017
+          },
+          "poisson_on_mean": {
+            "r_var_signed_expr_median": 0.8231597853254269,
+            "r_var_frac_gt1_expr_median": 0.2783625730994152,
+            "r_var_abs_log2_expr_median": 0.3789879567455046,
+            "energy_median": 1.3390684018562444,
+            "r_var_signed_topk_median": 0.7945079996545009
+          }
+        },
+        "energy_redraw": {
+          "n_redraws": 10,
+          "naive_p": [
+            4.0874808587488896e-52,
+            7.932888246531395e-51,
+            1.1135701921627672e-51,
+            4.0874808587488896e-52,
+            5.802293744635339e-52,
+            4.756371298897642e-52,
+            2.035212233346586e-51,
+            7.56108090741116e-52,
+            3.8922138378193425e-51,
+            1.685938860777527e-51
+          ],
+          "clustered_wilcoxon_p": [
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            3.552713678800501e-15,
+            1.7763568394002505e-15,
+            3.552713678800501e-15,
+            3.552713678800501e-15,
+            3.552713678800501e-15,
+            8.881784197001252e-15,
+            3.552713678800501e-15,
+            1.7763568394002505e-15
+          ],
+          "clustered_sign_p": [
+            1.7763568394002505e-15,
+            1.7763568394002505e-15,
+            9.059419880941277e-14,
+            1.7763568394002505e-15,
+            9.059419880941277e-14,
+            9.059419880941277e-14,
+            9.059419880941277e-14,
+            9.059419880941277e-14,
+            9.059419880941277e-14,
+            1.7763568394002505e-15
+          ],
+          "naive_p_min": 4.0874808587488896e-52,
+          "naive_p_max": 7.932888246531395e-51,
+          "naive_p_median": 9.348391414519417e-52,
+          "clustered_wilcoxon_p_min": 1.7763568394002505e-15,
+          "clustered_wilcoxon_p_max": 8.881784197001252e-15,
+          "clustered_wilcoxon_p_median": 3.552713678800501e-15,
+          "any_clustered_gt_0.05": false
+        },
+        "train_meta": {
+          "n_epochs_trained": 85,
+          "dispersion": "gene-cell"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=1.5cm},width=6.1cm, height=5.4cm, tick label style={font=\footnotesize}, label style={font=\footnotesize}, clip=false]
+\nextgroupplot[title={Eight datasets, 512 dimensions}, xlabel={Dataset index}, ylabel={tightness ratio (enc/raw)}, xmin=0.4, xmax=8.6, ymin=0.80, ymax=1.06, xtick={1,2,3,4,5,6,7,8}, legend style={font=\footnotesize, at={(0.02,0.03)}, anchor=south west, draw=none, fill=none, legend columns=2, /tikz/every even column/.append style={column sep=4pt}}]
+\addplot[hgray, dashed, thick, forget plot, domain=0.4:8.6]{1.0}; \node[font=\footnotesize, black, anchor=north east] at (axis cs:8.6,1.055){identity $=1.00$};
+\addplot[only marks, mark=*, mark size=1.6pt, color=hblue] coordinates {
+  (1,0.9082)
+  (2,0.9206)
+  (3,0.9352)
+  (4,0.9264)
+  (5,0.8905)
+  (6,0.8968)
+  (7,0.8725)
+  (8,0.8935)
+}; \addlegendentry{PCA-512}
+\addplot[only marks, mark=square*, mark size=1.6pt, color=horange, error bars/.cd, y dir=both, y explicit] coordinates {
+  (1,0.9907) +- (0,0.0153)
+  (2,1.0097) +- (0,0.0093)
+  (3,1.0027) +- (0,0.0094)
+  (4,0.9976) +- (0,0.0141)
+  (5,1.0011) +- (0,0.0126)
+  (6,0.9999) +- (0,0.0148)
+  (7,1.0012) +- (0,0.0160)
+  (8,0.9935) +- (0,0.0157)
+}; \addlegendentry{randproj-512}
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={Effect of appended noise}, xlabel={Appended noise dimensions (log scale)}, ylabel={tightness ratio (enc/raw)}, xmode=log, log basis x=10, xtick={50,200,800,2000}, xticklabels={50,200,800,2000}, ymin=0.4, ymax=2.7, legend style={font=\footnotesize, at={(0.02,0.98)}, anchor=north west, draw=none}]
+\addplot[hgray, dashed, forget plot, domain=40:2600, samples=2]{1.0};
+\node[font=\footnotesize, black, anchor=south east] at (axis cs:2400,1.045){identity $=1.00$};
+\addplot[hgray, densely dotted, thick, forget plot, domain=40:2600, samples=2]{0.602};
+\node[font=\footnotesize, black, anchor=south east] at (axis cs:2400,0.615){0 noise dims $=0.602$};
+\addplot[color=hgreen, mark=*, thick, mark size=1.6pt] coordinates {
+  (50,0.7804)
+  (200,1.0994)
+  (800,1.7842)
+  (2000,2.4935)
+};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}
+
+\endgroup

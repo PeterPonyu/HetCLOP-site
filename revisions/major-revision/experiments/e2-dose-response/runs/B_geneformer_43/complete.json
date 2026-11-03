@@ -1,0 +1,10 @@
+{
+  "design_sha256": "32b42b08603d848ff3f48077646ec87acededdd35815261170f68e450f0a34f7",
+  "files": {
+    "mu.npy": "14dfc84bb0014c9f88a8a1d6a8f538be516a010b8b1a9f317476fa145479881e",
+    "theta.npy": "d7e2df9ca06030cf0eaa5a46b8c5451af119d948d8978649caff51d987cfd2d6",
+    "fit.json": "5b9a9f74fd9ca040a079a08c833247b0acf2d05d62ff6f5a6e8c42e8408a2c9f",
+    "groups.csv": "b6d8fff5caf83e1993d9356e3f1499ddcc0a5303a2c164c4d886fcd10bc8b5b5",
+    "excluded.json": "5bb11bc92573a99bbd30b39eb9e9c06ebe17c31a35f4b54baef98c0dc29e66fc"
+  }
+}

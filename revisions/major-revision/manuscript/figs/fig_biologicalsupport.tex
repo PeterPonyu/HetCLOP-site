@@ -1,0 +1,43 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}
+
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=3.0cm},width=5.4cm,height=5.2cm,scale only axis,tick align=outside,tick pos=left,tick label style={font=\footnotesize},label style={font=\footnotesize},legend style={font=\footnotesize,draw=none,at={(1.22,1.20)},anchor=south,legend columns=3}]
+\nextgroupplot[title={Same 69 cell types},ylabel={Marker recall},xmin=.55,xmax=2.45,ymin=0,ymax=.87,xtick={1,2},xticklabels={Fixed mean,End-to-end}]
+\draw[hblue,line width=.8pt] (axis cs:0.8200000000000001,0.7553623)--(axis cs:0.8200000000000001,0.7617391);
+\addplot[only marks,mark=*,mark size=1.2pt,hblue,forget plot] coordinates {(0.7850,0.7553623) (0.8200,0.7617391) (0.8550,0.7594203)};
+\addplot[only marks,mark=diamond*,mark size=2.3pt,hblue,forget plot] coordinates {(0.8200000000000001,0.7588406)};
+\draw[hblue,line width=.8pt] (axis cs:1.82,0.2802899)--(axis cs:1.82,0.2947826);
+\addplot[only marks,mark=*,mark size=1.2pt,hblue,forget plot] coordinates {(1.7850,0.2947826) (1.8200,0.2910145) (1.8550,0.2802899)};
+\addplot[only marks,mark=diamond*,mark size=2.3pt,hblue,forget plot] coordinates {(1.82,0.2886957)};
+\addlegendimage{hblue,mark=diamond*}\addlegendentry{Poisson}
+\draw[horange,line width=.8pt] (axis cs:1.0,0.5623188)--(axis cs:1.0,0.5666667);
+\addplot[only marks,mark=*,mark size=1.2pt,horange,forget plot] coordinates {(0.9650,0.5666667) (1.0000,0.5652174) (1.0350,0.5623188)};
+\addplot[only marks,mark=diamond*,mark size=2.3pt,horange,forget plot] coordinates {(1.0,0.5647343)};
+\draw[horange,line width=.8pt] (axis cs:2.0,0.2626087)--(axis cs:2.0,0.2707246);
+\addplot[only marks,mark=*,mark size=1.2pt,horange,forget plot] coordinates {(1.9650,0.2707246) (2.0000,0.2637681) (2.0350,0.2626087)};
+\addplot[only marks,mark=diamond*,mark size=2.3pt,horange,forget plot] coordinates {(2.0,0.2657005)};
+\addlegendimage{horange,mark=diamond*}\addlegendentry{Global}
+\draw[hgreen,line width=.8pt] (axis cs:1.18,0.8011594)--(axis cs:1.18,0.8028986);
+\addplot[only marks,mark=*,mark size=1.2pt,hgreen,forget plot] coordinates {(1.1450,0.8011594) (1.1800,0.8028986) (1.2150,0.8014493)};
+\addplot[only marks,mark=diamond*,mark size=2.3pt,hgreen,forget plot] coordinates {(1.18,0.8018357)};
+\draw[hgreen,line width=.8pt] (axis cs:2.18,0.2530435)--(axis cs:2.18,0.2739130);
+\addplot[only marks,mark=*,mark size=1.2pt,hgreen,forget plot] coordinates {(2.1450,0.2739130) (2.1800,0.2663768) (2.2150,0.2530435)};
+\addplot[only marks,mark=diamond*,mark size=2.3pt,hgreen,forget plot] coordinates {(2.18,0.2644444)};
+\addlegendimage{hgreen,mark=diamond*}\addlegendentry{Conditional}
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={Within-stage contrasts},xlabel={Conditional minus comparator},xmin=-.06,xmax=.27,ymin=.5,ymax=4.5,ytick={4,3,2,1},yticklabels={Fixed: Poisson,Fixed: global,End-to-end: Poisson,End-to-end: global},yticklabel style={font=\scriptsize},xtick={0,.1,.2}]
+\draw[hgray,dashed] (axis cs:0,.5)--(axis cs:0,4.5);
+\draw[hblue,line width=.8pt] (axis cs:0.0411594,4)--(axis cs:0.0457971,4);
+\addplot[only marks,mark=*,mark size=1.2pt,hblue,forget plot] coordinates {(0.0457971,3.92) (0.0411594,4.0) (0.0420290,4.08)};
+\addplot[only marks,mark=diamond*,mark size=2.2pt,hblue,forget plot] coordinates {(0.0429952,4)};
+\draw[horange,line width=.8pt] (axis cs:0.2344928,3)--(axis cs:0.2391304,3);
+\addplot[only marks,mark=*,mark size=1.2pt,horange,forget plot] coordinates {(0.2344928,2.92) (0.2376812,3.0) (0.2391304,3.08)};
+\addplot[only marks,mark=diamond*,mark size=2.2pt,horange,forget plot] coordinates {(0.2371014,3)};
+\draw[hblue,line width=.8pt] (axis cs:-0.0272464,2)--(axis cs:-0.0208696,2);
+\addplot[only marks,mark=*,mark size=1.2pt,hblue,forget plot] coordinates {(-0.0208696,1.92) (-0.0246377,2.0) (-0.0272464,2.08)};
+\addplot[only marks,mark=diamond*,mark size=2.2pt,hblue,forget plot] coordinates {(-0.0242512,2)};
+\draw[horange,line width=.8pt] (axis cs:-0.0095652,1)--(axis cs:0.0031884,1);
+\addplot[only marks,mark=*,mark size=1.2pt,horange,forget plot] coordinates {(0.0031884,0.92) (0.0026087,1.0) (-0.0095652,1.08)};
+\addplot[only marks,mark=diamond*,mark size=2.2pt,horange,forget plot] coordinates {(-0.0012560,1)};
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}\endgroup

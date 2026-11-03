@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "design-hash": {
+      "pass": true,
+      "detail": ""
+    },
+    "fifty-datasets": {
+      "pass": true,
+      "detail": ""
+    },
+    "summary-means-recomputed": {
+      "pass": true,
+      "detail": ""
+    },
+    "rare-recall-recomputed": {
+      "pass": true,
+      "detail": ""
+    }
+  }
+}

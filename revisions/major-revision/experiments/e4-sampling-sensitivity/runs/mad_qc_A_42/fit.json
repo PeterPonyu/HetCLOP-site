@@ -1,0 +1,13 @@
+{
+  "variant": "mad_qc",
+  "arm": "A",
+  "seed": 42,
+  "best_validation_nll": 0.2647220492362976,
+  "n_parameters": 12875656,
+  "n_train": 90034,
+  "n_validation": 19274,
+  "n_test": 19340,
+  "seconds": 67.80567598342896,
+  "device": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "torch": "2.12.1+cu130"
+}

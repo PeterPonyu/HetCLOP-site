@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": {
+    "design_hash": true,
+    "reference_reproduces_cache": true,
+    "all_fits_complete": true,
+    "finite_primary_metrics": true,
+    "reference_groups_match_original_314": true,
+    "summary_effects_recomputed": true,
+    "interval_contains_estimate": true
+  },
+  "fits": 48,
+  "group_rows": 15456,
+  "max_recompute_error": 9.367506770274758e-17
+}

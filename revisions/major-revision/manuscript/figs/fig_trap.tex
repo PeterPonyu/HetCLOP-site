@@ -1,0 +1,23 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=1.7cm},width=6.2cm, height=5.4cm, tick label style={font=\footnotesize}, label style={font=\footnotesize}, xmin=0.550, xmax=4.150, ymin=0, xtick={1,1.9,2.8,3.7}, xticklabels={{PCA-512},{randproj},{scGPT},{Geneformer}}, x tick label style={font=\footnotesize, rotate=45, anchor=east}, enlarge x limits=0,legend style={font=\footnotesize, at={(1.14,1.19)}, anchor=south, legend columns=4, draw=none}, legend cell align=left]
+\nextgroupplot[title={Decoded tightness}, ylabel={decoded tightness ratio (higher looks better)}, ymax=1.42]
+\addplot[draw=black!30, fill=hgray,area legend, mark=, ybar, bar width=0.15] coordinates {(0.752,0.7579) (1.652,0.7318) (2.552,0.6017) (3.453,0.5799)}; \addlegendentry{determ.}
+\addplot[draw=black!30, fill=holive,area legend, mark=, ybar, bar width=0.15] coordinates {(0.917,1.0832) (1.817,1.1185) (2.717,1.1305) (3.618,1.1036)}; \addlegendentry{$\beta$-NLL}
+\addplot[draw=black!30, fill=hviolet,area legend, mark=, ybar, bar width=0.15] coordinates {(1.083,1.1136) (1.982,1.1681) (2.882,1.2435) (3.783,1.2112)}; \addlegendentry{matched}
+\addplot[draw=black!30, fill=hbrown,area legend, mark=, ybar, bar width=0.15] coordinates {(1.248,1.1037) (2.147,1.1662) (3.047,1.2416) (3.948,1.1891)}; \addlegendentry{matched/type}
+\draw[hgray, dashed, thin] (axis cs:0.887,0.5) -- (axis cs:3.812,0.5);
+\node[font=\footnotesize, anchor=north] at (rel axis cs:0.5,0.99){higher scores with added noise};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={Energy distance}, ylabel={energy distance (lower is better)}, ymax=2.5]
+\addplot[draw=black!30, fill=hgray,area legend, mark=, ybar, bar width=0.15] coordinates {(0.752,1.0120) (1.652,1.2871) (2.552,2.2819) (3.453,2.1800)};
+\addplot[draw=black!30, fill=holive,area legend, mark=, ybar, bar width=0.15] coordinates {(0.917,0.9300) (1.817,1.0611) (2.717,1.2427) (3.618,1.1849)};
+\addplot[draw=black!30, fill=hviolet,area legend, mark=, ybar, bar width=0.15] coordinates {(1.083,1.0122) (1.982,1.2092) (2.882,1.6169) (3.783,1.4658)};
+\addplot[draw=black!30, fill=hbrown,area legend, mark=, ybar, bar width=0.15] coordinates {(1.248,0.9513) (2.147,1.1268) (3.047,1.4392) (3.948,1.3129)};
+\node[font=\footnotesize, anchor=north] at (rel axis cs:0.5,0.99){matched noise does not minimize distance};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}
+
+\endgroup

@@ -1,0 +1,80 @@
+\begingroup\sffamily\mdseries\sansmath
+% Experimental design (hand-authored; carries no result numbers).
+% (a) Arm A / Arm B geometries. (b) mean-fixed dispersion ablation.
+% Colour lock: hblue=Poisson, horange=global θ, hgreen=conditional θ.
+% Notes: shared gray italic. Fork gap ~1.6cm (middle ground: not cramped, not stretched).
+\begin{tikzpicture}[font=\sffamily\mdseries\small,
+  genes/.style={rectangle, rounded corners=2pt, align=center, draw=hgray!70!black, line width=0.65pt,
+                fill=white, text width=2.00cm, minimum height=0.85cm, inner sep=2.5pt, outer sep=1.2pt,
+                font=\footnotesize},
+  unseen/.style={genes, fill=hgray!8, draw=hgray, densely dotted},
+  model/.style={rectangle, rounded corners=2pt, align=center, draw=hgray, line width=0.65pt,
+                fill=hgray!14, minimum width=1.30cm, minimum height=0.85cm, inner sep=2pt,
+                font=\footnotesize, outer sep=1.2pt},
+  arm/.style={font=\small},
+  note/.style={font=\footnotesize, text=hgray!55!black, align=center},
+  arr/.style={-{Stealth[length=2.0mm]}, line width=0.7pt, draw=hgray!50!black,
+              shorten <=0.8pt, shorten >=0.8pt},
+  panel/.style={rectangle, rounded corners=3pt, draw=hgray!30, fill=hgray!3, inner sep=8pt}]
+
+% ---- panel (a) ----
+\node[panel, minimum width=9.50cm, minimum height=4.95cm, anchor=north west]
+  (pa) at (-0.60,0.90) {};
+\node[arm,anchor=base] at ([yshift=-0.40cm]pa.north) {Encoder--decoder geometry};
+\node[arm,anchor=base west,font=\small\bfseries] at ([xshift=0.10cm,yshift=-0.40cm]pa.north west) {(a)};
+
+\node[arm, font=\footnotesize] at (0.10,0.28) {Arm A};
+\node[genes] (aG) at (0.75,-0.30) {all \Cpanel{} panel genes};
+\node[model] (aE) at (2.95,-0.30) {encoder};
+\node[model] (aD) at (4.75,-0.30) {decoder};
+\node[genes] (aO) at (6.85,-0.30) {same \Cpanel{} targets};
+\draw[arr] (aG) -- (aE);
+\draw[arr] (aE) -- node[above, font=\footnotesize] {$Z$} (aD);
+\draw[arr] (aD) -- (aO);
+\node[note, font=\footnotesize] at (3.85,-1.05) {near-invertible: input $=$ target};
+
+\node[arm, font=\footnotesize] at (0.10,-1.65) {Arm B};
+\node[genes] (bG) at (0.75,-2.25) {seen half, \Cgin{} genes};
+\node[model] (bE) at (2.95,-2.25) {encoder};
+\node[model] (bD) at (4.75,-2.25) {decoder};
+\node[genes] (bO) at (6.85,-2.25) {unseen \Cgout{} genes};
+\node[unseen] (bX) at (0.75,-3.20) {held-out half, \Cgout{} genes};
+\draw[arr] (bG) -- (bE);
+\draw[arr] (bE) -- node[above, font=\footnotesize] {$Z$} (bD);
+\draw[arr] (bD) -- (bO);
+\coordinate (heldoutbend) at (bX.east -| bO.south);
+\draw[arr, densely dashed, draw=hgray] (bX.east)
+  -- node[above=1.5pt, font=\footnotesize] {target only; never encoded} (heldoutbend)
+  -- (bO.south);
+\node[note, font=\footnotesize] at (3.85,-3.80) {fixed random split; held-out genes skip the encoder};
+
+% ---- panel (b): middle-ground fork ----
+\node[panel, minimum width=5.55cm, minimum height=4.95cm, anchor=north west]
+  (pb) at (9.20,0.90) {};
+\node[arm,anchor=base] at ([yshift=-0.40cm]pb.north) {Mean-fixed ablation};
+\node[arm,anchor=base west,font=\small\bfseries] at ([xshift=0.10cm,yshift=-0.40cm]pb.north west) {(b)};
+
+\node[model, text width=1.85cm, minimum height=0.9cm, font=\footnotesize]
+  (mu) at (10.25,-1.15) {one fitted mean $\hat\mu_{ng}$, frozen};
+\node[rectangle, rounded corners=2pt, align=center, draw=hblue, line width=0.65pt, fill=hblue!10,
+      text width=2.20cm, minimum height=0.78cm, inner sep=2.5pt, font=\footnotesize, outer sep=1.2pt]
+  (pois) at (13.15,-0.25) {Poisson, $\theta\to\infty$};
+\node[rectangle, rounded corners=2pt, align=center, draw=horange, line width=0.65pt, fill=horange!12,
+      text width=2.20cm, minimum height=0.78cm, inner sep=2.5pt, font=\footnotesize, outer sep=1.2pt]
+  (glob) at (13.15,-1.15) {global $\theta_g$};
+\node[rectangle, rounded corners=2pt, align=center, draw=hgreen, line width=0.65pt, fill=hgreen!12,
+      text width=2.20cm, minimum height=0.78cm, inner sep=2.5pt, font=\footnotesize, outer sep=1.2pt]
+  (cond) at (13.15,-2.05) {conditional $\theta_{ng}$};
+\coordinate (bus) at ($(mu.east)!0.42!(glob.west)$);
+\draw[line width=0.7pt, draw=hgray!50!black] (mu.east) -- (bus);
+\draw[arr] (bus) |- (pois.west);
+\draw[arr] (bus) -- (glob.west);
+\draw[arr] (bus) |- (cond.west);
+\node[note] at ($(bus)!0.5!(glob.west)+(0,-1.45)$) {only dispersion varies};
+\node[font=\scriptsize, anchor=south] at ([yshift=0.10cm]pb.south) {%
+  {\color{hblue}\rule{1.6ex}{1.6ex}}~Poisson\quad
+  {\color{horange}\rule{1.6ex}{1.6ex}}~global\quad
+  {\color{hgreen}\rule{1.6ex}{1.6ex}}~conditional};
+\end{tikzpicture}
+
+\endgroup

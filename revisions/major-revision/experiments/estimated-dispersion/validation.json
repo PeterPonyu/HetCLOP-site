@@ -1,0 +1,11 @@
+{
+  "files": 120,
+  "group_rows": 77760,
+  "seed_summaries": 1080,
+  "unique_seeds": 30,
+  "complete_factorial": true,
+  "finite_primary_metrics": true,
+  "energy_missing_only_for_small_training_sizes": true,
+  "aggregation": "median within dataset, then median across 12 datasets within each seed; paired differences before across-seed summaries",
+  "interval": "central 95% of seed outcomes; not a confidence interval"
+}

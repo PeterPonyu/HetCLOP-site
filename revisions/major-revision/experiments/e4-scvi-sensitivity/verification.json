@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": {
+    "design-hash": {
+      "pass": true,
+      "detail": ""
+    },
+    "all-fits-present": {
+      "pass": true,
+      "detail": "48/48"
+    },
+    "group-tables-complete": {
+      "pass": true,
+      "detail": []
+    },
+    "identical-groups-within-corpus": {
+      "pass": true,
+      "detail": []
+    },
+    "summary-finite": {
+      "pass": true,
+      "detail": ""
+    }
+  }
+}

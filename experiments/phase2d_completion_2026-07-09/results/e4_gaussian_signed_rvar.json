@@ -1,0 +1,600 @@
+{
+  "purpose": "Phase 2d E4: SIGNED r_var for the Gaussian-arm variants (deterministic, stochastic_betanll, matched_noise, matched_noise_per_type) on pca_512 and scgpt_512, Arm A, 3 seeds -- recording the DIRECTION of variance miscalibration that only |log2 r_var| captured before. Reports BOTH the unrestricted signed r_var (degenerate/sparsity-pinned for resampled variants) and the expression-restricted direction stats (mean-count>=0.5 and top-200-variance: median signed ratio + fraction of genes with ratio>1), so the artefact is visible rather than hidden.",
+  "setting": "Arm A: encoders see 2500 panel genes; decoder predicts them; metric on log1p; real = logX[te].",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "encoders": [
+    "pca_512",
+    "scgpt_512"
+  ],
+  "variants": [
+    "deterministic",
+    "stochastic_betanll",
+    "matched_noise",
+    "matched_noise_per_type"
+  ],
+  "energy_subsample": 300,
+  "per_encoder": {
+    "pca_512": {
+      "gate_per_seed": {
+        "42": {
+          "det_pearson": 0.741955478023618,
+          "beta_used": 0.5,
+          "gate_passed": true
+        },
+        "43": {
+          "det_pearson": 0.7420573073556134,
+          "beta_used": 0.5,
+          "gate_passed": true
+        },
+        "44": {
+          "det_pearson": 0.7420775111299235,
+          "beta_used": 0.5,
+          "gate_passed": true
+        }
+      },
+      "variants": {
+        "deterministic": {
+          "unrestr_median_per_seed": [
+            0.24237081493652696,
+            0.2452012469370717,
+            0.24625366009811422
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.1797502363433602,
+              0.32218974562180114
+            ],
+            [
+              0.18158170280470054,
+              0.3238137900183221
+            ],
+            [
+              0.18141081711311427,
+              0.3212912699202459
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            2.047112097442742,
+            2.027962434268928,
+            2.02392627045415
+          ],
+          "expr_signed_per_seed": [
+            0.5141175428029532,
+            0.5187806744622204,
+            0.5192613519696436
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.005076665378172916,
+            0.005150309460654288,
+            0.004656634212980029
+          ],
+          "expr_meanlog2_per_seed": [
+            -1.2848590772629962,
+            -1.2855225980200413,
+            -1.2952312334357303
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.5425603755978226,
+            0.538194704350205,
+            0.5372725495142412
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.005,
+            0.005,
+            0.005
+          ],
+          "unrestr_median_mean": 0.24460857399057098,
+          "unrestr_median_sd": 0.0020081253828759848,
+          "expr_signed_mean": 0.5173865230782725,
+          "expr_signed_sd": 0.0028412033976565752,
+          "expr_frac_gt1_mean": 0.004961203017269078,
+          "expr_frac_gt1_sd": 0.0002663221360132805,
+          "topk_signed_mean": 0.5393425431540896,
+          "topk_signed_sd": 0.002824610878037581,
+          "topk_frac_gt1_mean": 0.005,
+          "topk_frac_gt1_sd": 0.0,
+          "direction_expr": "under_inflated(<1)"
+        },
+        "stochastic_betanll": {
+          "unrestr_median_per_seed": [
+            0.95888718499305,
+            0.9136574853619965,
+            0.9365437317596146
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.8803445123720415,
+              1.0544922709268627
+            ],
+            [
+              0.849715931098862,
+              1.0227462868975814
+            ],
+            [
+              0.8557269459464475,
+              1.051129770528593
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            0.7657811099542532,
+            0.7721410403077434,
+            0.759485821548602
+          ],
+          "expr_signed_per_seed": [
+            0.6980124523932528,
+            0.6692031659093705,
+            0.6784095122236826
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.12323981861181627,
+            0.1066017316017316,
+            0.11803405572755418
+          ],
+          "expr_meanlog2_per_seed": [
+            -0.6743276738652685,
+            -0.7203729747899077,
+            -0.6900275709631167
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.6939464513860122,
+            0.6745422569500028,
+            0.6885724760516411
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.13,
+            0.105,
+            0.12
+          ],
+          "unrestr_median_mean": 0.9363628007048871,
+          "unrestr_median_sd": 0.022615392638947348,
+          "expr_signed_mean": 0.6818750435087685,
+          "expr_signed_sd": 0.014713978973871557,
+          "expr_frac_gt1_mean": 0.11595853531370066,
+          "expr_frac_gt1_sd": 0.008511011901062586,
+          "topk_signed_mean": 0.685687061462552,
+          "topk_signed_sd": 0.010018727635823338,
+          "topk_frac_gt1_mean": 0.11833333333333333,
+          "topk_frac_gt1_sd": 0.01258305739211792,
+          "direction_expr": "under_inflated(<1)"
+        },
+        "matched_noise": {
+          "unrestr_median_per_seed": [
+            0.9718017927424201,
+            0.9826477499531231,
+            0.9830950846745736
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.8010583461817784,
+              1.4076005150030155
+            ],
+            [
+              0.7972937019214617,
+              1.4049018015502004
+            ],
+            [
+              0.8017587209205589,
+              1.4111720437757924
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            0.8387908796444691,
+            0.8384578102621225,
+            0.8343803481072622
+          ],
+          "expr_signed_per_seed": [
+            0.6451660206217947,
+            0.6473422987938631,
+            0.6424833810374704
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.030303030303030304,
+            0.02766257020859797,
+            0.029197080291970802
+          ],
+          "expr_meanlog2_per_seed": [
+            -0.8104714431379494,
+            -0.815342923007609,
+            -0.8233072857588295
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.7032188591079814,
+            0.7022748321525539,
+            0.7049458825587193
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "unrestr_median_mean": 0.9791815424567055,
+          "unrestr_median_sd": 0.0063949633675555026,
+          "expr_signed_mean": 0.644997233484376,
+          "expr_signed_sd": 0.0024338523505269445,
+          "expr_frac_gt1_mean": 0.029054226934533023,
+          "expr_frac_gt1_sd": 0.0013260138343436831,
+          "topk_signed_mean": 0.7034798579397515,
+          "topk_signed_sd": 0.0013545175748981692,
+          "topk_frac_gt1_mean": 0.04,
+          "topk_frac_gt1_sd": 0.0,
+          "direction_expr": "under_inflated(<1)"
+        },
+        "matched_noise_per_type": {
+          "unrestr_median_per_seed": [
+            0.8777578847620242,
+            0.8759602029065914,
+            0.8771652685323121
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.7583883004418,
+              1.1200664870695365
+            ],
+            [
+              0.7566802566311508,
+              1.1177075185058383
+            ],
+            [
+              0.7495953418785466,
+              1.11319223310729
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            0.7433199302411839,
+            0.7515275002370544,
+            0.7488156725847849
+          ],
+          "expr_signed_per_seed": [
+            0.7365922094123214,
+            0.7348497105085445,
+            0.7355861462912687
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.07056186621404012,
+            0.07193259809324658,
+            0.07166199813258636
+          ],
+          "expr_meanlog2_per_seed": [
+            -0.5474277485765437,
+            -0.5436947562590704,
+            -0.54455161948828
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.7635451256778194,
+            0.7612516878338388,
+            0.7619806483837346
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.09,
+            0.095,
+            0.0925
+          ],
+          "unrestr_median_mean": 0.8769611187336426,
+          "unrestr_median_sd": 0.0009160637906612855,
+          "expr_signed_mean": 0.7356760220707116,
+          "expr_signed_sd": 0.0008747192973827306,
+          "expr_frac_gt1_mean": 0.07138548747995768,
+          "expr_frac_gt1_sd": 0.0007259959207399646,
+          "topk_signed_mean": 0.762259153965131,
+          "topk_signed_sd": 0.001171809841741526,
+          "topk_frac_gt1_mean": 0.09249999999999999,
+          "topk_frac_gt1_sd": 0.0025000000000000022,
+          "direction_expr": "under_inflated(<1)"
+        }
+      }
+    },
+    "scgpt_512": {
+      "gate_per_seed": {
+        "42": {
+          "det_pearson": 0.6900453040244693,
+          "beta_used": 0.5,
+          "gate_passed": true
+        },
+        "43": {
+          "det_pearson": 0.6908217726179539,
+          "beta_used": 0.5,
+          "gate_passed": true
+        },
+        "44": {
+          "det_pearson": 0.691287255970285,
+          "beta_used": 0.5,
+          "gate_passed": true
+        }
+      },
+      "variants": {
+        "deterministic": {
+          "unrestr_median_per_seed": [
+            0.12062459783904561,
+            0.12379612040906011,
+            0.12162820058698573
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.06833154357691149,
+              0.20759764858662413
+            ],
+            [
+              0.06732899294768074,
+              0.20745445226685305
+            ],
+            [
+              0.06477764626768787,
+              0.20695229223746198
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            3.0702201511992726,
+            3.013968785963992,
+            3.0394604519369417
+          ],
+          "expr_signed_per_seed": [
+            0.23641859012171076,
+            0.24461770503365682,
+            0.24639233485212061
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.006873582766439909,
+            0.007490741779822691,
+            0.007220227062094532
+          ],
+          "expr_meanlog2_per_seed": [
+            -2.1541988421843374,
+            -2.1271907452228893,
+            -2.115883076980262
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.2257186368983879,
+            0.23056116638542867,
+            0.23518624789355935
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.005,
+            0.005,
+            0.005
+          ],
+          "unrestr_median_mean": 0.12201630627836384,
+          "unrestr_median_sd": 0.001620989936362314,
+          "expr_signed_mean": 0.24247621000249608,
+          "expr_signed_sd": 0.005320563571014748,
+          "expr_frac_gt1_mean": 0.007194850536119044,
+          "expr_frac_gt1_sd": 0.00030936109645985,
+          "topk_signed_mean": 0.23048868372579198,
+          "topk_signed_sd": 0.004734221666856537,
+          "topk_frac_gt1_mean": 0.005,
+          "topk_frac_gt1_sd": 0.0,
+          "direction_expr": "under_inflated(<1)"
+        },
+        "stochastic_betanll": {
+          "unrestr_median_per_seed": [
+            0.9767528204167332,
+            0.940549288568227,
+            0.9492375872800731
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.8942530941616084,
+              1.0748484576939006
+            ],
+            [
+              0.8646278044955341,
+              1.0201257279010743
+            ],
+            [
+              0.8783373034726983,
+              1.044156513026312
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            0.7848440642069391,
+            0.7953689501098326,
+            0.7843283627964395
+          ],
+          "expr_signed_per_seed": [
+            0.6841774878593896,
+            0.6565082488676263,
+            0.6645273645418606
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.1992484868746387,
+            0.179226096983013,
+            0.18755863039399623
+          ],
+          "expr_meanlog2_per_seed": [
+            -0.6079499247878484,
+            -0.6699929865626681,
+            -0.638460829324451
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.6783603668807756,
+            0.6489058855477373,
+            0.6598796555994075
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.205,
+            0.18,
+            0.195
+          ],
+          "unrestr_median_mean": 0.9555132320883444,
+          "unrestr_median_sd": 0.018900045446933134,
+          "expr_signed_mean": 0.6684043670896255,
+          "expr_signed_sd": 0.014236223451546433,
+          "expr_frac_gt1_mean": 0.18867773808388266,
+          "expr_frac_gt1_sd": 0.010057998098987733,
+          "topk_signed_mean": 0.6623819693426402,
+          "topk_signed_sd": 0.014885825412174949,
+          "topk_frac_gt1_mean": 0.19333333333333336,
+          "topk_frac_gt1_sd": 0.012583057392117914,
+          "direction_expr": "under_inflated(<1)"
+        },
+        "matched_noise": {
+          "unrestr_median_per_seed": [
+            1.2080272708399202,
+            1.2085527089871817,
+            1.2046296557968725
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.8511315225807917,
+              1.8233814025483608
+            ],
+            [
+              0.8480585527236634,
+              1.835469407141578
+            ],
+            [
+              0.8489551306685191,
+              1.8348926188173098
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            1.0243099626079988,
+            1.0298228426091751,
+            1.0183727123892616
+          ],
+          "expr_signed_per_seed": [
+            0.6204295068628182,
+            0.6130542626792763,
+            0.606466982529366
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.1459918212224512,
+            0.14499289772727272,
+            0.14143292194261903
+          ],
+          "expr_meanlog2_per_seed": [
+            -0.7745015683340648,
+            -0.7579118301394954,
+            -0.7601702852841765
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.6595890580587978,
+            0.662354896141414,
+            0.6557252986598224
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.165,
+            0.17,
+            0.165
+          ],
+          "unrestr_median_mean": 1.2070698785413247,
+          "unrestr_median_sd": 0.0021295625357232607,
+          "expr_signed_mean": 0.6133169173571535,
+          "expr_signed_sd": 0.006984966861082363,
+          "expr_frac_gt1_mean": 0.14413921363078097,
+          "expr_frac_gt1_sd": 0.0023963457729146154,
+          "topk_signed_mean": 0.6592230842866781,
+          "topk_signed_sd": 0.0033299164093698866,
+          "topk_frac_gt1_mean": 0.16666666666666666,
+          "topk_frac_gt1_sd": 0.002886751345948131,
+          "direction_expr": "under_inflated(<1)"
+        },
+        "matched_noise_per_type": {
+          "unrestr_median_per_seed": [
+            0.9552288454753445,
+            0.9550309284546097,
+            0.9429737866072083
+          ],
+          "unrestr_iqr_per_seed": [
+            [
+              0.766050237569874,
+              1.3248789433703374
+            ],
+            [
+              0.7693826991460253,
+              1.2935702936680138
+            ],
+            [
+              0.7606683285064071,
+              1.3035814973907407
+            ]
+          ],
+          "abs_log2_median_per_seed": [
+            0.9015134774740575,
+            0.8977346440929843,
+            0.8962275954553428
+          ],
+          "expr_signed_per_seed": [
+            0.7411101893141439,
+            0.7416433860598254,
+            0.7345759292484666
+          ],
+          "expr_frac_gt1_per_seed": [
+            0.2275256684574296,
+            0.2216339957946144,
+            0.21751109538995528
+          ],
+          "expr_meanlog2_per_seed": [
+            -0.48484894646517634,
+            -0.47879693582329974,
+            -0.4870160299518247
+          ],
+          "n_expr_per_seed": [
+            223.0,
+            223.0,
+            223.0
+          ],
+          "topk_signed_per_seed": [
+            0.7724156978662708,
+            0.7778299826755748,
+            0.7695717285776386
+          ],
+          "topk_frac_gt1_per_seed": [
+            0.25,
+            0.245,
+            0.23
+          ],
+          "unrestr_median_mean": 0.9510778535123876,
+          "unrestr_median_sd": 0.007019025437301778,
+          "expr_signed_mean": 0.7391098348741453,
+          "expr_signed_sd": 0.003935517737137254,
+          "expr_frac_gt1_mean": 0.2222235865473331,
+          "expr_frac_gt1_sd": 0.00503325256397035,
+          "topk_signed_mean": 0.7732724697064947,
+          "topk_signed_sd": 0.004195263242774001,
+          "topk_frac_gt1_mean": 0.24166666666666667,
+          "topk_frac_gt1_sd": 0.010408329997330656,
+          "direction_expr": "under_inflated(<1)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1315 @@
+stage,seed,arm,cell_type,scoreable,in_common,recall
+fixed,0,poisson,Adipocytes,True,True,0.72
+fixed,0,poisson,Alpha cells,True,True,0.86
+fixed,0,poisson,Alveolar type 1,True,True,0.54
+fixed,0,poisson,Alveolar type 2,True,True,0.82
+fixed,0,poisson,Astrocytes,True,True,0.84
+fixed,0,poisson,B cells,True,True,0.88
+fixed,0,poisson,Basal cells,True,True,0.64
+fixed,0,poisson,Beta cells,True,True,0.78
+fixed,0,poisson,CD4+ T cells,True,True,0.6
+fixed,0,poisson,CD8+ T cells,True,True,0.66
+fixed,0,poisson,Capillary endothelial,True,True,0.82
+fixed,0,poisson,Cholangiocytes,True,True,0.9
+fixed,0,poisson,Ciliated cells,True,True,0.68
+fixed,0,poisson,Club cells,True,True,0.58
+fixed,0,poisson,Collecting duct,True,False,0.44
+fixed,0,poisson,Corticotrophs,True,False,0.58
+fixed,0,poisson,Cycling cells,True,True,0.78
+fixed,0,poisson,Delta cells,True,False,0.74
+fixed,0,poisson,Dendritic cells,True,False,0.72
+fixed,0,poisson,Dorsal horn neurons,True,True,0.88
+fixed,0,poisson,Endothelial cells,True,True,0.8
+fixed,0,poisson,Epithelial cells,True,True,0.76
+fixed,0,poisson,Erythrocytes,True,True,0.88
+fixed,0,poisson,Erythroid progenitors,True,True,0.82
+fixed,0,poisson,Excitatory neurons,True,True,0.7
+fixed,0,poisson,Exhausted T cells,True,True,0.82
+fixed,0,poisson,Fibroblasts,True,True,0.84
+fixed,0,poisson,Goblet cells,True,True,0.8
+fixed,0,poisson,Gonadotrophs,True,True,0.7
+fixed,0,poisson,Granule cells,True,True,0.86
+fixed,0,poisson,HSCs/Progenitors,True,True,0.68
+fixed,0,poisson,Hepatocytes,True,True,0.74
+fixed,0,poisson,IFN-stimulated cells,True,True,0.84
+fixed,0,poisson,Immature neurons,True,True,0.92
+fixed,0,poisson,Inhibitory neurons,True,True,0.76
+fixed,0,poisson,Intermediate progenitors,True,True,0.72
+fixed,0,poisson,Luminal epithelial,True,True,0.76
+fixed,0,poisson,Lymphatic endothelial,True,True,0.36
+fixed,0,poisson,MHC-II high APCs,True,True,0.82
+fixed,0,poisson,Macrophages,True,True,0.82
+fixed,0,poisson,Mammary secretory,True,True,0.78
+fixed,0,poisson,Mast cells,True,True,0.74
+fixed,0,poisson,Megakaryocytes,True,True,0.78
+fixed,0,poisson,Melanocytes,True,True,0.9
+fixed,0,poisson,Merkel cells,True,True,0.74
+fixed,0,poisson,Mesenchymal stem cells,True,True,0.74
+fixed,0,poisson,Microglia,True,True,0.8
+fixed,0,poisson,Monocytes,True,True,0.84
+fixed,0,poisson,Myoepithelial cells,True,True,0.6
+fixed,0,poisson,Müller glia,True,True,0.68
+fixed,0,poisson,NK cells,True,True,0.84
+fixed,0,poisson,Neuroendocrine cells,True,True,0.76
+fixed,0,poisson,Neutrophils,True,True,0.78
+fixed,0,poisson,OPCs,True,True,0.48
+fixed,0,poisson,Odontoblasts,True,True,0.64
+fixed,0,poisson,Oligodendrocytes,True,True,0.38
+fixed,0,poisson,Plasma cells,True,True,0.8
+fixed,0,poisson,Plasmacytoid DCs,True,True,0.88
+fixed,0,poisson,Pluripotent stem cells,True,True,0.82
+fixed,0,poisson,Proliferating cells,True,True,0.86
+fixed,0,poisson,Prostate epithelial,True,True,0.82
+fixed,0,poisson,Radial glia,True,True,0.82
+fixed,0,poisson,Regulatory T cells,True,True,0.58
+fixed,0,poisson,Retinal ganglion cells,True,True,0.84
+fixed,0,poisson,Sertoli cells,True,True,0.62
+fixed,0,poisson,Smooth muscle cells,True,True,0.86
+fixed,0,poisson,Somatotrophs,True,True,0.74
+fixed,0,poisson,Spinal interneurons,True,True,0.68
+fixed,0,poisson,Stress-response cells,True,True,0.82
+fixed,0,poisson,Thyrotrophs,True,True,0.62
+fixed,0,poisson,Tip cells,True,True,0.8
+fixed,0,poisson,Urothelial cells,True,True,0.88
+fixed,0,poisson,Venous endothelial,True,True,0.82
+fixed,0,nb_global,Adipocytes,True,True,0.54
+fixed,0,nb_global,Alpha cells,True,True,0.6
+fixed,0,nb_global,Alveolar type 1,True,True,0.28
+fixed,0,nb_global,Alveolar type 2,True,True,0.7
+fixed,0,nb_global,Astrocytes,True,True,0.58
+fixed,0,nb_global,B cells,True,True,0.74
+fixed,0,nb_global,Basal cells,True,True,0.46
+fixed,0,nb_global,Beta cells,True,True,0.58
+fixed,0,nb_global,CD4+ T cells,True,True,0.46
+fixed,0,nb_global,CD8+ T cells,True,True,0.4
+fixed,0,nb_global,Capillary endothelial,True,True,0.74
+fixed,0,nb_global,Cholangiocytes,True,True,0.54
+fixed,0,nb_global,Ciliated cells,True,True,0.64
+fixed,0,nb_global,Club cells,True,True,0.5
+fixed,0,nb_global,Collecting duct,True,False,0.4
+fixed,0,nb_global,Corticotrophs,True,False,0.38
+fixed,0,nb_global,Cycling cells,True,True,0.7
+fixed,0,nb_global,Delta cells,True,False,0.48
+fixed,0,nb_global,Dendritic cells,True,False,0.58
+fixed,0,nb_global,Dorsal horn neurons,True,True,0.56
+fixed,0,nb_global,Endothelial cells,True,True,0.58
+fixed,0,nb_global,Epithelial cells,True,True,0.44
+fixed,0,nb_global,Erythrocytes,True,True,0.6
+fixed,0,nb_global,Erythroid progenitors,True,True,0.72
+fixed,0,nb_global,Excitatory neurons,True,True,0.44
+fixed,0,nb_global,Exhausted T cells,True,True,0.66
+fixed,0,nb_global,Fibroblasts,True,True,0.58
+fixed,0,nb_global,Goblet cells,True,True,0.52
+fixed,0,nb_global,Gonadotrophs,True,True,0.48
+fixed,0,nb_global,Granule cells,True,True,0.68
+fixed,0,nb_global,HSCs/Progenitors,True,True,0.58
+fixed,0,nb_global,Hepatocytes,True,True,0.56
+fixed,0,nb_global,IFN-stimulated cells,True,True,0.8
+fixed,0,nb_global,Immature neurons,True,True,0.68
+fixed,0,nb_global,Inhibitory neurons,True,True,0.48
+fixed,0,nb_global,Intermediate progenitors,True,True,0.58
+fixed,0,nb_global,Luminal epithelial,True,True,0.58
+fixed,0,nb_global,Lymphatic endothelial,True,True,0.4
+fixed,0,nb_global,MHC-II high APCs,True,True,0.72
+fixed,0,nb_global,Macrophages,True,True,0.7
+fixed,0,nb_global,Mammary secretory,True,True,0.5
+fixed,0,nb_global,Mast cells,True,True,0.38
+fixed,0,nb_global,Megakaryocytes,True,True,0.58
+fixed,0,nb_global,Melanocytes,True,True,0.42
+fixed,0,nb_global,Merkel cells,True,True,0.7
+fixed,0,nb_global,Mesenchymal stem cells,True,True,0.22
+fixed,0,nb_global,Microglia,True,True,0.62
+fixed,0,nb_global,Monocytes,True,True,0.7
+fixed,0,nb_global,Myoepithelial cells,True,True,0.54
+fixed,0,nb_global,Müller glia,True,True,0.6
+fixed,0,nb_global,NK cells,True,True,0.76
+fixed,0,nb_global,Neuroendocrine cells,True,True,0.5
+fixed,0,nb_global,Neutrophils,True,True,0.58
+fixed,0,nb_global,OPCs,True,True,0.36
+fixed,0,nb_global,Odontoblasts,True,True,0.4
+fixed,0,nb_global,Oligodendrocytes,True,True,0.32
+fixed,0,nb_global,Plasma cells,True,True,0.74
+fixed,0,nb_global,Plasmacytoid DCs,True,True,0.8
+fixed,0,nb_global,Pluripotent stem cells,True,True,0.48
+fixed,0,nb_global,Proliferating cells,True,True,0.64
+fixed,0,nb_global,Prostate epithelial,True,True,0.7
+fixed,0,nb_global,Radial glia,True,True,0.6
+fixed,0,nb_global,Regulatory T cells,True,True,0.62
+fixed,0,nb_global,Retinal ganglion cells,True,True,0.54
+fixed,0,nb_global,Sertoli cells,True,True,0.32
+fixed,0,nb_global,Smooth muscle cells,True,True,0.68
+fixed,0,nb_global,Somatotrophs,True,True,0.5
+fixed,0,nb_global,Spinal interneurons,True,True,0.44
+fixed,0,nb_global,Stress-response cells,True,True,0.72
+fixed,0,nb_global,Thyrotrophs,True,True,0.46
+fixed,0,nb_global,Tip cells,True,True,0.72
+fixed,0,nb_global,Urothelial cells,True,True,0.54
+fixed,0,nb_global,Venous endothelial,True,True,0.62
+fixed,0,nb_conditional,Adipocytes,True,True,0.82
+fixed,0,nb_conditional,Alpha cells,True,True,0.78
+fixed,0,nb_conditional,Alveolar type 1,True,True,0.6
+fixed,0,nb_conditional,Alveolar type 2,True,True,0.84
+fixed,0,nb_conditional,Astrocytes,True,True,0.8
+fixed,0,nb_conditional,B cells,True,True,0.9
+fixed,0,nb_conditional,Basal cells,True,True,0.64
+fixed,0,nb_conditional,Beta cells,True,True,0.8
+fixed,0,nb_conditional,CD4+ T cells,True,True,0.84
+fixed,0,nb_conditional,CD8+ T cells,True,True,0.9
+fixed,0,nb_conditional,Capillary endothelial,True,True,0.86
+fixed,0,nb_conditional,Cholangiocytes,True,True,0.84
+fixed,0,nb_conditional,Ciliated cells,True,True,0.78
+fixed,0,nb_conditional,Club cells,True,True,0.58
+fixed,0,nb_conditional,Collecting duct,True,False,0.44
+fixed,0,nb_conditional,Corticotrophs,True,False,0.74
+fixed,0,nb_conditional,Cycling cells,True,True,0.86
+fixed,0,nb_conditional,Delta cells,True,False,0.66
+fixed,0,nb_conditional,Dendritic cells,True,False,0.76
+fixed,0,nb_conditional,Dorsal horn neurons,True,True,0.86
+fixed,0,nb_conditional,Endothelial cells,True,True,0.92
+fixed,0,nb_conditional,Epithelial cells,True,True,0.86
+fixed,0,nb_conditional,Erythrocytes,True,True,0.9
+fixed,0,nb_conditional,Erythroid progenitors,True,True,0.9
+fixed,0,nb_conditional,Excitatory neurons,True,True,0.82
+fixed,0,nb_conditional,Exhausted T cells,True,True,0.88
+fixed,0,nb_conditional,Fibroblasts,True,True,0.92
+fixed,0,nb_conditional,Goblet cells,True,True,0.82
+fixed,0,nb_conditional,Gonadotrophs,True,True,0.84
+fixed,0,nb_conditional,Granule cells,True,True,0.9
+fixed,0,nb_conditional,HSCs/Progenitors,True,True,0.84
+fixed,0,nb_conditional,Hepatocytes,True,True,0.82
+fixed,0,nb_conditional,IFN-stimulated cells,True,True,0.92
+fixed,0,nb_conditional,Immature neurons,True,True,0.92
+fixed,0,nb_conditional,Inhibitory neurons,True,True,0.84
+fixed,0,nb_conditional,Intermediate progenitors,True,True,0.76
+fixed,0,nb_conditional,Luminal epithelial,True,True,0.82
+fixed,0,nb_conditional,Lymphatic endothelial,True,True,0.5
+fixed,0,nb_conditional,MHC-II high APCs,True,True,0.82
+fixed,0,nb_conditional,Macrophages,True,True,0.9
+fixed,0,nb_conditional,Mammary secretory,True,True,0.78
+fixed,0,nb_conditional,Mast cells,True,True,0.64
+fixed,0,nb_conditional,Megakaryocytes,True,True,0.74
+fixed,0,nb_conditional,Melanocytes,True,True,0.84
+fixed,0,nb_conditional,Merkel cells,True,True,0.84
+fixed,0,nb_conditional,Mesenchymal stem cells,True,True,0.7
+fixed,0,nb_conditional,Microglia,True,True,0.86
+fixed,0,nb_conditional,Monocytes,True,True,0.86
+fixed,0,nb_conditional,Myoepithelial cells,True,True,0.56
+fixed,0,nb_conditional,Müller glia,True,True,0.76
+fixed,0,nb_conditional,NK cells,True,True,0.88
+fixed,0,nb_conditional,Neuroendocrine cells,True,True,0.8
+fixed,0,nb_conditional,Neutrophils,True,True,0.88
+fixed,0,nb_conditional,OPCs,True,True,0.46
+fixed,0,nb_conditional,Odontoblasts,True,True,0.66
+fixed,0,nb_conditional,Oligodendrocytes,True,True,0.48
+fixed,0,nb_conditional,Plasma cells,True,True,0.92
+fixed,0,nb_conditional,Plasmacytoid DCs,True,True,0.94
+fixed,0,nb_conditional,Pluripotent stem cells,True,True,0.78
+fixed,0,nb_conditional,Proliferating cells,True,True,0.9
+fixed,0,nb_conditional,Prostate epithelial,True,True,0.9
+fixed,0,nb_conditional,Radial glia,True,True,0.82
+fixed,0,nb_conditional,Regulatory T cells,True,True,0.88
+fixed,0,nb_conditional,Retinal ganglion cells,True,True,0.88
+fixed,0,nb_conditional,Sertoli cells,True,True,0.6
+fixed,0,nb_conditional,Smooth muscle cells,True,True,0.92
+fixed,0,nb_conditional,Somatotrophs,True,True,0.8
+fixed,0,nb_conditional,Spinal interneurons,True,True,0.68
+fixed,0,nb_conditional,Stress-response cells,True,True,0.84
+fixed,0,nb_conditional,Thyrotrophs,True,True,0.6
+fixed,0,nb_conditional,Tip cells,True,True,0.82
+fixed,0,nb_conditional,Urothelial cells,True,True,0.82
+fixed,0,nb_conditional,Venous endothelial,True,True,0.84
+fixed,1,poisson,Adipocytes,True,True,0.78
+fixed,1,poisson,Alpha cells,True,True,0.82
+fixed,1,poisson,Alveolar type 1,True,True,0.58
+fixed,1,poisson,Alveolar type 2,True,True,0.86
+fixed,1,poisson,Astrocytes,True,True,0.8
+fixed,1,poisson,B cells,True,True,0.84
+fixed,1,poisson,Basal cells,True,True,0.66
+fixed,1,poisson,Beta cells,True,True,0.84
+fixed,1,poisson,CD4+ T cells,True,True,0.66
+fixed,1,poisson,CD8+ T cells,True,True,0.74
+fixed,1,poisson,Capillary endothelial,True,True,0.74
+fixed,1,poisson,Cholangiocytes,True,True,0.86
+fixed,1,poisson,Ciliated cells,True,True,0.74
+fixed,1,poisson,Club cells,True,True,0.64
+fixed,1,poisson,Collecting duct,True,False,0.5
+fixed,1,poisson,Corticotrophs,True,False,0.58
+fixed,1,poisson,Cycling cells,True,True,0.8
+fixed,1,poisson,Delta cells,True,False,0.62
+fixed,1,poisson,Dendritic cells,True,False,0.74
+fixed,1,poisson,Dorsal horn neurons,True,True,0.86
+fixed,1,poisson,Endothelial cells,True,True,0.82
+fixed,1,poisson,Epithelial cells,True,True,0.7
+fixed,1,poisson,Erythrocytes,True,True,0.84
+fixed,1,poisson,Erythroid progenitors,True,True,0.76
+fixed,1,poisson,Excitatory neurons,True,True,0.78
+fixed,1,poisson,Exhausted T cells,True,True,0.8
+fixed,1,poisson,Fibroblasts,True,True,0.9
+fixed,1,poisson,Goblet cells,True,True,0.76
+fixed,1,poisson,Gonadotrophs,True,True,0.7
+fixed,1,poisson,Granule cells,True,True,0.88
+fixed,1,poisson,HSCs/Progenitors,True,True,0.76
+fixed,1,poisson,Hepatocytes,True,True,0.78
+fixed,1,poisson,IFN-stimulated cells,True,True,0.8
+fixed,1,poisson,Immature neurons,True,True,0.92
+fixed,1,poisson,Inhibitory neurons,True,True,0.82
+fixed,1,poisson,Intermediate progenitors,True,True,0.68
+fixed,1,poisson,Luminal epithelial,True,True,0.74
+fixed,1,poisson,Lymphatic endothelial,True,True,0.54
+fixed,1,poisson,MHC-II high APCs,True,True,0.82
+fixed,1,poisson,Macrophages,True,True,0.84
+fixed,1,poisson,Mammary secretory,True,True,0.72
+fixed,1,poisson,Mast cells,True,True,0.66
+fixed,1,poisson,Megakaryocytes,True,True,0.72
+fixed,1,poisson,Melanocytes,True,True,0.88
+fixed,1,poisson,Merkel cells,True,True,0.74
+fixed,1,poisson,Mesenchymal stem cells,True,True,0.64
+fixed,1,poisson,Microglia,True,True,0.82
+fixed,1,poisson,Monocytes,True,True,0.86
+fixed,1,poisson,Myoepithelial cells,True,True,0.64
+fixed,1,poisson,Müller glia,True,True,0.72
+fixed,1,poisson,NK cells,True,True,0.86
+fixed,1,poisson,Neuroendocrine cells,True,True,0.76
+fixed,1,poisson,Neutrophils,True,True,0.76
+fixed,1,poisson,OPCs,True,True,0.48
+fixed,1,poisson,Odontoblasts,True,True,0.68
+fixed,1,poisson,Oligodendrocytes,True,True,0.52
+fixed,1,poisson,Plasma cells,True,True,0.84
+fixed,1,poisson,Plasmacytoid DCs,True,True,0.8
+fixed,1,poisson,Pluripotent stem cells,True,True,0.8
+fixed,1,poisson,Proliferating cells,True,True,0.88
+fixed,1,poisson,Prostate epithelial,True,True,0.82
+fixed,1,poisson,Radial glia,True,True,0.82
+fixed,1,poisson,Regulatory T cells,True,True,0.66
+fixed,1,poisson,Retinal ganglion cells,True,True,0.86
+fixed,1,poisson,Sertoli cells,True,True,0.6
+fixed,1,poisson,Smooth muscle cells,True,True,0.84
+fixed,1,poisson,Somatotrophs,True,True,0.78
+fixed,1,poisson,Spinal interneurons,True,True,0.64
+fixed,1,poisson,Stress-response cells,True,True,0.84
+fixed,1,poisson,Thyrotrophs,True,True,0.66
+fixed,1,poisson,Tip cells,True,True,0.8
+fixed,1,poisson,Urothelial cells,True,True,0.82
+fixed,1,poisson,Venous endothelial,True,True,0.78
+fixed,1,nb_global,Adipocytes,True,True,0.48
+fixed,1,nb_global,Alpha cells,True,True,0.58
+fixed,1,nb_global,Alveolar type 1,True,True,0.32
+fixed,1,nb_global,Alveolar type 2,True,True,0.64
+fixed,1,nb_global,Astrocytes,True,True,0.56
+fixed,1,nb_global,B cells,True,True,0.74
+fixed,1,nb_global,Basal cells,True,True,0.58
+fixed,1,nb_global,Beta cells,True,True,0.6
+fixed,1,nb_global,CD4+ T cells,True,True,0.46
+fixed,1,nb_global,CD8+ T cells,True,True,0.44
+fixed,1,nb_global,Capillary endothelial,True,True,0.68
+fixed,1,nb_global,Cholangiocytes,True,True,0.5
+fixed,1,nb_global,Ciliated cells,True,True,0.56
+fixed,1,nb_global,Club cells,True,True,0.46
+fixed,1,nb_global,Collecting duct,True,False,0.42
+fixed,1,nb_global,Corticotrophs,True,False,0.34
+fixed,1,nb_global,Cycling cells,True,True,0.64
+fixed,1,nb_global,Delta cells,True,False,0.4
+fixed,1,nb_global,Dendritic cells,True,False,0.54
+fixed,1,nb_global,Dorsal horn neurons,True,True,0.52
+fixed,1,nb_global,Endothelial cells,True,True,0.6
+fixed,1,nb_global,Epithelial cells,True,True,0.46
+fixed,1,nb_global,Erythrocytes,True,True,0.58
+fixed,1,nb_global,Erythroid progenitors,True,True,0.74
+fixed,1,nb_global,Excitatory neurons,True,True,0.5
+fixed,1,nb_global,Exhausted T cells,True,True,0.68
+fixed,1,nb_global,Fibroblasts,True,True,0.54
+fixed,1,nb_global,Goblet cells,True,True,0.6
+fixed,1,nb_global,Gonadotrophs,True,True,0.44
+fixed,1,nb_global,Granule cells,True,True,0.74
+fixed,1,nb_global,HSCs/Progenitors,True,True,0.52
+fixed,1,nb_global,Hepatocytes,True,True,0.54
+fixed,1,nb_global,IFN-stimulated cells,True,True,0.74
+fixed,1,nb_global,Immature neurons,True,True,0.56
+fixed,1,nb_global,Inhibitory neurons,True,True,0.58
+fixed,1,nb_global,Intermediate progenitors,True,True,0.58
+fixed,1,nb_global,Luminal epithelial,True,True,0.58
+fixed,1,nb_global,Lymphatic endothelial,True,True,0.38
+fixed,1,nb_global,MHC-II high APCs,True,True,0.72
+fixed,1,nb_global,Macrophages,True,True,0.76
+fixed,1,nb_global,Mammary secretory,True,True,0.5
+fixed,1,nb_global,Mast cells,True,True,0.58
+fixed,1,nb_global,Megakaryocytes,True,True,0.58
+fixed,1,nb_global,Melanocytes,True,True,0.44
+fixed,1,nb_global,Merkel cells,True,True,0.74
+fixed,1,nb_global,Mesenchymal stem cells,True,True,0.24
+fixed,1,nb_global,Microglia,True,True,0.64
+fixed,1,nb_global,Monocytes,True,True,0.74
+fixed,1,nb_global,Myoepithelial cells,True,True,0.5
+fixed,1,nb_global,Müller glia,True,True,0.62
+fixed,1,nb_global,NK cells,True,True,0.72
+fixed,1,nb_global,Neuroendocrine cells,True,True,0.46
+fixed,1,nb_global,Neutrophils,True,True,0.64
+fixed,1,nb_global,OPCs,True,True,0.32
+fixed,1,nb_global,Odontoblasts,True,True,0.42
+fixed,1,nb_global,Oligodendrocytes,True,True,0.34
+fixed,1,nb_global,Plasma cells,True,True,0.72
+fixed,1,nb_global,Plasmacytoid DCs,True,True,0.72
+fixed,1,nb_global,Pluripotent stem cells,True,True,0.48
+fixed,1,nb_global,Proliferating cells,True,True,0.66
+fixed,1,nb_global,Prostate epithelial,True,True,0.76
+fixed,1,nb_global,Radial glia,True,True,0.48
+fixed,1,nb_global,Regulatory T cells,True,True,0.66
+fixed,1,nb_global,Retinal ganglion cells,True,True,0.52
+fixed,1,nb_global,Sertoli cells,True,True,0.42
+fixed,1,nb_global,Smooth muscle cells,True,True,0.66
+fixed,1,nb_global,Somatotrophs,True,True,0.44
+fixed,1,nb_global,Spinal interneurons,True,True,0.34
+fixed,1,nb_global,Stress-response cells,True,True,0.76
+fixed,1,nb_global,Thyrotrophs,True,True,0.52
+fixed,1,nb_global,Tip cells,True,True,0.62
+fixed,1,nb_global,Urothelial cells,True,True,0.6
+fixed,1,nb_global,Venous endothelial,True,True,0.56
+fixed,1,nb_conditional,Adipocytes,True,True,0.82
+fixed,1,nb_conditional,Alpha cells,True,True,0.82
+fixed,1,nb_conditional,Alveolar type 1,True,True,0.5
+fixed,1,nb_conditional,Alveolar type 2,True,True,0.9
+fixed,1,nb_conditional,Astrocytes,True,True,0.82
+fixed,1,nb_conditional,B cells,True,True,0.88
+fixed,1,nb_conditional,Basal cells,True,True,0.6
+fixed,1,nb_conditional,Beta cells,True,True,0.84
+fixed,1,nb_conditional,CD4+ T cells,True,True,0.84
+fixed,1,nb_conditional,CD8+ T cells,True,True,0.9
+fixed,1,nb_conditional,Capillary endothelial,True,True,0.82
+fixed,1,nb_conditional,Cholangiocytes,True,True,0.9
+fixed,1,nb_conditional,Ciliated cells,True,True,0.72
+fixed,1,nb_conditional,Club cells,True,True,0.52
+fixed,1,nb_conditional,Collecting duct,True,False,0.48
+fixed,1,nb_conditional,Corticotrophs,True,False,0.62
+fixed,1,nb_conditional,Cycling cells,True,True,0.86
+fixed,1,nb_conditional,Delta cells,True,False,0.66
+fixed,1,nb_conditional,Dendritic cells,True,False,0.76
+fixed,1,nb_conditional,Dorsal horn neurons,True,True,0.82
+fixed,1,nb_conditional,Endothelial cells,True,True,0.88
+fixed,1,nb_conditional,Epithelial cells,True,True,0.86
+fixed,1,nb_conditional,Erythrocytes,True,True,0.88
+fixed,1,nb_conditional,Erythroid progenitors,True,True,0.9
+fixed,1,nb_conditional,Excitatory neurons,True,True,0.8
+fixed,1,nb_conditional,Exhausted T cells,True,True,0.86
+fixed,1,nb_conditional,Fibroblasts,True,True,0.98
+fixed,1,nb_conditional,Goblet cells,True,True,0.82
+fixed,1,nb_conditional,Gonadotrophs,True,True,0.8
+fixed,1,nb_conditional,Granule cells,True,True,0.9
+fixed,1,nb_conditional,HSCs/Progenitors,True,True,0.8
+fixed,1,nb_conditional,Hepatocytes,True,True,0.84
+fixed,1,nb_conditional,IFN-stimulated cells,True,True,0.88
+fixed,1,nb_conditional,Immature neurons,True,True,0.92
+fixed,1,nb_conditional,Inhibitory neurons,True,True,0.86
+fixed,1,nb_conditional,Intermediate progenitors,True,True,0.78
+fixed,1,nb_conditional,Luminal epithelial,True,True,0.86
+fixed,1,nb_conditional,Lymphatic endothelial,True,True,0.52
+fixed,1,nb_conditional,MHC-II high APCs,True,True,0.86
+fixed,1,nb_conditional,Macrophages,True,True,0.88
+fixed,1,nb_conditional,Mammary secretory,True,True,0.74
+fixed,1,nb_conditional,Mast cells,True,True,0.64
+fixed,1,nb_conditional,Megakaryocytes,True,True,0.76
+fixed,1,nb_conditional,Melanocytes,True,True,0.86
+fixed,1,nb_conditional,Merkel cells,True,True,0.84
+fixed,1,nb_conditional,Mesenchymal stem cells,True,True,0.7
+fixed,1,nb_conditional,Microglia,True,True,0.9
+fixed,1,nb_conditional,Monocytes,True,True,0.9
+fixed,1,nb_conditional,Myoepithelial cells,True,True,0.66
+fixed,1,nb_conditional,Müller glia,True,True,0.78
+fixed,1,nb_conditional,NK cells,True,True,0.9
+fixed,1,nb_conditional,Neuroendocrine cells,True,True,0.84
+fixed,1,nb_conditional,Neutrophils,True,True,0.84
+fixed,1,nb_conditional,OPCs,True,True,0.46
+fixed,1,nb_conditional,Odontoblasts,True,True,0.68
+fixed,1,nb_conditional,Oligodendrocytes,True,True,0.48
+fixed,1,nb_conditional,Plasma cells,True,True,0.92
+fixed,1,nb_conditional,Plasmacytoid DCs,True,True,0.86
+fixed,1,nb_conditional,Pluripotent stem cells,True,True,0.78
+fixed,1,nb_conditional,Proliferating cells,True,True,0.94
+fixed,1,nb_conditional,Prostate epithelial,True,True,0.86
+fixed,1,nb_conditional,Radial glia,True,True,0.82
+fixed,1,nb_conditional,Regulatory T cells,True,True,0.86
+fixed,1,nb_conditional,Retinal ganglion cells,True,True,0.92
+fixed,1,nb_conditional,Sertoli cells,True,True,0.58
+fixed,1,nb_conditional,Smooth muscle cells,True,True,0.88
+fixed,1,nb_conditional,Somatotrophs,True,True,0.82
+fixed,1,nb_conditional,Spinal interneurons,True,True,0.7
+fixed,1,nb_conditional,Stress-response cells,True,True,0.86
+fixed,1,nb_conditional,Thyrotrophs,True,True,0.62
+fixed,1,nb_conditional,Tip cells,True,True,0.84
+fixed,1,nb_conditional,Urothelial cells,True,True,0.84
+fixed,1,nb_conditional,Venous endothelial,True,True,0.88
+fixed,2,poisson,Adipocytes,True,True,0.7
+fixed,2,poisson,Alpha cells,True,True,0.82
+fixed,2,poisson,Alveolar type 1,True,True,0.56
+fixed,2,poisson,Alveolar type 2,True,True,0.86
+fixed,2,poisson,Astrocytes,True,True,0.82
+fixed,2,poisson,B cells,True,True,0.86
+fixed,2,poisson,Basal cells,True,True,0.7
+fixed,2,poisson,Beta cells,True,True,0.78
+fixed,2,poisson,CD4+ T cells,True,True,0.62
+fixed,2,poisson,CD8+ T cells,True,True,0.66
+fixed,2,poisson,Capillary endothelial,True,True,0.8
+fixed,2,poisson,Cholangiocytes,True,True,0.9
+fixed,2,poisson,Ciliated cells,True,True,0.64
+fixed,2,poisson,Club cells,True,True,0.56
+fixed,2,poisson,Collecting duct,True,False,0.44
+fixed,2,poisson,Corticotrophs,True,False,0.58
+fixed,2,poisson,Cycling cells,True,True,0.82
+fixed,2,poisson,Delta cells,True,False,0.7
+fixed,2,poisson,Dendritic cells,True,False,0.8
+fixed,2,poisson,Dorsal horn neurons,True,True,0.86
+fixed,2,poisson,Endothelial cells,True,True,0.8
+fixed,2,poisson,Epithelial cells,True,True,0.66
+fixed,2,poisson,Erythrocytes,True,True,0.86
+fixed,2,poisson,Erythroid progenitors,True,True,0.74
+fixed,2,poisson,Excitatory neurons,True,True,0.76
+fixed,2,poisson,Exhausted T cells,True,True,0.84
+fixed,2,poisson,Fibroblasts,True,True,0.86
+fixed,2,poisson,Goblet cells,True,True,0.74
+fixed,2,poisson,Gonadotrophs,True,True,0.76
+fixed,2,poisson,Granule cells,True,True,0.92
+fixed,2,poisson,HSCs/Progenitors,True,True,0.72
+fixed,2,poisson,Hepatocytes,True,True,0.8
+fixed,2,poisson,IFN-stimulated cells,True,True,0.86
+fixed,2,poisson,Immature neurons,True,True,0.88
+fixed,2,poisson,Inhibitory neurons,True,True,0.82
+fixed,2,poisson,Intermediate progenitors,True,True,0.74
+fixed,2,poisson,Luminal epithelial,True,True,0.72
+fixed,2,poisson,Lymphatic endothelial,True,True,0.5
+fixed,2,poisson,MHC-II high APCs,True,True,0.82
+fixed,2,poisson,Macrophages,True,True,0.82
+fixed,2,poisson,Mammary secretory,True,True,0.74
+fixed,2,poisson,Mast cells,True,True,0.58
+fixed,2,poisson,Megakaryocytes,True,True,0.82
+fixed,2,poisson,Melanocytes,True,True,0.88
+fixed,2,poisson,Merkel cells,True,True,0.68
+fixed,2,poisson,Mesenchymal stem cells,True,True,0.66
+fixed,2,poisson,Microglia,True,True,0.84
+fixed,2,poisson,Monocytes,True,True,0.88
+fixed,2,poisson,Myoepithelial cells,True,True,0.64
+fixed,2,poisson,Müller glia,True,True,0.7
+fixed,2,poisson,NK cells,True,True,0.82
+fixed,2,poisson,Neuroendocrine cells,True,True,0.78
+fixed,2,poisson,Neutrophils,True,True,0.82
+fixed,2,poisson,OPCs,True,True,0.5
+fixed,2,poisson,Odontoblasts,True,True,0.64
+fixed,2,poisson,Oligodendrocytes,True,True,0.48
+fixed,2,poisson,Plasma cells,True,True,0.86
+fixed,2,poisson,Plasmacytoid DCs,True,True,0.84
+fixed,2,poisson,Pluripotent stem cells,True,True,0.82
+fixed,2,poisson,Proliferating cells,True,True,0.88
+fixed,2,poisson,Prostate epithelial,True,True,0.86
+fixed,2,poisson,Radial glia,True,True,0.76
+fixed,2,poisson,Regulatory T cells,True,True,0.6
+fixed,2,poisson,Retinal ganglion cells,True,True,0.86
+fixed,2,poisson,Sertoli cells,True,True,0.6
+fixed,2,poisson,Smooth muscle cells,True,True,0.86
+fixed,2,poisson,Somatotrophs,True,True,0.84
+fixed,2,poisson,Spinal interneurons,True,True,0.76
+fixed,2,poisson,Stress-response cells,True,True,0.76
+fixed,2,poisson,Thyrotrophs,True,True,0.6
+fixed,2,poisson,Tip cells,True,True,0.78
+fixed,2,poisson,Urothelial cells,True,True,0.88
+fixed,2,poisson,Venous endothelial,True,True,0.8
+fixed,2,nb_global,Adipocytes,True,True,0.5
+fixed,2,nb_global,Alpha cells,True,True,0.58
+fixed,2,nb_global,Alveolar type 1,True,True,0.32
+fixed,2,nb_global,Alveolar type 2,True,True,0.64
+fixed,2,nb_global,Astrocytes,True,True,0.58
+fixed,2,nb_global,B cells,True,True,0.7
+fixed,2,nb_global,Basal cells,True,True,0.66
+fixed,2,nb_global,Beta cells,True,True,0.54
+fixed,2,nb_global,CD4+ T cells,True,True,0.4
+fixed,2,nb_global,CD8+ T cells,True,True,0.38
+fixed,2,nb_global,Capillary endothelial,True,True,0.62
+fixed,2,nb_global,Cholangiocytes,True,True,0.56
+fixed,2,nb_global,Ciliated cells,True,True,0.58
+fixed,2,nb_global,Club cells,True,True,0.46
+fixed,2,nb_global,Collecting duct,True,False,0.4
+fixed,2,nb_global,Corticotrophs,True,False,0.28
+fixed,2,nb_global,Cycling cells,True,True,0.74
+fixed,2,nb_global,Delta cells,True,False,0.4
+fixed,2,nb_global,Dendritic cells,True,False,0.58
+fixed,2,nb_global,Dorsal horn neurons,True,True,0.52
+fixed,2,nb_global,Endothelial cells,True,True,0.58
+fixed,2,nb_global,Epithelial cells,True,True,0.4
+fixed,2,nb_global,Erythrocytes,True,True,0.62
+fixed,2,nb_global,Erythroid progenitors,True,True,0.74
+fixed,2,nb_global,Excitatory neurons,True,True,0.46
+fixed,2,nb_global,Exhausted T cells,True,True,0.72
+fixed,2,nb_global,Fibroblasts,True,True,0.56
+fixed,2,nb_global,Goblet cells,True,True,0.54
+fixed,2,nb_global,Gonadotrophs,True,True,0.48
+fixed,2,nb_global,Granule cells,True,True,0.62
+fixed,2,nb_global,HSCs/Progenitors,True,True,0.58
+fixed,2,nb_global,Hepatocytes,True,True,0.46
+fixed,2,nb_global,IFN-stimulated cells,True,True,0.76
+fixed,2,nb_global,Immature neurons,True,True,0.64
+fixed,2,nb_global,Inhibitory neurons,True,True,0.6
+fixed,2,nb_global,Intermediate progenitors,True,True,0.58
+fixed,2,nb_global,Luminal epithelial,True,True,0.58
+fixed,2,nb_global,Lymphatic endothelial,True,True,0.48
+fixed,2,nb_global,MHC-II high APCs,True,True,0.76
+fixed,2,nb_global,Macrophages,True,True,0.76
+fixed,2,nb_global,Mammary secretory,True,True,0.56
+fixed,2,nb_global,Mast cells,True,True,0.4
+fixed,2,nb_global,Megakaryocytes,True,True,0.58
+fixed,2,nb_global,Melanocytes,True,True,0.46
+fixed,2,nb_global,Merkel cells,True,True,0.68
+fixed,2,nb_global,Mesenchymal stem cells,True,True,0.2
+fixed,2,nb_global,Microglia,True,True,0.62
+fixed,2,nb_global,Monocytes,True,True,0.68
+fixed,2,nb_global,Myoepithelial cells,True,True,0.5
+fixed,2,nb_global,Müller glia,True,True,0.62
+fixed,2,nb_global,NK cells,True,True,0.7
+fixed,2,nb_global,Neuroendocrine cells,True,True,0.5
+fixed,2,nb_global,Neutrophils,True,True,0.66
+fixed,2,nb_global,OPCs,True,True,0.4
+fixed,2,nb_global,Odontoblasts,True,True,0.4
+fixed,2,nb_global,Oligodendrocytes,True,True,0.3
+fixed,2,nb_global,Plasma cells,True,True,0.7
+fixed,2,nb_global,Plasmacytoid DCs,True,True,0.74
+fixed,2,nb_global,Pluripotent stem cells,True,True,0.48
+fixed,2,nb_global,Proliferating cells,True,True,0.64
+fixed,2,nb_global,Prostate epithelial,True,True,0.7
+fixed,2,nb_global,Radial glia,True,True,0.58
+fixed,2,nb_global,Regulatory T cells,True,True,0.58
+fixed,2,nb_global,Retinal ganglion cells,True,True,0.54
+fixed,2,nb_global,Sertoli cells,True,True,0.44
+fixed,2,nb_global,Smooth muscle cells,True,True,0.6
+fixed,2,nb_global,Somatotrophs,True,True,0.46
+fixed,2,nb_global,Spinal interneurons,True,True,0.34
+fixed,2,nb_global,Stress-response cells,True,True,0.7
+fixed,2,nb_global,Thyrotrophs,True,True,0.54
+fixed,2,nb_global,Tip cells,True,True,0.74
+fixed,2,nb_global,Urothelial cells,True,True,0.48
+fixed,2,nb_global,Venous endothelial,True,True,0.58
+fixed,2,nb_conditional,Adipocytes,True,True,0.86
+fixed,2,nb_conditional,Alpha cells,True,True,0.86
+fixed,2,nb_conditional,Alveolar type 1,True,True,0.46
+fixed,2,nb_conditional,Alveolar type 2,True,True,0.92
+fixed,2,nb_conditional,Astrocytes,True,True,0.86
+fixed,2,nb_conditional,B cells,True,True,0.9
+fixed,2,nb_conditional,Basal cells,True,True,0.72
+fixed,2,nb_conditional,Beta cells,True,True,0.78
+fixed,2,nb_conditional,CD4+ T cells,True,True,0.86
+fixed,2,nb_conditional,CD8+ T cells,True,True,0.86
+fixed,2,nb_conditional,Capillary endothelial,True,True,0.86
+fixed,2,nb_conditional,Cholangiocytes,True,True,0.9
+fixed,2,nb_conditional,Ciliated cells,True,True,0.74
+fixed,2,nb_conditional,Club cells,True,True,0.54
+fixed,2,nb_conditional,Collecting duct,True,False,0.48
+fixed,2,nb_conditional,Corticotrophs,True,False,0.68
+fixed,2,nb_conditional,Cycling cells,True,True,0.9
+fixed,2,nb_conditional,Delta cells,True,False,0.66
+fixed,2,nb_conditional,Dendritic cells,True,False,0.74
+fixed,2,nb_conditional,Dorsal horn neurons,True,True,0.9
+fixed,2,nb_conditional,Endothelial cells,True,True,0.88
+fixed,2,nb_conditional,Epithelial cells,True,True,0.86
+fixed,2,nb_conditional,Erythrocytes,True,True,0.86
+fixed,2,nb_conditional,Erythroid progenitors,True,True,0.88
+fixed,2,nb_conditional,Excitatory neurons,True,True,0.82
+fixed,2,nb_conditional,Exhausted T cells,True,True,0.84
+fixed,2,nb_conditional,Fibroblasts,True,True,0.94
+fixed,2,nb_conditional,Goblet cells,True,True,0.78
+fixed,2,nb_conditional,Gonadotrophs,True,True,0.82
+fixed,2,nb_conditional,Granule cells,True,True,0.92
+fixed,2,nb_conditional,HSCs/Progenitors,True,True,0.82
+fixed,2,nb_conditional,Hepatocytes,True,True,0.82
+fixed,2,nb_conditional,IFN-stimulated cells,True,True,0.86
+fixed,2,nb_conditional,Immature neurons,True,True,0.94
+fixed,2,nb_conditional,Inhibitory neurons,True,True,0.86
+fixed,2,nb_conditional,Intermediate progenitors,True,True,0.72
+fixed,2,nb_conditional,Luminal epithelial,True,True,0.84
+fixed,2,nb_conditional,Lymphatic endothelial,True,True,0.42
+fixed,2,nb_conditional,MHC-II high APCs,True,True,0.88
+fixed,2,nb_conditional,Macrophages,True,True,0.92
+fixed,2,nb_conditional,Mammary secretory,True,True,0.74
+fixed,2,nb_conditional,Mast cells,True,True,0.68
+fixed,2,nb_conditional,Megakaryocytes,True,True,0.78
+fixed,2,nb_conditional,Melanocytes,True,True,0.8
+fixed,2,nb_conditional,Merkel cells,True,True,0.88
+fixed,2,nb_conditional,Mesenchymal stem cells,True,True,0.66
+fixed,2,nb_conditional,Microglia,True,True,0.86
+fixed,2,nb_conditional,Monocytes,True,True,0.94
+fixed,2,nb_conditional,Myoepithelial cells,True,True,0.62
+fixed,2,nb_conditional,Müller glia,True,True,0.8
+fixed,2,nb_conditional,NK cells,True,True,0.84
+fixed,2,nb_conditional,Neuroendocrine cells,True,True,0.78
+fixed,2,nb_conditional,Neutrophils,True,True,0.9
+fixed,2,nb_conditional,OPCs,True,True,0.5
+fixed,2,nb_conditional,Odontoblasts,True,True,0.68
+fixed,2,nb_conditional,Oligodendrocytes,True,True,0.34
+fixed,2,nb_conditional,Plasma cells,True,True,0.92
+fixed,2,nb_conditional,Plasmacytoid DCs,True,True,0.9
+fixed,2,nb_conditional,Pluripotent stem cells,True,True,0.78
+fixed,2,nb_conditional,Proliferating cells,True,True,0.96
+fixed,2,nb_conditional,Prostate epithelial,True,True,0.82
+fixed,2,nb_conditional,Radial glia,True,True,0.82
+fixed,2,nb_conditional,Regulatory T cells,True,True,0.8
+fixed,2,nb_conditional,Retinal ganglion cells,True,True,0.84
+fixed,2,nb_conditional,Sertoli cells,True,True,0.58
+fixed,2,nb_conditional,Smooth muscle cells,True,True,0.9
+fixed,2,nb_conditional,Somatotrophs,True,True,0.82
+fixed,2,nb_conditional,Spinal interneurons,True,True,0.7
+fixed,2,nb_conditional,Stress-response cells,True,True,0.84
+fixed,2,nb_conditional,Thyrotrophs,True,True,0.68
+fixed,2,nb_conditional,Tip cells,True,True,0.84
+fixed,2,nb_conditional,Urothelial cells,True,True,0.88
+fixed,2,nb_conditional,Venous endothelial,True,True,0.82
+end_to_end,1,nb_global,Adipocytes,True,True,0.26
+end_to_end,1,nb_global,Alpha cells,True,True,0.12
+end_to_end,1,nb_global,Alveolar type 1,True,True,0.3
+end_to_end,1,nb_global,Alveolar type 2,True,True,0.32
+end_to_end,1,nb_global,Astrocytes,True,True,0.16
+end_to_end,1,nb_global,B cells,True,True,0.6
+end_to_end,1,nb_global,Basal cells,True,True,0.3
+end_to_end,1,nb_global,Beta cells,True,True,0.08
+end_to_end,1,nb_global,CD4+ T cells,True,True,0.44
+end_to_end,1,nb_global,CD8+ T cells,True,True,0.54
+end_to_end,1,nb_global,Capillary endothelial,True,True,0.26
+end_to_end,1,nb_global,Cholangiocytes,True,True,0.42
+end_to_end,1,nb_global,Ciliated cells,True,True,0.04
+end_to_end,1,nb_global,Club cells,True,True,0.06
+end_to_end,1,nb_global,Collecting duct,True,False,0.16
+end_to_end,1,nb_global,Corticotrophs,True,False,0.02
+end_to_end,1,nb_global,Cycling cells,True,True,0.54
+end_to_end,1,nb_global,Delta cells,False,False,
+end_to_end,1,nb_global,Dendritic cells,False,False,
+end_to_end,1,nb_global,Dorsal horn neurons,True,True,0.04
+end_to_end,1,nb_global,Endothelial cells,True,True,0.56
+end_to_end,1,nb_global,Epithelial cells,True,True,0.5
+end_to_end,1,nb_global,Erythrocytes,True,True,0.32
+end_to_end,1,nb_global,Erythroid progenitors,True,True,0.44
+end_to_end,1,nb_global,Excitatory neurons,True,True,0.04
+end_to_end,1,nb_global,Exhausted T cells,True,True,0.12
+end_to_end,1,nb_global,Fibroblasts,True,True,0.68
+end_to_end,1,nb_global,Goblet cells,True,True,0.26
+end_to_end,1,nb_global,Gonadotrophs,True,True,0.14
+end_to_end,1,nb_global,Granule cells,True,True,0.06
+end_to_end,1,nb_global,HSCs/Progenitors,True,True,0.06
+end_to_end,1,nb_global,Hepatocytes,True,True,0.1
+end_to_end,1,nb_global,IFN-stimulated cells,True,True,0.32
+end_to_end,1,nb_global,Immature neurons,True,True,0.14
+end_to_end,1,nb_global,Inhibitory neurons,True,True,0.02
+end_to_end,1,nb_global,Intermediate progenitors,True,True,0.24
+end_to_end,1,nb_global,Luminal epithelial,True,True,0.42
+end_to_end,1,nb_global,Lymphatic endothelial,True,True,0.24
+end_to_end,1,nb_global,MHC-II high APCs,True,True,0.54
+end_to_end,1,nb_global,Macrophages,True,True,0.74
+end_to_end,1,nb_global,Mammary secretory,True,True,0.06
+end_to_end,1,nb_global,Mast cells,True,True,0.16
+end_to_end,1,nb_global,Megakaryocytes,True,True,0.36
+end_to_end,1,nb_global,Melanocytes,True,True,0.06
+end_to_end,1,nb_global,Merkel cells,True,True,0.12
+end_to_end,1,nb_global,Mesenchymal stem cells,True,True,0.18
+end_to_end,1,nb_global,Microglia,True,True,0.22
+end_to_end,1,nb_global,Monocytes,True,True,0.56
+end_to_end,1,nb_global,Myoepithelial cells,True,True,0.3
+end_to_end,1,nb_global,Müller glia,True,True,0.22
+end_to_end,1,nb_global,NK cells,True,True,0.6
+end_to_end,1,nb_global,Neuroendocrine cells,True,True,0.1
+end_to_end,1,nb_global,Neutrophils,True,True,0.36
+end_to_end,1,nb_global,OPCs,True,True,0.04
+end_to_end,1,nb_global,Odontoblasts,True,True,0.22
+end_to_end,1,nb_global,Oligodendrocytes,True,True,0.04
+end_to_end,1,nb_global,Plasma cells,True,True,0.52
+end_to_end,1,nb_global,Plasmacytoid DCs,True,True,0.18
+end_to_end,1,nb_global,Pluripotent stem cells,True,True,0.18
+end_to_end,1,nb_global,Proliferating cells,True,True,0.46
+end_to_end,1,nb_global,Prostate epithelial,True,True,0.28
+end_to_end,1,nb_global,Radial glia,True,True,0.14
+end_to_end,1,nb_global,Regulatory T cells,True,True,0.38
+end_to_end,1,nb_global,Retinal ganglion cells,True,True,0.12
+end_to_end,1,nb_global,Sertoli cells,True,True,0.2
+end_to_end,1,nb_global,Smooth muscle cells,True,True,0.58
+end_to_end,1,nb_global,Somatotrophs,True,True,0.16
+end_to_end,1,nb_global,Spinal interneurons,True,True,0.1
+end_to_end,1,nb_global,Stress-response cells,True,True,0.3
+end_to_end,1,nb_global,Thyrotrophs,True,True,0.08
+end_to_end,1,nb_global,Tip cells,True,True,0.42
+end_to_end,1,nb_global,Urothelial cells,True,True,0.26
+end_to_end,1,nb_global,Venous endothelial,True,True,0.3
+end_to_end,1,nb_conditional,Adipocytes,True,True,0.36
+end_to_end,1,nb_conditional,Alpha cells,True,True,0.02
+end_to_end,1,nb_conditional,Alveolar type 1,True,True,0.22
+end_to_end,1,nb_conditional,Alveolar type 2,True,True,0.34
+end_to_end,1,nb_conditional,Astrocytes,True,True,0.1
+end_to_end,1,nb_conditional,B cells,True,True,0.56
+end_to_end,1,nb_conditional,Basal cells,True,True,0.2
+end_to_end,1,nb_conditional,Beta cells,True,True,0.16
+end_to_end,1,nb_conditional,CD4+ T cells,True,True,0.4
+end_to_end,1,nb_conditional,CD8+ T cells,True,True,0.56
+end_to_end,1,nb_conditional,Capillary endothelial,True,True,0.3
+end_to_end,1,nb_conditional,Cholangiocytes,True,True,0.54
+end_to_end,1,nb_conditional,Ciliated cells,True,True,0.06
+end_to_end,1,nb_conditional,Club cells,True,True,0.12
+end_to_end,1,nb_conditional,Collecting duct,True,False,0.16
+end_to_end,1,nb_conditional,Corticotrophs,True,False,0.02
+end_to_end,1,nb_conditional,Cycling cells,True,True,0.54
+end_to_end,1,nb_conditional,Delta cells,True,False,0.06
+end_to_end,1,nb_conditional,Dendritic cells,False,False,
+end_to_end,1,nb_conditional,Dorsal horn neurons,True,True,0.04
+end_to_end,1,nb_conditional,Endothelial cells,True,True,0.56
+end_to_end,1,nb_conditional,Epithelial cells,True,True,0.58
+end_to_end,1,nb_conditional,Erythrocytes,True,True,0.36
+end_to_end,1,nb_conditional,Erythroid progenitors,True,True,0.28
+end_to_end,1,nb_conditional,Excitatory neurons,True,True,0.06
+end_to_end,1,nb_conditional,Exhausted T cells,True,True,0.2
+end_to_end,1,nb_conditional,Fibroblasts,True,True,0.7
+end_to_end,1,nb_conditional,Goblet cells,True,True,0.34
+end_to_end,1,nb_conditional,Gonadotrophs,True,True,0.16
+end_to_end,1,nb_conditional,Granule cells,True,True,0.06
+end_to_end,1,nb_conditional,HSCs/Progenitors,True,True,0.1
+end_to_end,1,nb_conditional,Hepatocytes,True,True,0.2
+end_to_end,1,nb_conditional,IFN-stimulated cells,True,True,0.6
+end_to_end,1,nb_conditional,Immature neurons,True,True,0.08
+end_to_end,1,nb_conditional,Inhibitory neurons,True,True,0.3
+end_to_end,1,nb_conditional,Intermediate progenitors,True,True,0.08
+end_to_end,1,nb_conditional,Luminal epithelial,True,True,0.3
+end_to_end,1,nb_conditional,Lymphatic endothelial,True,True,0.16
+end_to_end,1,nb_conditional,MHC-II high APCs,True,True,0.52
+end_to_end,1,nb_conditional,Macrophages,True,True,0.7
+end_to_end,1,nb_conditional,Mammary secretory,True,True,0.18
+end_to_end,1,nb_conditional,Mast cells,True,True,0.18
+end_to_end,1,nb_conditional,Megakaryocytes,True,True,0.22
+end_to_end,1,nb_conditional,Melanocytes,True,True,0.12
+end_to_end,1,nb_conditional,Merkel cells,True,True,0.08
+end_to_end,1,nb_conditional,Mesenchymal stem cells,True,True,0.18
+end_to_end,1,nb_conditional,Microglia,True,True,0.38
+end_to_end,1,nb_conditional,Monocytes,True,True,0.66
+end_to_end,1,nb_conditional,Myoepithelial cells,True,True,0.34
+end_to_end,1,nb_conditional,Müller glia,True,True,0.04
+end_to_end,1,nb_conditional,NK cells,True,True,0.54
+end_to_end,1,nb_conditional,Neuroendocrine cells,True,True,0.1
+end_to_end,1,nb_conditional,Neutrophils,True,True,0.34
+end_to_end,1,nb_conditional,OPCs,True,True,0.06
+end_to_end,1,nb_conditional,Odontoblasts,True,True,0.34
+end_to_end,1,nb_conditional,Oligodendrocytes,True,True,0.14
+end_to_end,1,nb_conditional,Plasma cells,True,True,0.5
+end_to_end,1,nb_conditional,Plasmacytoid DCs,True,True,0.28
+end_to_end,1,nb_conditional,Pluripotent stem cells,True,True,0.1
+end_to_end,1,nb_conditional,Proliferating cells,True,True,0.46
+end_to_end,1,nb_conditional,Prostate epithelial,True,True,0.18
+end_to_end,1,nb_conditional,Radial glia,True,True,0.14
+end_to_end,1,nb_conditional,Regulatory T cells,True,True,0.5
+end_to_end,1,nb_conditional,Retinal ganglion cells,True,True,0.14
+end_to_end,1,nb_conditional,Sertoli cells,True,True,0.1
+end_to_end,1,nb_conditional,Smooth muscle cells,True,True,0.5
+end_to_end,1,nb_conditional,Somatotrophs,True,True,0.02
+end_to_end,1,nb_conditional,Spinal interneurons,True,True,0.1
+end_to_end,1,nb_conditional,Stress-response cells,True,True,0.32
+end_to_end,1,nb_conditional,Thyrotrophs,True,True,0.1
+end_to_end,1,nb_conditional,Tip cells,True,True,0.24
+end_to_end,1,nb_conditional,Urothelial cells,True,True,0.2
+end_to_end,1,nb_conditional,Venous endothelial,True,True,0.26
+end_to_end,1,poisson,Adipocytes,True,True,0.34
+end_to_end,1,poisson,Alpha cells,True,True,0.08
+end_to_end,1,poisson,Alveolar type 1,True,True,0.26
+end_to_end,1,poisson,Alveolar type 2,True,True,0.36
+end_to_end,1,poisson,Astrocytes,True,True,0.1
+end_to_end,1,poisson,B cells,True,True,0.54
+end_to_end,1,poisson,Basal cells,True,True,0.26
+end_to_end,1,poisson,Beta cells,True,True,0.12
+end_to_end,1,poisson,CD4+ T cells,True,True,0.32
+end_to_end,1,poisson,CD8+ T cells,True,True,0.52
+end_to_end,1,poisson,Capillary endothelial,True,True,0.28
+end_to_end,1,poisson,Cholangiocytes,True,True,0.56
+end_to_end,1,poisson,Ciliated cells,True,True,0.1
+end_to_end,1,poisson,Club cells,True,True,0.14
+end_to_end,1,poisson,Collecting duct,True,False,0.26
+end_to_end,1,poisson,Corticotrophs,True,False,0.0
+end_to_end,1,poisson,Cycling cells,True,True,0.58
+end_to_end,1,poisson,Delta cells,True,False,0.08
+end_to_end,1,poisson,Dendritic cells,False,False,
+end_to_end,1,poisson,Dorsal horn neurons,True,True,0.02
+end_to_end,1,poisson,Endothelial cells,True,True,0.56
+end_to_end,1,poisson,Epithelial cells,True,True,0.52
+end_to_end,1,poisson,Erythrocytes,True,True,0.4
+end_to_end,1,poisson,Erythroid progenitors,True,True,0.32
+end_to_end,1,poisson,Excitatory neurons,True,True,0.02
+end_to_end,1,poisson,Exhausted T cells,True,True,0.22
+end_to_end,1,poisson,Fibroblasts,True,True,0.64
+end_to_end,1,poisson,Goblet cells,True,True,0.4
+end_to_end,1,poisson,Gonadotrophs,True,True,0.24
+end_to_end,1,poisson,Granule cells,True,True,0.04
+end_to_end,1,poisson,HSCs/Progenitors,True,True,0.1
+end_to_end,1,poisson,Hepatocytes,True,True,0.26
+end_to_end,1,poisson,IFN-stimulated cells,True,True,0.62
+end_to_end,1,poisson,Immature neurons,True,True,0.14
+end_to_end,1,poisson,Inhibitory neurons,True,True,0.34
+end_to_end,1,poisson,Intermediate progenitors,True,True,0.1
+end_to_end,1,poisson,Luminal epithelial,True,True,0.36
+end_to_end,1,poisson,Lymphatic endothelial,True,True,0.2
+end_to_end,1,poisson,MHC-II high APCs,True,True,0.54
+end_to_end,1,poisson,Macrophages,True,True,0.66
+end_to_end,1,poisson,Mammary secretory,True,True,0.2
+end_to_end,1,poisson,Mast cells,True,True,0.24
+end_to_end,1,poisson,Megakaryocytes,True,True,0.22
+end_to_end,1,poisson,Melanocytes,True,True,0.12
+end_to_end,1,poisson,Merkel cells,True,True,0.16
+end_to_end,1,poisson,Mesenchymal stem cells,True,True,0.18
+end_to_end,1,poisson,Microglia,True,True,0.44
+end_to_end,1,poisson,Monocytes,True,True,0.68
+end_to_end,1,poisson,Myoepithelial cells,True,True,0.4
+end_to_end,1,poisson,Müller glia,True,True,0.16
+end_to_end,1,poisson,NK cells,True,True,0.66
+end_to_end,1,poisson,Neuroendocrine cells,True,True,0.2
+end_to_end,1,poisson,Neutrophils,True,True,0.26
+end_to_end,1,poisson,OPCs,True,True,0.0
+end_to_end,1,poisson,Odontoblasts,True,True,0.36
+end_to_end,1,poisson,Oligodendrocytes,True,True,0.2
+end_to_end,1,poisson,Plasma cells,True,True,0.54
+end_to_end,1,poisson,Plasmacytoid DCs,True,True,0.32
+end_to_end,1,poisson,Pluripotent stem cells,True,True,0.18
+end_to_end,1,poisson,Proliferating cells,True,True,0.48
+end_to_end,1,poisson,Prostate epithelial,True,True,0.14
+end_to_end,1,poisson,Radial glia,True,True,0.1
+end_to_end,1,poisson,Regulatory T cells,True,True,0.4
+end_to_end,1,poisson,Retinal ganglion cells,True,True,0.12
+end_to_end,1,poisson,Sertoli cells,True,True,0.16
+end_to_end,1,poisson,Smooth muscle cells,True,True,0.6
+end_to_end,1,poisson,Somatotrophs,True,True,0.06
+end_to_end,1,poisson,Spinal interneurons,True,True,0.02
+end_to_end,1,poisson,Stress-response cells,True,True,0.4
+end_to_end,1,poisson,Thyrotrophs,True,True,0.14
+end_to_end,1,poisson,Tip cells,True,True,0.42
+end_to_end,1,poisson,Urothelial cells,True,True,0.24
+end_to_end,1,poisson,Venous endothelial,True,True,0.28
+end_to_end,2,nb_global,Adipocytes,True,True,0.28
+end_to_end,2,nb_global,Alpha cells,True,True,0.06
+end_to_end,2,nb_global,Alveolar type 1,True,True,0.18
+end_to_end,2,nb_global,Alveolar type 2,True,True,0.2
+end_to_end,2,nb_global,Astrocytes,True,True,0.22
+end_to_end,2,nb_global,B cells,True,True,0.54
+end_to_end,2,nb_global,Basal cells,True,True,0.12
+end_to_end,2,nb_global,Beta cells,True,True,0.02
+end_to_end,2,nb_global,CD4+ T cells,True,True,0.26
+end_to_end,2,nb_global,CD8+ T cells,True,True,0.54
+end_to_end,2,nb_global,Capillary endothelial,True,True,0.36
+end_to_end,2,nb_global,Cholangiocytes,True,True,0.38
+end_to_end,2,nb_global,Ciliated cells,True,True,0.14
+end_to_end,2,nb_global,Club cells,True,True,0.16
+end_to_end,2,nb_global,Collecting duct,False,False,
+end_to_end,2,nb_global,Corticotrophs,True,False,0.02
+end_to_end,2,nb_global,Cycling cells,True,True,0.52
+end_to_end,2,nb_global,Delta cells,False,False,
+end_to_end,2,nb_global,Dendritic cells,False,False,
+end_to_end,2,nb_global,Dorsal horn neurons,True,True,0.06
+end_to_end,2,nb_global,Endothelial cells,True,True,0.66
+end_to_end,2,nb_global,Epithelial cells,True,True,0.56
+end_to_end,2,nb_global,Erythrocytes,True,True,0.34
+end_to_end,2,nb_global,Erythroid progenitors,True,True,0.28
+end_to_end,2,nb_global,Excitatory neurons,True,True,0.12
+end_to_end,2,nb_global,Exhausted T cells,True,True,0.22
+end_to_end,2,nb_global,Fibroblasts,True,True,0.68
+end_to_end,2,nb_global,Goblet cells,True,True,0.26
+end_to_end,2,nb_global,Gonadotrophs,True,True,0.18
+end_to_end,2,nb_global,Granule cells,True,True,0.24
+end_to_end,2,nb_global,HSCs/Progenitors,True,True,0.18
+end_to_end,2,nb_global,Hepatocytes,True,True,0.24
+end_to_end,2,nb_global,IFN-stimulated cells,True,True,0.48
+end_to_end,2,nb_global,Immature neurons,True,True,0.16
+end_to_end,2,nb_global,Inhibitory neurons,True,True,0.14
+end_to_end,2,nb_global,Intermediate progenitors,True,True,0.14
+end_to_end,2,nb_global,Luminal epithelial,True,True,0.26
+end_to_end,2,nb_global,Lymphatic endothelial,True,True,0.2
+end_to_end,2,nb_global,MHC-II high APCs,True,True,0.52
+end_to_end,2,nb_global,Macrophages,True,True,0.7
+end_to_end,2,nb_global,Mammary secretory,True,True,0.04
+end_to_end,2,nb_global,Mast cells,True,True,0.28
+end_to_end,2,nb_global,Megakaryocytes,True,True,0.26
+end_to_end,2,nb_global,Melanocytes,True,True,0.1
+end_to_end,2,nb_global,Merkel cells,True,True,0.14
+end_to_end,2,nb_global,Mesenchymal stem cells,True,True,0.1
+end_to_end,2,nb_global,Microglia,True,True,0.12
+end_to_end,2,nb_global,Monocytes,True,True,0.54
+end_to_end,2,nb_global,Myoepithelial cells,True,True,0.38
+end_to_end,2,nb_global,Müller glia,True,True,0.06
+end_to_end,2,nb_global,NK cells,True,True,0.52
+end_to_end,2,nb_global,Neuroendocrine cells,True,True,0.16
+end_to_end,2,nb_global,Neutrophils,True,True,0.26
+end_to_end,2,nb_global,OPCs,True,True,0.08
+end_to_end,2,nb_global,Odontoblasts,True,True,0.28
+end_to_end,2,nb_global,Oligodendrocytes,True,True,0.08
+end_to_end,2,nb_global,Plasma cells,True,True,0.6
+end_to_end,2,nb_global,Plasmacytoid DCs,True,True,0.22
+end_to_end,2,nb_global,Pluripotent stem cells,True,True,0.12
+end_to_end,2,nb_global,Proliferating cells,True,True,0.34
+end_to_end,2,nb_global,Prostate epithelial,True,True,0.14
+end_to_end,2,nb_global,Radial glia,True,True,0.22
+end_to_end,2,nb_global,Regulatory T cells,True,True,0.32
+end_to_end,2,nb_global,Retinal ganglion cells,True,True,0.08
+end_to_end,2,nb_global,Sertoli cells,True,True,0.12
+end_to_end,2,nb_global,Smooth muscle cells,True,True,0.48
+end_to_end,2,nb_global,Somatotrophs,True,True,0.3
+end_to_end,2,nb_global,Spinal interneurons,True,True,0.08
+end_to_end,2,nb_global,Stress-response cells,True,True,0.4
+end_to_end,2,nb_global,Thyrotrophs,True,True,0.12
+end_to_end,2,nb_global,Tip cells,True,True,0.2
+end_to_end,2,nb_global,Urothelial cells,True,True,0.18
+end_to_end,2,nb_global,Venous endothelial,True,True,0.28
+end_to_end,2,nb_conditional,Adipocytes,True,True,0.36
+end_to_end,2,nb_conditional,Alpha cells,True,True,0.14
+end_to_end,2,nb_conditional,Alveolar type 1,True,True,0.24
+end_to_end,2,nb_conditional,Alveolar type 2,True,True,0.3
+end_to_end,2,nb_conditional,Astrocytes,True,True,0.16
+end_to_end,2,nb_conditional,B cells,True,True,0.62
+end_to_end,2,nb_conditional,Basal cells,True,True,0.28
+end_to_end,2,nb_conditional,Beta cells,True,True,0.14
+end_to_end,2,nb_conditional,CD4+ T cells,True,True,0.3
+end_to_end,2,nb_conditional,CD8+ T cells,True,True,0.56
+end_to_end,2,nb_conditional,Capillary endothelial,True,True,0.28
+end_to_end,2,nb_conditional,Cholangiocytes,True,True,0.26
+end_to_end,2,nb_conditional,Ciliated cells,True,True,0.08
+end_to_end,2,nb_conditional,Club cells,True,True,0.06
+end_to_end,2,nb_conditional,Collecting duct,True,False,0.16
+end_to_end,2,nb_conditional,Corticotrophs,True,False,0.18
+end_to_end,2,nb_conditional,Cycling cells,True,True,0.56
+end_to_end,2,nb_conditional,Delta cells,True,False,0.12
+end_to_end,2,nb_conditional,Dendritic cells,False,False,
+end_to_end,2,nb_conditional,Dorsal horn neurons,True,True,0.1
+end_to_end,2,nb_conditional,Endothelial cells,True,True,0.52
+end_to_end,2,nb_conditional,Epithelial cells,True,True,0.58
+end_to_end,2,nb_conditional,Erythrocytes,True,True,0.28
+end_to_end,2,nb_conditional,Erythroid progenitors,True,True,0.46
+end_to_end,2,nb_conditional,Excitatory neurons,True,True,0.04
+end_to_end,2,nb_conditional,Exhausted T cells,True,True,0.14
+end_to_end,2,nb_conditional,Fibroblasts,True,True,0.58
+end_to_end,2,nb_conditional,Goblet cells,True,True,0.26
+end_to_end,2,nb_conditional,Gonadotrophs,True,True,0.22
+end_to_end,2,nb_conditional,Granule cells,True,True,0.2
+end_to_end,2,nb_conditional,HSCs/Progenitors,True,True,0.08
+end_to_end,2,nb_conditional,Hepatocytes,True,True,0.18
+end_to_end,2,nb_conditional,IFN-stimulated cells,True,True,0.48
+end_to_end,2,nb_conditional,Immature neurons,True,True,0.22
+end_to_end,2,nb_conditional,Inhibitory neurons,True,True,0.1
+end_to_end,2,nb_conditional,Intermediate progenitors,True,True,0.22
+end_to_end,2,nb_conditional,Luminal epithelial,True,True,0.36
+end_to_end,2,nb_conditional,Lymphatic endothelial,True,True,0.22
+end_to_end,2,nb_conditional,MHC-II high APCs,True,True,0.58
+end_to_end,2,nb_conditional,Macrophages,True,True,0.68
+end_to_end,2,nb_conditional,Mammary secretory,True,True,0.02
+end_to_end,2,nb_conditional,Mast cells,True,True,0.2
+end_to_end,2,nb_conditional,Megakaryocytes,True,True,0.06
+end_to_end,2,nb_conditional,Melanocytes,True,True,0.04
+end_to_end,2,nb_conditional,Merkel cells,True,True,0.3
+end_to_end,2,nb_conditional,Mesenchymal stem cells,True,True,0.08
+end_to_end,2,nb_conditional,Microglia,True,True,0.3
+end_to_end,2,nb_conditional,Monocytes,True,True,0.58
+end_to_end,2,nb_conditional,Myoepithelial cells,True,True,0.18
+end_to_end,2,nb_conditional,Müller glia,True,True,0.12
+end_to_end,2,nb_conditional,NK cells,True,True,0.6
+end_to_end,2,nb_conditional,Neuroendocrine cells,True,True,0.16
+end_to_end,2,nb_conditional,Neutrophils,True,True,0.34
+end_to_end,2,nb_conditional,OPCs,True,True,0.02
+end_to_end,2,nb_conditional,Odontoblasts,True,True,0.14
+end_to_end,2,nb_conditional,Oligodendrocytes,True,True,0.0
+end_to_end,2,nb_conditional,Plasma cells,True,True,0.68
+end_to_end,2,nb_conditional,Plasmacytoid DCs,True,True,0.18
+end_to_end,2,nb_conditional,Pluripotent stem cells,True,True,0.14
+end_to_end,2,nb_conditional,Proliferating cells,True,True,0.42
+end_to_end,2,nb_conditional,Prostate epithelial,True,True,0.32
+end_to_end,2,nb_conditional,Radial glia,True,True,0.06
+end_to_end,2,nb_conditional,Regulatory T cells,True,True,0.4
+end_to_end,2,nb_conditional,Retinal ganglion cells,True,True,0.06
+end_to_end,2,nb_conditional,Sertoli cells,True,True,0.08
+end_to_end,2,nb_conditional,Smooth muscle cells,True,True,0.6
+end_to_end,2,nb_conditional,Somatotrophs,True,True,0.2
+end_to_end,2,nb_conditional,Spinal interneurons,True,True,0.02
+end_to_end,2,nb_conditional,Stress-response cells,True,True,0.32
+end_to_end,2,nb_conditional,Thyrotrophs,True,True,0.04
+end_to_end,2,nb_conditional,Tip cells,True,True,0.42
+end_to_end,2,nb_conditional,Urothelial cells,True,True,0.16
+end_to_end,2,nb_conditional,Venous endothelial,True,True,0.3
+end_to_end,2,poisson,Adipocytes,True,True,0.36
+end_to_end,2,poisson,Alpha cells,True,True,0.1
+end_to_end,2,poisson,Alveolar type 1,True,True,0.32
+end_to_end,2,poisson,Alveolar type 2,True,True,0.34
+end_to_end,2,poisson,Astrocytes,True,True,0.2
+end_to_end,2,poisson,B cells,True,True,0.58
+end_to_end,2,poisson,Basal cells,True,True,0.24
+end_to_end,2,poisson,Beta cells,True,True,0.18
+end_to_end,2,poisson,CD4+ T cells,True,True,0.3
+end_to_end,2,poisson,CD8+ T cells,True,True,0.54
+end_to_end,2,poisson,Capillary endothelial,True,True,0.28
+end_to_end,2,poisson,Cholangiocytes,True,True,0.38
+end_to_end,2,poisson,Ciliated cells,True,True,0.1
+end_to_end,2,poisson,Club cells,True,True,0.12
+end_to_end,2,poisson,Collecting duct,True,False,0.24
+end_to_end,2,poisson,Corticotrophs,True,False,0.16
+end_to_end,2,poisson,Cycling cells,True,True,0.54
+end_to_end,2,poisson,Delta cells,True,False,0.2
+end_to_end,2,poisson,Dendritic cells,False,False,
+end_to_end,2,poisson,Dorsal horn neurons,True,True,0.1
+end_to_end,2,poisson,Endothelial cells,True,True,0.6
+end_to_end,2,poisson,Epithelial cells,True,True,0.52
+end_to_end,2,poisson,Erythrocytes,True,True,0.36
+end_to_end,2,poisson,Erythroid progenitors,True,True,0.44
+end_to_end,2,poisson,Excitatory neurons,True,True,0.12
+end_to_end,2,poisson,Exhausted T cells,True,True,0.16
+end_to_end,2,poisson,Fibroblasts,True,True,0.62
+end_to_end,2,poisson,Goblet cells,True,True,0.34
+end_to_end,2,poisson,Gonadotrophs,True,True,0.18
+end_to_end,2,poisson,Granule cells,True,True,0.22
+end_to_end,2,poisson,HSCs/Progenitors,True,True,0.08
+end_to_end,2,poisson,Hepatocytes,True,True,0.22
+end_to_end,2,poisson,IFN-stimulated cells,True,True,0.44
+end_to_end,2,poisson,Immature neurons,True,True,0.24
+end_to_end,2,poisson,Inhibitory neurons,True,True,0.1
+end_to_end,2,poisson,Intermediate progenitors,True,True,0.18
+end_to_end,2,poisson,Luminal epithelial,True,True,0.48
+end_to_end,2,poisson,Lymphatic endothelial,True,True,0.18
+end_to_end,2,poisson,MHC-II high APCs,True,True,0.58
+end_to_end,2,poisson,Macrophages,True,True,0.66
+end_to_end,2,poisson,Mammary secretory,True,True,0.06
+end_to_end,2,poisson,Mast cells,True,True,0.24
+end_to_end,2,poisson,Megakaryocytes,True,True,0.06
+end_to_end,2,poisson,Melanocytes,True,True,0.12
+end_to_end,2,poisson,Merkel cells,True,True,0.28
+end_to_end,2,poisson,Mesenchymal stem cells,True,True,0.12
+end_to_end,2,poisson,Microglia,True,True,0.32
+end_to_end,2,poisson,Monocytes,True,True,0.52
+end_to_end,2,poisson,Myoepithelial cells,True,True,0.26
+end_to_end,2,poisson,Müller glia,True,True,0.32
+end_to_end,2,poisson,NK cells,True,True,0.6
+end_to_end,2,poisson,Neuroendocrine cells,True,True,0.16
+end_to_end,2,poisson,Neutrophils,True,True,0.38
+end_to_end,2,poisson,OPCs,True,True,0.02
+end_to_end,2,poisson,Odontoblasts,True,True,0.28
+end_to_end,2,poisson,Oligodendrocytes,True,True,0.04
+end_to_end,2,poisson,Plasma cells,True,True,0.58
+end_to_end,2,poisson,Plasmacytoid DCs,True,True,0.28
+end_to_end,2,poisson,Pluripotent stem cells,True,True,0.14
+end_to_end,2,poisson,Proliferating cells,True,True,0.42
+end_to_end,2,poisson,Prostate epithelial,True,True,0.38
+end_to_end,2,poisson,Radial glia,True,True,0.12
+end_to_end,2,poisson,Regulatory T cells,True,True,0.36
+end_to_end,2,poisson,Retinal ganglion cells,True,True,0.12
+end_to_end,2,poisson,Sertoli cells,True,True,0.14
+end_to_end,2,poisson,Smooth muscle cells,True,True,0.6
+end_to_end,2,poisson,Somatotrophs,True,True,0.22
+end_to_end,2,poisson,Spinal interneurons,True,True,0.02
+end_to_end,2,poisson,Stress-response cells,True,True,0.36
+end_to_end,2,poisson,Thyrotrophs,True,True,0.08
+end_to_end,2,poisson,Tip cells,True,True,0.42
+end_to_end,2,poisson,Urothelial cells,True,True,0.26
+end_to_end,2,poisson,Venous endothelial,True,True,0.4
+end_to_end,3,nb_global,Adipocytes,True,True,0.28
+end_to_end,3,nb_global,Alpha cells,True,True,0.14
+end_to_end,3,nb_global,Alveolar type 1,True,True,0.24
+end_to_end,3,nb_global,Alveolar type 2,True,True,0.4
+end_to_end,3,nb_global,Astrocytes,True,True,0.12
+end_to_end,3,nb_global,B cells,True,True,0.56
+end_to_end,3,nb_global,Basal cells,True,True,0.2
+end_to_end,3,nb_global,Beta cells,True,True,0.08
+end_to_end,3,nb_global,CD4+ T cells,True,True,0.4
+end_to_end,3,nb_global,CD8+ T cells,True,True,0.54
+end_to_end,3,nb_global,Capillary endothelial,True,True,0.44
+end_to_end,3,nb_global,Cholangiocytes,True,True,0.42
+end_to_end,3,nb_global,Ciliated cells,True,True,0.04
+end_to_end,3,nb_global,Club cells,True,True,0.12
+end_to_end,3,nb_global,Collecting duct,True,False,0.16
+end_to_end,3,nb_global,Corticotrophs,True,False,0.06
+end_to_end,3,nb_global,Cycling cells,True,True,0.5
+end_to_end,3,nb_global,Delta cells,False,False,
+end_to_end,3,nb_global,Dendritic cells,False,False,
+end_to_end,3,nb_global,Dorsal horn neurons,True,True,0.04
+end_to_end,3,nb_global,Endothelial cells,True,True,0.64
+end_to_end,3,nb_global,Epithelial cells,True,True,0.44
+end_to_end,3,nb_global,Erythrocytes,True,True,0.34
+end_to_end,3,nb_global,Erythroid progenitors,True,True,0.32
+end_to_end,3,nb_global,Excitatory neurons,True,True,0.08
+end_to_end,3,nb_global,Exhausted T cells,True,True,0.0
+end_to_end,3,nb_global,Fibroblasts,True,True,0.66
+end_to_end,3,nb_global,Goblet cells,True,True,0.3
+end_to_end,3,nb_global,Gonadotrophs,True,True,0.22
+end_to_end,3,nb_global,Granule cells,True,True,0.1
+end_to_end,3,nb_global,HSCs/Progenitors,True,True,0.2
+end_to_end,3,nb_global,Hepatocytes,True,True,0.16
+end_to_end,3,nb_global,IFN-stimulated cells,True,True,0.38
+end_to_end,3,nb_global,Immature neurons,True,True,0.28
+end_to_end,3,nb_global,Inhibitory neurons,True,True,0.06
+end_to_end,3,nb_global,Intermediate progenitors,True,True,0.08
+end_to_end,3,nb_global,Luminal epithelial,True,True,0.38
+end_to_end,3,nb_global,Lymphatic endothelial,True,True,0.22
+end_to_end,3,nb_global,MHC-II high APCs,True,True,0.6
+end_to_end,3,nb_global,Macrophages,True,True,0.68
+end_to_end,3,nb_global,Mammary secretory,True,True,0.04
+end_to_end,3,nb_global,Mast cells,True,True,0.16
+end_to_end,3,nb_global,Megakaryocytes,True,True,0.18
+end_to_end,3,nb_global,Melanocytes,True,True,0.16
+end_to_end,3,nb_global,Merkel cells,True,True,0.2
+end_to_end,3,nb_global,Mesenchymal stem cells,True,True,0.14
+end_to_end,3,nb_global,Microglia,True,True,0.2
+end_to_end,3,nb_global,Monocytes,True,True,0.54
+end_to_end,3,nb_global,Myoepithelial cells,True,True,0.16
+end_to_end,3,nb_global,Müller glia,True,True,0.08
+end_to_end,3,nb_global,NK cells,True,True,0.64
+end_to_end,3,nb_global,Neuroendocrine cells,True,True,0.12
+end_to_end,3,nb_global,Neutrophils,True,True,0.32
+end_to_end,3,nb_global,OPCs,True,True,0.1
+end_to_end,3,nb_global,Odontoblasts,True,True,0.18
+end_to_end,3,nb_global,Oligodendrocytes,True,True,0.02
+end_to_end,3,nb_global,Plasma cells,True,True,0.5
+end_to_end,3,nb_global,Plasmacytoid DCs,True,True,0.34
+end_to_end,3,nb_global,Pluripotent stem cells,True,True,0.14
+end_to_end,3,nb_global,Proliferating cells,True,True,0.4
+end_to_end,3,nb_global,Prostate epithelial,True,True,0.12
+end_to_end,3,nb_global,Radial glia,True,True,0.1
+end_to_end,3,nb_global,Regulatory T cells,True,True,0.3
+end_to_end,3,nb_global,Retinal ganglion cells,True,True,0.08
+end_to_end,3,nb_global,Sertoli cells,True,True,0.12
+end_to_end,3,nb_global,Smooth muscle cells,True,True,0.56
+end_to_end,3,nb_global,Somatotrophs,True,True,0.12
+end_to_end,3,nb_global,Spinal interneurons,True,True,0.2
+end_to_end,3,nb_global,Stress-response cells,True,True,0.4
+end_to_end,3,nb_global,Thyrotrophs,True,True,0.16
+end_to_end,3,nb_global,Tip cells,True,True,0.28
+end_to_end,3,nb_global,Urothelial cells,True,True,0.06
+end_to_end,3,nb_global,Venous endothelial,True,True,0.34
+end_to_end,3,nb_conditional,Adipocytes,True,True,0.2
+end_to_end,3,nb_conditional,Alpha cells,True,True,0.06
+end_to_end,3,nb_conditional,Alveolar type 1,True,True,0.12
+end_to_end,3,nb_conditional,Alveolar type 2,True,True,0.26
+end_to_end,3,nb_conditional,Astrocytes,True,True,0.12
+end_to_end,3,nb_conditional,B cells,True,True,0.5
+end_to_end,3,nb_conditional,Basal cells,True,True,0.12
+end_to_end,3,nb_conditional,Beta cells,True,True,0.06
+end_to_end,3,nb_conditional,CD4+ T cells,True,True,0.34
+end_to_end,3,nb_conditional,CD8+ T cells,True,True,0.58
+end_to_end,3,nb_conditional,Capillary endothelial,True,True,0.32
+end_to_end,3,nb_conditional,Cholangiocytes,True,True,0.46
+end_to_end,3,nb_conditional,Ciliated cells,True,True,0.1
+end_to_end,3,nb_conditional,Club cells,True,True,0.14
+end_to_end,3,nb_conditional,Collecting duct,True,False,0.12
+end_to_end,3,nb_conditional,Corticotrophs,False,False,
+end_to_end,3,nb_conditional,Cycling cells,True,True,0.52
+end_to_end,3,nb_conditional,Delta cells,True,False,0.0
+end_to_end,3,nb_conditional,Dendritic cells,False,False,
+end_to_end,3,nb_conditional,Dorsal horn neurons,True,True,0.06
+end_to_end,3,nb_conditional,Endothelial cells,True,True,0.66
+end_to_end,3,nb_conditional,Epithelial cells,True,True,0.5
+end_to_end,3,nb_conditional,Erythrocytes,True,True,0.34
+end_to_end,3,nb_conditional,Erythroid progenitors,True,True,0.28
+end_to_end,3,nb_conditional,Excitatory neurons,True,True,0.04
+end_to_end,3,nb_conditional,Exhausted T cells,True,True,0.08
+end_to_end,3,nb_conditional,Fibroblasts,True,True,0.62
+end_to_end,3,nb_conditional,Goblet cells,True,True,0.28
+end_to_end,3,nb_conditional,Gonadotrophs,True,True,0.06
+end_to_end,3,nb_conditional,Granule cells,True,True,0.08
+end_to_end,3,nb_conditional,HSCs/Progenitors,True,True,0.14
+end_to_end,3,nb_conditional,Hepatocytes,True,True,0.22
+end_to_end,3,nb_conditional,IFN-stimulated cells,True,True,0.44
+end_to_end,3,nb_conditional,Immature neurons,True,True,0.16
+end_to_end,3,nb_conditional,Inhibitory neurons,True,True,0.04
+end_to_end,3,nb_conditional,Intermediate progenitors,True,True,0.16
+end_to_end,3,nb_conditional,Luminal epithelial,True,True,0.34
+end_to_end,3,nb_conditional,Lymphatic endothelial,True,True,0.1
+end_to_end,3,nb_conditional,MHC-II high APCs,True,True,0.58
+end_to_end,3,nb_conditional,Macrophages,True,True,0.66
+end_to_end,3,nb_conditional,Mammary secretory,True,True,0.08
+end_to_end,3,nb_conditional,Mast cells,True,True,0.22
+end_to_end,3,nb_conditional,Megakaryocytes,True,True,0.22
+end_to_end,3,nb_conditional,Melanocytes,True,True,0.06
+end_to_end,3,nb_conditional,Merkel cells,True,True,0.16
+end_to_end,3,nb_conditional,Mesenchymal stem cells,True,True,0.14
+end_to_end,3,nb_conditional,Microglia,True,True,0.32
+end_to_end,3,nb_conditional,Monocytes,True,True,0.6
+end_to_end,3,nb_conditional,Myoepithelial cells,True,True,0.38
+end_to_end,3,nb_conditional,Müller glia,True,True,0.06
+end_to_end,3,nb_conditional,NK cells,True,True,0.62
+end_to_end,3,nb_conditional,Neuroendocrine cells,True,True,0.06
+end_to_end,3,nb_conditional,Neutrophils,True,True,0.28
+end_to_end,3,nb_conditional,OPCs,True,True,0.04
+end_to_end,3,nb_conditional,Odontoblasts,True,True,0.2
+end_to_end,3,nb_conditional,Oligodendrocytes,True,True,0.02
+end_to_end,3,nb_conditional,Plasma cells,True,True,0.5
+end_to_end,3,nb_conditional,Plasmacytoid DCs,True,True,0.26
+end_to_end,3,nb_conditional,Pluripotent stem cells,True,True,0.04
+end_to_end,3,nb_conditional,Proliferating cells,True,True,0.46
+end_to_end,3,nb_conditional,Prostate epithelial,True,True,0.1
+end_to_end,3,nb_conditional,Radial glia,True,True,0.06
+end_to_end,3,nb_conditional,Regulatory T cells,True,True,0.42
+end_to_end,3,nb_conditional,Retinal ganglion cells,True,True,0.08
+end_to_end,3,nb_conditional,Sertoli cells,True,True,0.1
+end_to_end,3,nb_conditional,Smooth muscle cells,True,True,0.54
+end_to_end,3,nb_conditional,Somatotrophs,True,True,0.2
+end_to_end,3,nb_conditional,Spinal interneurons,True,True,0.04
+end_to_end,3,nb_conditional,Stress-response cells,True,True,0.38
+end_to_end,3,nb_conditional,Thyrotrophs,True,True,0.12
+end_to_end,3,nb_conditional,Tip cells,True,True,0.42
+end_to_end,3,nb_conditional,Urothelial cells,True,True,0.26
+end_to_end,3,nb_conditional,Venous endothelial,True,True,0.28
+end_to_end,3,poisson,Adipocytes,True,True,0.24
+end_to_end,3,poisson,Alpha cells,True,True,0.04
+end_to_end,3,poisson,Alveolar type 1,True,True,0.16
+end_to_end,3,poisson,Alveolar type 2,True,True,0.32
+end_to_end,3,poisson,Astrocytes,True,True,0.08
+end_to_end,3,poisson,B cells,True,True,0.54
+end_to_end,3,poisson,Basal cells,True,True,0.14
+end_to_end,3,poisson,Beta cells,True,True,0.08
+end_to_end,3,poisson,CD4+ T cells,True,True,0.34
+end_to_end,3,poisson,CD8+ T cells,True,True,0.52
+end_to_end,3,poisson,Capillary endothelial,True,True,0.32
+end_to_end,3,poisson,Cholangiocytes,True,True,0.48
+end_to_end,3,poisson,Ciliated cells,True,True,0.16
+end_to_end,3,poisson,Club cells,True,True,0.1
+end_to_end,3,poisson,Collecting duct,True,False,0.16
+end_to_end,3,poisson,Corticotrophs,False,False,
+end_to_end,3,poisson,Cycling cells,True,True,0.58
+end_to_end,3,poisson,Delta cells,True,False,0.0
+end_to_end,3,poisson,Dendritic cells,False,False,
+end_to_end,3,poisson,Dorsal horn neurons,True,True,0.08
+end_to_end,3,poisson,Endothelial cells,True,True,0.68
+end_to_end,3,poisson,Epithelial cells,True,True,0.54
+end_to_end,3,poisson,Erythrocytes,True,True,0.36
+end_to_end,3,poisson,Erythroid progenitors,True,True,0.32
+end_to_end,3,poisson,Excitatory neurons,True,True,0.04
+end_to_end,3,poisson,Exhausted T cells,True,True,0.04
+end_to_end,3,poisson,Fibroblasts,True,True,0.68
+end_to_end,3,poisson,Goblet cells,True,True,0.24
+end_to_end,3,poisson,Gonadotrophs,True,True,0.16
+end_to_end,3,poisson,Granule cells,True,True,0.12
+end_to_end,3,poisson,HSCs/Progenitors,True,True,0.14
+end_to_end,3,poisson,Hepatocytes,True,True,0.26
+end_to_end,3,poisson,IFN-stimulated cells,True,True,0.42
+end_to_end,3,poisson,Immature neurons,True,True,0.18
+end_to_end,3,poisson,Inhibitory neurons,True,True,0.1
+end_to_end,3,poisson,Intermediate progenitors,True,True,0.2
+end_to_end,3,poisson,Luminal epithelial,True,True,0.38
+end_to_end,3,poisson,Lymphatic endothelial,True,True,0.22
+end_to_end,3,poisson,MHC-II high APCs,True,True,0.6
+end_to_end,3,poisson,Macrophages,True,True,0.74
+end_to_end,3,poisson,Mammary secretory,True,True,0.12
+end_to_end,3,poisson,Mast cells,True,True,0.2
+end_to_end,3,poisson,Megakaryocytes,True,True,0.18
+end_to_end,3,poisson,Melanocytes,True,True,0.12
+end_to_end,3,poisson,Merkel cells,True,True,0.16
+end_to_end,3,poisson,Mesenchymal stem cells,True,True,0.16
+end_to_end,3,poisson,Microglia,True,True,0.3
+end_to_end,3,poisson,Monocytes,True,True,0.6
+end_to_end,3,poisson,Myoepithelial cells,True,True,0.44
+end_to_end,3,poisson,Müller glia,True,True,0.08
+end_to_end,3,poisson,NK cells,True,True,0.58
+end_to_end,3,poisson,Neuroendocrine cells,True,True,0.14
+end_to_end,3,poisson,Neutrophils,True,True,0.36
+end_to_end,3,poisson,OPCs,True,True,0.04
+end_to_end,3,poisson,Odontoblasts,True,True,0.32
+end_to_end,3,poisson,Oligodendrocytes,True,True,0.04
+end_to_end,3,poisson,Plasma cells,True,True,0.52
+end_to_end,3,poisson,Plasmacytoid DCs,True,True,0.24
+end_to_end,3,poisson,Pluripotent stem cells,True,True,0.1
+end_to_end,3,poisson,Proliferating cells,True,True,0.58
+end_to_end,3,poisson,Prostate epithelial,True,True,0.16
+end_to_end,3,poisson,Radial glia,True,True,0.14
+end_to_end,3,poisson,Regulatory T cells,True,True,0.42
+end_to_end,3,poisson,Retinal ganglion cells,True,True,0.08
+end_to_end,3,poisson,Sertoli cells,True,True,0.16
+end_to_end,3,poisson,Smooth muscle cells,True,True,0.64
+end_to_end,3,poisson,Somatotrophs,True,True,0.22
+end_to_end,3,poisson,Spinal interneurons,True,True,0.08
+end_to_end,3,poisson,Stress-response cells,True,True,0.44
+end_to_end,3,poisson,Thyrotrophs,True,True,0.12
+end_to_end,3,poisson,Tip cells,True,True,0.36
+end_to_end,3,poisson,Urothelial cells,True,True,0.32
+end_to_end,3,poisson,Venous endothelial,True,True,0.32

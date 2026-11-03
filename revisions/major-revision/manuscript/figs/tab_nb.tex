@@ -1,0 +1,10 @@
+\begin{tabular}{l l S[table-format=2.1,group-digits=false] S[table-format=+1.4,retain-explicit-plus,group-digits=false] c}
+\toprule
+Encoder & metric & {Poisson win (\%)} & {median paired $\Delta$} & {max Holm $p$}\\
+\midrule
+PCA-512 & energy & \FfourPoisWinEnergy & \FfourEnergyMedDeltaPca & \num{\FfourHolmEnergyPca}\\
+PCA-512 & calibration error & \FfourPoisWinRvar & \FfourRvarMedDeltaPca & \num{\FfourHolmRvarPca}\\
+randproj-512 & energy & \FfourRpWinEnergy & {---} & \num{\FfourHolmEnergyRp}\\
+randproj-512 & calibration error & \FfourRpWinRvar & {---} & \num{\FfourHolmRvarRp}\\
+\bottomrule
+\end{tabular}

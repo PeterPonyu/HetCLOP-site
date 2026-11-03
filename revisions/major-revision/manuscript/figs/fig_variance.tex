@@ -1,0 +1,39 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=1.6cm},width=6.1cm, height=5.3cm, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}]
+\nextgroupplot[title={expressed-gene signed $r_{\mathrm{var}}$}, ybar, /pgf/bar width=13pt, symbolic x coords={deterministic,stochastic_betanll,matched_noise,matched_noise_per_type,NB,Poisson}, xtick=data, xticklabels={{determ.},{$\beta$-NLL},{matched},{matched/type},{NB($\hat\theta$)},{Poisson}}, x tick label style={rotate=25, anchor=east, font=\footnotesize}, ylabel={signed $r_{\mathrm{var}}$ (expressed)}, ymin=0, ymax=1.35, nodes near coords, nodes near coords style={font=\footnotesize}, every node near coord/.append style={/pgf/number format/.cd, fixed, precision=2}]
+\addplot[draw=black!40, fill=hblue] coordinates {
+  (deterministic,0.517)
+  (stochastic_betanll,0.682)
+  (matched_noise,0.645)
+  (matched_noise_per_type,0.736)
+  (NB,1.179) (Poisson,1.072)
+};
+\draw[hgray, dashed, thick] ({rel axis cs:0,0}|-{axis cs:deterministic,1.0}) -- ({rel axis cs:1,0}|-{axis cs:Poisson,1.0});
+\node[font=\footnotesize, black, anchor=north west] at (rel axis cs:0.015,0.75){calibrated $=1.00$};
+\node[font=\footnotesize, anchor=north west] at (rel axis cs:0.01,0.99){Gaussian: underdispersed}; \node[font=\footnotesize, anchor=north east] at (rel axis cs:0.99,0.99){};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={All genes versus expressed genes}, ybar, /pgf/bar width=20pt, symbolic x coords={PCAmn,scGPTmn}, xtick=data, xticklabels={PCA-512 matched, scGPT matched}, x tick label style={font=\footnotesize}, ylabel={var(gen)/var(real)}, ymin=0, ymax=1.35, enlarge x limits=0.52, legend style={font=\footnotesize, at={(0.5,1.22)}, anchor=south, legend columns=2, draw=none, fill=none}, nodes near coords, nodes near coords style={font=\footnotesize}, every node near coord/.append style={/pgf/number format/.cd, fixed, precision=2}]
+\draw[hgray, dashed, thick] ({rel axis cs:0,0}|-{axis cs:PCAmn,1.0}) -- ({rel axis cs:1,0}|-{axis cs:scGPTmn,1.0});
+\addplot[draw=black!40, fill=hgray] coordinates {
+  (PCAmn,0.979)
+  (scGPTmn,1.207)
+}; \addlegendentry{unrestricted (all genes)}
+\addplot[draw=black!40, fill=hblue] coordinates {
+  (PCAmn,0.645)
+  (scGPTmn,0.613)
+}; \addlegendentry{expressed only}
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}
+\begin{axis}[at={(3.6cm,-2.5cm)},anchor=north west,width=6.1cm,height=3.3cm,scale only axis,tick align=outside,tick pos=left,tick label style={font=\footnotesize},label style={font=\footnotesize},title={Expression-threshold sensitivity},xmin=-.25,xmax=4.25,ymin=50,ymax=90,ytick={50,60,70,80,90},xtick={0,1,2,3,4},xticklabels={0.1,0.25,0.5,1,2},xlabel={Minimum mean count},ylabel={Groups favouring Poisson (\%)}]
+\draw[hgray,dashed] (axis cs:2,50)--(axis cs:2,90);
+\node[font=\footnotesize,anchor=north west] at (axis cs:2.05,89) {primary cut};
+\addplot[hblue,thick,mark=*,mark size=1.8pt] coordinates {(0,79.299363) (1,77.070064) (2,73.566879) (3,74.522293) (4,70.926518)};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(c)};
+\end{axis}
+\end{tikzpicture}
+
+\endgroup

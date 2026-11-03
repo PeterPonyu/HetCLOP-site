@@ -1,0 +1,73 @@
+{
+  "purpose": "Sensitivity of F4's primary claim to the arbitrary expression cut (mean count >= 0.5). Arm A, PCA-512, NB's own fitted mean held fixed.",
+  "convention": "diff = NB - Poisson on |log2 r_var| (lower better); diff>0 => Poisson wins",
+  "paper_cut": 0.5,
+  "cuts": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "seed": 42,
+  "per_cut": {
+    "0.0": {
+      "n_groups": 314,
+      "median_genes_surviving": 1274.5,
+      "poisson_win_fraction_groups": 0.8535031847133758,
+      "median_paired_diff_nb_minus_pois": 0.025227038457818818,
+      "naive_p": 5.168574567735117e-37,
+      "clustered_wilcoxon_p": 3.552713678800501e-15,
+      "clustered_n_datasets": 50
+    },
+    "0.1": {
+      "n_groups": 314,
+      "median_genes_surviving": 700.0,
+      "poisson_win_fraction_groups": 0.7929936305732485,
+      "median_paired_diff_nb_minus_pois": 0.019386935059511654,
+      "naive_p": 3.7092805857923605e-27,
+      "clustered_wilcoxon_p": 5.610267805877811e-11,
+      "clustered_n_datasets": 50
+    },
+    "0.25": {
+      "n_groups": 314,
+      "median_genes_surviving": 400.0,
+      "poisson_win_fraction_groups": 0.7707006369426752,
+      "median_paired_diff_nb_minus_pois": 0.020583382404456868,
+      "naive_p": 2.1232998370734842e-26,
+      "clustered_wilcoxon_p": 7.94031507211912e-13,
+      "clustered_n_datasets": 50
+    },
+    "0.5": {
+      "n_groups": 314,
+      "median_genes_surviving": 223.0,
+      "poisson_win_fraction_groups": 0.7356687898089171,
+      "median_paired_diff_nb_minus_pois": 0.017364243138372176,
+      "naive_p": 7.5070799114144065e-19,
+      "clustered_wilcoxon_p": 5.897913268881894e-10,
+      "clustered_n_datasets": 50
+    },
+    "1.0": {
+      "n_groups": 314,
+      "median_genes_surviving": 114.5,
+      "poisson_win_fraction_groups": 0.7452229299363057,
+      "median_paired_diff_nb_minus_pois": 0.020373500575377318,
+      "naive_p": 2.610956485778733e-17,
+      "clustered_wilcoxon_p": 8.855280952957401e-10,
+      "clustered_n_datasets": 50
+    },
+    "2.0": {
+      "n_groups": 313,
+      "median_genes_surviving": 57.0,
+      "poisson_win_fraction_groups": 0.7092651757188498,
+      "median_paired_diff_nb_minus_pois": 0.02079908621137784,
+      "naive_p": 2.2005374246729235e-14,
+      "clustered_wilcoxon_p": 2.6378053519238165e-08,
+      "clustered_n_datasets": 50
+    }
+  },
+  "direction_stable_across_informative_cuts": true,
+  "significance_stable_across_informative_cuts": true,
+  "note": "cut 0.0 is the unrestricted statistic F3 discredits (sparsity pins the median at 1.0); it is reported for contrast and is NOT evidence for or against the claim."
+}

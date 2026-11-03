@@ -1,0 +1,192 @@
+{
+  "purpose": "seed-aggregate of the abundance-based rarity robustness arm",
+  "seeds": [
+    0
+  ],
+  "n_seeds": 1,
+  "rarity_definitions": {
+    "original": "types with < 50 held-out test cells (split artefact)",
+    "abundance": "types with total corpus abundance <= Q1 (the 25% quantile = 377 cells) of per-type corpus totals over all 133845 cells"
+  },
+  "n_rare_types_abundance": 20,
+  "n_rare_types_original": 19,
+  "rare_set_overlap_n": 19,
+  "abundance_q1_cells": "types with total corpus abundance <= Q1 (the 25% quantile = 377 cells) of per-type corpus totals over all 133845 cells",
+  "abundance_rare_support": {
+    "Schwann cells": {
+      "corpus_cells": 24,
+      "test_cells": 4
+    },
+    "Kupffer cells": {
+      "corpus_cells": 29,
+      "test_cells": 5
+    },
+    "Gamma-delta T cells": {
+      "corpus_cells": 38,
+      "test_cells": 5
+    },
+    "Definitive endoderm": {
+      "corpus_cells": 43,
+      "test_cells": 7
+    },
+    "Proximal tubule": {
+      "corpus_cells": 77,
+      "test_cells": 14
+    },
+    "Bipolar cells": {
+      "corpus_cells": 89,
+      "test_cells": 8
+    },
+    "Corticotrophs": {
+      "corpus_cells": 108,
+      "test_cells": 22
+    },
+    "Oligodendrocytes": {
+      "corpus_cells": 118,
+      "test_cells": 20
+    },
+    "Delta cells": {
+      "corpus_cells": 142,
+      "test_cells": 28
+    },
+    "OPCs": {
+      "corpus_cells": 144,
+      "test_cells": 22
+    },
+    "Sertoli cells": {
+      "corpus_cells": 197,
+      "test_cells": 31
+    },
+    "Dendritic cells": {
+      "corpus_cells": 204,
+      "test_cells": 30
+    },
+    "Odontoblasts": {
+      "corpus_cells": 209,
+      "test_cells": 25
+    },
+    "Myoepithelial cells": {
+      "corpus_cells": 242,
+      "test_cells": 27
+    },
+    "Alveolar type 1": {
+      "corpus_cells": 247,
+      "test_cells": 48
+    },
+    "Thyrotrophs": {
+      "corpus_cells": 295,
+      "test_cells": 43
+    },
+    "Mesenchymal stem cells": {
+      "corpus_cells": 295,
+      "test_cells": 46
+    },
+    "Dorsal horn neurons": {
+      "corpus_cells": 299,
+      "test_cells": 51
+    },
+    "Lymphatic endothelial": {
+      "corpus_cells": 317,
+      "test_cells": 42
+    },
+    "Intermediate progenitors": {
+      "corpus_cells": 358,
+      "test_cells": 47
+    }
+  },
+  "abundance": {
+    "poisson": {
+      "rare_f1_mean_sd": [
+        0.42559401830987575,
+        0.0
+      ],
+      "rare_f1_unmasked_mean_sd": [
+        0.4081687632853962,
+        0.0
+      ],
+      "macro_f1_mean_sd": [
+        0.6397976877022544,
+        0.0
+      ]
+    },
+    "nb_global": {
+      "rare_f1_mean_sd": [
+        0.19656679591975917,
+        0.0
+      ],
+      "rare_f1_unmasked_mean_sd": [
+        0.1791291620039248,
+        0.0
+      ],
+      "macro_f1_mean_sd": [
+        0.5198501478715023,
+        0.0
+      ]
+    },
+    "nb_conditional": {
+      "rare_f1_mean_sd": [
+        0.4149707519041077,
+        0.0
+      ],
+      "rare_f1_unmasked_mean_sd": [
+        0.3919565876958096,
+        0.0
+      ],
+      "macro_f1_mean_sd": [
+        0.6394745136167355,
+        0.0
+      ]
+    },
+    "real_ceiling": {
+      "rare_f1_mean_sd": [
+        0.6743973472274526,
+        0.0
+      ],
+      "rare_f1_unmasked_mean_sd": [
+        0.6599571990141067,
+        0.0
+      ],
+      "macro_f1_mean_sd": [
+        0.774846353629463,
+        0.0
+      ]
+    }
+  },
+  "original_on_same_draws": {
+    "poisson": {
+      "rare_f1_mean_sd": [
+        0.3953621245367113,
+        0.0
+      ]
+    },
+    "nb_global": {
+      "rare_f1_mean_sd": [
+        0.15678710347443323,
+        0.0
+      ]
+    },
+    "nb_conditional": {
+      "rare_f1_mean_sd": [
+        0.38540372905450754,
+        0.0
+      ]
+    },
+    "real_ceiling": {
+      "rare_f1_mean_sd": [
+        0.6572603655025816,
+        0.0
+      ]
+    }
+  },
+  "headline_ratio_abundance_mean_sd": [
+    0.4736883142192687,
+    0.0
+  ],
+  "headline_ratio_original_mean_sd": [
+    0.4068126270056377,
+    0.0
+  ],
+  "claims": {
+    "global_more_than_halves_conditional_under_abundance_rarity": true
+  }
+}

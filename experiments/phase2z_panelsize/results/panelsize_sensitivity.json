@@ -1,0 +1,118 @@
+{
+  "purpose": "F2 panel-size sensitivity: circularity-broken (Arm B) reconstruction Pearson for refit-free encoders across input-panel sizes",
+  "design": "G_out fixed at the original 1,250 genes; encoders see nested prefixes of G_in (deterministic; G_in drawn by gene_split_seed 1234); decoder retrained per (encoder, size) with phase2a's train_decoder (seed 42, CPU)",
+  "input_sizes": [
+    250,
+    625,
+    1250
+  ],
+  "panel_terms": "input {250,625,1250} = total panel {500,1250,2500}; input 2500 / panel 5000 infeasible: corpus caps at a 2,500-gene shared panel and circularity-broken disjointness leaves at most 1,250 input genes",
+  "paper_reference_span": 0.0045,
+  "anchors_phase2a": {
+    "armB_pca": 0.6746034211236559,
+    "armB_randproj": 0.6442981094204413,
+    "armB_scgpt": 0.6705054533901997,
+    "armB_geneformer": 0.6755097193742773,
+    "oracle_identity_gin_1250d": 0.6737631671560859,
+    "pca_1250d": 0.6717114386850626,
+    "pca_50d_anchor": 0.6746034211236559
+  },
+  "rows": [
+    {
+      "input_genes": 250,
+      "encoder": "oracle_identity",
+      "embed_dim": 250,
+      "recon_pearson": 0.6629040115234546,
+      "val_mse": 0.0806640237569809,
+      "best_epoch": 11
+    },
+    {
+      "input_genes": 250,
+      "encoder": "pca_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6619185750693175,
+      "val_mse": 0.08079950511455536,
+      "best_epoch": 19
+    },
+    {
+      "input_genes": 250,
+      "encoder": "randproj_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6458847445068674,
+      "val_mse": 0.08560770750045776,
+      "best_epoch": 21
+    },
+    {
+      "input_genes": 625,
+      "encoder": "oracle_identity",
+      "embed_dim": 625,
+      "recon_pearson": 0.6704268433179895,
+      "val_mse": 0.07830004394054413,
+      "best_epoch": 10
+    },
+    {
+      "input_genes": 625,
+      "encoder": "pca_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6709828562899866,
+      "val_mse": 0.07802863419055939,
+      "best_epoch": 17
+    },
+    {
+      "input_genes": 625,
+      "encoder": "randproj_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6467392337166077,
+      "val_mse": 0.08525490015745163,
+      "best_epoch": 18
+    },
+    {
+      "input_genes": 1250,
+      "encoder": "oracle_identity",
+      "embed_dim": 1250,
+      "recon_pearson": 0.6737631671560859,
+      "val_mse": 0.07733286917209625,
+      "best_epoch": 7
+    },
+    {
+      "input_genes": 1250,
+      "encoder": "pca_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6746034211236559,
+      "val_mse": 0.07679599523544312,
+      "best_epoch": 19
+    },
+    {
+      "input_genes": 1250,
+      "encoder": "randproj_50",
+      "embed_dim": 50,
+      "recon_pearson": 0.6442981094204413,
+      "val_mse": 0.08566740155220032,
+      "best_epoch": 18
+    }
+  ],
+  "span_by_input_size": {
+    "250": {
+      "min": 0.6458847445068674,
+      "max": 0.6629040115234546,
+      "span_all_encoders": 0.01701926701658718,
+      "span": 0.0009854364541370675,
+      "span_definition": "non-degenerate (oracle vs PCA-50), matching the paper's exclusion of the degenerate randproj-50 fallback"
+    },
+    "625": {
+      "min": 0.6467392337166077,
+      "max": 0.6709828562899866,
+      "span_all_encoders": 0.024243622573378865,
+      "span": 0.000556012971997033,
+      "span_definition": "non-degenerate (oracle vs PCA-50), matching the paper's exclusion of the degenerate randproj-50 fallback"
+    },
+    "1250": {
+      "min": 0.6442981094204413,
+      "max": 0.6746034211236559,
+      "span_all_encoders": 0.0303053117032146,
+      "span": 0.0008402539675700371,
+      "span_definition": "non-degenerate (oracle vs PCA-50), matching the paper's exclusion of the degenerate randproj-50 fallback"
+    }
+  },
+  "elapsed_s": 0.0006823539733886719
+}

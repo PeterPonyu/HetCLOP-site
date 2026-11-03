@@ -1,0 +1,537 @@
+{
+  "purpose": "Controlled 2x2 phase diagram isolating the dispersion law's two factors with known ground truth; the contestable factor (b), theta-conditionality, is isolated via a homogeneous-vs-heterogeneous true-theta contrast that real data cannot give cleanly.",
+  "law": "extra dispersion helps iff (a) Poisson-on-mean leaves a deficit AND (b) theta is conditional enough to place the missing variance per group",
+  "fixture": {
+    "n_datasets": 12,
+    "n_types": 6,
+    "cells_per_group": 200,
+    "n_genes": 150,
+    "theta_huge": 1000.0,
+    "theta_deficit_homog": 0.8,
+    "theta_hetero_range": [
+      0.3,
+      8.0
+    ]
+  },
+  "predictions_checked": {
+    "no_deficit__poisson_calibrated_no_conditional_gain": true,
+    "deficit__poisson_under_inflates": true,
+    "homogeneous__conditionality_buys_nothing": true,
+    "heterogeneous__conditionality_wins": true,
+    "mixed__conditionality_wins": true
+  },
+  "all_predictions_hold": true,
+  "observations_primary_seed": {
+    "no_deficit__poisson_strictly_best": true,
+    "mixed__global_theta_does_not_beat_poisson": true
+  },
+  "seed_robustness": {
+    "seeds": [
+      20260709,
+      20260810,
+      20260911,
+      20261012,
+      20261113
+    ],
+    "n_seeds": 5,
+    "all_core_predictions_hold_every_seed": true,
+    "per_prediction_holds_all_seeds": {
+      "no_deficit__poisson_calibrated_no_conditional_gain": true,
+      "deficit__poisson_under_inflates": true,
+      "homogeneous__conditionality_buys_nothing": true,
+      "heterogeneous__conditionality_wins": true,
+      "mixed__conditionality_wins": true
+    },
+    "per_seed_predictions": {
+      "20260810": {
+        "no_deficit__poisson_calibrated_no_conditional_gain": true,
+        "deficit__poisson_under_inflates": true,
+        "homogeneous__conditionality_buys_nothing": true,
+        "heterogeneous__conditionality_wins": true,
+        "mixed__conditionality_wins": true
+      },
+      "20260911": {
+        "no_deficit__poisson_calibrated_no_conditional_gain": true,
+        "deficit__poisson_under_inflates": true,
+        "homogeneous__conditionality_buys_nothing": true,
+        "heterogeneous__conditionality_wins": true,
+        "mixed__conditionality_wins": true
+      },
+      "20261012": {
+        "no_deficit__poisson_calibrated_no_conditional_gain": true,
+        "deficit__poisson_under_inflates": true,
+        "homogeneous__conditionality_buys_nothing": true,
+        "heterogeneous__conditionality_wins": true,
+        "mixed__conditionality_wins": true
+      },
+      "20261113": {
+        "no_deficit__poisson_calibrated_no_conditional_gain": true,
+        "deficit__poisson_under_inflates": true,
+        "homogeneous__conditionality_buys_nothing": true,
+        "heterogeneous__conditionality_wins": true,
+        "mixed__conditionality_wins": true
+      }
+    },
+    "observation_seed_counts_out_of_n": {
+      "no_deficit__poisson_strictly_best": 3,
+      "mixed__global_theta_does_not_beat_poisson": 3
+    },
+    "note": "core predictions are the factor-(a)/(b) law claims and hold unanimously; the two observations are intentionally non-asserted -- a 3-way calibrated tie and a borderline mixed-regime contest that mirrors the near-noise-floor scVI `gene` paired energy leg."
+  },
+  "verdicts": {
+    "no_deficit": {
+      "poisson_signed_rvar": 0.991462353678148,
+      "poisson_leaves_deficit": false,
+      "best_calibrated_model": "poisson",
+      "conditional_beats_global": false,
+      "conditional_vs_global_clustered_p": 1.0,
+      "global_beats_poisson": false,
+      "global_vs_poisson_clustered_p": 0.30126953125
+    },
+    "deficit_homog": {
+      "poisson_signed_rvar": 0.6527170526598596,
+      "poisson_leaves_deficit": true,
+      "best_calibrated_model": "nb_global",
+      "conditional_beats_global": false,
+      "conditional_vs_global_clustered_p": 1.0,
+      "global_beats_poisson": true,
+      "global_vs_poisson_clustered_p": 0.00048828125
+    },
+    "deficit_hetero": {
+      "poisson_signed_rvar": 0.7117437860907365,
+      "poisson_leaves_deficit": true,
+      "best_calibrated_model": "nb_conditional",
+      "conditional_beats_global": true,
+      "conditional_vs_global_clustered_p": 0.00048828125,
+      "global_beats_poisson": true,
+      "global_vs_poisson_clustered_p": 0.00146484375
+    },
+    "deficit_mixed": {
+      "poisson_signed_rvar": 0.8046105230086634,
+      "poisson_leaves_deficit": true,
+      "best_calibrated_model": "nb_conditional",
+      "conditional_beats_global": true,
+      "conditional_vs_global_clustered_p": 0.00048828125,
+      "global_beats_poisson": false,
+      "global_vs_poisson_clustered_p": 0.12939453125
+    }
+  },
+  "results": {
+    "no_deficit": {
+      "regime": "no_deficit",
+      "seed": 20260709,
+      "theta_global_used": 1000.0,
+      "theta_true_summary": {
+        "min": 1000.0,
+        "median": 1000.0,
+        "max": 1000.0
+      },
+      "levels": {
+        "poisson": {
+          "r_var_signed_expr_median": 0.991462353678148,
+          "r_var_frac_gt1_expr_median": 0.46359137504418524,
+          "r_var_abs_log2_expr_median": 0.1069727480345045,
+          "energy_median": 0.06451406984970731
+        },
+        "nb_global": {
+          "r_var_signed_expr_median": 0.9938982290225685,
+          "r_var_frac_gt1_expr_median": 0.47724149776709035,
+          "r_var_abs_log2_expr_median": 0.10927411376403981,
+          "energy_median": 0.06607931999601124
+        },
+        "nb_conditional": {
+          "r_var_signed_expr_median": 0.9938982290225685,
+          "r_var_frac_gt1_expr_median": 0.47724149776709035,
+          "r_var_abs_log2_expr_median": 0.10927411376403981,
+          "energy_median": 0.06607931999601124
+        }
+      },
+      "contrasts": {
+        "conditional_vs_poisson__rvar": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.4444444444444444,
+          "median_paired_diff_a_minus_b": 0.003204921111964014,
+          "naive_p": 0.39056725212988164,
+          "clustered_wilcoxon_p": 0.30126953125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.29687031296870314
+        },
+        "conditional_vs_poisson__energy": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.4444444444444444,
+          "median_paired_diff_a_minus_b": 0.0008273073405482556,
+          "naive_p": 0.5978469804883305,
+          "clustered_wilcoxon_p": 0.26611328125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.2633736626337366
+        },
+        "global_vs_poisson__rvar": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.4444444444444444,
+          "median_paired_diff_a_minus_b": 0.003204921111964014,
+          "naive_p": 0.39056725212988164,
+          "clustered_wilcoxon_p": 0.30126953125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.29687031296870314
+        },
+        "global_vs_poisson__energy": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.4444444444444444,
+          "median_paired_diff_a_minus_b": 0.0008273073405482556,
+          "naive_p": 0.5978469804883305,
+          "clustered_wilcoxon_p": 0.26611328125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.2633736626337366
+        },
+        "conditional_vs_global__rvar": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": 0.0,
+          "naive_p": 1.0,
+          "clustered_wilcoxon_p": 1.0,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 1.0
+        },
+        "conditional_vs_global__energy": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": 0.0,
+          "naive_p": 1.0,
+          "clustered_wilcoxon_p": 1.0,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 1.0
+        }
+      }
+    },
+    "deficit_homog": {
+      "regime": "deficit_homog",
+      "seed": 20260709,
+      "theta_global_used": 0.8,
+      "theta_true_summary": {
+        "min": 0.8,
+        "median": 0.8,
+        "max": 0.8
+      },
+      "levels": {
+        "poisson": {
+          "r_var_signed_expr_median": 0.6527170526598596,
+          "r_var_frac_gt1_expr_median": 0.0125,
+          "r_var_abs_log2_expr_median": 0.6154705296725271,
+          "energy_median": 0.43800450359267273
+        },
+        "nb_global": {
+          "r_var_signed_expr_median": 0.9957924674942846,
+          "r_var_frac_gt1_expr_median": 0.49240855762594893,
+          "r_var_abs_log2_expr_median": 0.12934475144259527,
+          "energy_median": 0.08764848015208226
+        },
+        "nb_conditional": {
+          "r_var_signed_expr_median": 0.9957924674942846,
+          "r_var_frac_gt1_expr_median": 0.49240855762594893,
+          "r_var_abs_log2_expr_median": 0.12934475144259527,
+          "energy_median": 0.08764848015208226
+        }
+      },
+      "contrasts": {
+        "conditional_vs_poisson__rvar": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 1.0,
+          "median_paired_diff_a_minus_b": -0.49560981998433484,
+          "naive_p": 1.6587518023763977e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "conditional_vs_poisson__energy": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 1.0,
+          "median_paired_diff_a_minus_b": -0.35006235332969204,
+          "naive_p": 1.6587518023763977e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "global_vs_poisson__rvar": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 1.0,
+          "median_paired_diff_a_minus_b": -0.49560981998433484,
+          "naive_p": 1.6587518023763977e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "global_vs_poisson__energy": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 1.0,
+          "median_paired_diff_a_minus_b": -0.35006235332969204,
+          "naive_p": 1.6587518023763977e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "conditional_vs_global__rvar": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": 0.0,
+          "naive_p": 1.0,
+          "clustered_wilcoxon_p": 1.0,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 1.0
+        },
+        "conditional_vs_global__energy": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.0,
+          "median_paired_diff_a_minus_b": 0.0,
+          "naive_p": 1.0,
+          "clustered_wilcoxon_p": 1.0,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 1.0
+        }
+      }
+    },
+    "deficit_hetero": {
+      "regime": "deficit_hetero",
+      "seed": 20260709,
+      "theta_global_used": 1.1953595829023167,
+      "theta_true_summary": {
+        "min": 0.3039893513044713,
+        "median": 1.1953595829023167,
+        "max": 7.847438295379917
+      },
+      "levels": {
+        "poisson": {
+          "r_var_signed_expr_median": 0.7117437860907365,
+          "r_var_frac_gt1_expr_median": 0.019592055823939882,
+          "r_var_abs_log2_expr_median": 0.490573007638721,
+          "energy_median": 0.27892854187992056
+        },
+        "nb_global": {
+          "r_var_signed_expr_median": 0.9896784933852871,
+          "r_var_frac_gt1_expr_median": 0.46453546453546457,
+          "r_var_abs_log2_expr_median": 0.22206499711870756,
+          "energy_median": 0.1432680394593655
+        },
+        "nb_conditional": {
+          "r_var_signed_expr_median": 0.9957869477871373,
+          "r_var_frac_gt1_expr_median": 0.48106591865357645,
+          "r_var_abs_log2_expr_median": 0.11648256031378396,
+          "energy_median": 0.08163066724720736
+        }
+      },
+      "contrasts": {
+        "conditional_vs_poisson__rvar": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.9861111111111112,
+          "median_paired_diff_a_minus_b": -0.3760032079194896,
+          "naive_p": 1.730074612761643e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "conditional_vs_poisson__energy": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 1.0,
+          "median_paired_diff_a_minus_b": -0.200865730436655,
+          "naive_p": 1.6587518023763977e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "global_vs_poisson__rvar": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.7361111111111112,
+          "median_paired_diff_a_minus_b": -0.37326193072450786,
+          "naive_p": 1.1119501642808525e-08,
+          "clustered_wilcoxon_p": 0.00146484375,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0021997800219978004
+        },
+        "global_vs_poisson__energy": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.7083333333333334,
+          "median_paired_diff_a_minus_b": -0.20287302071221314,
+          "naive_p": 1.174383435954063e-07,
+          "clustered_wilcoxon_p": 0.00244140625,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0025997400259974
+        },
+        "conditional_vs_global__rvar": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.9583333333333334,
+          "median_paired_diff_a_minus_b": -0.10352710179005546,
+          "naive_p": 2.860335848091075e-13,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "conditional_vs_global__energy": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.8611111111111112,
+          "median_paired_diff_a_minus_b": -0.0636433124213509,
+          "naive_p": 3.1756493245665793e-12,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        }
+      }
+    },
+    "deficit_mixed": {
+      "regime": "deficit_mixed",
+      "seed": 20260709,
+      "theta_global_used": 50.25,
+      "theta_true_summary": {
+        "min": 0.5,
+        "median": 50.25,
+        "max": 100.0
+      },
+      "levels": {
+        "poisson": {
+          "r_var_signed_expr_median": 0.8046105230086634,
+          "r_var_frac_gt1_expr_median": 0.17499628142198423,
+          "r_var_abs_log2_expr_median": 0.37747076876822944,
+          "energy_median": 0.29692424587748967
+        },
+        "nb_global": {
+          "r_var_signed_expr_median": 0.8077114544737194,
+          "r_var_frac_gt1_expr_median": 0.23417721518987342,
+          "r_var_abs_log2_expr_median": 0.382078405706645,
+          "energy_median": 0.28085784045364104
+        },
+        "nb_conditional": {
+          "r_var_signed_expr_median": 0.9930413740698655,
+          "r_var_frac_gt1_expr_median": 0.47368421052631576,
+          "r_var_abs_log2_expr_median": 0.12058251002662188,
+          "energy_median": 0.07970477773448703
+        }
+      },
+      "contrasts": {
+        "conditional_vs_poisson__rvar": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.7083333333333334,
+          "median_paired_diff_a_minus_b": -0.22379143961305512,
+          "naive_p": 5.901676027167115e-07,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "conditional_vs_poisson__energy": {
+          "a": "nb_conditional",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.7083333333333334,
+          "median_paired_diff_a_minus_b": -0.21705106332256197,
+          "naive_p": 4.154309364315416e-07,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "global_vs_poisson__rvar": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.5972222222222222,
+          "median_paired_diff_a_minus_b": -0.0034031432442032106,
+          "naive_p": 0.04278309546273729,
+          "clustered_wilcoxon_p": 0.12939453125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.12938706129387062
+        },
+        "global_vs_poisson__energy": {
+          "a": "nb_global",
+          "b": "poisson",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.625,
+          "median_paired_diff_a_minus_b": -0.005150621134779598,
+          "naive_p": 5.335572069167815e-05,
+          "clustered_wilcoxon_p": 0.00341796875,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0022997700229977
+        },
+        "conditional_vs_global__rvar": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "r_var_abs_log2_expr",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.7777777777777778,
+          "median_paired_diff_a_minus_b": -0.22947980205623897,
+          "naive_p": 7.155354002906615e-08,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        },
+        "conditional_vs_global__energy": {
+          "a": "nb_conditional",
+          "b": "nb_global",
+          "metric": "energy_distance",
+          "n_groups": 72,
+          "a_win_fraction_groups": 0.7361111111111112,
+          "median_paired_diff_a_minus_b": -0.20746567906346858,
+          "naive_p": 1.0708354853376587e-07,
+          "clustered_wilcoxon_p": 0.00048828125,
+          "clustered_n_datasets": 12,
+          "dataset_signflip_perm_p": 0.0004999500049995
+        }
+      }
+    }
+  }
+}

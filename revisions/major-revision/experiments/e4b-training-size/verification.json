@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "design-hash": {
+      "pass": true,
+      "detail": ""
+    },
+    "all-fits-present": {
+      "pass": true,
+      "detail": "12/12"
+    },
+    "training-sizes": {
+      "pass": true,
+      "detail": "x1 93673, x2 233502, x3 373317"
+    },
+    "identical-evaluation-groups": {
+      "pass": true,
+      "detail": []
+    },
+    "extra-cells-from-known-datasets": {
+      "pass": true,
+      "detail": ""
+    },
+    "half-is-half": {
+      "pass": true,
+      "detail": ""
+    }
+  }
+}

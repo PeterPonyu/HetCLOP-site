@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "new_numeric_macros_verified": 82,
+  "all_plotted_seeds_within_axes": true,
+  "synthetic_runs": 120,
+  "group_rows": 60480,
+  "independent_primary_arithmetic": true,
+  "test_outcomes_cannot_change_selection": true,
+  "independent_split_covariates": true,
+  "lognormal_poisson_moment_check": true,
+  "original_biological_inputs_unchanged": true,
+  "common_support_types": 69,
+  "biological_seed_arm_rows": 18,
+  "deterministic_complete_job": true,
+  "scope": "These checks verify execution and arithmetic, not external validity or biological replication."
+}

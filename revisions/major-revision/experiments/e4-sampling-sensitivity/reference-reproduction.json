@@ -1,0 +1,4 @@
+{
+  "status": "PASS",
+  "checked": "cells, order, labels, panel counts and split equal the analysed cache for every dataset"
+}

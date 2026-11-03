@@ -1,0 +1,21 @@
+{
+  "experiment": "E7: accession-level clustering sensitivity and an independent replay of the E4 summaries",
+  "created": "2026-11-03",
+  "status": "fixed before execution",
+  "question": "Do the dataset-clustered conclusions change when datasets that come from one GEO accession are treated as a single cluster?",
+  "clusters": "GEO accession as listed in the corpus table: 45 clusters, five of which contain two datasets",
+  "analyses": {
+    "armb_energy": "Arm B per-cell negative-binomial minus Poisson energy distance for PCA-512, random projection-512, scGPT and Geneformer from the archived group records; accession medians of group differences; two-sided Wilcoxon signed-rank and sign tests; accession sign-flip permutation with the signed-rank statistic (10,000 permutations, seed 0); worst p over the three seeds, as in the multiplicity inventory",
+    "e1_matched": "every matched fixed-mean contrast and metric; seed-averaged dataset effects averaged within accession; 10,000-resample accession bootstrap and sign-flip of accession means",
+    "e2_slope": "deficit-effect slope (pooled, Arm A, Arm B) with the E2 random-intercept estimator, accession as the cluster, 2000 accession resamples",
+    "e4_reference": "E4 reference-corpus contrasts (2000 resamples) and slope (1000 resamples) with accession clusters",
+    "e4_scvi_reference": "shared and per-cell scVI negative-binomial minus Poisson calibration on the reference corpus, 2000 accession resamples",
+    "e3_selection": "regret and differences from always-Poisson and always-per-cell by arm, 2000 accession resamples",
+    "e6_dependence": "correlation-error and calibration contrasts by arm, 2000 accession resamples"
+  },
+  "replay": "independently written recomputation of the E4 contrast summaries for all corpora from the per-fit group tables with dataset clusters and a separate random stream: effects must equal summary.csv within 1e-9, interval limits are compared with a Monte Carlo tolerance of one quarter of the interval width, and classifications must agree; slopes are recomputed with the statsmodels REML mixed model (point estimate within 1e-3 of summary.csv) and a 1000-resample dataset bootstrap of that model",
+  "inference_stats": "bootstrap seed 20261112 unless stated; percentile 95% intervals",
+  "outcome": "for each analysis, the dataset-clustered and accession-clustered interval classification (below zero / spans zero / above zero) or two-sided p, and whether they agree",
+  "not_covered": "tests whose stored outputs keep only dataset-level p-values (CFGen, the archived scVI comparisons and three-refit probe, the PCA-truncation control, monotonicity, zero-inflation and deterministic-versus-stochastic tests) are not re-clustered",
+  "retention": "all analyses reported, including disagreements"
+}

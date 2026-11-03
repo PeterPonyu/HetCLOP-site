@@ -1,0 +1,27 @@
+\begingroup\sffamily\mdseries\sansmath
+\begin{tikzpicture}[font=\sffamily\mdseries]
+\begin{groupplot}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize},  group style={group size=2 by 1, horizontal sep=2.5cm},width=5.7cm, height=5.5cm, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}]
+\nextgroupplot[title={Held-out-gene reconstruction}, symbolic y coords={randproj-50,scGPT-512,randproj-512,PCA-512,oracle 1250-d,PCA-50,Geneformer}, ytick={randproj-50,scGPT-512,randproj-512,PCA-512,oracle 1250-d,PCA-50,Geneformer}, y tick label style={font=\footnotesize}, xlabel={Held-out-gene Pearson $r$}, xmin=0.6435, xmax=0.681, enlarge y limits=0.10, xtick={0.65,0.66,0.67,0.68}, x tick label style={/pgf/number format/.cd, fixed, precision=2}]
+\addplot[only marks, mark=*, mark size=1.7pt, color=hblue, error bars/.cd, x dir=both, x explicit, error bar style={color=hblue}] coordinates {(0.6750,Geneformer) +- (0.0004,0)};
+\addplot[only marks, mark=*, mark size=1.7pt, color=hblue, error bars/.cd, x dir=both, x explicit, error bar style={color=hblue}] coordinates {(0.6748,PCA-50) +- (0.0004,0)};
+\addplot[only marks, mark=*, mark size=1.7pt, color=hgray, error bars/.cd, x dir=both, x explicit, error bar style={color=hgray}] coordinates {(0.6737,oracle 1250-d) +- (0.0001,0)};
+\addplot[only marks, mark=*, mark size=1.7pt, color=hblue, error bars/.cd, x dir=both, x explicit, error bar style={color=hblue}] coordinates {(0.6727,PCA-512) +- (0.0003,0)};
+\addplot[only marks, mark=*, mark size=1.7pt, color=hblue, error bars/.cd, x dir=both, x explicit, error bar style={color=hblue}] coordinates {(0.6723,randproj-512) +- (0.0002,0)};
+\addplot[only marks, mark=*, mark size=1.7pt, color=hblue, error bars/.cd, x dir=both, x explicit, error bar style={color=hblue}] coordinates {(0.6705,scGPT-512) +- (0.0002,0)};
+\addplot[only marks, mark=*, mark size=1.7pt, color=hred, error bars/.cd, x dir=both, x explicit, error bar style={color=hred}] coordinates {(0.6476,randproj-50) +- (0.0004,0)};
+\draw[hgray, dashed, thick] (axis cs:0.6737,Geneformer) -- (axis cs:0.6737,randproj-50);
+\node[font=\footnotesize, anchor=south east] at (axis cs:0.6725,scGPT-512){span $=0.0045$ (6 non-deg.)};
+\node[font=\footnotesize, black, anchor=west] at (axis cs:0.649,randproj-50){falls back};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(a)};
+\nextgroupplot[title={Capacity controls}, symbolic y coords={ridge,oracleMLP,bigMLP}, ytick=data, yticklabels={{ridge\\{closed form}},{oracle MLP\\{5.9M}},{big MLP\\{21.9M}}}, y tick label style={align=center, font=\footnotesize}, xlabel={Reconstruction Pearson $r$}, xmin=0.626, xmax=0.694, enlarge y limits=0.30, point meta=x, nodes near coords, nodes near coords style={font=\footnotesize}, every node near coord/.append style={anchor=south, /pgf/number format/.cd, fixed, precision=4}]
+\addplot[only marks, mark=*, mark size=2.0pt, color=hblue] coordinates {
+  (0.6467,ridge)
+  (0.6738,oracleMLP)
+  (0.6792,bigMLP)
+};
+
+\node[anchor=base west,font=\footnotesize\bfseries,xshift=-19pt,yshift=12pt] at (rel axis cs:0,1) {(b)};
+\end{groupplot}\end{tikzpicture}
+
+\endgroup

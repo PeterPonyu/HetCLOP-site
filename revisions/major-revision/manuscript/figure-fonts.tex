@@ -1,0 +1,23 @@
+% Arial text, mathematical letters, symbols and tick labels. Standalone XeLaTeX only.
+\usepackage{mathspec}
+\setmainfont{Arial}\setsansfont{Arial}
+\setmathsfont(Digits,Latin){Arial}
+\setmathsfont(Greek)[Lowercase=Regular,Uppercase=Regular]{Arial}
+\setmathrm{Arial}\setmathsf{Arial}
+\makeatletter
+\DeclareSymbolFont{arialsymbols}{TU}{\sfdefault}{m}{n}
+\DeclareSymbolFont{operators}{TU}{\sfdefault}{m}{n}
+\DeclareMathSymbol{+}{\mathbin}{arialsymbols}{43}
+\DeclareMathSymbol{=}{\mathrel}{arialsymbols}{61}
+\DeclareMathSymbol{(}{\mathopen}{arialsymbols}{40}
+\DeclareMathSymbol{)}{\mathclose}{arialsymbols}{41}
+\DeclareMathSymbol{|}{\mathord}{arialsymbols}{124}
+\Umathchardef\infty=0 \symarialsymbols "221E
+\Umathchardef\to=3 \symarialsymbols "2192
+\XeTeXmathcode`\- = "2 \symarialsymbols "2212
+\XeTeXmathcode`\. = "0 \symarialsymbols "002E
+\XeTeXmathcode`\, = "6 \symarialsymbols "002C
+\makeatother
+\providecommand{\sansmath}{}
+\pgfplotsset{every axis/.append style={clip mode=individual}}
+\pgfplotsset{every axis title/.style={at={(0.5,1)},anchor=base,yshift=12pt,font=\footnotesize}}

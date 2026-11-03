@@ -1,0 +1,62 @@
+{
+  "design_sha256": "32b42b08603d848ff3f48077646ec87acededdd35815261170f68e450f0a34f7",
+  "new_replication": true,
+  "source_table": "groups.csv",
+  "inference": [
+    {
+      "analysis": "pooled",
+      "n_rows": 7008,
+      "n_datasets": 50,
+      "n_groups": 292,
+      "slope": -0.0399316417030368,
+      "ci_low": -0.08679880179653882,
+      "ci_high": -0.007930232004730899,
+      "residual_variance": 0.006864676034297991,
+      "dataset_variance": 0.004809227352335236,
+      "reference_max_coefficient_error": 2.494354250925923e-09,
+      "n_bootstrap": 2000,
+      "direction": "supports negative association",
+      "reference_converged": true,
+      "reference_warnings": "The MLE may be on the boundary of the parameter space."
+    },
+    {
+      "analysis": "Arm_A",
+      "n_rows": 3504,
+      "n_datasets": 50,
+      "n_groups": 292,
+      "slope": -0.020858228270783055,
+      "ci_low": -0.07220214908947174,
+      "ci_high": 0.016322461143763074,
+      "residual_variance": 0.005798279849071752,
+      "dataset_variance": 0.0025209862327024695,
+      "reference_max_coefficient_error": 6.462460958728267e-09,
+      "n_bootstrap": 2000,
+      "direction": "inconclusive",
+      "reference_converged": true,
+      "reference_warnings": "The MLE may be on the boundary of the parameter space."
+    },
+    {
+      "analysis": "Arm_B",
+      "n_rows": 3504,
+      "n_datasets": 50,
+      "n_groups": 292,
+      "slope": -0.0688750867551584,
+      "ci_low": -0.13247540556662557,
+      "ci_high": -0.011958878743583272,
+      "residual_variance": 0.006981141716919966,
+      "dataset_variance": 0.007501148479771521,
+      "reference_max_coefficient_error": 8.780772635802458e-07,
+      "n_bootstrap": 2000,
+      "direction": "supports negative association",
+      "reference_converged": true,
+      "reference_warnings": "The MLE may be on the boundary of the parameter space."
+    }
+  ],
+  "fit_seeds": [
+    42,
+    43,
+    44
+  ],
+  "fit_count": 24,
+  "primary_slope_interpretation": "association of independently measured validation deficit with test calibration effect; not biological validation or a sufficient rule"
+}

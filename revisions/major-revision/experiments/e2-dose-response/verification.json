@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "fits": 24,
+  "rows": 7008,
+  "datasets": 50,
+  "all_fit_seeds_retained": true,
+  "validation_test_disjoint": true,
+  "bootstrap_replicates": 6000
+}
