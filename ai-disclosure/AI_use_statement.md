@@ -1,6 +1,6 @@
 # AI use statement
 
-**Manuscript:** Calibration gains from added dispersion do not carry over to marker recovery in single-cell count decoders
+**Manuscript:** Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders
 
 ## Tools
 
