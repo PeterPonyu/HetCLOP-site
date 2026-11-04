@@ -1,7 +1,7 @@
 """Write pgfplots sources for the panels added in the consolidation round.
 
-Every plotted value is read from a saved experiment summary or group table;
-nothing is typed by hand. Each source follows the existing figure style:
+Every plotted value of a result panel is read from a saved experiment summary or group table; nothing is typed by
+hand. The one exception is the worked example of Figure 1b, computed here from its stated means and dispersions. Each source follows the existing figure style:
 Arial via the figure preamble, regular-weight titles, bold panel labels at
 (-19pt, +12pt) from the plot area's top-left corner.
 """
@@ -280,28 +280,41 @@ def overview_panel():
     ratios = {'Poisson': {t: mu / real[t] for t in th},
               'shared per-gene': {t: shared_var / real[t] for t in th},
               'per-cell-type': {t: 1.0 for t in th}}
-    steps = [('F1', 'tightness ratio as an encoder diagnostic'),
-             ('F2', 'reconstruction of held-out genes'),
-             ('F3', 'variance calibration on expressed genes'),
-             ('F4', 'dispersion at a fixed mean and end to end:\\\\deficit, allocation, biological readouts')]
-    body = ('\\tikzset{roadstep/.style={rectangle, draw=hgray!70!black, line width=0.6pt, fill=white, text width=5.9cm, '
-            'minimum height=0.80cm, align=left, inner sep=3.5pt, font=\\footnotesize}, '
+    # (a) Roadmap: the question, what each preliminary analysis found, the main analysis and the checks it implies.
+    grey = lambda t: '\\textcolor{hgray!60!black}{' + t + '}'
+    box = lambda at, anchor, name, width, head, body: (
+        f'\\node[road, anchor={anchor}, text width={width}] ({name}) at ({at}) {{{head}\\\\[1pt]{grey(body)}}};\n')
+    body = ('\\tikzset{road/.style={rectangle, draw=hgray!70!black, line width=0.6pt, fill=white, align=left, '
+            'inner sep=3.5pt, font=\\footnotesize, execute at begin node={\\hyphenpenalty=10000\\exhyphenpenalty=10000}}, '
             'arr/.style={-{Stealth[length=1.8mm]}, line width=0.6pt, draw=hgray!50!black}}\n')
-    prev = None
-    for i, (tag, text) in enumerate(steps):
-        where = 'anchor=north west] (s0) at (0,0)' if prev is None else f'below=0.34cm of {prev}] (s{i})'
-        body += f'\\node[roadstep, {where} {{\\makebox[1.6em][l]{{{tag}}}{text.replace("\\\\", "\\\\\\makebox[1.6em]{}")}}};\n'
-        if prev is not None:
-            body += f'\\draw[arr] ({prev}.south) -- (s{i}.north);\n'
-        prev = f's{i}'
-    body += '\\panellabelat{s0}{(a)}\n'
+    body += box('0,0', 'north west', 'f1', '4.55cm', 'F1\\ \\ Tightness ratio',
+                'rewards random projections and added noise, so it cannot select an encoder')
+    body += box('[yshift=-0.16cm]f1.south west', 'north west', 'f2', '4.55cm', 'F2\\ \\ Held-out-gene reconstruction',
+                'encoders differ little and their ranking is unresolved')
+    body += box('[yshift=-0.16cm]f2.south west', 'north west', 'f3', '4.55cm', 'F3\\ \\ Expressed-gene variance',
+                'deterministic decoders lose variance, which all-gene ratios hide')
+    body += box('[xshift=-0.5cm]f2.west', 'east', 'q', '2.75cm', 'Question',
+                'when does adding dispersion help a count decoder, and on which readouts?')
+    body += box('[xshift=0.55cm]f2.east', 'west', 'f4', '3.3cm', 'F4\\ \\ Dispersion at a fixed mean and end to end',
+                'a measured deficit predicts the calibration effect; allocation matters; marker recovery does not '
+                'follow calibration')
+    body += box('[xshift=0.5cm]f4.east', 'west', 'app', '2.9cm', 'Checks for analysts',
+                '1.\\ measure the deficit on held-out cells\\\\2.\\ compare allocations on validation cells\\\\'
+                '3.\\ score each readout on test cells')
+    for f in ['f1', 'f2', 'f3']:
+        body += f'\\draw[arr] (q.east) -- ({f}.west);\n\\draw[arr] ({f}.east) -- (f4.west);\n'
+    body += '\\draw[arr] (f4.east) -- (app.west);\n'
+    body += '\\node[inner sep=0pt, minimum size=0pt] (ptl) at ([xshift=0.95cm]q.west |- f1.north) {};\n\\panellabelat{ptl}{(a)}\n'
+    body += '\\node[inner sep=0pt, minimum size=0pt] (pbl) at (q.west |- f3.south) {};\n'
     colours = {'Poisson': ('hblue', 'square*', -0.2), 'shared per-gene': ('horange', 'diamond*', 0.0),
                'per-cell-type': ('hgreen', '*', 0.2)}
-    body += ('\\begin{axis}[' + AXIS + ', at={(7.45cm,0cm)}, anchor=north west, width=5.6cm, height=3.55cm, '
+    # (b) Worked example below the roadmap; the legend sits to the right of the plot area.
+    body += ('\\begin{axis}[' + AXIS + ', at={(pbl)}, anchor=north west, xshift=0.95cm, yshift=-1.35cm, '
+             'width=7.6cm, height=3.0cm, '
              'xmin=0.5, xmax=2.5, xtick={1,2}, '
-             'xticklabels={{type 1\\\\(true variance %.0f)},{type 2\\\\(true variance %.0f)}}, x tick label style={align=center}, '
+             'xticklabels={{type 1 (true variance %.0f)},{type 2 (true variance %.0f)}}, '
              'ymin=-3.6, ymax=2.3, ylabel={$\\log_2$ decoded / real variance}, title={Worked example, known means}, '
-             'legend style={font=\\footnotesize, draw=none, fill=none, at={(0.98,0.03)}, anchor=south east}, '
+             'legend style={font=\\footnotesize, draw=none, fill=none, at={(1.04,0.5)}, anchor=west}, '
              'legend cell align=left]\n' % (real['type 1'], real['type 2']))
     body += '\\draw[hgray, dashed] (axis cs:0.5,0) -- (axis cs:2.5,0);\n'
     ledger = {}

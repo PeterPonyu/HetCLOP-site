@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the article and this archive."
 title: "Code, results and analysed corpus for: Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders"
-version: 3.0.0
-doi: 10.5281/zenodo.23922327
+version: 3.0.1
+doi: 10.5281/zenodo.23934208
 license: MIT
 authors:
   - family-names: Fu

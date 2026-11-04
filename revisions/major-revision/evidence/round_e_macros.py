@@ -40,6 +40,10 @@ for arm in 'AB':
     for o, key in [('poisson', 'Pois'), ('shared', 'Shared'), ('per_type', 'Type'), ('per_cell', 'Cell')]:
         put(f'Ethree{A}Chose{key}', 100 * e3(arm, 'all encoders', f'chosen_{o}').effect, '{:.0f}')
     put(f'Ethree{A}Best', 100 * e3(arm, 'all encoders', 'share_best_option').effect, '{:.0f}')
+    # Mean regret is an average; the largest single-fit regret shows it is not a per-dataset bound.
+    ch = pd.read_csv(EXP / 'e3-prospective-selection' / 'choices.csv')
+    put(f'Ethree{A}RegretMax', ch[ch.arm == arm].regret.max())
+    assert ch[ch.arm == arm].regret.max() > 10 * e3(arm, 'all encoders', 'regret').effect, 'mean-regret wording'
     r = e3(arm, 'PCA-512', 'welch_vs_poisson')
     ci(f'Ethree{A}Welch', r.effect, r.ci_low, r.ci_high)
     # The encoder breakdown (Supplementary Table S4) is the reported source for PCA-512 calibration; the 'PCA-512'
@@ -48,6 +52,15 @@ for arm in 'AB':
     ci(f'Ethree{A}PcaVsPois', r.effect, r.ci_low, r.ci_high)
     for enc, key in [('pca_512', 'Pca'), ('randproj_512', 'Rand'), ('scgpt_512', 'Scgpt'), ('geneformer', 'Gf')]:
         put(f'Ethree{A}{key}ChosePois', 100 * e3(arm, enc, 'chosen_poisson').effect, '{:.0f}')
+
+# Post hoc deficit slope on the two encoders that pass the mean-fit gate (e2-dose-response/linear_encoders.py).
+lin = pd.read_csv(EXP / 'e2-dose-response' / 'linear-encoders.csv').set_index('analysis')
+for lab, key in [('linear pooled', 'Pooled'), ('linear Arm_A', 'ArmA'), ('linear Arm_B', 'ArmB')]:
+    ci(f'EtwoLin{key}', lin.loc[lab, 'slope'], lin.loc[lab, 'ci_low'], lin.loc[lab, 'ci_high'], 4)
+# Results and Discussion wording: pooled interval includes zero, Arm B excludes it, Arm A includes it.
+assert lin.loc['linear pooled', 'ci_low'] < 0 < lin.loc['linear pooled', 'ci_high'], 'linear pooled wording'
+assert lin.loc['linear Arm_B', 'ci_high'] < 0, 'linear Arm B wording'
+assert lin.loc['linear Arm_A', 'ci_low'] < 0 < lin.loc['linear Arm_A', 'ci_high'], 'linear Arm A wording'
 
 # Matched comparison: masked rare-type F1 (sensitivity form), read from the E1 summary.
 e1 = pd.read_csv(EXP / 'e1-armb-biology' / 'summary.csv')
@@ -172,9 +185,16 @@ if p.exists():
                     'Arm B per-cell minus shared Welch recall']:
             r = g('x3 minus x1', lab)
             assert r.ci_low < 0 < r.ci_high, f'unchanged-with-size wording: {lab}'
-        cap = np.load(EXP / 'e4-sampling-sensitivity' / 'corpora' / 'cap10000' / 'meta.npz', allow_pickle=True)
-        put('EfourCapTrain', int((cap['split'] == 0).sum()), '{:,}')
-        assert int((cap['split'] == 0).sum()) < n1 + len(ex['half'])
+        # Training cells of the larger-cap corpus, read from its saved fit records (the corpus itself is not distributed).
+        cap_n = {json.loads(f.read_text())['n_train']
+                 for f in (EXP / 'e4-sampling-sensitivity' / 'runs').glob('cap10000_*/fit.json')}
+        assert len(cap_n) == 1, cap_n
+        cap_n = cap_n.pop()
+        cap_meta = EXP / 'e4-sampling-sensitivity' / 'corpora' / 'cap10000' / 'meta.npz'
+        if cap_meta.exists():
+            assert int((np.load(cap_meta, allow_pickle=True)['split'] == 0).sum()) == cap_n
+        put('EfourCapTrain', cap_n, '{:,}')
+        assert cap_n < n1 + len(ex['half'])
 
 # E5: ten-seed end-to-end generation.
 p = EXP / 'e5-endtoend-seeds' / 'summary.csv'
@@ -205,6 +225,20 @@ if p.exists():
         d5 = (w5['per_cell'] - w5['poisson']).to_numpy()
         put('EfiveRareCellPoisNear', int(((d5 < 0) & (d5 > -1e-4)).sum()), '{:d}')
         put('EfiveRareOrderings', int(e5[(e5.endpoint == 'tstr_rare_f1') & e5.quantity.str.startswith('ordering')].shape[0]), '{:d}')
+        # Post hoc scoring-support check (common_support.py): marker differences on the types scoreable in all runs.
+        cs5 = pd.read_csv(EXP / 'e5-endtoend-seeds' / 'common-support.csv').set_index(['comparison', 'support'])
+        put('EfiveCommonTypes', json.loads((EXP / 'e5-endtoend-seeds' / 'common-support.json').read_text())['n_common_types_all_runs'], '{:d}')
+        for k, lab in [('Cell', 'per_cell minus poisson'), ('Shared', 'shared minus poisson')]:
+            r = cs5.loc[(lab, 'all-runs common')]
+            ci(f'EfiveCommon{k}Pois', r['mean'], r.ci_low, r.ci_high)
+            put(f'EfiveCommon{k}PoisBelow', int(r.seeds_below_zero), '{:d}')
+            put(f'EfiveCommon{k}PoisMax', r.max_seed_difference, '{:.4f}')
+            pw = cs5.loc[(lab, 'per-seed pairwise')]
+            assert pw.ci_high < 0 and pw.seeds_below_zero == n, f'pairwise-support wording: {lab}'
+        # Results wording: per-cell below Poisson in every seed on common support; shared in all but one.
+        assert cs5.loc[('per_cell minus poisson', 'all-runs common')].seeds_below_zero == n
+        assert cs5.loc[('shared minus poisson', 'all-runs common')].seeds_below_zero == n - 1
+        assert cs5.loc[('shared minus poisson', 'all-runs common')].ci_high < 0
 
 lines = ['% Follow-up analyses; generated by evidence/round_e_macros.py from the experiment outputs']
 lines += [f'\\newcommand{{\\{k}}}{{{v}}}' for k, v in m.items()]

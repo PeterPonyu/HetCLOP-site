@@ -1,10 +1,10 @@
 {
   "title": "Code, results and analysed corpus for: Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders",
-  "description": "Code, result records, figure sources and verification scripts for the article, with the analysed single-cell corpus (counts of 133,845 cells from 50 public GEO datasets on a 2500-gene panel, cell-type labels and splits) as a separate data file. Restore it with scripts/restore_corpus.py; the scGPT and Geneformer embeddings are recomputed from the public model weights by the encode stage of the decoder analysis. Every analysis folder records its design, scripts and verification. Code is MIT-licensed; result records, figures and the corpus are CC BY 4.0; the source datasets remain under their GEO terms.",
+  "description": "Code, result records, figure sources and verification scripts for the article, with the analysed single-cell corpus (counts of 133,845 cells from 50 public GEO datasets on a 2500-gene panel, cell-type labels and splits) as a separate data file. Restore it with scripts/restore_corpus.py; the scGPT and Geneformer embeddings are recomputed from the public model weights by the encode stage of the decoder analysis. Each analysis added in revision records its design, scripts and verification. Code is MIT-licensed; result records, figures and the corpus are CC BY 4.0; the source datasets remain under their GEO terms.",
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "creators": [
     {
       "name": "Fu, Zeyu",

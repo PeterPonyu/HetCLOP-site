@@ -22,7 +22,7 @@ from src.utils.paths import CORPUS_SOURCE_ROOT  # noqa: E402
 
 VARIANTS = ['reference', 'uniform_s1', 'uniform_s2', 'uniform_s3', 'type_floor', 'batch_balanced', 'cap10000', 'mad_qc']
 # Sample identity recorded outside the harmonised batch field, found by inspecting every source file's
-# cell metadata (sample-semantics.csv lists all columns). No source file records donor identity.
+# cell metadata (sample-semantics.csv lists all columns). No usable donor field was found in those annotations.
 SAMPLE_FIELDS = {
     'GSE130148_LungHmDev': ('GEO_Sample', 'GEO sample'),
     'bm_GSE120446': ('gsm_id', 'GEO sample'),

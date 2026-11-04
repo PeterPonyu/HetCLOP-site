@@ -1,0 +1,4 @@
+analysis,n_rows,n_datasets,n_groups,slope,ci_low,ci_high,residual_variance,dataset_variance,reference_max_coefficient_error,n_bootstrap,direction,reference_converged,reference_warnings
+linear pooled,3504,50,292,-0.03937030930096912,-0.08756131204440322,0.0037638728283129886,0.005027423372329738,0.0009004020757007278,1.1033491878822965e-06,2000,inconclusive,True,The MLE may be on the boundary of the parameter space.
+linear Arm_A,1752,50,292,0.0022023619389988413,-0.024243210318575275,0.02038220176818559,0.0018133626124150566,0.00011679008698499759,1.649428478032837e-07,2000,inconclusive,True,The MLE may be on the boundary of the parameter space.
+linear Arm_B,1752,50,292,-0.08739262021775382,-0.15998133505033058,-0.01232816289588807,0.005012717417323189,0.003836258530764805,2.597576737040086e-09,2000,supports negative association,True,The MLE may be on the boundary of the parameter space.

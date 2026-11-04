@@ -1,15 +1,23 @@
 \begingroup\sffamily\mdseries\sansmath
 \begin{tikzpicture}[font=\sffamily\mdseries]
-\tikzset{roadstep/.style={rectangle, draw=hgray!70!black, line width=0.6pt, fill=white, text width=5.9cm, minimum height=0.80cm, align=left, inner sep=3.5pt, font=\footnotesize}, arr/.style={-{Stealth[length=1.8mm]}, line width=0.6pt, draw=hgray!50!black}}
-\node[roadstep, anchor=north west] (s0) at (0,0) {\makebox[1.6em][l]{F1}tightness ratio as an encoder diagnostic};
-\node[roadstep, below=0.34cm of s0] (s1) {\makebox[1.6em][l]{F2}reconstruction of held-out genes};
-\draw[arr] (s0.south) -- (s1.north);
-\node[roadstep, below=0.34cm of s1] (s2) {\makebox[1.6em][l]{F3}variance calibration on expressed genes};
-\draw[arr] (s1.south) -- (s2.north);
-\node[roadstep, below=0.34cm of s2] (s3) {\makebox[1.6em][l]{F4}dispersion at a fixed mean and end to end:\\\makebox[1.6em]{}deficit, allocation, biological readouts};
-\draw[arr] (s2.south) -- (s3.north);
-\panellabelat{s0}{(a)}
-\begin{axis}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}, at={(7.45cm,0cm)}, anchor=north west, width=5.6cm, height=3.55cm, xmin=0.5, xmax=2.5, xtick={1,2}, xticklabels={{type 1\\(true variance 36)},{type 2\\(true variance 6)}}, x tick label style={align=center}, ymin=-3.6, ymax=2.3, ylabel={$\log_2$ decoded / real variance}, title={Worked example, known means}, legend style={font=\footnotesize, draw=none, fill=none, at={(0.98,0.03)}, anchor=south east}, legend cell align=left]
+\tikzset{road/.style={rectangle, draw=hgray!70!black, line width=0.6pt, fill=white, align=left, inner sep=3.5pt, font=\footnotesize, execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000}}, arr/.style={-{Stealth[length=1.8mm]}, line width=0.6pt, draw=hgray!50!black}}
+\node[road, anchor=north west, text width=4.55cm] (f1) at (0,0) {F1\ \ Tightness ratio\\[1pt]\textcolor{hgray!60!black}{rewards random projections and added noise, so it cannot select an encoder}};
+\node[road, anchor=north west, text width=4.55cm] (f2) at ([yshift=-0.16cm]f1.south west) {F2\ \ Held-out-gene reconstruction\\[1pt]\textcolor{hgray!60!black}{encoders differ little and their ranking is unresolved}};
+\node[road, anchor=north west, text width=4.55cm] (f3) at ([yshift=-0.16cm]f2.south west) {F3\ \ Expressed-gene variance\\[1pt]\textcolor{hgray!60!black}{deterministic decoders lose variance, which all-gene ratios hide}};
+\node[road, anchor=east, text width=2.75cm] (q) at ([xshift=-0.5cm]f2.west) {Question\\[1pt]\textcolor{hgray!60!black}{when does adding dispersion help a count decoder, and on which readouts?}};
+\node[road, anchor=west, text width=3.3cm] (f4) at ([xshift=0.55cm]f2.east) {F4\ \ Dispersion at a fixed mean and end to end\\[1pt]\textcolor{hgray!60!black}{a measured deficit predicts the calibration effect; allocation matters; marker recovery does not follow calibration}};
+\node[road, anchor=west, text width=2.9cm] (app) at ([xshift=0.5cm]f4.east) {Checks for analysts\\[1pt]\textcolor{hgray!60!black}{1.\ measure the deficit on held-out cells\\2.\ compare allocations on validation cells\\3.\ score each readout on test cells}};
+\draw[arr] (q.east) -- (f1.west);
+\draw[arr] (f1.east) -- (f4.west);
+\draw[arr] (q.east) -- (f2.west);
+\draw[arr] (f2.east) -- (f4.west);
+\draw[arr] (q.east) -- (f3.west);
+\draw[arr] (f3.east) -- (f4.west);
+\draw[arr] (f4.east) -- (app.west);
+\node[inner sep=0pt, minimum size=0pt] (ptl) at ([xshift=0.95cm]q.west |- f1.north) {};
+\panellabelat{ptl}{(a)}
+\node[inner sep=0pt, minimum size=0pt] (pbl) at (q.west |- f3.south) {};
+\begin{axis}[scale only axis=true, tick align=outside, tick pos=left, tick label style={font=\footnotesize}, label style={font=\footnotesize}, title style={font=\footnotesize}, at={(pbl)}, anchor=north west, xshift=0.95cm, yshift=-1.35cm, width=7.6cm, height=3.0cm, xmin=0.5, xmax=2.5, xtick={1,2}, xticklabels={{type 1 (true variance 36)},{type 2 (true variance 6)}}, ymin=-3.6, ymax=2.3, ylabel={$\log_2$ decoded / real variance}, title={Worked example, known means}, legend style={font=\footnotesize, draw=none, fill=none, at={(1.04,0.5)}, anchor=west}, legend cell align=left]
 \draw[hgray, dashed] (axis cs:0.5,0) -- (axis cs:2.5,0);
 \addplot[ycomb, color=hblue, line width=1.2pt, mark=square*, mark size=2.4pt] coordinates {(0.80,-3.1699) (1.80,-0.5850)};
 \addlegendentry{Poisson}

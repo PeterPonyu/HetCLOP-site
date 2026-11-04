@@ -1,6 +1,6 @@
 # Instructions that governed the archived code packaging (English summary)
 
-The code archive accompanying the original submission contains code before and after AI-assisted packaging work.
+The code archive accompanying the original submission included code before and after AI-assisted packaging work.
 Two author instructions governed that work. They are summarised here in English; the summaries state the intent
 of each instruction.
 

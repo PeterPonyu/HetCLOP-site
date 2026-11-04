@@ -1,7 +1,7 @@
 # Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders
 
 Code, result records and figure sources for the article of the same title. This version is archived at
-https://doi.org/10.5281/zenodo.23922327 together with the analysed corpus (`hetclop-corpus-3.0.0`, a separate download);
+https://doi.org/10.5281/zenodo.23934208 together with the analysed corpus (`hetclop-corpus-3.0.1`, a separate download);
 https://doi.org/10.5281/zenodo.21524011 always resolves to the latest version.
 
 ## Contents
@@ -30,8 +30,8 @@ for the scVI analyses; a CUDA GPU for model fitting. The figure builder needs a 
 
 ## Reproducing the results
 
-1. Download `hetclop-corpus-3.0.0` from the archive record and run
-   `python scripts/restore_corpus.py /path/to/hetclop-corpus-3.0.0`. This places the analysed corpus where the
+1. Download `hetclop-corpus-3.0.1` from the archive record and run
+   `python scripts/restore_corpus.py /path/to/hetclop-corpus-3.0.1`. This places the analysed corpus where the
    scripts expect it and checks every file against its recorded SHA-256 digest. Analyses that use the scGPT or
    Geneformer encoders first need `python experiments/phase2a_decoder_2026-07-08/run_phase2a.py --stage encode`
    with the public model weights under `data/models/`.
@@ -40,6 +40,7 @@ for the scVI analyses; a CUDA GPU for model fitting. The figure builder needs a 
    are reused unless removed.
 3. Regenerate the numbers and check the recorded results:
    `python revisions/major-revision/evidence/round_e_macros.py`,
+   `python revisions/major-revision/evidence/supplement_tables.py` (Supplementary Tables S2 to S4),
    `python revisions/major-revision/evidence/verify_round_e_experiments.py`, and the `verify.py` scripts of
    `armb-primary-report`, `e4-sampling-sensitivity`, `estimated-dispersion` and `scientific-boundaries`. The
    `verify.py` scripts of `e1-armb-biology` and `e2-dose-response` also check the saved per-fit predictions of the
@@ -51,6 +52,9 @@ for the scVI analyses; a CUDA GPU for model fitting. The figure builder needs a 
    `python revisions/major-revision/figures/build_figures_v2.py`, which also checks panel alignment and that every
    plotted coordinate of each source survives composition; `python revisions/major-revision/evidence/verify_figure_data.py`
    repeats the data check strictly.
+5. Run the tests: `python -m pytest tests`. One test re-runs the simulation of
+   `experiments/phase2m_lawgrid_2026-07-09` and rewrites its `results/lawgrid.json`; across library versions the
+   rewritten values agree with the archived ones to about eight significant digits.
 
 ## Data
 

@@ -19,9 +19,11 @@ The assistants were used, under the author's direction, for:
 The assistants were used, under the author's direction, for:
 
 - **Text.** Revision of the manuscript and drafting of the response to reviewers.
-- **Figures.** Plotting and figure-composition code that draws figures from saved result files.
+- **Figures.** Plotting and figure-composition code. Result figures are drawn from saved result files; the worked
+  example in Figure 1b is computed from stated parameters.
 - **Analyses.** Scripting and analysis of the additional experiments requested in review. Each design was fixed
-  before the experiment was run, and every result, including negative ones, is reported.
+  before the experiment was run, and every result, including negative ones, is reported. Checks added after
+  the results were seen are labelled post hoc in the manuscript.
 - **Checks.** Metadata, provenance and consistency checks.
 
 ## Correction of an earlier statement
@@ -35,7 +37,7 @@ replaces the earlier declaration.
 ## Not delegated to AI
 
 The research question, the study design, the scientific conclusions and the choice of references were decided by
-the author. No AI tool generated, altered or imputed data.
+the author. No AI tool fabricated, edited or imputed data; simulated counts come only from the documented scripts.
 
 ## Verification
 

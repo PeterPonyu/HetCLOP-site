@@ -1,0 +1,16 @@
+{
+  "status": "post hoc check added after review; uses saved per-type marker recall only; no refit",
+  "n_common_types_all_runs": 66,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

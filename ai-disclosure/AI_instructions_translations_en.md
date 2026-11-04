@@ -2,7 +2,8 @@
 
 The two author instructions that governed the AI-assisted packaging of the code archive were given in Chinese.
 They are translated below. Two internal names are replaced by bracketed descriptions; nothing else is omitted.
-The originals are included verbatim in the archived PROMPTS package.
+The originals were part of the code package archived with the original submission; they are not among the
+revision's files or in the new archive version.
 
 1. "Regarding the earlier AI source-code issue, I meant preparing a submission version specifically for HetCLOP,
    not refreshing [a different project] again. Also continue checking whether unused historical or outdated
