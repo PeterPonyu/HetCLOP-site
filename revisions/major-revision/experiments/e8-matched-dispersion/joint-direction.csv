@@ -1,0 +1,22 @@
+size,arm,contrast,n_datasets,calibration_lower,calibration_lower_recall_higher,calibration_lower_recall_lower,calibration_lower_recall_tied,recall_higher
+x1,A,per_cell minus shared_matched,50,49,49,0,0,50
+x1,A,per_cell minus shared_fitted,50,48,47,1,0,48
+x1,A,per_cell minus shared_median,50,47,41,5,1,43
+x1,A,shared_matched minus shared_median,50,1,0,1,0,0
+x1,A,per_cell minus poisson,50,4,3,1,0,27
+x1,A,shared_matched minus poisson,50,0,0,0,0,0
+x1,A,shared_fitted minus poisson,50,0,0,0,0,3
+x1,B,per_cell minus shared_matched,50,50,50,0,0,50
+x1,B,per_cell minus shared_fitted,50,48,47,1,0,49
+x1,B,per_cell minus shared_median,50,49,49,0,0,50
+x1,B,shared_matched minus shared_median,50,46,20,26,0,22
+x1,B,per_cell minus poisson,50,20,2,18,0,7
+x1,B,shared_matched minus poisson,50,2,0,2,0,0
+x1,B,shared_fitted minus poisson,50,2,0,2,0,0
+x3,B,per_cell minus shared_matched,50,50,50,0,0,50
+x3,B,per_cell minus shared_fitted,50,49,48,1,0,49
+x3,B,per_cell minus shared_median,50,50,50,0,0,50
+x3,B,shared_matched minus shared_median,50,24,1,23,0,2
+x3,B,per_cell minus poisson,50,33,12,21,0,16
+x3,B,shared_matched minus poisson,50,2,0,2,0,0
+x3,B,shared_fitted minus poisson,50,2,0,2,0,0

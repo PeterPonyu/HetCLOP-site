@@ -62,6 +62,57 @@ assert lin.loc['linear pooled', 'ci_low'] < 0 < lin.loc['linear pooled', 'ci_hig
 assert lin.loc['linear Arm_B', 'ci_high'] < 0, 'linear Arm B wording'
 assert lin.loc['linear Arm_A', 'ci_low'] < 0 < lin.loc['linear Arm_A', 'ci_high'], 'linear Arm A wording'
 
+# Post hoc per-dataset directions and influence at the largest training size (e4b posthoc_direction.py).
+pd4 = json.loads((EXP / 'e4b-training-size' / 'posthoc-direction.json').read_text())
+for comp, key in [('poisson', 'Pois'), ('shared', 'Shared')]:
+    for k, kk in [('calibration_lower', 'CalLower'), ('recall_lower', 'RecLower'), ('recall_higher', 'RecHigher'),
+                  ('recall_tied', 'RecTied')]:
+        put(f'Efourb{key}{kk}', pd4[comp][k], '{:d}')
+    put(f'Efourb{key}Markers', abs(pd4[comp]['markers_of_50']), '{:.1f}')
+put('EfourbInfluenceShare', 100 * pd4['influence']['share_of_net_calibration_change'], '{:.0f}')
+put('EfourbInfluenceAccession', pd4['influence']['dataset'].split('_')[0])
+ci('EfourbWithout', pd4['influence']['without'], *pd4['influence']['without_ci'])
+assert pd4['influence']['without_ci'][1] < 0, 'direction-without-largest wording'
+assert pd4['shared']['calibration_lower'] == pd4['n_datasets'], 'shared wording'
+
+# E8: shared-dispersion controls matched in the amount of extra variance.
+e8 = pd.read_csv(EXP / 'e8-matched-dispersion' / 'summary.csv')
+e8j = pd.read_csv(EXP / 'e8-matched-dispersion' / 'joint-direction.csv')
+e8v = pd.read_csv(EXP / 'e8-matched-dispersion' / 'variance.csv')
+SET8 = {('x1', 'A'): 'OneA', ('x1', 'B'): 'OneB', ('x3', 'B'): 'ThreeB'}
+CON8 = {'per_cell minus shared_matched': 'Mat', 'per_cell minus shared_fitted': 'Fit', 'per_cell minus shared_median': 'Med',
+        'shared_matched minus shared_median': 'MatMed', 'per_cell minus poisson': 'Pois'}
+END8 = {'calibration': 'Cal', 'welch': 'Welch', 'macro_f1': 'Macro', 'rare_f1_full': 'Rare'}
+for (size, arm), sk in SET8.items():
+    for con, ck in CON8.items():
+        for ep, ek in END8.items():
+            r = e8[(e8['size'] == size) & (e8.arm == arm) & (e8.contrast == con) & (e8.endpoint == ep)].iloc[0]
+            ci(f'Eeight{sk}{ck}{ek}', r.effect, r.ci_low, r.ci_high)
+        j = e8j[(e8j['size'] == size) & (e8j.arm == arm) & (e8j.contrast == con)].iloc[0]
+        put(f'Eeight{sk}{ck}Both', int(j.calibration_lower_recall_higher), '{:d}')
+    # Pre-specified rule (design.json): allocation is supported where per-cell beats the matched shared value on both
+    # primary endpoints; the Results and abstract wording depend on it.
+    pm = lambda ep: e8[(e8['size'] == size) & (e8.arm == arm) & (e8.contrast == 'per_cell minus shared_matched') & (e8.endpoint == ep)].iloc[0]
+    assert pm('calibration').ci_high < 0 and pm('welch').ci_low > 0, f'allocation wording no longer holds: {size} {arm}'
+vm = e8v[e8v.variant == 'shared_matched']; vd = e8v[e8v.variant == 'shared_median']
+put('EeightVarMatLo', vm['median'].min(), '{:.2f}'); put('EeightVarMatHi', vm['median'].max(), '{:.2f}')
+put('EeightVarMatQlo', vm['q25'].min(), '{:.2f}'); put('EeightVarMatQhi', vm['q75'].max(), '{:.2f}')
+put('EeightVarMedQlo', vd['q25'].min(), '{:.2f}'); put('EeightVarMedQhi', vd['q75'].max(), '{:.2f}')
+# Arm B at the original size, the setting the Results sentence describes.
+bm = vm[(vm['size'] == 'x1') & (vm.arm == 'B')]; bd = vd[(vd['size'] == 'x1') & (vd.arm == 'B')]
+put('EeightOneBVarMatQlo', bm['q25'].min(), '{:.2f}'); put('EeightOneBVarMatQhi', bm['q75'].max(), '{:.2f}')
+put('EeightOneBVarMedQlo', bd['q25'].min(), '{:.2f}'); put('EeightOneBVarMedQhi', bd['q75'].max(), '{:.2f}')
+# Second draw of the same largest-size fits: per-dataset directions against Poisson.
+jp = e8j[(e8j['size'] == 'x3') & (e8j.arm == 'B') & (e8j.contrast == 'per_cell minus poisson')].iloc[0]
+put('EeightThreeBPoisCalLower', int(jp.calibration_lower), '{:d}')
+put('EeightThreeBPoisRecLower', int(jp.calibration_lower_recall_lower), '{:d}')
+put('EeightThreeBPoisRecHigher', int(jp.calibration_lower_recall_higher), '{:d}')
+# Share of the per-cell-minus-median calibration gap that matching the amount closes (Arm B, original size).
+g_med = e8[(e8['size'] == 'x1') & (e8.arm == 'B') & (e8.contrast == 'per_cell minus shared_median') & (e8.endpoint == 'calibration')].effect.iloc[0]
+g_mm = e8[(e8['size'] == 'x1') & (e8.arm == 'B') & (e8.contrast == 'shared_matched minus shared_median') & (e8.endpoint == 'calibration')].effect.iloc[0]
+put('EeightOneBMatShare', 100 * g_mm / g_med, '{:.0f}')
+assert 20 < 100 * g_mm / g_med < 50, 'about-a-third wording'
+
 # Matched comparison: masked rare-type F1 (sensitivity form), read from the E1 summary.
 e1 = pd.read_csv(EXP / 'e1-armb-biology' / 'summary.csv')
 r = e1[(e1.arm == 'B') & (e1.metric == 'rare_f1_masked') & (e1.a == 'per_cell') & (e1.b == 'poisson')].iloc[0]

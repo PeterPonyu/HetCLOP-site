@@ -1,0 +1,12 @@
+{
+  "design-hash": true,
+  "all-fits-complete": true,
+  "outputs-present": true,
+  "matched-extra-variance-on-validation": true,
+  "median-recomputed-from-validation": true,
+  "arrays-checked": 9,
+  "notes": [],
+  "input-digests": true,
+  "analysis-regenerates": true,
+  "status": "PASS"
+}

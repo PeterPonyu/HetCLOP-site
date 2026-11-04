@@ -1,0 +1,47 @@
+{
+  "experiment": "E8: shared-dispersion controls matched in amount of extra variance",
+  "created_utc": "2026-11-04T02:23:56.492850+00:00",
+  "status": "fixed before execution",
+  "question": "When per-cell dispersion beats a shared per-gene dispersion at the same fitted mean, is the difference due to where the extra variance is placed (allocation) or to how much extra variance is added? The earlier shared comparator is the per-gene median of the per-cell model's validation theta, which changes both.",
+  "settings": {
+    "original_size": "reuse the saved E2 PCA-512 fits (fitted means and per-cell theta on validation and test cells), arms A and B, fit seeds 42, 43, 44; the same fits as the matched comparison (E1)",
+    "largest_size": "refit Arm B PCA-512 with the E4b recipe on the largest training set (original training cells plus all extra cells; validation and test cells and labels fixed), fit seeds 42, 43, 44, saving fitted means and per-cell theta on validation and test cells"
+  },
+  "variants": {
+    "poisson": "Poisson draw at the fitted mean",
+    "per_cell": "the decoder's per-cell theta",
+    "shared_median": "per-gene median of per-cell theta over all validation cells (the earlier comparator, recomputed here)",
+    "shared_matched": "per-gene theta* = sum_v mu^2 / sum_v (mu^2 / theta) over all validation cells, so that the shared value adds the same total raw-count extra variance (sum of mu^2/theta) on validation cells as the per-cell theta",
+    "shared_fitted": "per-gene theta maximising the negative-binomial likelihood of the validation counts given the fitted means, pooled over all validation cells, searched on log theta in [-4, 8] (the decoder's bounds)"
+  },
+  "test_cells_used_for_allocation": "none; every shared value is computed from validation cells only",
+  "genes": "the 1250 held-out target genes in both arms (Arm A decoder outputs restricted to them, as in E1)",
+  "draws": "one draw per variant with the same seed (fit seed + 1) for every variant",
+  "endpoints": {
+    "primary": [
+      "per_cell minus shared_matched Welch marker recall@50",
+      "per_cell minus shared_matched calibration error"
+    ],
+    "secondary": [
+      "per_cell minus shared_fitted on both endpoints",
+      "shared_matched minus shared_median on both endpoints",
+      "per_cell minus poisson on both endpoints",
+      "AUROC marker recall@50",
+      "TSTR macro-F1 and rare-type F1 (unmasked and masked) as in E1"
+    ],
+    "achieved_variance": "for each shared variant, the ratio of its total raw-count extra variance on test cells to that of per_cell, per gene; report the median and interquartile range over genes"
+  },
+  "scoring": "E1 functions: groups with at least 20 test cells; expressed-gene calibration error; within-dataset Welch and AUROC recall@50; TSTR as E1",
+  "inference": {
+    "cluster": "dataset",
+    "aggregation": "average seeds within group, groups within dataset, equal-weight dataset mean",
+    "resamples": 10000,
+    "seed": 20261110,
+    "interval": "percentile 95%",
+    "test": "two-sided sign-flip of dataset means (10,000)"
+  },
+  "descriptive": "per-dataset joint direction counts (calibration lower and recall higher, etc.) with ties at |difference| <= 1e-12",
+  "interpretation_rule": "Allocation is supported for an arm and size if per_cell minus shared_matched has a calibration interval below zero and a Welch recall interval above zero. If those intervals include zero while per_cell minus shared_median favours per_cell, the earlier advantage is attributed to the amount of extra variance, and the manuscript's allocation wording is withdrawn for that setting. Results are reported whichever way they fall.",
+  "retention": "all variants, arms, sizes and seeds retained; no outcome-based filtering",
+  "status_note": "added after the second-round review; a post hoc control relative to the original design, fixed before any of its outcomes were computed"
+}

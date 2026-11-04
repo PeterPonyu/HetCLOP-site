@@ -296,8 +296,8 @@ def overview_panel():
     body += box('[xshift=-0.5cm]f2.west', 'east', 'q', '2.75cm', 'Question',
                 'when does adding dispersion help a count decoder, and on which readouts?')
     body += box('[xshift=0.55cm]f2.east', 'west', 'f4', '3.3cm', 'F4\\ \\ Dispersion at a fixed mean and end to end',
-                'a measured deficit predicts the calibration effect; allocation matters; marker recovery does not '
-                'follow calibration')
+                'with target genes held out, a measured deficit predicts the calibration effect; where extra '
+                'variance goes matters at a matched amount; markers do not follow calibration')
     body += box('[xshift=0.5cm]f4.east', 'west', 'app', '2.9cm', 'Checks for analysts',
                 '1.\\ measure the deficit on held-out cells\\\\2.\\ compare allocations on validation cells\\\\'
                 '3.\\ score each readout on test cells')

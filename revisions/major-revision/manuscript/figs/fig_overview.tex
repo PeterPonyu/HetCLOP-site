@@ -5,7 +5,7 @@
 \node[road, anchor=north west, text width=4.55cm] (f2) at ([yshift=-0.16cm]f1.south west) {F2\ \ Held-out-gene reconstruction\\[1pt]\textcolor{hgray!60!black}{encoders differ little and their ranking is unresolved}};
 \node[road, anchor=north west, text width=4.55cm] (f3) at ([yshift=-0.16cm]f2.south west) {F3\ \ Expressed-gene variance\\[1pt]\textcolor{hgray!60!black}{deterministic decoders lose variance, which all-gene ratios hide}};
 \node[road, anchor=east, text width=2.75cm] (q) at ([xshift=-0.5cm]f2.west) {Question\\[1pt]\textcolor{hgray!60!black}{when does adding dispersion help a count decoder, and on which readouts?}};
-\node[road, anchor=west, text width=3.3cm] (f4) at ([xshift=0.55cm]f2.east) {F4\ \ Dispersion at a fixed mean and end to end\\[1pt]\textcolor{hgray!60!black}{a measured deficit predicts the calibration effect; allocation matters; marker recovery does not follow calibration}};
+\node[road, anchor=west, text width=3.3cm] (f4) at ([xshift=0.55cm]f2.east) {F4\ \ Dispersion at a fixed mean and end to end\\[1pt]\textcolor{hgray!60!black}{with target genes held out, a measured deficit predicts the calibration effect; where extra variance goes matters at a matched amount; markers do not follow calibration}};
 \node[road, anchor=west, text width=2.9cm] (app) at ([xshift=0.5cm]f4.east) {Checks for analysts\\[1pt]\textcolor{hgray!60!black}{1.\ measure the deficit on held-out cells\\2.\ compare allocations on validation cells\\3.\ score each readout on test cells}};
 \draw[arr] (q.east) -- (f1.west);
 \draw[arr] (f1.east) -- (f4.west);

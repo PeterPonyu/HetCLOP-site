@@ -1,0 +1,31 @@
+{
+  "n_groups": 314,
+  "n_datasets": 50,
+  "poisson": {
+    "calibration_lower": 32,
+    "recall_lower": 22,
+    "recall_higher": 7,
+    "recall_tied": 3,
+    "mean_calibration": -0.0277182531826039,
+    "mean_recall": -0.007499100529100526,
+    "markers_of_50": -0.3749550264550263
+  },
+  "influence": {
+    "dataset": "GSE98638_TcellLiverHmCancer",
+    "share_of_net_calibration_change": 0.4628602920137421,
+    "without": -0.015192422877952066,
+    "without_ci": [
+      -0.028368082312817223,
+      -0.003850959297999889
+    ]
+  },
+  "shared": {
+    "calibration_lower": 50,
+    "recall_lower": 1,
+    "recall_higher": 49,
+    "recall_tied": 0,
+    "mean_calibration": -0.11873558773803274,
+    "mean_recall": 0.058877407407407406,
+    "markers_of_50": 2.9438703703703704
+  }
+}
