@@ -1,4 +1,4 @@
-"""Pins the paired deterministic-vs-stochastic re-analysis (defect #16, paper.tex:436).
+"""Pins the paired deterministic-vs-stochastic re-analysis.
 
 The point of these tests is narrow and load-bearing: the sign convention must be right
 (energy is lower-is-better; diff = det - opponent; diff>0 => deterministic worse), and the

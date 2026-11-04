@@ -1,8 +1,7 @@
 """scGPT (whole-human) zero-shot cell encoder, ported to HetCLOP.
 
 This is a faithful, self-contained port of a standalone scGPT cell
-encoder  -- the
-parent paper's OWN encoder, and the single most decision-relevant baseline for
+encoder, the single most decision-relevant baseline for
 the HetCLOP Phase 2a decoder experiment. Only the ENCODE path is ported (we use
 scGPT purely as an encoder here; decoding is done by a separately-trained,
 encoder-agnostic MLP, not by scGPT's native generate()).

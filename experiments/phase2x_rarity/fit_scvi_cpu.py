@@ -3,7 +3,7 @@ cache exists, using the IDENTICAL call phase2q/phase2t used:
 fit_and_extract(data, "gene-cell", seed, n_param_samples=10, None, device).
 Writes cache_mu_theta_seed{S}.npz for run_rarity.py.
 
-Boundary rule: imports run_scvi.fit_and_extract unmodified.
+Imports run_scvi.fit_and_extract unmodified.
 """
 from __future__ import annotations
 

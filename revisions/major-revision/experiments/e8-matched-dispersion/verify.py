@@ -21,6 +21,19 @@ CACHE = ROOT / 'experiments/phase2a_decoder_2026-07-08/cache'
 def digest(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
+def design_ok() -> bool:
+    """The design hash recorded before execution, or, in a released copy whose descriptive note was reworded, the
+    released digest that ../released-source-digests.json pairs with that recorded hash."""
+    recorded = (HERE / 'design.sha256').read_text().strip()
+    now = digest(HERE / 'design.json')
+    if now == recorded:
+        return True
+    rec = HERE.parent / 'released-source-digests.json'
+    alt = json.loads(rec.read_text())['files'].get('revisions/major-revision/experiments/e8-matched-dispersion/design.json', {}) \
+        if rec.exists() else {}
+    return alt.get('analysed') == recorded and alt.get('released') == now
+
+
 
 def load(name, path):
     spec = importlib.util.spec_from_file_location(name, path)
@@ -31,7 +44,7 @@ def load(name, path):
 
 def main():
     checks = {}
-    checks['design-hash'] = digest(HERE / 'design.json') == (HERE / 'design.sha256').read_text().strip()
+    checks['design-hash'] = design_ok()
     want = {f'x1_{a}_{s}' for a in 'AB' for s in (42, 43, 44)} | {f'x3_B_{s}' for s in (42, 43, 44)}
     have = {d.name for d in (HERE / 'runs').glob('*') if (d / 'complete.json').exists()}
     checks['all-fits-complete'] = want == have

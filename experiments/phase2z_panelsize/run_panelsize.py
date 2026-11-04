@@ -1,9 +1,9 @@
-"""Phase 2z -- F2 panel-size sensitivity (review panel 2026-07-19, SYNTHESIS #10 context).
+"""Phase 2z -- F2 panel-size sensitivity.
 
 F2's near-null (six encoders span ~0.0045 decoded Pearson) is measured in Arm B:
 encoders see HALF of the 2,500-gene shared panel (1,250 G_in genes, ~6% of FM
 native panels) and decode the disjoint 1,250 G_out genes (circularity broken).
-The referee caveat: does the near-null survive at other panel sizes?
+The question: does the near-null survive at other panel sizes?
 
 This script recomputes the Arm-B reconstruction Pearson for the three encoders
 that need NO refitting of the encoder itself -- PCA-50, random-projection-50,
@@ -22,7 +22,7 @@ Decoder: the exact train_decoder/reconstruction_metrics of phase2a
 The size-1250 rows are anchors: they must reproduce phase2a's Arm-B pca /
 randproj and oracle_control's oracle Pearson.
 
-Boundary rule: all code under HetCLOP/; phase2a code is imported, not modified.
+The phase2a code is imported, not modified.
 """
 from __future__ import annotations
 

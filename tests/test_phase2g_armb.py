@@ -3,7 +3,7 @@
 Covers the two load-bearing new pieces:
   * gin_library_size -- the anti-leak library-size offset (G_in only).
   * exact_spearman_perm_p -- the honest 4!-permutation p that replaces scipy's
-    degenerate p=0.0 for a perfect Spearman rho (spec defect #12).
+    degenerate p=0.0 for a perfect Spearman rho.
 plus assert_log1p_scale (the control-space guard) and build_armB_encoders shapes.
 """
 from __future__ import annotations

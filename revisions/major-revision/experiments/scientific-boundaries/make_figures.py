@@ -54,5 +54,5 @@ for stage in ['fixed','end_to_end']:
  q=bio[bio.stage==stage].pivot(index='seed',columns='arm',values='common_support_mean')
  for arm in q.columns:mac['Support'+{'fixed':'Fixed','end_to_end':'End'}[stage]+{'poisson':'Pois','nb_global':'Global','nb_conditional':'Cond'}[arm]]=f'{q[arm].mean():.3f}'
  for ctrl in ['poisson','nb_global']:mac['Support'+{'fixed':'Fixed','end_to_end':'End'}[stage]+{'poisson':'VsPois','nb_global':'VsGlobal'}[ctrl]]=f'{(q.nb_conditional-q[ctrl]).mean():.3f}'
-(P/'science_numbers.tex').write_text('% Generated from isolated scientific-boundary results.\n'+'\n'.join(B+'newcommand{'+B+k+'}{'+v+'}' for k,v in mac.items())+'\n')
+(P/'boundary_numbers.tex').write_text('% Generated from isolated scientific-boundary results.\n'+'\n'.join(B+'newcommand{'+B+k+'}{'+v+'}' for k,v in mac.items())+'\n')
 print('Created Figures 18–19 and',len(mac),'ledger values')

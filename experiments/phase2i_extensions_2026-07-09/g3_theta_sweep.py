@@ -13,7 +13,7 @@ pca_512 in Arm A it NEVER crossed -- even Poisson over-inflated ~7%).
 
 Reuses the phase2d E1 helpers byte-for-byte (flip_theta, energy_ci_over_count_
 draws, paired, per_group_map) and the shared NB machinery; only the encoder and
-the orchestration loop differ. Boundary rule: all code under HetCLOP/.
+the orchestration loop differ.
 """
 from __future__ import annotations
 

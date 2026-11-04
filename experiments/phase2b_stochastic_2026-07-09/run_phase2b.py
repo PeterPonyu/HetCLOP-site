@@ -25,7 +25,7 @@ Metrics (all on test cells):
       to INFLATE under sampling for BOTH the learned and the trivial decoder.
 
 Fixed seeds throughout. Reuses decoder_eval.train_decoder,
-decoder_eval.reconstruction_metrics, parent_metric_probe.parent_tightness_ratio_
+decoder_eval.reconstruction_metrics, centroid_metric_probe.centroid_tightness_ratio_
 per_dataset, and src.diagnostics.tightness.per_dataset_tightness_ratio.
 """
 from __future__ import annotations
@@ -49,7 +49,7 @@ from src.diagnostics.tightness import per_dataset_tightness_ratio  # noqa: E402
 from src.evaluation.distributional import aggregate_over_groups  # noqa: E402
 
 from decoder_eval import reconstruction_metrics, train_decoder  # noqa: E402
-from parent_metric_probe import parent_tightness_ratio_per_dataset  # noqa: E402
+from centroid_metric_probe import centroid_tightness_ratio_per_dataset  # noqa: E402
 
 CACHE = PHASE2A / "cache"
 RESULTS = HERE / "results"
@@ -65,7 +65,7 @@ def log(msg: str) -> None:
 
 def load_geneformer_armA(ordered):
     """Concatenate cached per-dataset Arm A Geneformer embeddings (same
-    cache-path resolution as f2_under_parent_metric.py). Returns None if any
+    cache-path resolution as f2_under_centroid_metric.py). Returns None if any
     dataset's cache is missing/mismatched -> caller EXCLUDES loudly."""
     cache_dirs = [
         (HETCLOP_ROOT / "experiments/real_phase0_2026-07-05/results", "{fm}_{ds}.npz"),
@@ -132,8 +132,8 @@ def main() -> None:
     else:
         log("EXCLUDED geneformer: cached per-dataset Arm A embeddings missing/mismatched")
 
-    def parent_t(pred):
-        med, iqr, n = parent_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
+    def centroid_t(pred):
+        med, iqr, n = centroid_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
         return {"median": med, "iqr": list(iqr), "n": n}
 
     def hetclop_t(pred):
@@ -203,7 +203,7 @@ def main() -> None:
                 "cov_preservation_median": dist["cov_preservation"]["median"],
                 "cov_preservation_iqr": dist["cov_preservation"]["iqr"],
                 # C the trap (report only)
-                "decoded_tightness_parent": parent_t(v["decoded"]),
+                "decoded_tightness_centroid": centroid_t(v["decoded"]),
                 "decoded_tightness_hetclop": hetclop_t(v["decoded"]),
             }
             rows.append(row)
@@ -213,7 +213,7 @@ def main() -> None:
                 f"|log2|={row['r_var_abs_log2_median']:.3f} "
                 f"energy={row['energy_distance_median']:.3f} "
                 f"cov={row['cov_preservation_median']:.3f} | "
-                f"tight(parent)={row['decoded_tightness_parent']['median']:.3f} "
+                f"tight(centroid)={row['decoded_tightness_centroid']['median']:.3f} "
                 f"tight(het)={row['decoded_tightness_hetclop']['median']:.3f}")
 
     out = {

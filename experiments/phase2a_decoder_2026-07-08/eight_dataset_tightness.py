@@ -20,7 +20,7 @@ import anndata as ad
 import numpy as np
 from sklearn.decomposition import PCA
 
-from parent_metric_probe import parent_tightness  # their exact estimator
+from centroid_metric_probe import centroid_tightness  # centroid-based estimator
 from src.utils.paths import CORPUS_SOURCE_ROOT  # noqa: E402
 
 CORPUS_SOURCE = CORPUS_SOURCE_ROOT
@@ -38,17 +38,17 @@ SELECTED_DATASETS = [
     "dentate",
     "setty",
 ]
-EMBED_DIM = 512   # parent: "All three encoders map to a 512-dimensional space"
+EMBED_DIM = 512   # all encoders map to 512 dimensions
 N_SEEDS = 10
-MIN_LABELED = 20  # parent: skip if known_mask.sum() < 20
+MIN_LABELED = 20  # skip if known_mask.sum() < 20
 
 
 def log(msg: str) -> None:
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
 
-def load_parent_dataset(name: str, meta: dict):
-    """Their raw matrix (.X = CP10K+log1p, 2000 HVG) + their per-cell cell_type."""
+def load_benchmark_dataset(name: str, meta: dict):
+    """Raw matrix (.X = CP10K+log1p, 2000 HVG) and per-cell cell_type."""
     path = H5AD_DIR / f"{name}_processed.h5ad"
     if not path.exists():
         return None, None, f"missing h5ad: {path.name}"
@@ -78,7 +78,7 @@ def main() -> None:
     per_ds = {}
     skipped = []
     for name in SELECTED_DATASETS:
-        X, labels, err = load_parent_dataset(name, meta)
+        X, labels, err = load_benchmark_dataset(name, meta)
         if err:
             log(f"  SKIP {name}: {err}")
             skipped.append({"dataset": name, "reason": err})
@@ -89,15 +89,15 @@ def main() -> None:
         if n_comp < EMBED_DIM:
             Z_pca = np.pad(Z_pca, ((0, 0), (0, EMBED_DIM - n_comp)))
 
-        t_raw = parent_tightness(X, labels)
-        t_pca = parent_tightness(Z_pca, labels)
+        t_raw = centroid_tightness(X, labels)
+        t_pca = centroid_tightness(Z_pca, labels)
 
         rp_ratios = []
         for s in range(N_SEEDS):
             rng = np.random.default_rng(int(rng_master.integers(1 << 30)) + s)
             W = rng.normal(0, 1 / np.sqrt(EMBED_DIM),
                            size=(X.shape[1], EMBED_DIM)).astype(np.float32)
-            t_rp = parent_tightness(X @ W, labels)
+            t_rp = centroid_tightness(X @ W, labels)
             rp_ratios.append(t_rp / t_raw)
 
         per_ds[name] = {
@@ -112,10 +112,10 @@ def main() -> None:
             f"PCA={t_pca/t_raw:.4f}  randproj={np.mean(rp_ratios):.4f}±{np.std(rp_ratios):.4f}")
 
     if not per_ds:
-        raise SystemExit("no datasets loaded -- cannot replicate")
+        raise SystemExit("no datasets loaded")
 
     pca_vals = np.array([v["pca_ratio"] for v in per_ds.values()])
-    # Per seed: median across datasets (their reduction), then spread across seeds.
+    # Per seed: median across datasets, then spread across seeds.
     rp_medians = []
     for s in range(N_SEEDS):
         vals = np.array([v["randproj_ratio_per_seed"][s] for v in per_ds.values()])
@@ -135,20 +135,20 @@ def main() -> None:
         "randproj_median_max_over_seeds": float(rp_medians.max()),
     }
     log("")
-    log(f"REPLICATION over {len(per_ds)}/8 of the parent's own datasets, {N_SEEDS} seeds:")
+    log(f"Tightness over {len(per_ds)}/8 benchmark datasets, {N_SEEDS} seeds:")
     log(f"  PCA-512 (per-dataset fit)  median tightness ratio = {summary['pca_median_tightness_ratio']:.4f} ")
     log(f"  RANDOM PROJECTION 512-d    median tightness ratio = "
         f"{summary['randproj_median_tightness_ratio_mean_over_seeds']:.4f} "
         f"± {summary['randproj_median_tightness_ratio_std_over_seeds']:.4f} "
         f"(range {summary['randproj_median_min_over_seeds']:.4f}-{summary['randproj_median_max_over_seeds']:.4f})")
     beats = summary["randproj_median_tightness_ratio_mean_over_seeds"] > summary["pca_median_tightness_ratio"]
-    log(f"  => random projection {'BEATS' if beats else 'does NOT beat'} PCA under the parent's own metric")
+    log(f"  => random projection {'BEATS' if beats else 'does NOT beat'} PCA under the centroid-based estimator")
 
-    out = {"purpose": "replicate the encoder-comparison setting exactly and "
+    out = {"purpose": "score the eight-dataset encoder comparison and "
                       "insert a random-projection baseline",
            "per_dataset": per_ds, "summary": summary}
-    (RESULTS / "parent_setting_replication.json").write_text(json.dumps(out, indent=2))
-    log(f"=== done -> {RESULTS / 'parent_setting_replication.json'} ===")
+    (RESULTS / "eight_dataset_tightness.json").write_text(json.dumps(out, indent=2))
+    log(f"=== done -> {RESULTS / 'eight_dataset_tightness.json'} ===")
 
 
 if __name__ == "__main__":

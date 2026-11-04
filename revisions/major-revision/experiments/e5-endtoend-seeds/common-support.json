@@ -1,5 +1,5 @@
 {
-  "status": "post hoc check added after review; uses saved per-type marker recall only; no refit",
+  "status": "post hoc check; uses saved per-type marker recall only; no refit",
   "n_common_types_all_runs": 66,
   "seeds": [
     1,

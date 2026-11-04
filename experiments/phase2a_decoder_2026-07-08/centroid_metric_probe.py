@@ -34,7 +34,7 @@ def log(msg: str) -> None:
 # ---------------------------------------------------------------------------
 # the original centroid-based estimator
 # ---------------------------------------------------------------------------
-def parent_within_between(X: np.ndarray, labels: np.ndarray) -> tuple[float, float, int]:
+def centroid_within_between(X: np.ndarray, labels: np.ndarray) -> tuple[float, float, int]:
     types = np.unique(labels)
     intra_vals, centroids = [], []
     for t in types:
@@ -52,21 +52,21 @@ def parent_within_between(X: np.ndarray, labels: np.ndarray) -> tuple[float, flo
     return float(np.mean(intra_vals)), float(np.mean(inter)) if inter else 0.0, len(C)
 
 
-def parent_tightness(X: np.ndarray, labels: np.ndarray) -> float:
-    intra, inter, _ = parent_within_between(X, labels)
+def centroid_tightness(X: np.ndarray, labels: np.ndarray) -> float:
+    intra, inter, _ = centroid_within_between(X, labels)
     return intra / inter if inter > 0 else float("nan")
 
 
-def parent_tightness_ratio_per_dataset(enc_X, raw_X, labels, dataset_ids):
-    """Their per-dataset statistic, reduced to a median across datasets
+def centroid_tightness_ratio_per_dataset(enc_X, raw_X, labels, dataset_ids):
+    """Per-dataset statistic, reduced to a median across datasets
     (manuscript:710 reports median/IQR over 8 datasets; we have 50)."""
     vals = []
     for d in np.unique(dataset_ids):
         m = dataset_ids == d
         if len(np.unique(labels[m])) < 2:
             continue
-        t_raw = parent_tightness(raw_X[m], labels[m])
-        t_enc = parent_tightness(enc_X[m], labels[m])
+        t_raw = centroid_tightness(raw_X[m], labels[m])
+        t_enc = centroid_tightness(enc_X[m], labels[m])
         if not np.isfinite(t_raw) or not np.isfinite(t_enc) or t_raw == 0:
             continue
         vals.append(t_enc / t_raw)
@@ -92,8 +92,8 @@ def main() -> None:
     rng = np.random.default_rng(0)
     encoders: dict[str, np.ndarray] = {}
 
-    # --- Matched 512-d, mirroring the parent's table ---
-    log("fitting PCA-512 (parent used 512-d, per-dataset; we fit globally on train)")
+    # --- Matched 512-d, ---
+    log("fitting PCA-512 (fitted globally on train, not per dataset)")
     p512 = PCA(n_components=512, random_state=0).fit(logX[tr])
     encoders["pca_512"] = p512.transform(logX).astype(np.float32)
 
@@ -104,7 +104,7 @@ def main() -> None:
     encoders["scgpt_512_native"] = scgpt
 
     # --- 50-d variants: isolates the estimator's dimension sensitivity.
-    # NOT a criticism of the parent's matched-dim table; reported separately.
+    # Reported separately from the matched-dimension comparison.
     log("50-d variants (dimension-sensitivity of the estimator, reported separately)")
     p50 = PCA(n_components=50, random_state=0).fit(logX[tr])
     encoders["pca_50"] = p50.transform(logX).astype(np.float32)
@@ -116,29 +116,29 @@ def main() -> None:
 
     rows = []
     for name, Z in encoders.items():
-        med, iqr, n = parent_tightness_ratio_per_dataset(Z[te], raw_te, lab_te, ds_te)
+        med, iqr, n = centroid_tightness_ratio_per_dataset(Z[te], raw_te, lab_te, ds_te)
         rows.append({"encoder": name, "dim": int(Z.shape[1]),
-                     "parent_tightness_ratio_median": med, "iqr": list(iqr), "n_datasets": n})
-        log(f"  {name:22s} dim={Z.shape[1]:5d}  parent tightness ratio = {med:.4f}  "
+                     "centroid_tightness_ratio_median": med, "iqr": list(iqr), "n_datasets": n})
+        log(f"  {name:22s} dim={Z.shape[1]:5d}  centroid tightness ratio = {med:.4f}  "
             f"IQR=({iqr[0]:.4f},{iqr[1]:.4f})")
 
-    # --- Noise-dimension inflation of THEIR estimator, in isolation ----------
-    log("noise-dimension sensitivity of the parent estimator (matched-dim table is immune;"
+    # --- Noise-dimension inflation of the centroid estimator, in isolation ----------
+    log("noise-dimension sensitivity of the centroid estimator (matched-dimension comparisons are immune;"
         " this concerns cross-dimension comparisons such as encoder-vs-raw normalization)")
     base = encoders["pca_50"][te]
     infl = []
     for extra in [0, 50, 200, 800, 2000]:
         noise = rng.normal(0, 1.0, size=(base.shape[0], extra)).astype(np.float32) if extra else None
         Z = base if extra == 0 else np.hstack([base, noise])
-        t = parent_tightness(Z, lab_te)
-        infl.append({"extra_noise_dims": extra, "parent_tightness": float(t)})
-        log(f"  +{extra:5d} pure-noise dims -> parent tightness = {t:.4f}")
+        t = centroid_tightness(Z, lab_te)
+        infl.append({"extra_noise_dims": extra, "centroid_tightness": float(t)})
+        log(f"  +{extra:5d} pure-noise dims -> centroid tightness = {t:.4f}")
 
-    # --- F2 under THEIR estimator: does latent rank-order predict decoded? ---
+    # --- F2 under the centroid estimator: does latent rank-order predict decoded? ---
     # Reuse Arm A decoded predictions if they were saved; otherwise skip loudly.
     dec_path = CACHE / "armA_decoded.npz"
     f2 = {"status": "skipped: no cached Arm A decoded predictions "
-                    "(run_phase2a.py did not persist them); F2 under the parent "
+                    "(run_phase2a.py did not persist them); F2 under the centroid "
                     "estimator not re-tested here"}
     if dec_path.exists():
         dec = np.load(dec_path)
@@ -146,26 +146,26 @@ def main() -> None:
         for name in dec.files:
             if name not in encoders:
                 continue
-            lm, _, _ = parent_tightness_ratio_per_dataset(encoders[name][te], raw_te, lab_te, ds_te)
-            dm, _, _ = parent_tightness_ratio_per_dataset(dec[name], raw_te, lab_te, ds_te)
+            lm, _, _ = centroid_tightness_ratio_per_dataset(encoders[name][te], raw_te, lab_te, ds_te)
+            dm, _, _ = centroid_tightness_ratio_per_dataset(dec[name], raw_te, lab_te, ds_te)
             lat.append(lm); decd.append(dm); names.append(name)
         if len(lat) >= 3:
             f2 = {"n": len(lat), "encoders": names,
                   "pearson_r": float(pearsonr(lat, decd)[0]),
                   "spearman_rho": float(spearmanr(lat, decd)[0])}
-    log(f"F2-under-parent-estimator: {f2}")
+    log(f"F2-under-centroid-estimator: {f2}")
 
     out = {
         "purpose": "score encoders under the centroid-based tightness estimator",
-        "parent_estimator": "within = mean per-cell L2 from centroid; "
+        "centroid_estimator": "within = mean per-cell L2 from centroid; "
                             "between = mean inter-centroid L2; ratio = enc/raw",
         "n_test_cells": int(te.sum()),
         "results": rows,
         "noise_dim_inflation": infl,
-        "f2_under_parent_estimator": f2,
+        "f2_under_centroid_estimator": f2,
     }
-    (RESULTS / "parent_metric_probe.json").write_text(json.dumps(out, indent=2))
-    log(f"=== done -> {RESULTS / 'parent_metric_probe.json'} ===")
+    (RESULTS / "centroid_metric_probe.json").write_text(json.dumps(out, indent=2))
+    log(f"=== done -> {RESULTS / 'centroid_metric_probe.json'} ===")
 
 
 if __name__ == "__main__":

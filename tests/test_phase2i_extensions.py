@@ -6,7 +6,7 @@ monotonicity leg from borderline to significant; G5 adds the ZINB rung to the
 "more noise parameters => worse Arm-A calibration" ladder). Pinning them here prevents
 silent drift before they enter the manuscript. Pure JSON re-reads; no GPU.
 
-Crucial statistic hygiene (defect #14): G3's over-inflation direction MUST be read from the
+G3's over-inflation direction MUST be read from the
 EXPRESSION-RESTRICTED signed r_var (`expr_signed_median`). The unrestricted field pins at
 1.000 (sparsity point mass) and is directionally meaningless.
 """

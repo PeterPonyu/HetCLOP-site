@@ -19,7 +19,7 @@ from scipy.stats import pearsonr, spearmanr
 from sklearn.decomposition import PCA
 
 from decoder_eval import reconstruction_metrics, train_decoder  # noqa: E402
-from parent_metric_probe import parent_tightness_ratio_per_dataset  # noqa: E402
+from centroid_metric_probe import centroid_tightness_ratio_per_dataset  # noqa: E402
 from src.utils.paths import PROJECT_ROOT  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -93,22 +93,22 @@ def main() -> None:
 
     rows = []
     for name, Z in encoders.items():
-        lat_med, lat_iqr, _ = parent_tightness_ratio_per_dataset(Z[te], raw_te, lab_te, ds_te)
+        lat_med, lat_iqr, _ = centroid_tightness_ratio_per_dataset(Z[te], raw_te, lab_te, ds_te)
         pred, vloss, hist, nparams = train_decoder(
             Z[tr], target[tr], Z[va], target[va], Z[te], device=DEVICE)
         rec = reconstruction_metrics(pred, target[te])
-        dec_med, dec_iqr, _ = parent_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
+        dec_med, dec_iqr, _ = centroid_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
         rows.append({
             "encoder": name, "dim": int(Z.shape[1]),
-            "parent_latent_tightness": lat_med, "parent_latent_iqr": list(lat_iqr),
-            "parent_decoded_tightness": dec_med, "parent_decoded_iqr": list(dec_iqr),
+            "centroid_latent_tightness": lat_med, "centroid_latent_iqr": list(lat_iqr),
+            "centroid_decoded_tightness": dec_med, "centroid_decoded_iqr": list(dec_iqr),
             "recon_pearson": rec["mean_gene_pearson"], "val_mse": vloss,
         })
         log(f"  {name:16s} dim={Z.shape[1]:5d} latentT={lat_med:.4f} decodedT={dec_med:.4f} "
             f"pearson={rec['mean_gene_pearson']:.4f}")
 
-    lat = np.array([r["parent_latent_tightness"] for r in rows])
-    dec = np.array([r["parent_decoded_tightness"] for r in rows])
+    lat = np.array([r["centroid_latent_tightness"] for r in rows])
+    dec = np.array([r["centroid_decoded_tightness"] for r in rows])
     rec = np.array([r["recon_pearson"] for r in rows])
 
     real = [i for i, r in enumerate(rows) if not r["encoder"].startswith("randproj")]
@@ -133,7 +133,7 @@ def main() -> None:
             "decoded_spread": float(dec[real].max() - dec[real].min()),
         },
         "randproj_check": {
-            "note": "randproj has near-ideal latent geometry under the parent metric; "
+            "note": "randproj has near-ideal latent geometry under the centroid metric; "
                     "does that buy decoded quality?",
             "rows": [r for r in rows if r["encoder"].startswith("randproj")],
         },
@@ -149,13 +149,13 @@ def main() -> None:
 
     out = {
         "purpose": "re-test F2 under the exact centroid-based estimator, Arm A geometry",
-        "estimator": "parent: within=mean per-cell L2 from centroid; between=mean inter-centroid L2; ratio=enc/raw",
+        "estimator": "centroid: within=mean per-cell L2 from centroid; between=mean inter-centroid L2; ratio=enc/raw",
         "n_test_cells": int(te.sum()),
         "results": rows,
         "summary": summary,
     }
-    (RESULTS / "f2_under_parent_metric.json").write_text(json.dumps(out, indent=2))
-    log(f"=== done -> {RESULTS / 'f2_under_parent_metric.json'} ===")
+    (RESULTS / "f2_under_centroid_metric.json").write_text(json.dumps(out, indent=2))
+    log(f"=== done -> {RESULTS / 'f2_under_centroid_metric.json'} ===")
 
 
 if __name__ == "__main__":

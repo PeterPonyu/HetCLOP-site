@@ -1,4 +1,4 @@
-"""Post hoc descriptive check added after the second review round (not part of design.json), from the saved group
+"""Post hoc descriptive check (not part of design.json), from the saved group
 tables of the largest training set in Arm B: (1) in how many datasets per-cell dispersion lowered calibration error
 and, among those, how marker recall moved, against Poisson and against the shared per-gene value; (2) how much of the
 net per-cell-minus-Poisson calibration change one dataset contributes, and the contrast without it (dataset bootstrap,

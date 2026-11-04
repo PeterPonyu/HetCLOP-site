@@ -163,7 +163,7 @@
         1.3813859271794042,
         1.8918837729298947
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 0.7578798693410328,
         "iqr": [
           0.7232204277571159,
@@ -218,7 +218,7 @@
         1.077227318934126,
         1.25530539035818
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.083200415828887,
         "iqr": [
           1.0579850087915985,
@@ -285,7 +285,7 @@
         1.0623207260850418,
         1.333075629951289
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.1136188813610288,
         "iqr": [
           1.010313531955431,
@@ -340,7 +340,7 @@
         0.995138488360108,
         1.1806968564141909
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.1036784008579006,
         "iqr": [
           1.013336794663681,
@@ -398,7 +398,7 @@
         1.4638990828286178,
         2.0384971400601346
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 0.7317852538889245,
         "iqr": [
           0.7048567638409073,
@@ -453,7 +453,7 @@
         1.0613653498344588,
         1.2592674582136598
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.1184980266335762,
         "iqr": [
           1.0780897211965175,
@@ -520,7 +520,7 @@
         1.0395762199515817,
         1.3289318320013643
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.168098215355658,
         "iqr": [
           1.0689846804530578,
@@ -575,7 +575,7 @@
         0.9692867059242373,
         1.1753056857980404
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.1661711757362063,
         "iqr": [
           1.063872832212073,
@@ -633,7 +633,7 @@
         1.8053618501288826,
         3.1918178907646446
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 0.6017321594460578,
         "iqr": [
           0.5585835158586204,
@@ -688,7 +688,7 @@
         0.9900819586762258,
         1.152115497087499
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.1304985597017894,
         "iqr": [
           1.0914200667653846,
@@ -755,7 +755,7 @@
         1.0004198491336114,
         1.314597131903468
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.243474107033402,
         "iqr": [
           1.1146623340858746,
@@ -810,7 +810,7 @@
         0.9186263653439272,
         1.155569949073438
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.2415552674447081,
         "iqr": [
           1.107100015145126,
@@ -868,7 +868,7 @@
         1.8060154209593224,
         3.2618601246531966
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 0.579866219953519,
         "iqr": [
           0.5305534402680093,
@@ -923,7 +923,7 @@
         1.0030970787034776,
         1.1676002054826466
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.103631134585528,
         "iqr": [
           1.0732479147745297,
@@ -990,7 +990,7 @@
         1.0247539941305797,
         1.339641202489605
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.2112260628779807,
         "iqr": [
           1.079333309395396,
@@ -1045,7 +1045,7 @@
         0.9358185275787492,
         1.179786382817381
       ],
-      "decoded_tightness_parent": {
+      "decoded_tightness_centroid": {
         "median": 1.1891425956216595,
         "iqr": [
           1.0713576504954347,

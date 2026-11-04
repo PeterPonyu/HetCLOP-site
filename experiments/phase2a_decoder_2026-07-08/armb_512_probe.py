@@ -1,9 +1,9 @@
 """Arm B at matched 512-d: the fair test of "is the tightness metric's optimum
 (a random projection) actually a bad encoder?"
 
-Why this is needed. `f2_under_parent_metric.py` (Arm A: encoders see the 2500-gene
+Why this is needed. `f2_under_centroid_metric.py` (Arm A: encoders see the 2500-gene
 panel, decoder predicts those SAME genes) found randproj-512 has BOTH the highest
-parent-metric latent tightness (0.9956) AND the best reconstruction (0.7522).
+centroid-metric latent tightness (0.9956) AND the best reconstruction (0.7522).
 That is not a critique of the metric -- it is a near-lossless linear compression
 (Johnson-Lindenstrauss) of exactly the genes being reconstructed. Arm A rewards
 any linear function of the input genes by near-invertibility.
@@ -16,7 +16,7 @@ retains almost all of G_in; at 50-d it does not.
 Arm B (encoders see only G_in=1250 genes; decoder predicts only G_out=1250 genes
 that NO encoder saw) removes the invertibility advantage: G_out cannot be
 recovered by inverting any function of G_in, only predicted. So this is the fair
-setting in which to ask whether a random projection -- the parent metric's
+setting in which to ask whether a random projection -- the centroid metric's
 maximizer -- is actually a good or bad encoder.
 
 Encoders, all restricted to G_in:
@@ -29,7 +29,7 @@ Encoders, all restricted to G_in:
   geneformer    cached Arm B Geneformer embedding (G_in-restricted re-embed)
 
 Reports, for each: reconstruction on held-out test cells, plus latent and decoded
-tightness under BOTH estimators (HetCLOP's and the parent's centroid-based one),
+tightness under BOTH estimators (HetCLOP's and the centroid-based one),
 so no conclusion depends on a single metric definition.
 """
 from __future__ import annotations
@@ -52,7 +52,7 @@ from src.utils.paths import CORPUS_SOURCE_ROOT
 
 from combine_datasets import ALL_DATASETS  # noqa: E402
 from decoder_eval import reconstruction_metrics, train_decoder  # noqa: E402
-from parent_metric_probe import parent_tightness_ratio_per_dataset  # noqa: E402
+from centroid_metric_probe import centroid_tightness_ratio_per_dataset  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 CACHE = HERE / "cache"
@@ -120,20 +120,20 @@ def main() -> None:
     rows = []
     for name, Z in enc.items():
         lat_h = het_t(Z[te])
-        lat_p, _, _ = parent_tightness_ratio_per_dataset(Z[te], raw_te, lab_te, ds_te)
+        lat_p, _, _ = centroid_tightness_ratio_per_dataset(Z[te], raw_te, lab_te, ds_te)
         pred, vloss, _, nparams = train_decoder(
             Z[tr], Yout[tr], Z[va], Yout[va], Z[te], device=DEVICE)
         rec = reconstruction_metrics(pred, Yout[te])
         dec_h = het_t(pred)
-        dec_p, _, _ = parent_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
+        dec_p, _, _ = centroid_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
         rows.append({
             "encoder": name, "dim": int(Z.shape[1]), "decoder_params": nparams,
             "val_mse": vloss, "recon_pearson": rec["mean_gene_pearson"], "recon_mse": rec["mse"],
             "latent_tightness_hetclop": lat_h, "decoded_tightness_hetclop": dec_h,
-            "latent_tightness_parent": lat_p, "decoded_tightness_parent": dec_p,
+            "latent_tightness_centroid": lat_p, "decoded_tightness_centroid": dec_p,
         })
         log(f"  {name:14s} dim={Z.shape[1]:5d} pearson={rec['mean_gene_pearson']:.4f} "
-            f"| hetclop lat={lat_h:.4f} dec={dec_h:.4f} | parent lat={lat_p:.4f} dec={dec_p:.4f}")
+            f"| hetclop lat={lat_h:.4f} dec={dec_h:.4f} | centroid lat={lat_p:.4f} dec={dec_p:.4f}")
 
     def corr(xs, ys):
         return {"pearson_r": float(pearsonr(xs, ys)[0]), "pearson_p": float(pearsonr(xs, ys)[1]),
@@ -147,16 +147,16 @@ def main() -> None:
             continue
         lh = [r["latent_tightness_hetclop"] for r in subset]
         dh = [r["decoded_tightness_hetclop"] for r in subset]
-        lp = [r["latent_tightness_parent"] for r in subset]
-        dp = [r["decoded_tightness_parent"] for r in subset]
+        lp = [r["latent_tightness_centroid"] for r in subset]
+        dp = [r["decoded_tightness_centroid"] for r in subset]
         summary[tag] = {
             "n": len(subset),
             "latent_vs_decoded_hetclop": corr(lh, dh),
-            "latent_vs_decoded_parent": corr(lp, dp),
+            "latent_vs_decoded_centroid": corr(lp, dp),
             "latent_spread_hetclop": float(max(lh) - min(lh)),
             "decoded_spread_hetclop": float(max(dh) - min(dh)),
-            "latent_spread_parent": float(max(lp) - min(lp)),
-            "decoded_spread_parent": float(max(dp) - min(dp)),
+            "latent_spread_centroid": float(max(lp) - min(lp)),
+            "decoded_spread_centroid": float(max(dp) - min(dp)),
         }
 
     rp512 = next((r for r in rows if r["encoder"] == "randproj_512"), None)
@@ -166,8 +166,8 @@ def main() -> None:
         verdict = {
             "randproj_512_recon": rp512["recon_pearson"],
             "oracle_1250_recon": orc["recon_pearson"],
-            "randproj_512_parent_latent_tightness": rp512["latent_tightness_parent"],
-            "question": "is the parent metric's maximizer (randproj-512) a BAD encoder in the "
+            "randproj_512_centroid_latent_tightness": rp512["latent_tightness_centroid"],
+            "question": "is the centroid metric's maximizer (randproj-512) a BAD encoder in the "
                         "circularity-broken arm?",
             "answer": ("NO -- it reconstructs within {:.4f} of the uncompressed oracle"
                        .format(abs(rp512["recon_pearson"] - orc["recon_pearson"]))),
@@ -175,7 +175,7 @@ def main() -> None:
     log(f"VERDICT: {verdict}")
 
     out = {
-        "purpose": "Arm B at matched 512-d: fair test of whether the parent metric's maximizer "
+        "purpose": "Arm B at matched 512-d: fair test of whether the centroid metric's maximizer "
                    "(random projection) is actually a bad encoder once the near-invertibility "
                    "advantage of Arm A is removed",
         "n_test_cells": int(te.sum()), "g_in": len(gin_idx), "g_out": len(gout_idx),

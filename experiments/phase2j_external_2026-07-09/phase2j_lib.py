@@ -3,7 +3,7 @@
 F4 (per the spec, ss20): holding a negative-binomial decoder's own fitted mean
 fixed, a dispersion-free Poisson draw (theta -> inf) beats the learned-theta NB on
 expression-restricted ``|log2 r_var|`` (the per-gene within-type variance
-calibration error). The referee objection F4 must survive is that it is a control
+calibration error). An objection F4 must survive is that it is a control
 on a home-built decoder. This module runs the SAME within-decoder control on two
 DEPLOYED arrangements:
 

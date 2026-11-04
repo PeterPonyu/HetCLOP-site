@@ -1,6 +1,6 @@
 """Phase 2x -- abundance-based rarity robustness for the rare-type TSTR headline.
 
-Referee Major #5 (review panel 2026-07-19, SYNTHESIS #9): the paper's rare-type
+The paper's rare-type
 leg defines "rare" as < 50 held-out TEST cells -- an artefact of the 70/15/15
 split and the 3,000-cell/dataset cap. This script re-runs the SAME TSTR readout
 on the SAME mean-fixed draws with an abundance-based rarity definition:
@@ -22,7 +22,7 @@ fit_and_extract(data, "gene-cell", seed=0, n_param_samples=10) product -- the
 same call phase2q seed 0 made. Seeds 1/2 are refit on CPU with the identical
 call into cache_mu_theta_seed{S}.npz by fit_scvi_cpu.py (this directory).
 
-Boundary rule: all code under HetCLOP/; existing scripts are imported, never
+Existing scripts are imported, never
 modified.
 """
 from __future__ import annotations

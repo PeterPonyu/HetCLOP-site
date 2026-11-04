@@ -1,4 +1,4 @@
-"""Phase 2y -- pin the theta-hat estimator (review panel 2026-07-19, SYNTHESIS #7).
+"""Phase 2y -- pin the theta-hat estimator.
 
 The paper reports theta-hat ~= 1.31 (\\FfourFittedTheta) as "the median of the
 decoder's per-cell, per-gene fitted values on held-out cells" -- an amortised
@@ -27,7 +27,7 @@ number is unpinned. This script quantifies:
     expressed-restricted median of the amortised scVI theta from the phase2t
     cache (only model whose full theta matrix is persisted).
 
-Boundary rule: all code under HetCLOP/; corpus loaded via phase2j_lib.
+The corpus is loaded via phase2j_lib.
 """
 from __future__ import annotations
 

@@ -170,7 +170,7 @@ def stage_encode():
     gin_genes = [panel[i] for i in gin_idx]
     raw_full = np.load(CACHE / "raw_full.npy", mmap_mode="r")
 
-    # ---- scGPT (parent paper's own encoder) : Arm A (full panel) + Arm B (G_in)
+    # ---- scGPT : Arm A (full panel) + Arm B (G_in)
     from src.embedders.scgpt_embed import ScGPTCellEncoder
     for arm, cols, var, tag in [
         ("A", None, panel, "enc_A_scgpt.npy"),

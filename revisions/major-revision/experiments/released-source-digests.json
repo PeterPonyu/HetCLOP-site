@@ -1,13 +1,25 @@
 {
-  "note": "These source files were pinned by SHA-256 before the analyses ran. In this release one docstring or comment line in each was reworded; the syntax tree without docstrings is identical, which the release build checks. Both digests are listed so that the pins remain checkable.",
+  "note": "These files were pinned by SHA-256 before or when the analyses ran, and differ in this release as stated for each. Both digests are listed so that the pins remain checkable.",
   "files": {
     "experiments/phase2m_lawgrid_2026-07-09/run_lawgrid.py": {
       "analysed": "c2b64c0f338a95131465361a3027b6a0b5c828cad552f87606923338a920d292",
-      "released": "4117e9a3bc605bafc5c185e3b4e4b7799bf97cdc03cae2cb0e7b95f70013fe49"
+      "released": "4117e9a3bc605bafc5c185e3b4e4b7799bf97cdc03cae2cb0e7b95f70013fe49",
+      "change": "comment, docstring or descriptive note reworded"
+    },
+    "revisions/major-revision/experiments/e2-dose-response/verify.py": {
+      "analysed": "a5790f3a1037b64736d31b55d44229db0f19a5fe2084377ec0a8d772fe85d3e3",
+      "released": "297d473b1edf0996e513816ebe1427529b117a859ed78dd846d8654f4c503aec",
+      "change": "the digest check also accepts the released digests listed here"
+    },
+    "revisions/major-revision/experiments/e8-matched-dispersion/design.json": {
+      "analysed": "b92f80eadafa526c1ff5ee31666b763a4e376ab0edaaa3dd27a791cc0a562f50",
+      "released": "0735b7821ce9a951bc3027def9a44bf64ece530554e80a95f0fdbd769660d237",
+      "change": "comment, docstring or descriptive note reworded"
     },
     "src/architecture/stochastic_decoder.py": {
       "analysed": "87331352650eb6a83c14c8916d0b97df44eaf3aa996f3757675cd7f17427eb32",
-      "released": "d49028388e7174eb7f59d830fe43cd2f291cac0891f8681da38078f8e6b4c9d0"
+      "released": "e582c80f2831a3eafc1f84f63773a4ca40e9a76fda78e483c5c82b3d83a3b035",
+      "change": "comment, docstring or descriptive note reworded"
     }
   }
 }

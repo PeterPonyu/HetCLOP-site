@@ -1,6 +1,6 @@
 """Paper-level multiplicity inventory over the manuscript's asserted significance claims.
 
-The manuscript asserts many dataset-clustered tests. A referee will ask whether they survive
+The manuscript asserts many dataset-clustered tests. The question is whether they survive
 correction for multiplicity. This script enumerates EVERY dataset-clustered p-value the paper
 asserts as significant, sources each from its experiment JSON (never hand-typed), and applies
 BOTH corrections over the union as a SINGLE family -- the most conservative choice, since it

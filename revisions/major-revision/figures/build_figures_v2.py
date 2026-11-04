@@ -174,7 +174,7 @@ FIGURES = {
         ('{\\color{hgreen}\\rule{1.6ex}{1.6ex}}~conditional}', '{\\color{holive}\\rule{1.6ex}{1.6ex}}~per-cell-type\\quad\n  {\\color{hgreen}\\rule{1.6ex}{1.6ex}}~conditional}'),
     ]), 0, None)]]),
     'Figure3': ('60pt', [
-        [(B('f3ab', 'fig_parent', subs=[two(6.1, 1.6, 12.8), SEP(1.5, 1.6), H(5.4, 4.0),
+        [(B('f3ab', 'fig_tightness', subs=[two(6.1, 1.6, 12.8), SEP(1.5, 1.6), H(5.4, 4.0),
             ]), 0, None)],
         [(B('f3cd', 'fig_trap', {'a': 'c', 'b': 'd'}, subs=[two(6.2, 1.6, 12.8), SEP(1.7, 1.6), H(5.4, 4.0),
             ('\\node[font=\\footnotesize, anchor=north] at (rel axis cs:0.5,0.99){higher scores with added noise};\n', ''),

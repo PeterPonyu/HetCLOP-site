@@ -42,7 +42,7 @@ from scipy.stats import wilcoxon  # noqa: E402
 from sklearn.decomposition import PCA  # noqa: E402
 
 # Reuse the v2 machinery verbatim (importing runs only module-level setup, which
-# also fixes sys.path for decoder_eval / parent_metric_probe / src.*).
+# also fixes sys.path for decoder_eval / centroid_metric_probe / src.*).
 import run_phase2b_v2 as v2  # noqa: E402
 from run_phase2b_v2 import (  # noqa: E402
     CACHE, DEVICE, MIN_VAL_CELLS_PER_TYPE, NOISE_SEED, SEED,

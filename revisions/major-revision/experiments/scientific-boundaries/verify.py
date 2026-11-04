@@ -58,7 +58,7 @@ for metric,upper in [('correlation_error',.66),('mean_error',.72)]:
  assert ss[ss.arm.isin(['poisson','selected','reference'])][metric].between(0,upper).all()
 # Every generated new manuscript macro agrees with its source summary.
 import re
-ledger=(H.parents[1]/'manuscript/figs/science_numbers.tex').read_text()
+ledger=(H.parents[1]/'manuscript/figs/boundary_numbers.tex').read_text()
 macros=dict(re.findall(r'\\newcommand\{\\([^}]+)\}\{([^}]+)\}',ledger))
 summary=pd.read_csv(H/'summary.csv');checked=0
 for _,rr in summary.iterrows():

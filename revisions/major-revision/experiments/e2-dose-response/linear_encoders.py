@@ -1,4 +1,4 @@
-"""Post hoc check added after review (not part of design.json): the deficit-effect slope refitted on the two encoders
+"""Post hoc check (not part of design.json): the deficit-effect slope refitted on the two encoders
 whose means pass the acceptance gate (PCA-512 and random projection-512), because the measured deficit of scGPT and
 Geneformer can include mean error. Same model, bootstrap and resample count as analyze.py; new bootstrap seeds."""
 from __future__ import annotations

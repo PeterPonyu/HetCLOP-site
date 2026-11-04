@@ -1,5 +1,4 @@
-"""Shared input validation for embedder ports. Added after a round-2
-red-team review found none of the three embedders (Geneformer, scFoundation,
+"""Shared input validation for embedder ports. None of the three embedders (Geneformer, scFoundation,
 UCE) asserted their input is raw counts before performing their own
 normalization (norm-to-10k/gene-median for Geneformer; log1p(v/total*1e4)
 for scFoundation) -- silently producing plausible-looking but wrong

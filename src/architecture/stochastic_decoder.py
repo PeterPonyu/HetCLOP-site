@@ -26,8 +26,7 @@ At eval time the model exposes BOTH the mean prediction ``mu`` (for pointwise
 reconstruction, which sampling necessarily degrades) and a sampled draw
 ``mu + exp(0.5*log_var) * eps`` (for distributional metrics).
 
-This is a self-contained reimplementation living under HetCLOP/ per the project
-rule of self-contained code."""
+This is a self-contained implementation."""
 from __future__ import annotations
 
 import numpy as np

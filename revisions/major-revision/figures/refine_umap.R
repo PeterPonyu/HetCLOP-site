@@ -23,7 +23,7 @@ local({
   fixlab <- function(s) gsub("([[:alpha:]])cells\\b", "\\1 cells", s)
   df$type <- fixlab(df$type)
   # eight colour-blind-safe hues for the abundant types (alphabetical order below). Chosen so the
-  # deuteranope-confusable pairs a reviewer flagged are broken: the second blue and the magenta are
+  # deuteranope-confusable pairs are broken: the second blue and the magenta are
   # swapped out, and pure black is dropped. Residual dark-blue/sky and pink/purple proximities are
   # unavoidable at eight categories but differ in lightness.
   # Order: CD4+, CD8+, Cycling, Erythroid, Fibroblasts, MHC-II, NK, Stress-response.

@@ -1,5 +1,5 @@
 {
-  "purpose": "replicate the encoder-comparison setting exactly and insert a random-projection baseline",
+  "purpose": "score the eight-dataset encoder comparison and insert a random-projection baseline",
   "per_dataset": {
     "GSE167597_spineMm": {
       "n_cells": 2169,

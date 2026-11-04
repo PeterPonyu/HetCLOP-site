@@ -1,4 +1,4 @@
-E8: shared-dispersion controls matched in the amount of extra variance (added after the second review round).
+E8: shared-dispersion controls matched in the amount of extra variance (a post hoc control).
 
 design.json (hashed in design.sha256 before any outcome was computed) states the question, the four comparators, the
 endpoints, the inference and the interpretation rule. run.py original scores the saved E2 PCA-512 fits (arms A and B,

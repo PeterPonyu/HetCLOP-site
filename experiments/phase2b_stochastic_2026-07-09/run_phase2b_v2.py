@@ -27,7 +27,7 @@ Arm A geometry (encoders see all 2500 panel genes; decoder predicts those same
 genes). Fixed seeds throughout.
 
 Reuses decoder_eval.train_decoder / reconstruction_metrics,
-parent_metric_probe.parent_tightness_ratio_per_dataset, and
+centroid_metric_probe.centroid_tightness_ratio_per_dataset, and
 src.diagnostics.tightness.per_dataset_tightness_ratio."""
 from __future__ import annotations
 
@@ -51,7 +51,7 @@ from src.diagnostics.tightness import per_dataset_tightness_ratio  # noqa: E402
 from src.evaluation.distributional import aggregate_over_groups  # noqa: E402
 
 from decoder_eval import reconstruction_metrics, train_decoder  # noqa: E402
-from parent_metric_probe import parent_tightness_ratio_per_dataset  # noqa: E402
+from centroid_metric_probe import centroid_tightness_ratio_per_dataset  # noqa: E402
 
 CACHE = PHASE2A / "cache"
 RESULTS = HERE / "results"
@@ -202,8 +202,8 @@ def main() -> None:
     else:
         log("EXCLUDED geneformer: cached per-dataset Arm A embeddings missing/mismatched")
 
-    def parent_t(pred):
-        med, iqr, n = parent_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
+    def centroid_t(pred):
+        med, iqr, n = centroid_tightness_ratio_per_dataset(pred, raw_te, lab_te, ds_te)
         return {"median": med, "iqr": list(iqr), "n": n}
 
     def hetclop_t(pred):
@@ -293,7 +293,7 @@ def main() -> None:
                 "correlation_attenuation_median": dist["correlation_attenuation"]["median"],
                 "correlation_attenuation_iqr": dist["correlation_attenuation"]["iqr"],
                 # C the trap (report only)
-                "decoded_tightness_parent": parent_t(v["decoded"]),
+                "decoded_tightness_centroid": centroid_t(v["decoded"]),
                 "decoded_tightness_hetclop": hetclop_t(v["decoded"]),
             }
             if vname == "stochastic_betanll":
@@ -311,7 +311,7 @@ def main() -> None:
                 f"energy={row['energy_distance_median']:.3f} "
                 f"corr_att={row['correlation_attenuation_median']:.3f} "
                 f"cov={row['cov_preservation_median']:.3f} | "
-                f"tight(parent)={row['decoded_tightness_parent']['median']:.3f} "
+                f"tight(centroid)={row['decoded_tightness_centroid']['median']:.3f} "
                 f"tight(het)={row['decoded_tightness_hetclop']['median']:.3f}")
 
     out = {

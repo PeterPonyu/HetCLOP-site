@@ -22,8 +22,8 @@ def main():
     released = json.loads((HERE.parent / 'released-source-digests.json').read_text())['files']
     assert digest(HERE / 'design.json') == design_hash
     for rel, h in {**json.loads((HERE / 'input-code-manifest.json').read_text()), **json.loads((HERE / 'foundation-input-manifest.json').read_text())}.items():
-        # Two pinned source files differ in this release by one reworded docstring line; see
-        # ../released-source-digests.json, which records both digests.
+        # Some pinned files differ in this release only in reworded comments or docstrings;
+        # ../released-source-digests.json records both digests.
         alt = released.get(rel, {})
         assert digest(ROOT / rel) == h or (alt.get('analysed') == h and digest(ROOT / rel) == alt['released']), rel
     cache = ROOT / 'experiments/phase2a_decoder_2026-07-08/cache'

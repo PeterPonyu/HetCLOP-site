@@ -1,18 +1,18 @@
 {
   "purpose": "re-test F2 under the exact centroid-based estimator, Arm A geometry",
-  "estimator": "parent: within=mean per-cell L2 from centroid; between=mean inter-centroid L2; ratio=enc/raw",
+  "estimator": "centroid: within=mean per-cell L2 from centroid; between=mean inter-centroid L2; ratio=enc/raw",
   "n_test_cells": 20113,
   "results": [
     {
       "encoder": "scgpt_512",
       "dim": 512,
-      "parent_latent_tightness": 0.7657692918441117,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.7657692918441117,
+      "centroid_latent_iqr": [
         0.6991897066102141,
         0.8104398376421058
       ],
-      "parent_decoded_tightness": 0.6017321594460578,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.6017321594460578,
+      "centroid_decoded_iqr": [
         0.5585835020240959,
         0.6522044357517655
       ],
@@ -22,13 +22,13 @@
     {
       "encoder": "pca_512",
       "dim": 512,
-      "parent_latent_tightness": 0.7966362147576699,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.7966362147576699,
+      "centroid_latent_iqr": [
         0.7705645782830358,
         0.8122202882017773
       ],
-      "parent_decoded_tightness": 0.7578798693410328,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.7578798693410328,
+      "centroid_decoded_iqr": [
         0.7232204408631222,
         0.7835911766748046
       ],
@@ -38,13 +38,13 @@
     {
       "encoder": "pca_50",
       "dim": 50,
-      "parent_latent_tightness": 0.6099661242954948,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.6099661242954948,
+      "centroid_latent_iqr": [
         0.5873155851167673,
         0.6569296189025029
       ],
-      "parent_decoded_tightness": 0.6122971303181861,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.6122971303181861,
+      "centroid_decoded_iqr": [
         0.5757786412778516,
         0.6661299788314701
       ],
@@ -54,13 +54,13 @@
     {
       "encoder": "randproj_512",
       "dim": 512,
-      "parent_latent_tightness": 0.9956332644659648,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.9956332644659648,
+      "centroid_latent_iqr": [
         0.9857415101969935,
         1.0040480847212583
       ],
-      "parent_decoded_tightness": 0.7317852538889245,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.7317852538889245,
+      "centroid_decoded_iqr": [
         0.7048567608089975,
         0.7674690548131597
       ],
@@ -70,13 +70,13 @@
     {
       "encoder": "randproj_50",
       "dim": 50,
-      "parent_latent_tightness": 0.9833514896905504,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.9833514896905504,
+      "centroid_latent_iqr": [
         0.9592773723242108,
         1.0102815274985553
       ],
-      "parent_decoded_tightness": 0.6718468485361185,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.6718468485361185,
+      "centroid_decoded_iqr": [
         0.6351086053295926,
         0.7198094887017418
       ],
@@ -86,13 +86,13 @@
     {
       "encoder": "geneformer",
       "dim": 768,
-      "parent_latent_tightness": 0.7129297378006216,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.7129297378006216,
+      "centroid_latent_iqr": [
         0.6443947512491796,
         0.7524234569022243
       ],
-      "parent_decoded_tightness": 0.579866218101213,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.579866218101213,
+      "centroid_decoded_iqr": [
         0.5305534402680093,
         0.6338545023988409
       ],
@@ -102,13 +102,13 @@
     {
       "encoder": "scfoundation",
       "dim": 3072,
-      "parent_latent_tightness": 0.7505110062511688,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.7505110062511688,
+      "centroid_latent_iqr": [
         0.6850298492236665,
         0.8336108685394789
       ],
-      "parent_decoded_tightness": 0.5870079735156224,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.5870079735156224,
+      "centroid_decoded_iqr": [
         0.5488264637755265,
         0.6311345196353894
       ],
@@ -118,13 +118,13 @@
     {
       "encoder": "uce",
       "dim": 1280,
-      "parent_latent_tightness": 0.7402418697659663,
-      "parent_latent_iqr": [
+      "centroid_latent_tightness": 0.7402418697659663,
+      "centroid_latent_iqr": [
         0.6737747349791806,
         0.8212915156758432
       ],
-      "parent_decoded_tightness": 0.5685755175925102,
-      "parent_decoded_iqr": [
+      "centroid_decoded_tightness": 0.5685755175925102,
+      "centroid_decoded_iqr": [
         0.5140129451509725,
         0.6214641532642974
       ],
@@ -164,18 +164,18 @@
       "decoded_spread": 0.18930435174852256
     },
     "randproj_check": {
-      "note": "randproj has near-ideal latent geometry under the parent metric; does that buy decoded quality?",
+      "note": "randproj has near-ideal latent geometry under the centroid metric; does that buy decoded quality?",
       "rows": [
         {
           "encoder": "randproj_512",
           "dim": 512,
-          "parent_latent_tightness": 0.9956332644659648,
-          "parent_latent_iqr": [
+          "centroid_latent_tightness": 0.9956332644659648,
+          "centroid_latent_iqr": [
             0.9857415101969935,
             1.0040480847212583
           ],
-          "parent_decoded_tightness": 0.7317852538889245,
-          "parent_decoded_iqr": [
+          "centroid_decoded_tightness": 0.7317852538889245,
+          "centroid_decoded_iqr": [
             0.7048567608089975,
             0.7674690548131597
           ],
@@ -185,13 +185,13 @@
         {
           "encoder": "randproj_50",
           "dim": 50,
-          "parent_latent_tightness": 0.9833514896905504,
-          "parent_latent_iqr": [
+          "centroid_latent_tightness": 0.9833514896905504,
+          "centroid_latent_iqr": [
             0.9592773723242108,
             1.0102815274985553
           ],
-          "parent_decoded_tightness": 0.6718468485361185,
-          "parent_decoded_iqr": [
+          "centroid_decoded_tightness": 0.6718468485361185,
+          "centroid_decoded_iqr": [
             0.6351086053295926,
             0.7198094887017418
           ],

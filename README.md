@@ -1,7 +1,7 @@
 # Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders
 
 Code, result records and figure sources for the article of the same title. This version is archived at
-https://doi.org/10.5281/zenodo.23935467 together with the analysed corpus (`hetclop-corpus-3.0.2`, a separate download);
+https://doi.org/10.5281/zenodo.23940846 together with the analysed corpus (`hetclop-corpus-3.0.3`, a separate download);
 https://doi.org/10.5281/zenodo.21524011 always resolves to the latest version.
 
 ## Contents
@@ -18,8 +18,8 @@ https://doi.org/10.5281/zenodo.21524011 always resolves to the latest version.
   the scripts that compose the figures from saved results, the macro files holding every number reported in the
   article, and the rendered figures. `FIGURE-MAP.md` maps the submitted figures to the revised ones.
 - `revisions/major-revision/evidence/`: generators of the number macros and supplementary tables, and verifiers.
-- `ai-disclosure/`: the AI-use statement and English summaries of the instructions that governed AI-assisted
-  code packaging.
+- `ai-disclosure/`: the AI-use statement and, in `prompts/`, an English translation of the prompts used for the
+  AI-assisted code work of the original submission.
 - `tests/`: unit tests for the library.
 
 ## Requirements
@@ -30,8 +30,8 @@ for the scVI analyses; a CUDA GPU for model fitting. The figure builder needs a 
 
 ## Reproducing the results
 
-1. Download `hetclop-corpus-3.0.2` from the archive record and run
-   `python scripts/restore_corpus.py /path/to/hetclop-corpus-3.0.2`. This places the analysed corpus where the
+1. Download `hetclop-corpus-3.0.3` from the archive record and run
+   `python scripts/restore_corpus.py /path/to/hetclop-corpus-3.0.3`. This places the analysed corpus where the
    scripts expect it and checks every file against its recorded SHA-256 digest. Analyses that use the scGPT or
    Geneformer encoders first need `python experiments/phase2a_decoder_2026-07-08/run_phase2a.py --stage encode`
    with the public model weights under `data/models/`.
@@ -39,16 +39,16 @@ for the scVI analyses; a CUDA GPU for model fitting. The figure builder needs a 
    `python revisions/major-revision/experiments/e2-dose-response/run.py` followed by `analyze.py`. Existing outputs
    are reused unless removed.
 3. Regenerate the numbers and check the recorded results:
-   `python revisions/major-revision/evidence/round_e_macros.py`,
+   `python revisions/major-revision/evidence/followup_macros.py`,
    `python revisions/major-revision/evidence/supplement_tables.py` (Supplementary Tables S2 to S4),
-   `python revisions/major-revision/evidence/verify_round_e_experiments.py`, and the `verify.py` scripts of
+   `python revisions/major-revision/evidence/verify_followup_experiments.py`, and the `verify.py` scripts of
    `armb-primary-report`, `e4-sampling-sensitivity`, `e8-matched-dispersion`, `estimated-dispersion` and
    `scientific-boundaries` (the E8 verifier reports its two checks that need the fitted arrays as not checkable). The
    `verify.py` scripts of `e1-armb-biology` and `e2-dose-response` also check the saved per-fit predictions of the
    original runs (about 14 GB) and per-dataset Geneformer embeddings, which are not distributed; their
-   `verification.json` files record the checks made on those outputs. Two source files pinned by digest before the
-   analyses differ here by one reworded docstring line; `revisions/major-revision/experiments/released-source-digests.json`
-   lists both digests.
+   `verification.json` files record the checks made on those outputs. A few files pinned by digest differ here, mostly by reworded comments;
+   `revisions/major-revision/experiments/released-source-digests.json` lists both digests and the change. Each
+   verifier rewrites its `verification.json` when run.
 4. Rebuild the figures: `python revisions/major-revision/figures/make_new_panels.py`, then
    `python revisions/major-revision/figures/build_figures_v2.py`, which also checks panel alignment and that every
    plotted coordinate of each source survives composition; `python revisions/major-revision/evidence/verify_figure_data.py`

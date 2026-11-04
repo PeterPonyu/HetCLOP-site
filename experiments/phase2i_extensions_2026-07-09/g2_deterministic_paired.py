@@ -25,7 +25,7 @@ visible in the numbers.
 Reuses ``build_nb_variants`` (deterministic + matched_noise[/per_type] +
 nb_stochastic + poisson_on_nb_mean, all in log1p space) and the phase2b
 beta-NLL decoder (train_stochastic_decoder + sample_from) for stochastic_betanll,
-gated identically. Boundary rule: all code under HetCLOP/.
+gated identically.
 """
 from __future__ import annotations
 

@@ -8,12 +8,12 @@ analyze.py checks complete coverage and aggregates group medians within each dat
 
 verify.py checks estimator boundaries, exact deterministic reproduction of one complete run into a temporary folder, direct independent variance-ratio arithmetic, and equality of the homogeneous oracle/global controls. verification.json records those checks and source hashes.
 
-make_figures.py writes only the two additional figure sources and revision_numbers.tex. Original result files and the original numerical ledger are untouched.
+make_figures.py writes only the two additional figure sources and revision_numbers.tex. Original result files and the original number macros are untouched.
 
-Run from the HetCLOP project with the existing dl environment:
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 <home>/miniconda3/envs/dl/bin/python revisions/major-revision/experiments/estimated-dispersion/run.py
-<home>/miniconda3/envs/dl/bin/python revisions/major-revision/experiments/estimated-dispersion/analyze.py
-<home>/miniconda3/envs/dl/bin/python revisions/major-revision/experiments/estimated-dispersion/verify.py
-<home>/miniconda3/envs/dl/bin/python revisions/major-revision/experiments/estimated-dispersion/make_figures.py
+Run from the repository root:
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python revisions/major-revision/experiments/estimated-dispersion/run.py
+python revisions/major-revision/experiments/estimated-dispersion/analyze.py
+python revisions/major-revision/experiments/estimated-dispersion/verify.py
+python revisions/major-revision/experiments/estimated-dispersion/make_figures.py
 
 Existing result files are reused by run.py. Archive the results directory before an intentional full rerun. Never replace the original five-seed experiment with these summaries: the additional experiment has its own specified aggregation and random seeds.

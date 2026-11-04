@@ -235,7 +235,7 @@ def build_inventory(idx):
                 })
 
     # E6 monotonicity test (energy effect vs mean-fit gap across 4 encoders).
-    # Honest p per defect #12: exact permutation over 4! orderings, two-sided.
+    # Exact permutation p over 4! orderings, two-sided.
     tid += 1
     inv.append({
         "test_id": f"H{tid:02d}",
@@ -246,9 +246,9 @@ def build_inventory(idx):
         "seed": "pooled",
         "gate_passed": None,
         "inference": "exact_permutation_spearman_4orderings_two_sided",
-        "raw_p": 0.083,  # 2/24, honest two-sided value (defect #12); Pearson-r p=0.020
+        "raw_p": 0.083,  # 2/24, two-sided value; Pearson-r p=0.020
         "current_holm_p": None,
-        "current_holm_source": "reported as suggestive-not-conclusive (defect #12)",
+        "current_holm_source": "reported as suggestive-not-conclusive",
         "reported_in": "prose + tab:dispersion",
     })
     return inv

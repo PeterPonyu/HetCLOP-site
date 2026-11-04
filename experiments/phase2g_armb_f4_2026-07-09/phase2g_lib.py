@@ -20,7 +20,7 @@ unit-tested here (see tests/test_phase2g_armb.py):
     and that the returned offset is NOT the G_out depth.
   * ``exact_spearman_perm_p`` -- with only four encoders a perfect Spearman
     rho=+-1 makes scipy report p=0.0 (the t-statistic is infinite: a degeneracy,
-    NOT a real p-value; this was defect #12 in the spec). The honest value is the
+    NOT a real p-value). The honest value is the
     exact permutation p over all 4! orderings.
 
 """

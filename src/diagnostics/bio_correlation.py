@@ -12,8 +12,7 @@ itself substantially driven by technical depth/dropout variance, not just
 biology. PCA is a near-linear transform of log1p(raw counts), so it inherits
 and preserves that technical variance almost by construction -- a high
 bio-correlation for PCA is not strong evidence it is more "biological," only
-that it is more linear. Flagged in a round-2 red-team review, then
-elevated to blocking by the real Phase 0 run (2026-07-05): PCA's raw
+that it is more linear. The real Phase 0 run showed this: PCA's raw
 bio-correlation (0.887) was far above every FM's (<=0.36) alongside FMs
 also winning on tightness ratio -- a pattern this control could not
 distinguish from "FMs discard technical noise while reorganizing around

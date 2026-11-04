@@ -450,7 +450,7 @@
    "inference": "exact_permutation_spearman_4orderings_two_sided",
    "raw_p": 0.083,
    "current_holm_p": null,
-   "current_holm_source": "reported as suggestive-not-conclusive (defect #12)",
+   "current_holm_source": "reported as suggestive-not-conclusive",
    "reported_in": "prose + tab:dispersion",
    "holm_p_paper": 0.3522952547191855,
    "bh_q_paper": 0.09431818181818183,

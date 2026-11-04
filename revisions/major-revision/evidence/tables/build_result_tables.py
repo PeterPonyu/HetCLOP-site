@@ -65,8 +65,8 @@ def main():
         prefix = 'EoneDose' + metric_names[row.analysis]
         for suffix, field in [('Slope','slope'), ('Lo','ci_low'), ('Hi','ci_high')]:
             numbers[prefix + suffix] = fmt(row[field])
-    (FIGS / 'stage_a_numbers.tex').write_text('\n'.join('\\newcommand{\\' + key + '}{' + val + '}' for key, val in numbers.items()) + '\n')
-    (BASE / 'evidence/stages/manuscript-number-ledger.json').write_text(json.dumps({'sources': ['experiments/e2-dose-response/summary.csv',
+    (FIGS / 'dose_response_numbers.tex').write_text('\n'.join('\\newcommand{\\' + key + '}{' + val + '}' for key, val in numbers.items()) + '\n')
+    (BASE / 'evidence/tables/manuscript-number-ledger.json').write_text(json.dumps({'sources': ['experiments/e2-dose-response/summary.csv',
         'experiments/e1-armb-biology/summary.csv', 'experiments/e1-armb-biology/arm-interaction.csv',
         'experiments/e1-armb-biology/dose-response-marker-summary.csv'], 'macros': numbers}, indent=2) + '\n')
     print(f'Generated {len(numbers)} macros and two tables from verified new-run summaries.')

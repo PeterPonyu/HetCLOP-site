@@ -1,4 +1,4 @@
-"""E5 scoring-support check, added after review (not part of design.json). Uses only the saved per-type marker recall.
+"""E5 scoring-support check, post hoc (not part of design.json). Uses only the saved per-type marker recall.
 
 The three draws of a seed can score different cell types (69-72), so per-seed marker means may compare different
 populations. This recomputes the paired marker differences on (a) the cell types scoreable in all 30 runs (ten seeds
@@ -60,7 +60,7 @@ def main():
     out = pd.DataFrame(rows)
     out.to_csv(HERE / 'common-support.csv', index=False)
     (HERE / 'common-support.json').write_text(json.dumps({
-        'status': 'post hoc check added after review; uses saved per-type marker recall only; no refit',
+        'status': 'post hoc check; uses saved per-type marker recall only; no refit',
         'n_common_types_all_runs': len(common), 'seeds': seeds}, indent=2) + '\n')
     print('types scoreable in all 30 runs:', len(common))
     print(out.round(4).to_string())

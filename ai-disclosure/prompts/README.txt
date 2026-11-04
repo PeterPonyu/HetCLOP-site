@@ -1,0 +1,1 @@
+The two prompts that set the scope of the AI-assisted code work of the original submission, in the order they were given; the working sessions themselves are not included. They were written in Chinese; this is an English translation. Two names are replaced by descriptions in brackets.

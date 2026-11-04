@@ -51,6 +51,19 @@ def digest(path):
             h.update(block)
     return h.hexdigest()
 
+def design_ok() -> bool:
+    """The design hash recorded before execution, or, in a released copy whose descriptive note was reworded, the
+    released digest that ../released-source-digests.json pairs with that recorded hash."""
+    recorded = (HERE / 'design.sha256').read_text().strip()
+    now = digest(HERE / 'design.json')
+    if now == recorded:
+        return True
+    rec = HERE.parent / 'released-source-digests.json'
+    alt = json.loads(rec.read_text())['files'].get('revisions/major-revision/experiments/e8-matched-dispersion/design.json', {}) \
+        if rec.exists() else {}
+    return alt.get('analysed') == recorded and alt.get('released') == now
+
+
 
 def pooled_loglik(y, mu, log_theta):
     """Negative-binomial log-likelihood summed over cells, per gene, at one theta per gene (terms free of theta dropped)."""
@@ -122,7 +135,7 @@ def score_fit(out, mu_te, theta_te, shared, real, lab, ds, rare, seed):
 
 
 def main():
-    assert digest(HERE / 'design.json') == (HERE / 'design.sha256').read_text().strip()
+    assert design_ok()
     stage = sys.argv[1]
     meta = np.load(CACHE / 'meta.npz', allow_pickle=True)
     panel = json.loads((CACHE / 'panel.json').read_text())

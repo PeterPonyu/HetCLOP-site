@@ -1,12 +1,12 @@
 {
   "purpose": "score encoders under the centroid-based tightness estimator",
-  "parent_estimator": "within = mean per-cell L2 from centroid; between = mean inter-centroid L2; ratio = enc/raw",
+  "centroid_estimator": "within = mean per-cell L2 from centroid; between = mean inter-centroid L2; ratio = enc/raw",
   "n_test_cells": 20113,
   "results": [
     {
       "encoder": "pca_512",
       "dim": 512,
-      "parent_tightness_ratio_median": 0.7966362147576699,
+      "centroid_tightness_ratio_median": 0.7966362147576699,
       "iqr": [
         0.7705645782830358,
         0.8122202882017773
@@ -16,7 +16,7 @@
     {
       "encoder": "randproj_512",
       "dim": 512,
-      "parent_tightness_ratio_median": 0.9956332644659648,
+      "centroid_tightness_ratio_median": 0.9956332644659648,
       "iqr": [
         0.9857415101969935,
         1.0040480847212583
@@ -26,7 +26,7 @@
     {
       "encoder": "scgpt_512_native",
       "dim": 512,
-      "parent_tightness_ratio_median": 0.7657692918441117,
+      "centroid_tightness_ratio_median": 0.7657692918441117,
       "iqr": [
         0.6991897066102141,
         0.8104398376421058
@@ -36,7 +36,7 @@
     {
       "encoder": "pca_50",
       "dim": 50,
-      "parent_tightness_ratio_median": 0.6099661242954948,
+      "centroid_tightness_ratio_median": 0.6099661242954948,
       "iqr": [
         0.5873155851167673,
         0.6569296189025029
@@ -46,7 +46,7 @@
     {
       "encoder": "randproj_50",
       "dim": 50,
-      "parent_tightness_ratio_median": 0.9833514896905504,
+      "centroid_tightness_ratio_median": 0.9833514896905504,
       "iqr": [
         0.9592773723242108,
         1.0102815274985553
@@ -56,7 +56,7 @@
     {
       "encoder": "identity_raw_2500",
       "dim": 2500,
-      "parent_tightness_ratio_median": 1.0,
+      "centroid_tightness_ratio_median": 1.0,
       "iqr": [
         1.0,
         1.0
@@ -67,26 +67,26 @@
   "noise_dim_inflation": [
     {
       "extra_noise_dims": 0,
-      "parent_tightness": 0.602023339011986
+      "centroid_tightness": 0.602023339011986
     },
     {
       "extra_noise_dims": 50,
-      "parent_tightness": 0.7803830178198014
+      "centroid_tightness": 0.7803830178198014
     },
     {
       "extra_noise_dims": 200,
-      "parent_tightness": 1.099398659278377
+      "centroid_tightness": 1.099398659278377
     },
     {
       "extra_noise_dims": 800,
-      "parent_tightness": 1.7841779802762576
+      "centroid_tightness": 1.7841779802762576
     },
     {
       "extra_noise_dims": 2000,
-      "parent_tightness": 2.4935450315630616
+      "centroid_tightness": 2.4935450315630616
     }
   ],
-  "f2_under_parent_estimator": {
-    "status": "skipped: no cached Arm A decoded predictions (run_phase2a.py did not persist them); F2 under the parent estimator not re-tested here"
+  "f2_under_centroid_estimator": {
+    "status": "skipped: no cached Arm A decoded predictions (run_phase2a.py did not persist them); F2 under the centroid estimator not re-tested here"
   }
 }

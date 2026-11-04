@@ -101,9 +101,7 @@ def per_dataset_tightness_ratio(
     took one shared raw_X matrix sliced by dataset, which silently assumed
     every dataset used the same gene panel. That assumption does not hold
     for the per-dataset HVG selection (confirmed empirically:
-    two real datasets shared only 3,579 of 8,000 genes) -- found during a
-    round-3 fix, see the design notes
-    readiness-design.md section 3.
+    two real datasets shared only 3,579 of 8,000 genes).
 
     INVARIANT this function relies on but cannot verify itself: for each
     dataset d, raw_X_by_dataset[d] must have its rows in the SAME ORDER as

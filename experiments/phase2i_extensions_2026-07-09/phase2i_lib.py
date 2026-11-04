@@ -15,7 +15,7 @@ phase2a/b/c/d/f/g modules and ``src`` so no metric or decoder is reimplemented:
   * ``adjacent_pairs`` -- consecutive (i, i+1) index pairs along an ordering, used
     by G1 to find the SMALLEST information step energy distance still resolves.
 
-The exact n!-permutation Spearman p (spec defect #12: scipy reports p=0.0 for
+The exact n!-permutation Spearman p (scipy reports p=0.0 for
 |rho|=1) is reused directly from ``phase2g_lib.exact_spearman_perm_p`` -- not
 re-implemented.
 

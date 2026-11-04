@@ -1,7 +1,7 @@
 """Phase 2v: END-TO-END generation test of the dispersion design rule.
 
 The paper's biological-cost claim is mean-fixed (latents taken from real cells). This
-experiment is the referees' requested end-to-end arm: latents are SAMPLED from the
+experiment is the end-to-end arm: latents are SAMPLED from the
 fitted scVI prior and decoded through the full generative path; labels are never used
 by the generator (cell-type labels for evaluation are transferred by 1-NN in the
 model's own latent space against real TRAIN cells).

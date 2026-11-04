@@ -4,42 +4,36 @@
 
 ## Tools
 
-AI assistants were used in preparing this work: Claude (Anthropic) and Codex (OpenAI).
+Original submission: Claude (Anthropic). Revision: Claude (Anthropic) and Codex (OpenAI).
 
 ## Original submission
 
-The assistants were used, under the author's direction, for:
-
-- **Code.** Refactoring and packaging of the evaluation code and the reproducibility archive.
-- **Figures.** Plotting code for some figures, drawing them from saved result files.
-- **Text.** Language editing of author-written text.
+Under the author's direction, Claude was used to write and revise analysis scripts, to review drafts and code, to
+refactor and package the evaluation code and the code archive, to write plotting code for some figures from saved
+results, and to edit the language of text written by the author.
 
 ## Revision
 
-The assistants were used, under the author's direction, for:
+Under the author's direction, the tools were used to revise the manuscript and draft the response to reviewers, to
+write plotting and figure-composition code, to write and run the scripts of the further analyses, to review drafts,
+and to check numbers and metadata for consistency.
 
-- **Text.** Revision of the manuscript and drafting of the response to reviewers.
-- **Figures.** Plotting and figure-composition code. Result figures are drawn from saved result files; the worked
-  example in Figure 1b is computed from stated parameters.
-- **Analyses.** Scripting and analysis of the additional experiments requested in review. Each design was fixed
-  before the experiment was run, and every result, including negative ones, is reported. Checks added after
-  the results were seen are labelled post hoc in the manuscript.
-- **Checks.** Metadata, provenance and consistency checks.
+## Correction of earlier statements
 
-## Correction of an earlier statement
-
-The declaration given with the original submission stated that no generative AI was used to create or alter
-figures, and the description of the archived code package stated that figure generation was done without AI
-assistance. Both statements were incomplete: AI tools had written or edited plotting code for some figures of
-the original submission. The plotted values came from saved results and were not changed. This statement
+The declaration made with the original submission said that AI assistance with code was limited to refactoring and
+packaging and that no generative AI was used to create or alter figures, and the description of the AI code files
+said that the scientific analysis, figure generation and manuscript writing were done without AI assistance. These
+statements were incorrect: AI tools had also written and revised analysis scripts and plotting code, and had
+edited the language of the text. The plotted values came from saved results and were not changed. This statement
 replaces the earlier declaration.
 
-## Not delegated to AI
+## Author responsibility
 
-The research question, the study design, the scientific conclusions and the choice of references were decided by
-the author. No AI tool fabricated, edited or imputed data; simulated counts come only from the documented scripts.
+The research question, the study design, the conclusions and the choice of references are the author's. No AI
+tool fabricated, altered or imputed data. The author reviewed all AI-assisted code and text and takes
+responsibility for the work.
 
-## Verification
+## Supplementary files
 
-Reported numbers are produced by scripts from saved results, and figure data are checked against the saved
-values. The author reviewed all AI-assisted code and text and takes responsibility for the work.
+hetclop-ai-code-BEFORE.zip and hetclop-ai-code-AFTER.zip contain the code before and after the AI-assisted code
+work of the original submission, and hetclop-ai-code-PROMPTS.zip the prompts used for it.

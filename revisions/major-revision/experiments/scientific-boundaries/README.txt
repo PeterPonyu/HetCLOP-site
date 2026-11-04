@@ -24,16 +24,14 @@ No type-level bootstrap is presented as dataset-clustered uncertainty.
 verify.py checks complete finite outputs, direct primary-metric arithmetic,
 validation-only selection, independent split covariates, matched count moments,
 source hashes, common-support arithmetic, and one byte-identical complete rerun.
-The implementation-correction/ archive records a centering bug caught during
-review: attenuation must shrink towards E[size], not 1. All 40 affected conditions
+The implementation-correction/ archive records a centering bug: attenuation must shrink towards E[size], not 1. All 40 affected conditions
 were rerun under the original mean-preserving design, with unchanged seeds. The
 archive is excluded from all final analyses. Other 80 conditions are unchanged.
 
-make_figures.py generates Figures 18 and 19 in the established sans-serif style
-and a separate science_numbers.tex ledger. integrate.py records the one-time
-manuscript integration; it is a historical editing script, not a build command.
+make_figures.py generates the figure sources of this analysis and its macro file,
+boundary_numbers.tex.
 
-Reproduce with the existing dl environment (no new dependencies):
+Reproduce with the packages in requirements.txt:
   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python run.py
   python analyze.py
   python verify.py

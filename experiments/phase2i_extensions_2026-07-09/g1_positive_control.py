@@ -3,7 +3,7 @@ real information difference exists.
 
 The paper's F2 shows six encoders span only 0.0045 Pearson in decoded output, and
 F4/F2 conclude "encoder identity is practically negligible for decoded output." A
-referee's obvious objection: the metric is simply INSENSITIVE. This experiment
+natural objection: the metric is simply INSENSITIVE. This experiment
 kills that objection by constructing encoders with a KNOWN, MONOTONE information
 gradient and showing reconstruction Pearson AND energy distance separate them.
 

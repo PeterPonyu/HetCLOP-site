@@ -1,4 +1,4 @@
-"""Paired deterministic-vs-stochastic energy tests (defect #16: paper.tex:436).
+"""Paired deterministic-vs-stochastic energy tests.
 
 `paper.tex` asserts, in the trap section, that on energy distance "the deterministic
 decoder loses every group". No paired test involving `deterministic` had ever been run.

@@ -4,7 +4,7 @@ Two datasets in the corpus are species-misnamed (named "Hm"/human but are mouse,
 verified against GEO): ``GSE222002_TcellsHmCancer`` (MC38 syngeneic, C57BL/6) and
 ``GSE168181_BreastHmCancer`` (4T1 mammary, Balb/c). Our gene-symbol species
 detector identified both correctly and mapped them via MGI orthologs, so they are
-processed correctly -- but a referee will ask whether the load-bearing F4
+processed correctly -- but one may ask whether the main F4
 conclusions depend on them.
 
 This module recomputes F4's paired inference from the persisted per-group arrays

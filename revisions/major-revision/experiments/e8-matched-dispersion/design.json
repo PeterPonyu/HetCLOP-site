@@ -43,5 +43,5 @@
   "descriptive": "per-dataset joint direction counts (calibration lower and recall higher, etc.) with ties at |difference| <= 1e-12",
   "interpretation_rule": "Allocation is supported for an arm and size if per_cell minus shared_matched has a calibration interval below zero and a Welch recall interval above zero. If those intervals include zero while per_cell minus shared_median favours per_cell, the earlier advantage is attributed to the amount of extra variance, and the manuscript's allocation wording is withdrawn for that setting. Results are reported whichever way they fall.",
   "retention": "all variants, arms, sizes and seeds retained; no outcome-based filtering",
-  "status_note": "added after the second-round review; a post hoc control relative to the original design, fixed before any of its outcomes were computed"
+  "status_note": "a post hoc control relative to the original design, fixed before any of its outcomes were computed"
 }

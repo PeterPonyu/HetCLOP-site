@@ -14,8 +14,7 @@ is reported so a null is visible as pi ~ 0.
 
 Reuses ``build_nb_variants`` (nb_stochastic, poisson_on_nb_mean, deterministic
 gate anchor) and the new ``train_zinb_decoder`` / ``sample_zinb`` /
-``zi_logit_stats`` (src.architecture.stochastic_decoder). Boundary rule: all code
-under HetCLOP/.
+``zi_logit_stats`` (src.architecture.stochastic_decoder).
 """
 from __future__ import annotations
 

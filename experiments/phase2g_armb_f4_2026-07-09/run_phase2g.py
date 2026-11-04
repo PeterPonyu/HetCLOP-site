@@ -10,8 +10,8 @@ within-type variance."
 
 Every prior F3/F4 experiment ran in ARM A: encoders see all 2500 panel genes and
 the decoder predicts those same genes. There the latent nearly reconstructs its
-own input (deterministic recon Pearson ~0.74), so a referee can say F4's mechanism
-was shown only where it is trivially true. ARM B is the honest test: encoders see
+own input (deterministic recon Pearson ~0.74), so F4's mechanism could be said to hold
+only where it is trivially true. ARM B is the honest test: encoders see
 ONLY G_in (1250 genes); the decoder predicts G_out (1250 genes no encoder saw).
 
 CRITICAL anti-leak: the library-size offset is derived from G_in counts only

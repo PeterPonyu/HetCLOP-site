@@ -1,6 +1,6 @@
 """Pins the G1 positive control once it lands (spec: F2 sensitivity objection).
 
-G1 answers the obvious referee objection to F2 ("six encoders span only 0.0045 decoded
+G1 answers the obvious objection to F2 ("six encoders span only 0.0045 decoded
 Pearson => the METRIC is insensitive"): it builds a PCA-k ladder (k in {2,5,10,25,50,512})
 with a KNOWN monotone information gradient in Arm B and shows the pipeline DOES separate
 encoders when a real difference exists. This test is dormant (skipif) until
