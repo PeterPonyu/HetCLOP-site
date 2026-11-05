@@ -1,6 +1,6 @@
 {
   "title": "Code, results and analysed corpus for: Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders",
-  "description": "Code, result records, figure sources and verification scripts for the article, with the analysed single-cell corpus (counts of 133,845 cells from 50 public GEO datasets on a 2500-gene panel, cell-type labels and splits) as a separate data file. Restore it with scripts/restore_corpus.py; the scGPT and Geneformer embeddings are recomputed from the public model weights by the encode stage of the decoder analysis. Each analysis added in revision records its design, scripts and verification. Code is MIT-licensed; result records, figures and the corpus are CC BY 4.0; the source datasets remain under their GEO terms.",
+  "description": "<p>Code and data for the article \"Calibration gains from added dispersion need not carry over to marker recovery in single-cell count decoders\" by Zeyu Fu.</p><p><strong>hetclop-3.0.3.tar.gz</strong> contains the analysis code, the saved results of every analysis, the scripts that draw the figures and tables, and the checks. <strong>hetclop-corpus-3.0.3.tar</strong> contains the analysed corpus: counts of 133,845 cells from 50 public GEO datasets on a shared panel of 2500 genes, with cell-type labels and the training, validation and test splits.</p><p>To use the corpus, unpack both files and run <code>python scripts/restore_corpus.py /path/to/hetclop-corpus-3.0.3</code> in the code folder. The script puts the files where the analyses expect them and checks each one against its SHA-256 digest. The scGPT and Geneformer embeddings are not included; the code recomputes them from the public model weights. The README in the code archive explains how to rerun the analyses and rebuild the figures.</p><p>The code is also on GitHub: <a href=\"https://github.com/PeterPonyu/HetCLOP-site\">https://github.com/PeterPonyu/HetCLOP-site</a> (tag v3.0.3).</p><p>License: the code is under MIT; the results, figures and corpus are under CC BY 4.0. The source datasets keep their GEO terms.</p>",
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
@@ -9,7 +9,7 @@
     {
       "name": "Fu, Zeyu",
       "orcid": "0009-0001-8329-0108",
-      "affiliation": "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, College of Preventive Medicine, Army Medical University, Chongqing, China"
+      "affiliation": "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
     }
   ],
   "keywords": [
